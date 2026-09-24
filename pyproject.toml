@@ -1,0 +1,59 @@
+[build-system]
+requires = ["uv_build==0.12.18"]
+build-backend = "uv_build"
+
+[project]
+name = "normietext"
+version = "0.1.0"
+description = "Deterministic normalization of scraped job text"
+readme = "README.md"
+requires-python = ">=3.14,<3.15"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Anthony Josue Rojas Fuentes" }]
+classifiers = [
+  "Development Status :: 1 - Planning",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Topic :: Text Processing",
+  "Typing :: Typed",
+]
+dependencies = [
+  "beautifulsoup4==4.15.0",
+  "emoji==2.16.0",
+  "ftfy==6.3.1",
+  "lxml==6.1.3",
+  "regex==2026.9.10",
+]
+
+[project.urls]
+Repository = "https://github.com/ajrojasfuentes/normietext"
+Issues = "https://github.com/ajrojasfuentes/normietext/issues"
+
+[dependency-groups]
+dev = ["hypothesis", "mypy", "pytest", "ruff==0.16.8", "twine"]
+
+[tool.uv]
+required-version = "==0.12.18"
+package = true
+
+[tool.ruff]
+required-version = "==0.16.8"
+target-version = "py314"
+line-length = 100
+include = ["*.py", "*.pyi", "*.ipynb", "**/pyproject.toml"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "RUF"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra --strict-config --strict-markers --import-mode=importlib"
+filterwarnings = ["error"]
+
+[tool.mypy]
+python_version = "3.14"
+files = ["src", "scripts"]
+strict = true
+warn_unreachable = true
