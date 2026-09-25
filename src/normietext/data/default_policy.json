@@ -1,0 +1,93 @@
+{
+  "policy_id": "linkedin_jobs_aggressive_v1",
+  "schema_version": "1.0.0",
+  "normalization_version": "1.0.0",
+  "input": {
+    "default_format": "plain_text",
+    "auto_detect_html": false,
+    "require_recoverable_source": true,
+    "reject_surrogates": true
+  },
+  "encoding": {
+    "operation": "fix_encoding",
+    "restore_byte_a0": false,
+    "replace_lossy_sequences": false,
+    "decode_inconsistent_utf8": true,
+    "fix_c1_controls": true
+  },
+  "unicode": {
+    "normalization": "NFC",
+    "final_normalization": true,
+    "remove_cf": true,
+    "remove_default_ignorables": true,
+    "remove_cc_except_lf": true,
+    "remove_braille_blank": true
+  },
+  "emoji": {
+    "default_action": "remove",
+    "region_flags": "token_and_annotation",
+    "subdivision_flags": "token_and_annotation",
+    "hints": [
+      "money_bag",
+      "round_pushpin",
+      "warning",
+      "check_mark_button",
+      "cross_mark"
+    ],
+    "protected_text_symbols": [
+      "copyright",
+      "registered",
+      "trademark"
+    ],
+    "keycaps": "preserve_base_or_list_ordinal"
+  },
+  "whitespace": {
+    "horizontal": "ascii_space",
+    "collapse_runs": true,
+    "strip_each_line": true,
+    "preserve_indentation": false,
+    "max_blank_lines": 1,
+    "strip_field": true
+  },
+  "punctuation": {
+    "global_dash_folding": false,
+    "global_quote_folding": false,
+    "fullwidth_solidus_in_ordinary_text": true
+  },
+  "structure": {
+    "plain_text_lists_in": [
+      "job_description",
+      "job_criteria_list"
+    ],
+    "preserve_ordinals": true,
+    "metadata_before_spacing": true
+  },
+  "output": {
+    "compact_fields": [
+      "job_title",
+      "job_type",
+      "seniority",
+      "raw_location"
+    ],
+    "multiline_fields": [
+      "job_description",
+      "job_criteria_list"
+    ],
+    "generated_tokens_require_annotations": true,
+    "trace_snapshots": false
+  },
+  "limits": {
+    "job_title": 8192,
+    "job_description": 262144,
+    "job_criteria_list": 32768,
+    "job_type": 4096,
+    "seniority": 4096,
+    "raw_location": 8192,
+    "record": 327680,
+    "html_nodes": 20000,
+    "structural_depth": 128,
+    "output_floor": 1024,
+    "max_expansion_factor": 32,
+    "regex_timeout_ms": 50
+  }
+}

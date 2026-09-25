@@ -19,6 +19,12 @@ La versión de esta especificación no implica la existencia de una versión pub
 
 ---
 
+> **Revisión contractual F1 — 2026-09-24:** R01, R05, R06, R12 y R13 de la
+> revisión evaluada se incorporan explícitamente en §§8, 23, 29 y 31.
+> El documento conserva su identidad 2.0; esta es la primera baseline contractual,
+> aún sin normalizador publicado. Véase [ADR-0001](decisions/0001-contratos-fase-1.md).
+> Las demás decisiones de renderer del plan siguen pendientes de sus fases.
+
 ## Contenido
 
 1. Resumen ejecutivo
@@ -324,7 +330,9 @@ NormalizedField
   manifest
 ```
 
-`status` distingue `ok`, `ok_with_issues` y `empty`. Un fallo no produce `NormalizedField`: produce un resultado de error separado y preserva la fuente en el sobre de ingesta.
+`status` distingue `ok`, `ok_with_issues` y `empty`. `empty` prevalece si el texto
+final es vacío aunque existan incidencias; estas se conservan. Con texto no vacío,
+`ok_with_issues` indica incidencias y `ok` su ausencia. Un fallo no produce `NormalizedField`: produce un resultado de error separado y preserva la fuente en el sobre de ingesta.
 
 El manifiesto incluye `schema_version`, `normalization_version`, `policy_id`, `policy_hash`, `code_revision`, versiones de runtime y dependencias, y versiones/hashes de las tablas propias. La referencia al manifiesto puede compartirse entre registros para evitar duplicación.
 
@@ -335,6 +343,14 @@ Tipos mínimos: `paragraph`, `line`, `heading`, `list_item`, `table_cell`, `code
 La identificación de encabezados por HTML es estructural. En texto plano, una línea aislada se conserva sin necesidad de clasificar semánticamente su contenido como requisitos, beneficios o salario.
 
 La profundidad y las continuaciones reconocidas sobreviven en metadatos aunque el texto final no tenga sangría. No se inventan relaciones cuando el origen ya las perdió.
+
+Las asociaciones explícitas se representan mediante bloques adicionales `term` y
+`definition` y una colección `associations`. Cada grupo tiene ID, referencias
+ordenadas a cero o más términos y definiciones (al menos un miembro), origen y
+contrato de fuente; admite varios términos o valores sin duplicarlos. La agrupación
+procede de `dl/dt/dd` o de un adaptador versionado que la declare, nunca de negrita,
+encabezados o del nombre del campo por sí solos. No se rellenan valores ausentes.
+La proyección textual de multiplicidades se fijará antes del renderer de F5.
 
 ### 8.3 Anotaciones
 
@@ -372,6 +388,10 @@ La proyección solo texto puede contener la misma cadena para dos procedencias d
 Toda eliminación de emoji, invisibles o kaomoji y toda sustitución de marcadores DEBE quedar atribuida a una regla. Cambios repetidos de espacios pueden agregarse por segmento si la fuente sigue disponible.
 
 Un mapa de alineación admite relaciones muchos-a-uno y uno-a-muchos. Para HTML malformado o reparaciones complejas puede degradarse a procedencia de segmento; nunca se declaran offsets exactos sin evidencia. Los spans finales se calculan después de renderizar y aplicar NFC final.
+
+La igualdad de longitud después de una reparación no prueba alineación exacta.
+Sin correspondencia demostrable se usa precisión `segment`; un mapa exacto solo
+se admite con evidencia y pruebas.
 
 No se requiere guardar todas las cadenas intermedias. El modo trace es opcional y no cambia el resultado canónico.
 
@@ -969,8 +989,16 @@ Los siguientes son límites operativos iniciales del perfil, revisables mediante
 | Total por registro | 327.680 puntos de código |
 | Nodos de HTML aceptados después de parsear | 20.000 |
 | Profundidad estructural aceptada | 128 |
-| Longitud de salida por campo | Máximo `max(1.024, 16 * longitud_entrada)` |
+| Longitud de salida por campo | Máximo `max(1.024, 32 * longitud_entrada)` |
 | Timeout por operación regex compleja | 50 ms |
+
+El factor 32 cubre los hints iniciales, pero no constituye una demostración de
+expansión de todo el pipeline. La validación del perfil comprobará tablas y la
+composición con separadores, ordinales, HTML y reparación; el exceso de salida
+produce `OUTPUT_LIMIT_EXCEEDED`, sin resultado parcial. El límite agregado 327.680
+se conserva: es redundante con la suma predeterminada por campo 319.488, pero
+permanece independiente para configuraciones validadas de presupuestos distintos.
+No expresa un límite de memoria del worker.
 
 El límite de tamaño se valida antes de parsear. Los límites de nodos y profundidad después del parseo no sustituyen los límites de entrada ni el aislamiento del proceso. Ingesta por lotes debe disponer de un límite de memoria y tiempo de worker, fijado tras pruebas de carga.
 
@@ -978,13 +1006,17 @@ El límite de tamaño se valida antes de parsear. Los límites de nodos y profun
 
 | Código | Resultado |
 |---|---|
-| `INVALID_TYPE`, `INVALID_FIELD`, `INVALID_FORMAT` | Rechazo de la llamada |
+| `INVALID_TYPE`, `INVALID_FIELD`, `INVALID_FORMAT`, `INVALID_RECORD` | Rechazo de la llamada |
 | `INVALID_UNICODE` | Rechazo, sin sustitución silenciosa |
 | `INPUT_LIMIT_EXCEEDED` | Rechazo del campo; conservar fuente |
 | `HTML_PARSE_FAILED` | Error del campo; no fallback silencioso |
-| `RESOURCE_LIMIT_EXCEEDED`, `REGEX_TIMEOUT` | Fallo operativo; no publicar salida canónica parcial |
+| `RESOURCE_LIMIT_EXCEEDED`, `REGEX_TIMEOUT`, `OUTPUT_LIMIT_EXCEEDED` | Fallo operativo; no publicar salida canónica parcial |
 | `OUTPUT_INVARIANT_FAILED` | Error de implementación o política; bloquear publicación del campo |
 | `POLICY_MISMATCH` | Requerir reprocesamiento desde fuente |
+
+Los contratos inmutables usan además `INVALID_MODEL` y `INVALID_POLICY` para
+representaciones inconsistentes u opciones de política desconocidas. Los códigos
+de estas validaciones no sustituyen los errores operativos del pipeline.
 
 Incidencias no fatales incluyen formato desconocido, carácter de reemplazo, modificación de segmento protegido y alineación de precisión reducida. No implican que el contenido sea falso, solo que su interpretación requiere contexto.
 
@@ -1197,6 +1229,10 @@ structure:
   plain_text_lists_in: [job_description, job_criteria_list]
   preserve_ordinals: true
   metadata_before_spacing: true
+limits:
+  output_floor: 1024
+  max_expansion_factor: 32
+  record: 327680
 output:
   compact_fields: [job_title, job_type, seniority, raw_location]
   multiline_fields: [job_description, job_criteria_list]
@@ -1266,6 +1302,14 @@ El fixture declara explícitamente la separación siguiente: las dos primeras l�
 Los otros cuatro campos se declaran `missing` en el sobre de ingesta del fixture, no como cadenas vacías ni como valores extraídos. El perfil es `linkedin_jobs_aggressive_v1`.
 
 Las comillas externas usadas para presentar un ejemplo no forman parte de los campos. Las comillas que aparecen dentro del texto sí son contenido.
+
+Los fixtures materializados de este caso conservan los bytes UTF-8 de los bloques
+raw y expected; excluyen únicamente el LF que delimita el cierre del fence Markdown.
+Sus hashes, tamaños y secciones están en `tests/fixtures/integral/complex_multilingual_ai_role_001/fixture.json`.
+La especificación sigue siendo normativa; hashes y pruebas detectan divergencias,
+no autorizan actualizar las expectativas a partir de la implementación. Los cuatro
+campos missing de este caso no se sustituyen; un fixture independiente cubre seis
+campos presentes. Los archivos se leen sin convertir CR/CRLF ni editar espacios.
 
 ### 31.2 Entrada: `job_title`
 

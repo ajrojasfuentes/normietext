@@ -1,0 +1,201 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "id": {
+      "type": "string"
+    },
+    "family": {
+      "type": "string"
+    },
+    "split": {
+      "enum": [
+        "development",
+        "validation"
+      ]
+    },
+    "origin": {
+      "const": "synthetic"
+    },
+    "execution_status": {
+      "const": "awaiting_normalizer"
+    },
+    "fields": {
+      "type": "object",
+      "properties": {
+        "job_title": {
+          "type": "object",
+          "properties": {
+            "state": {
+              "const": "present"
+            },
+            "source_format": {
+              "enum": [
+                "plain_text",
+                "html_fragment",
+                "html_escaped_text",
+                "unknown"
+              ]
+            },
+            "raw": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "state",
+            "source_format",
+            "raw"
+          ],
+          "additionalProperties": false
+        },
+        "job_description": {
+          "type": "object",
+          "properties": {
+            "state": {
+              "const": "present"
+            },
+            "source_format": {
+              "enum": [
+                "plain_text",
+                "html_fragment",
+                "html_escaped_text",
+                "unknown"
+              ]
+            },
+            "raw": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "state",
+            "source_format",
+            "raw"
+          ],
+          "additionalProperties": false
+        },
+        "job_criteria_list": {
+          "type": "object",
+          "properties": {
+            "state": {
+              "const": "present"
+            },
+            "source_format": {
+              "enum": [
+                "plain_text",
+                "html_fragment",
+                "html_escaped_text",
+                "unknown"
+              ]
+            },
+            "raw": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "state",
+            "source_format",
+            "raw"
+          ],
+          "additionalProperties": false
+        },
+        "job_type": {
+          "type": "object",
+          "properties": {
+            "state": {
+              "const": "present"
+            },
+            "source_format": {
+              "enum": [
+                "plain_text",
+                "html_fragment",
+                "html_escaped_text",
+                "unknown"
+              ]
+            },
+            "raw": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "state",
+            "source_format",
+            "raw"
+          ],
+          "additionalProperties": false
+        },
+        "seniority": {
+          "type": "object",
+          "properties": {
+            "state": {
+              "const": "present"
+            },
+            "source_format": {
+              "enum": [
+                "plain_text",
+                "html_fragment",
+                "html_escaped_text",
+                "unknown"
+              ]
+            },
+            "raw": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "state",
+            "source_format",
+            "raw"
+          ],
+          "additionalProperties": false
+        },
+        "raw_location": {
+          "type": "object",
+          "properties": {
+            "state": {
+              "const": "present"
+            },
+            "source_format": {
+              "enum": [
+                "plain_text",
+                "html_fragment",
+                "html_escaped_text",
+                "unknown"
+              ]
+            },
+            "raw": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "state",
+            "source_format",
+            "raw"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "job_title",
+        "job_description",
+        "job_criteria_list",
+        "job_type",
+        "seniority",
+        "raw_location"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "schema_version",
+    "id",
+    "family",
+    "split",
+    "origin",
+    "execution_status",
+    "fields"
+  ],
+  "additionalProperties": false
+}

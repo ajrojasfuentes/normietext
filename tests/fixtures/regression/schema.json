@@ -1,0 +1,193 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "cases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "requirement": {
+            "type": "string",
+            "pattern": "^T[0-9]{2}$"
+          },
+          "field": {
+            "type": "string"
+          },
+          "source_format": {
+            "enum": [
+              "plain_text",
+              "html_fragment",
+              "html_escaped_text",
+              "unknown"
+            ]
+          },
+          "input_type": {
+            "enum": [
+              "text",
+              "bytes_hex"
+            ]
+          },
+          "raw": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "policy_id": {
+            "const": "linkedin_jobs_aggressive_v1"
+          },
+          "family": {
+            "type": "string",
+            "minLength": 1
+          },
+          "split": {
+            "enum": [
+              "development",
+              "validation"
+            ]
+          },
+          "origin": {
+            "const": "synthetic"
+          },
+          "execution_status": {
+            "const": "awaiting_normalizer"
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          },
+          "expected": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string"
+              },
+              "error": {
+                "type": "string",
+                "minLength": 1
+              },
+              "properties": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "annotations": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "kind": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "value": {
+                      "type": "string"
+                    },
+                    "count": {
+                      "type": "integer",
+                      "minimum": 0
+                    }
+                  },
+                  "required": [
+                    "kind",
+                    "value",
+                    "count"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "structure": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "kind": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "count": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "ordinals": {
+                      "type": "array",
+                      "items": {
+                        "type": "integer"
+                      }
+                    },
+                    "coordinates": {
+                      "type": "array",
+                      "items": {
+                        "type": "array",
+                        "prefixItems": [
+                          {
+                            "type": "integer",
+                            "minimum": 0
+                          },
+                          {
+                            "type": "integer",
+                            "minimum": 0
+                          }
+                        ],
+                        "minItems": 2,
+                        "maxItems": 2
+                      }
+                    }
+                  },
+                  "required": [
+                    "kind",
+                    "count"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            },
+            "required": [
+              "properties",
+              "annotations",
+              "structure"
+            ],
+            "additionalProperties": false,
+            "not": {
+              "required": [
+                "text",
+                "error"
+              ]
+            }
+          }
+        },
+        "required": [
+          "id",
+          "requirement",
+          "field",
+          "source_format",
+          "input_type",
+          "raw",
+          "policy_id",
+          "family",
+          "split",
+          "origin",
+          "execution_status",
+          "reason",
+          "expected"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "cases"
+  ],
+  "additionalProperties": false
+}

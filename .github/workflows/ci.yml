@@ -53,6 +53,7 @@ jobs:
           enable-cache: true
       - run: uv python install
       - run: uv sync --locked --no-build-package lxml --no-build-package regex
+      - run: uv run --locked python scripts/generate_tables.py --check
       # uv builds the wheel from the sdist by default, exercising both artifacts.
       - run: uv build
       - run: uv run --locked twine check --strict dist/*

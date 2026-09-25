@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "source": {
+      "const": "NT-REV-2.0-001"
+    },
+    "cases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^T(4[1-9]|5[0-9]|6[0-4])$"
+          },
+          "decision": {
+            "type": "string"
+          },
+          "execution_status": {
+            "const": "awaiting_normalizer"
+          }
+        },
+        "required": [
+          "id",
+          "decision",
+          "execution_status"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "source",
+    "cases"
+  ],
+  "additionalProperties": false
+}

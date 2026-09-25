@@ -1,0 +1,183 @@
+We’re looking for un/a Senior AI Engineer para unirse a nuestro equipo de Applied Inteligence & GenAI. No buscamos solamente alguien que "sepa usar ChatGPT" 😅 sino una persona que pueda diseñar, build, deploy y mantener sistemas de ML/AI en produccion — desde el messy prototype hasta algo que realmente aguante tráfico.
+
+La posición es technically basada en San José, Costa Rica 🇨🇷, pero somos bastante flexibles. Podés trabajar desde CR, Greater San José Area, alrededores de Alajuela/Heredia, “somewhere in the Central Valley”, o remoto desde LATAM dependiendo del timezone. Candidates from México, Colombia, Argentina, Perú etc también pueden aplicar.
+
+⚠️ NOTE: this is NOT a pure Data Scientist role.... aunque sí vas a tocar data, experimentos, métricas, SQL y probablemente algun CSV horrible de 2GB que alguien dejó en un bucket llamado "final_final_v3_USE_THIS.csv" 🙃
+
+
+What you'll be doing / Qué vas a hacer
+
+• Build & mantain GenAI applications usando LLMs: OpenAI, Anthropic, open-source models, etc.
+• Diseñar RAG pipelines, embeddings, vector search + evals.
+• Trabajar con agentes / agentic workflows (sí, sabemos que “agent” está overused).
+• Fine tuning? talvez. Prompt engineering? seguro. Production engineering? MUCHÍSIMO.
+• Crear APIs con Python / FastAPI / Flask   y posiblemente algún servicio en Node.js.
+• Deploy en AWS, GCP o Azure (actualmente ~70% AWS pero esto cambia).
+• Implement CI/CD pipelines  + observability + monitoring.
+• Collaborate con Product, Data, UX, Sales y clientes que aveces dicen cosas como
+   “can you just make the AI 100% accurate by Friday?”
+• Optimizar latency/cost. Un experimento que cuesta $0.004/request está cool...
+  hasta que tenés 14,500,000 requests / month 💸
+• Evaluar hallucinations, retrieval quality, precision / recall, model drift, etc etc.
+• Read papers cuando sea necesario; no esperamos que vivás en arXiv 24／7.
+
+
+Requirements-ish:
+
+1. 4+ años de experiencia en Software Eng., ML Engineering, Data, AI o similar.
+2. Strong Python skills. Si escribís:
+      for i in range(len(my_list)):
+   no necesariamente te rechazamos 😄 ...pero we'd like to know why.
+3. Experiencia real trabajando con ML/LLMs en producción.
+4. SQL — Postgres / BigQuery / Snowflake / “whatever warehouse we're using this quarter”.
+5. Docker, Git, APIs, Linux, cloud infrastructure.
+6. English B2+ / C1-ish. Español fluent o conversational.
+7. Comunicación clara: poder explicarle embeddings tanto a un engineer como a alguien de negocio.
+8. Nice to have → Kubernetes, Terraform, PyTorch, LangChain, LlamaIndex,
+   DSPy, Ray, MLflow, Airflow, dbt, Kafka... NO esperamos que sepás TODO esto.
+
+
+Some technical keywords porque LinkedIn SEO ¯\_(ツ)_/¯ :
+
+Python | PyTorch | TensorFlow | LLM | LLMs | GPT | RAG | rag | Retrieval-Augmented Generation
+Vector DB | Pinecone | pgvector | Weaviate | AWS | GCP | Azure | Docker | K8s
+FastAPI • REST • GraphQL?? • SQL • NoSQL • CI/CD • MLOps • GitHub Actions
+Prompt Enginering / Prompt Engineering / AI Agents / Gen AI / Generative-AI
+
+
+💰 Compensation / plata:
+
+Approx. USD $4,500 – $7,250 / month dependiendo de experience, ubicación, seniority & contract type.
+
+Para contractors fuera de CR podría ser algo tipo US$55k—85k yearly equivalent.
+Para ciertos perfiles muy senior podemos discutir > $90.000 USD/año, pero no es garantizado.
+
+También podemos pagar local currency (CRC ₡) en algunos casos.
+Ejemplo: ₡2,400,000+ mensual dependiendo del esquema.
+
+Bonus: 5–12% anual, subject to company + personal performance.
+
+***Numbers are indicative, not a contractual offer***
+
+
+Benefits ✨
+
+ → Flexible PTO / vacaciones
+ → Home office budget: $750 USD one-time
+ → Learning budget ≈ $1.200/year
+ → Private medical insurance (según país)
+ → MacBook Pro / Linux workstation / equivalente
+ → 2 company offsites per year 🌴✈️
+ → horario flexible-ish
+ → No tenemos pizza-Friday como “benefit” 🍕, prometido.
+ → parental leave
+ → mental wellness days
+ → acceso a APIs / GPUs para experimentar sin usar tu tarjeta personal :)
+
+
+Horario??
+
+Normalmente 8am-ish → 5pm-ish Costa Rica time (UTC−6) pero async-friendly.
+Necesitamos +/- 4 hrs overlap con US Central/Eastern teams.
+
+Tenemos daily standup a las 09:07 AM (sí, 09:07, long story).
+No esperamos respuestas a Slack a las 11:48pm.
+
+
+Where are we 📍
+
+Main office:
+San José, Costa Rica.
+
+Bueno… técnicamente no está en "downtown San José"; está como a ~15–25 km,
+dependiendo desde dónde midás y del tráfico infernal de la 27 😬.
+
+También lo describimos internamente como:
+• Greater Metropolitan Area, CR
+• GAM
+• Central Valley
+• cerca de SJO airport-ish
+• “por la zona oeste de la capital”
+• Costa Rica 🇨🇷
+• LatAm remote
+
+So yeah, location data may be a little messy.
+
+
+Proceso de interview:
+
+① Recruiter chat — 20/30 mins
+② Technical conversation ~ 60min
+③ take-home OR live exercise (max 2 hrs, seriously)
+④ System Design / AI Architecture
+5.) Cultural/team chat
+6 - Offer 🎉
+
+Normalmente 2–3 semanas end-to-end, aunque puede tomar 17 días, 21 días,
+o “depende de calendarios™”.
+
+
+A random example of the kind of problems you may work on:
+
+Un cliente tiene 3.7M documentos: PDFs, emails, Word files, scanned docs,
+algunos en English, otros español y unos cuantos en português.
+
+Need to answer user questions in < 2.5 sec p95 latency,
+con citations, permissions por usuario y < $0.03 USD average cost/query.
+
+Current accuracy según nuestro internal eval: ~81,4 %.
+Target = 92%+   (pero primero probablemente tengamos que discutir qué significa “accuracy” 😅)
+
+
+Interested??
+
+Apply aquí:
+https://careers.example.com/jobs/ai-engineer?id=92841&utm_source=linkedin
+
+o mandá CV / résumé a:
+
+jobs+ai@example.com
+
+Subject: “AI Eng — LinkedIn 2026”
+
+Questions? talent [at] example dot com
+Recruiter WhatsApp-ish: +506 8XXX-XX42
+Office: (+506) 2XXX 19 80
+
+Please DON'T send passwords, API keys, production datasets ni cosas confidenciales.
+
+
+Equal Opportunity / etc...
+
+We are an equal oportunity employer and consider qualified candidates without regard to
+race, gender, edad, disability, nacionality, religion, orientation, etc.
+
+Si necesitás alguna accomodation durante el proceso, decinos. No hay problema.
+
+
+Few last things—
+
+👉 No sponsorship available right-now para US relocation.
+👉 LATAM candidates: yes.
+👉 Europe candidates: maybe, timezone dependant.
+👉 US candidates: contractor possibilities depending on state.
+👉 Salary varies by geography & employment modality.
+👉 This JD was updated: 2026-08-31
+👉 Job ID № AI-0042／LATAM
+👉 Openings: 2 (maybe 3 Q4)
+👉 Headcount approved: 2.0 FTE
+👉 Team size actualmente = 11 → expected 15 by EOY.
+
+
+Random footer because apparently every job post needs one:
+
+“Build AI that actually works™”   © 2026 ACME-ish Technologies S.A.
+
+   Apply now →  https://careers.example.com/jobs/ai-engineer
+
+#AI #MachineLearning #LLM #Hiring   #CostaRica #RemoteJobs
+#GenAI #MLOps #Python   #trabajo #empleo 🚀
+
+
+P.D.: Si llegaste hasta acá, incluí la palabra "piña🍍" somewhere en tu application.
+(No, esto no es un trick question... probably.)

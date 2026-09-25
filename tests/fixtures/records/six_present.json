@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0.0",
+  "id": "six_present_001",
+  "family": "six_present",
+  "origin": "synthetic",
+  "split": "development",
+  "execution_status": "awaiting_normalizer",
+  "fields": {
+    "job_title": {
+      "state": "present",
+      "source_format": "plain_text",
+      "raw": "Python Engineer"
+    },
+    "job_description": {
+      "state": "present",
+      "source_format": "plain_text",
+      "raw": "\u2022 Build APIs\n\u2022 Write tests"
+    },
+    "job_criteria_list": {
+      "state": "present",
+      "source_format": "html_fragment",
+      "raw": "<dl><dt>Employment type</dt><dd>Full-time</dd></dl>"
+    },
+    "job_type": {
+      "state": "present",
+      "source_format": "plain_text",
+      "raw": "Full-time"
+    },
+    "seniority": {
+      "state": "present",
+      "source_format": "plain_text",
+      "raw": "Not Specified"
+    },
+    "raw_location": {
+      "state": "present",
+      "source_format": "plain_text",
+      "raw": "San Jos\u00e9, CR"
+    }
+  }
+}

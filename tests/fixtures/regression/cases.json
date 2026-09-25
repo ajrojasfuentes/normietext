@@ -1,0 +1,1070 @@
+{
+  "schema_version": "1.0.0",
+  "cases": [
+    {
+      "id": "T01-1",
+      "requirement": "T01",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "input_type": "text",
+      "raw": "C++",
+      "policy_id": "linkedin_jobs_aggressive_v1",
+      "family": "T01",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "reason": "Normative regression T01 (\u00a730); representation, not semantic inference.",
+      "expected": {
+        "properties": [],
+        "annotations": [],
+        "structure": [],
+        "text": "C++"
+      }
+    },
+    {
+      "id": "T01-2",
+      "requirement": "T01",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "input_type": "text",
+      "raw": "C#",
+      "policy_id": "linkedin_jobs_aggressive_v1",
+      "family": "T01",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "reason": "Normative regression T01 (\u00a730); representation, not semantic inference.",
+      "expected": {
+        "properties": [],
+        "annotations": [],
+        "structure": [],
+        "text": "C#"
+      }
+    },
+    {
+      "id": "T01-3",
+      "requirement": "T01",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "input_type": "text",
+      "raw": "B2+",
+      "policy_id": "linkedin_jobs_aggressive_v1",
+      "family": "T01",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "reason": "Normative regression T01 (\u00a730); representation, not semantic inference.",
+      "expected": {
+        "properties": [],
+        "annotations": [],
+        "structure": [],
+        "text": "B2+"
+      }
+    },
+    {
+      "id": "T01-4",
+      "requirement": "T01",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "input_type": "text",
+      "raw": "CI/CD",
+      "policy_id": "linkedin_jobs_aggressive_v1",
+      "family": "T01",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "reason": "Normative regression T01 (\u00a730); representation, not semantic inference.",
+      "expected": {
+        "properties": [],
+        "annotations": [],
+        "structure": [],
+        "text": "CI/CD"
+      }
+    },
+    {
+      "id": "T01-5",
+      "requirement": "T01",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "input_type": "text",
+      "raw": "--version",
+      "policy_id": "linkedin_jobs_aggressive_v1",
+      "family": "T01",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "reason": "Normative regression T01 (\u00a730); representation, not semantic inference.",
+      "expected": {
+        "properties": [],
+        "annotations": [],
+        "structure": [],
+        "text": "--version"
+      }
+    },
+    {
+      "id": "T02-1",
+      "requirement": "T02",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "input_type": "text",
+      "raw": "1-2",
+      "policy_id": "linkedin_jobs_aggressive_v1",
+      "family": "T02",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "reason": "Normative regression T02 (\u00a730); representation, not semantic inference.",
+      "expected": {
+        "properties": [],
+        "annotations": [],
+        "structure": [],
+        "text": "1-2"
+      }
+    },
+    {
+      "id": "T02-2",
+      "requirement": "T02",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "input_type": "text",
+      "raw": "1 - 2 years",
+      "policy_id": "linkedin_jobs_aggressive_v1",
+      "family": "T02",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "reason": "Normative regression T02 (\u00a730); representation, not semantic inference.",
+      "expected": {
+        "properties": [],
+        "annotations": [],
+        "structure": [],
+        "text": "1 - 2 years"
+      }
+    },
+    {
+      "id": "T02-3",
+      "requirement": "T02",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "input_type": "text",
+      "raw": "2500 - 3000",
+      "policy_id": "linkedin_jobs_aggressive_v1",
+      "family": "T02",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "reason": "Normative regression T02 (\u00a730); representation, not semantic inference.",
+      "expected": {
+        "properties": [],
+        "annotations": [],
+        "structure": [],
+        "text": "2500 - 3000"
+      }
+    },
+    {
+      "id": "T02-4",
+      "requirement": "T02",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "input_type": "text",
+      "raw": "10 \u2013 20%",
+      "policy_id": "linkedin_jobs_aggressive_v1",
+      "family": "T02",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "reason": "Normative regression T02 (\u00a730); representation, not semantic inference.",
+      "expected": {
+        "properties": [],
+        "annotations": [],
+        "structure": [],
+        "text": "10 \u2013 20%"
+      }
+    },
+    {
+      "id": "T03",
+      "requirement": "T03",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "input_type": "text",
+      "raw": "List<T>",
+      "policy_id": "linkedin_jobs_aggressive_v1",
+      "family": "T03",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "reason": "Normative regression T03 (\u00a730); representation, not semantic inference.",
+      "expected": {
+        "properties": [],
+        "annotations": [],
+        "structure": [],
+        "text": "List<T>"
+      }
+    },
+    {
+      "id": "T04",
+      "requirement": "T04",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "input_type": "text",
+      "raw": "&lt;b&gt;Python&lt;/b&gt;",
+      "policy_id": "linkedin_jobs_aggressive_v1",
+      "family": "T04",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "reason": "Normative regression T04 (\u00a730); representation, not semantic inference.",
+      "expected": {
+        "properties": [],
+        "annotations": [],
+        "structure": [],
+        "text": "&lt;b&gt;Python&lt;/b&gt;"
+      }
+    },
+    {
+      "id": "T05",
+      "requirement": "T05",
+      "field": "job_description",
+      "source_format": "html_escaped_text",
+      "input_type": "text",
+      "raw": "&lt;b&gt;Python&lt;/b&gt;",
+      "policy_id": "linkedin_jobs_aggressive_v1",
+      "family": "T05",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "reason": "Normative regression T05 (\u00a730); representation, not semantic inference.",
+      "expected": {
+        "properties": [],
+        "annotations": [],
+        "structure": [],
+        "text": "<b>Python</b>"
+      }
+    },
+    {
+      "id": "T06",
+      "requirement": "T06",
+      "field": "job_description",
+      "source_format": "html_escaped_text",
+      "input_type": "text",
+      "raw": "&amp;lt;b&amp;gt;",
+      "policy_id": "linkedin_jobs_aggressive_v1",
+      "family": "T06",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "reason": "Normative regression T06 (\u00a730); representation, not semantic inference.",
+      "expected": {
+        "properties": [],
+        "annotations": [],
+        "structure": [],
+        "text": "&lt;b&gt;"
+      }
+    },
+    {
+      "id": "T07",
+      "requirement": "T07",
+      "field": "job_description",
+      "source_format": "html_fragment",
+      "input_type": "text",
+      "raw": "C<b>++</b>",
+      "policy_id": "linkedin_jobs_aggressive_v1",
+      "family": "T07",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "reason": "Normative regression T07 (\u00a730); representation, not semantic inference.",
+      "expected": {
+        "properties": [],
+        "annotations": [],
+        "structure": [],
+        "text": "C++"
+      }
+    },
+    {
+      "id": "T08",
+      "requirement": "T08",
+      "field": "job_description",
+      "source_format": "html_fragment",
+      "input_type": "text",
+      "raw": "Python<br>AWS",
+      "policy_id": "linkedin_jobs_aggressive_v1",
+      "family": "T08",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "reason": "Normative regression T08 (\u00a730); representation, not semantic inference.",
+      "expected": {
+        "properties": [],
+        "annotations": [],
+        "structure": [],
+        "text": "Python\nAWS"
+      }
+    },
+    {
+      "id": "T09",
+      "requirement": "T09",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "input_type": "text",
+      "raw": "a\u200b\u0301",
+      "policy_id": "linkedin_jobs_aggressive_v1",
+      "family": "T09",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "reason": "Normative regression T09 (\u00a730); representation, not semantic inference.",
+      "expected": {
+        "properties": [
+          "final_nfc"
+        ],
+        "annotations": [],
+        "structure": [],
+        "text": "\u00e1"
+      }
+    },
+    {
+      "id": "T10",
+      "requirement": "T10",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "input_type": "text",
+      "raw": "py\u200bthon",
+      "policy_id": "linkedin_jobs_aggressive_v1",
+      "family": "T10",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "reason": "Normative regression T10 (\u00a730); representation, not semantic inference.",
+      "expected": {
+        "properties": [],
+        "annotations": [],
+        "structure": [],
+        "text": "python"
+      }
+    },
+    {
+      "id": "T11",
+      "requirement": "T11",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "input_type": "text",
+      "raw": "data\u200bscience",
+      "policy_id": "linkedin_jobs_aggressive_v1",
+      "family": "T11",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "reason": "Normative regression T11 (\u00a730); representation, not semantic inference.",
+      "expected": {
+        "properties": [
+          "destructive_edit_attributed"
+        ],
+        "annotations": [],
+        "structure": [],
+        "text": "datascience"
+      }
+    },
+    {
+      "id": "T12",
+      "requirement": "T12",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "input_type": "text",
+      "raw": "a\u200d\u200c\u202e\u00adb",
+      "policy_id": "linkedin_jobs_aggressive_v1",
+      "family": "T12",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "reason": "Normative regression T12 (\u00a730); representation, not semantic inference.",
+      "expected": {
+        "properties": [
+          "recoverable_source",
+          "destructive_edit_attributed"
+        ],
+        "annotations": [],
+        "structure": [],
+        "text": "ab"
+      }
+    },
+    {
+      "id": "T13",
+      "requirement": "T13",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "input_type": "text",
+      "raw": "2\u202f400\u202f000",
+      "policy_id": "linkedin_jobs_aggressive_v1",
+      "family": "T13",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "reason": "Normative regression T13 (\u00a730); representation, not semantic inference.",
+      "expected": {
+        "properties": [],
+        "annotations": [],
+        "structure": [],
+        "text": "2 400 000"
+      }
+    },
+    {
+      "id": "T14",
+      "requirement": "T14",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "input_type": "text",
+      "raw": "  A\t B\r\n\r\n\r\n\r\n  C  ",
+      "policy_id": "linkedin_jobs_aggressive_v1",
+      "family": "T14",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "reason": "Normative regression T14 (\u00a730); representation, not semantic inference.",
+      "expected": {
+        "properties": [],
+        "annotations": [],
+        "structure": [],
+        "text": "A B\n\nC"
+      }
+    },
+    {
+      "id": "T15",
+      "requirement": "T15",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "input_type": "text",
+      "raw": "foo\ud83d\ude80bar",
+      "policy_id": "linkedin_jobs_aggressive_v1",
+      "family": "T15",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "reason": "Normative regression T15 (\u00a730); representation, not semantic inference.",
+      "expected": {
+        "properties": [],
+        "annotations": [],
+        "structure": [],
+        "text": "foo bar"
+      }
+    },
+    {
+      "id": "T16",
+      "requirement": "T16",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "input_type": "text",
+      "raw": "\"pi\u00f1a\ud83c\udf4d\"",
+      "policy_id": "linkedin_jobs_aggressive_v1",
+      "family": "T16",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "reason": "Normative regression T16 (\u00a730); representation, not semantic inference.",
+      "expected": {
+        "properties": [],
+        "annotations": [],
+        "structure": [],
+        "text": "\"pi\u00f1a\""
+      }
+    },
+    {
+      "id": "T17",
+      "requirement": "T17",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "input_type": "text",
+      "raw": "Benefits \u2728",
+      "policy_id": "linkedin_jobs_aggressive_v1",
+      "family": "T17",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "reason": "Normative regression T17 (\u00a730); representation, not semantic inference.",
+      "expected": {
+        "properties": [],
+        "annotations": [],
+        "structure": [],
+        "text": "Benefits"
+      }
+    },
+    {
+      "id": "T18",
+      "requirement": "T18",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "input_type": "text",
+      "raw": "\u274c Visa sponsorship",
+      "policy_id": "linkedin_jobs_aggressive_v1",
+      "family": "T18",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "reason": "Normative regression T18 (\u00a730); representation, not semantic inference.",
+      "expected": {
+        "properties": [],
+        "annotations": [
+          {
+            "kind": "emoji_hint",
+            "value": "cross_mark",
+            "count": 1
+          }
+        ],
+        "structure": [],
+        "text": "[emoji:cross_mark] Visa sponsorship"
+      }
+    },
+    {
+      "id": "T19",
+      "requirement": "T19",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "input_type": "text",
+      "raw": "\ud83c\udde8\ud83c\uddf7",
+      "policy_id": "linkedin_jobs_aggressive_v1",
+      "family": "T19",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "reason": "Normative regression T19 (\u00a730); representation, not semantic inference.",
+      "expected": {
+        "properties": [],
+        "annotations": [
+          {
+            "kind": "emoji_region",
+            "value": "CR",
+            "count": 1
+          }
+        ],
+        "structure": [],
+        "text": "[flag:CR]"
+      }
+    },
+    {
+      "id": "T20",
+      "requirement": "T20",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "input_type": "text",
+      "raw": "[flag:CR]",
+      "policy_id": "linkedin_jobs_aggressive_v1",
+      "family": "T20",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "reason": "Normative regression T20 (\u00a730); representation, not semantic inference.",
+      "expected": {
+        "properties": [
+          "no_generated_annotations"
+        ],
+        "annotations": [],
+        "structure": [],
+        "text": "[flag:CR]"
+      }
+    },
+    {
+      "id": "T21",
+      "requirement": "T21",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "input_type": "text",
+      "raw": "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f",
+      "policy_id": "linkedin_jobs_aggressive_v1",
+      "family": "T21",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "reason": "Normative regression T21 (\u00a730); representation, not semantic inference.",
+      "expected": {
+        "properties": [],
+        "annotations": [
+          {
+            "kind": "emoji_subdivision",
+            "value": "gbeng",
+            "count": 1
+          }
+        ],
+        "structure": [],
+        "text": "[flag-subdivision:gbeng]"
+      }
+    },
+    {
+      "id": "T22",
+      "requirement": "T22",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "input_type": "text",
+      "raw": "1\ufe0f\u20e3 Python",
+      "policy_id": "linkedin_jobs_aggressive_v1",
+      "family": "T22",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "reason": "Normative regression T22 (\u00a730); representation, not semantic inference.",
+      "expected": {
+        "properties": [],
+        "annotations": [],
+        "structure": [
+          {
+            "kind": "list_item",
+            "count": 1,
+            "ordinals": [
+              1
+            ]
+          }
+        ],
+        "text": "1. Python"
+      }
+    },
+    {
+      "id": "T23",
+      "requirement": "T23",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "input_type": "text",
+      "raw": "\ud83d\ude80\u2022 Python",
+      "policy_id": "linkedin_jobs_aggressive_v1",
+      "family": "T23",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "reason": "Normative regression T23 (\u00a730); representation, not semantic inference.",
+      "expected": {
+        "properties": [],
+        "annotations": [],
+        "structure": [
+          {
+            "kind": "list_item",
+            "count": 1
+          }
+        ],
+        "text": "- Python"
+      }
+    },
+    {
+      "id": "T24",
+      "requirement": "T24",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "input_type": "text",
+      "raw": "5.) Chat\n6 - Offer \ud83c\udf89",
+      "policy_id": "linkedin_jobs_aggressive_v1",
+      "family": "T24",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "reason": "Normative regression T24 (\u00a730); representation, not semantic inference.",
+      "expected": {
+        "properties": [],
+        "annotations": [],
+        "structure": [
+          {
+            "kind": "list_item",
+            "count": 2,
+            "ordinals": [
+              5,
+              6
+            ]
+          }
+        ],
+        "text": "5. Chat\n6. Offer"
+      }
+    },
+    {
+      "id": "T25",
+      "requirement": "T25",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "input_type": "text",
+      "raw": "6 - Offer",
+      "policy_id": "linkedin_jobs_aggressive_v1",
+      "family": "T25",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "reason": "Normative regression T25 (\u00a730); representation, not semantic inference.",
+      "expected": {
+        "properties": [],
+        "annotations": [],
+        "structure": [],
+        "text": "6 - Offer"
+      }
+    },
+    {
+      "id": "T26",
+      "requirement": "T26",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "input_type": "text",
+      "raw": "11 \u2192 expected 15",
+      "policy_id": "linkedin_jobs_aggressive_v1",
+      "family": "T26",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "reason": "Normative regression T26 (\u00a730); representation, not semantic inference.",
+      "expected": {
+        "properties": [],
+        "annotations": [],
+        "structure": [],
+        "text": "11 \u2192 expected 15"
+      }
+    },
+    {
+      "id": "T27",
+      "requirement": "T27",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "input_type": "text",
+      "raw": "\u00a9 2026 calendarios\u2122 #AI",
+      "policy_id": "linkedin_jobs_aggressive_v1",
+      "family": "T27",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "reason": "Normative regression T27 (\u00a730); representation, not semantic inference.",
+      "expected": {
+        "properties": [],
+        "annotations": [],
+        "structure": [],
+        "text": "\u00a9 2026 calendarios\u2122 #AI"
+      }
+    },
+    {
+      "id": "T28",
+      "requirement": "T28",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "input_type": "text",
+      "raw": "24\uff0f7",
+      "policy_id": "linkedin_jobs_aggressive_v1",
+      "family": "T28",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "reason": "Normative regression T28 (\u00a730); representation, not semantic inference.",
+      "expected": {
+        "properties": [],
+        "annotations": [],
+        "structure": [],
+        "text": "24/7"
+      }
+    },
+    {
+      "id": "T29",
+      "requirement": "T29",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "input_type": "text",
+      "raw": "SEO \u00af\\_(\u30c4)_/\u00af : (+506) :)",
+      "policy_id": "linkedin_jobs_aggressive_v1",
+      "family": "T29",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "reason": "Normative regression T29 (\u00a730); representation, not semantic inference.",
+      "expected": {
+        "properties": [],
+        "annotations": [],
+        "structure": [],
+        "text": "SEO: (+506) :)"
+      }
+    },
+    {
+      "id": "T30",
+      "requirement": "T30",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "input_type": "text",
+      "raw": "https://example.com/jobs?id=1&utm_source=linkedin jobs+ai@example.com",
+      "policy_id": "linkedin_jobs_aggressive_v1",
+      "family": "T30",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "reason": "Normative regression T30 (\u00a730); representation, not semantic inference.",
+      "expected": {
+        "properties": [],
+        "annotations": [],
+        "structure": [],
+        "text": "https://example.com/jobs?id=1&utm_source=linkedin jobs+ai@example.com"
+      }
+    },
+    {
+      "id": "T31",
+      "requirement": "T31",
+      "field": "job_description",
+      "source_format": "html_fragment",
+      "input_type": "text",
+      "raw": "<pre>    for x in xs:\n        print(x)</pre>",
+      "policy_id": "linkedin_jobs_aggressive_v1",
+      "family": "T31",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "reason": "Normative regression T31 (\u00a730); representation, not semantic inference.",
+      "expected": {
+        "properties": [
+          "recoverable_source"
+        ],
+        "annotations": [],
+        "structure": [
+          {
+            "kind": "code",
+            "count": 1
+          }
+        ],
+        "text": "for x in xs:\nprint(x)"
+      }
+    },
+    {
+      "id": "T32",
+      "requirement": "T32",
+      "field": "job_description",
+      "source_format": "html_fragment",
+      "input_type": "text",
+      "raw": "<table><tr><th>Country</th><th>Salary</th></tr><tr><td>CR</td><td>$5000</td></tr></table>",
+      "policy_id": "linkedin_jobs_aggressive_v1",
+      "family": "T32",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "reason": "Normative regression T32 (\u00a730); representation, not semantic inference.",
+      "expected": {
+        "properties": [],
+        "annotations": [],
+        "structure": [
+          {
+            "kind": "table_cell",
+            "count": 4,
+            "coordinates": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                1
+              ]
+            ]
+          }
+        ],
+        "text": "Country | Salary\nCR | $5000"
+      }
+    },
+    {
+      "id": "T33",
+      "requirement": "T33",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "input_type": "text",
+      "raw": "Jos\u00c3\u00a9",
+      "policy_id": "linkedin_jobs_aggressive_v1",
+      "family": "T33",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "reason": "Normative regression T33 (\u00a730); representation, not semantic inference.",
+      "expected": {
+        "properties": [
+          "encoding_edit_attributed"
+        ],
+        "annotations": [],
+        "structure": [],
+        "text": "Jos\u00e9"
+      }
+    },
+    {
+      "id": "T34",
+      "requirement": "T34",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "input_type": "text",
+      "raw": "Enginner Inteligence aveces",
+      "policy_id": "linkedin_jobs_aggressive_v1",
+      "family": "T34",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "reason": "Normative regression T34 (\u00a730); representation, not semantic inference.",
+      "expected": {
+        "properties": [],
+        "annotations": [],
+        "structure": [],
+        "text": "Enginner Inteligence aveces"
+      }
+    },
+    {
+      "id": "T35-none",
+      "requirement": "T35",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "input_type": "text",
+      "raw": null,
+      "policy_id": "linkedin_jobs_aggressive_v1",
+      "family": "T35",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "reason": "Normative regression T35 (\u00a730); representation, not semantic inference.",
+      "expected": {
+        "properties": [],
+        "annotations": [],
+        "structure": [],
+        "error": "INVALID_TYPE"
+      }
+    },
+    {
+      "id": "T35-bytes",
+      "requirement": "T35",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "input_type": "bytes_hex",
+      "raw": "507974686f6e",
+      "policy_id": "linkedin_jobs_aggressive_v1",
+      "family": "T35",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "reason": "Normative regression T35 (\u00a730); representation, not semantic inference.",
+      "expected": {
+        "properties": [],
+        "annotations": [],
+        "structure": [],
+        "error": "INVALID_TYPE"
+      }
+    },
+    {
+      "id": "T35-field",
+      "requirement": "T35",
+      "field": "invalid",
+      "source_format": "plain_text",
+      "input_type": "text",
+      "raw": "Python",
+      "policy_id": "linkedin_jobs_aggressive_v1",
+      "family": "T35",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "reason": "Normative regression T35 (\u00a730); representation, not semantic inference.",
+      "expected": {
+        "properties": [],
+        "annotations": [],
+        "structure": [],
+        "error": "INVALID_FIELD"
+      }
+    },
+    {
+      "id": "T36",
+      "requirement": "T36",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "input_type": "text",
+      "raw": "\ud800",
+      "policy_id": "linkedin_jobs_aggressive_v1",
+      "family": "T36",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "reason": "Normative regression T36 (\u00a730); representation, not semantic inference.",
+      "expected": {
+        "properties": [],
+        "annotations": [],
+        "structure": [],
+        "error": "INVALID_UNICODE"
+      }
+    },
+    {
+      "id": "T37",
+      "requirement": "T37",
+      "field": "job_title",
+      "source_format": "plain_text",
+      "input_type": "text",
+      "raw": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "policy_id": "linkedin_jobs_aggressive_v1",
+      "family": "T37",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "reason": "Normative regression T37 (\u00a730); representation, not semantic inference.",
+      "expected": {
+        "properties": [],
+        "annotations": [],
+        "structure": [],
+        "error": "INPUT_LIMIT_EXCEEDED"
+      }
+    },
+    {
+      "id": "T38",
+      "requirement": "T38",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "input_type": "text",
+      "raw": "\ud83d\ude80\u2022 Python",
+      "policy_id": "linkedin_jobs_aggressive_v1",
+      "family": "T38",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "reason": "Normative regression T38 (\u00a730); representation, not semantic inference.",
+      "expected": {
+        "properties": [
+          "typed_idempotence_full_equality"
+        ],
+        "annotations": [],
+        "structure": []
+      }
+    },
+    {
+      "id": "T39",
+      "requirement": "T39",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "input_type": "text",
+      "raw": "Jos\u00c3\u00a9 \ud83c\udde8\ud83c\uddf7",
+      "policy_id": "linkedin_jobs_aggressive_v1",
+      "family": "T39",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "reason": "Normative regression T39 (\u00a730); representation, not semantic inference.",
+      "expected": {
+        "properties": [
+          "canonical_serialization_replay"
+        ],
+        "annotations": [],
+        "structure": []
+      }
+    },
+    {
+      "id": "T40",
+      "requirement": "T40",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "input_type": "text",
+      "raw": "\ue000",
+      "policy_id": "linkedin_jobs_aggressive_v1",
+      "family": "T40",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "reason": "Normative regression T40 (\u00a730); representation, not semantic inference.",
+      "expected": {
+        "properties": [
+          "unknown_symbol_preserved"
+        ],
+        "annotations": [],
+        "structure": [],
+        "text": "\ue000"
+      }
+    }
+  ]
+}

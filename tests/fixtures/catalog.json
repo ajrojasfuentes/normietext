@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0.0",
+  "configuration": {
+    "repository_path": "src/normietext/data/default_policy.json",
+    "sha256": "94913d93fb899bd2773738b87b4ff5e8016fef0da4cf6318831b3ff829281b64"
+  },
+  "files": {
+    "integral/complex_multilingual_ai_role_001/fixture.json": "2cbdd0c13f16fd54978cf1ebb80b3eeaea3f9205cc4ffedb1fe4e59a82cbf77d",
+    "integral/complex_multilingual_ai_role_001/job_description.expected.txt": "2b6b87d4138bb6441e7e4dc9a42739f9b53b2f303a6bddd001a761134d56b73e",
+    "integral/complex_multilingual_ai_role_001/job_description.raw.txt": "5be2345afe216ef80e29a2f761fee5cfcceaa4b9967ca0930cf263b02c9a749a",
+    "integral/complex_multilingual_ai_role_001/job_title.expected.txt": "f09bbbbcec19a6d29eb673bcb27cddb6ea69765451ba760bafc063a162966b25",
+    "integral/complex_multilingual_ai_role_001/job_title.raw.txt": "5a2af3c0c5fa97fcf25008ab8c013df3e5eff148d41c304481bd51b50e603b30",
+    "integral/schema.json": "d9105fb312772237cba666812c95cc40748e5522d78a39929073d3b649a2e4d5",
+    "records/schema.json": "60ded10c5ca5f9ffd750b4865a37088e71298990126ad992368873476fab1177",
+    "records/six_present.json": "dfd10e68b9a96e1060ab32e405e38c33c17c7fdac2e45619b20ee828b7600266",
+    "regression/cases.json": "fecf43b5a5f4e3e15e2349c25cb342771659bbb87c01d45d8b52aa35d51237be",
+    "regression/schema.json": "0581ab83826b0c9da525f8af125c36955c4bd7a350719a9cbcaa9cfc2fa4db59",
+    "review_inventory.json": "8c7b59d5f3539f4467eb98c8c8118eb108aa7245da9f3fa57b25d45b4c8d68b4",
+    "review_inventory.schema.json": "e70a96ad4e3918aca1015cf746d364cd52d4815913a0093d74f3bf7ee119837f",
+    "supplemental/cases.json": "e555631c386f9fcee8617acb337208c67a2004874fb8e135e6acd777ef13af26",
+    "supplemental/schema.json": "345451386b99261fc4fb0bdde1c0b48ecb6c57dd91d9b6dfca038bec0a7bb779"
+  }
+}

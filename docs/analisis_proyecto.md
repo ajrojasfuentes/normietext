@@ -5,6 +5,9 @@ Referencia normativa: [especificación 2.0](normietext_v2.0_especificacion.md), 
 completa, incluidos sus 32 capítulos y los apéndices A–D.
 Audiencia: responsables del núcleo, integradores y mantenedores.
 
+> Registro histórico del bootstrap. El [estado actual F0/F1](revisiones/cierre_fases_0_1.md)
+> y [ADR-0001](decisions/0001-contratos-fase-1.md) documentan los cambios posteriores.
+
 ## 1. Estado encontrado
 
 El repositorio estaba en `main`, con remoto

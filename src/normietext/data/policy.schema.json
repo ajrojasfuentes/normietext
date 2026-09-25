@@ -1,0 +1,260 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "policy_id": {
+      "const": "linkedin_jobs_aggressive_v1"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "normalization_version": {
+      "const": "1.0.0"
+    },
+    "input": {
+      "type": "object",
+      "properties": {
+        "default_format": {
+          "const": "plain_text"
+        },
+        "auto_detect_html": {
+          "const": false
+        },
+        "require_recoverable_source": {
+          "const": true
+        },
+        "reject_surrogates": {
+          "const": true
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "encoding": {
+      "type": "object",
+      "properties": {
+        "operation": {
+          "const": "fix_encoding"
+        },
+        "restore_byte_a0": {
+          "const": false
+        },
+        "replace_lossy_sequences": {
+          "const": false
+        },
+        "decode_inconsistent_utf8": {
+          "const": true
+        },
+        "fix_c1_controls": {
+          "const": true
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "unicode": {
+      "type": "object",
+      "properties": {
+        "normalization": {
+          "const": "NFC"
+        },
+        "final_normalization": {
+          "const": true
+        },
+        "remove_cf": {
+          "const": true
+        },
+        "remove_default_ignorables": {
+          "const": true
+        },
+        "remove_cc_except_lf": {
+          "const": true
+        },
+        "remove_braille_blank": {
+          "const": true
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "emoji": {
+      "type": "object",
+      "properties": {
+        "default_action": {
+          "const": "remove"
+        },
+        "region_flags": {
+          "const": "token_and_annotation"
+        },
+        "subdivision_flags": {
+          "const": "token_and_annotation"
+        },
+        "hints": {
+          "const": [
+            "money_bag",
+            "round_pushpin",
+            "warning",
+            "check_mark_button",
+            "cross_mark"
+          ]
+        },
+        "protected_text_symbols": {
+          "const": [
+            "copyright",
+            "registered",
+            "trademark"
+          ]
+        },
+        "keycaps": {
+          "const": "preserve_base_or_list_ordinal"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "whitespace": {
+      "type": "object",
+      "properties": {
+        "horizontal": {
+          "const": "ascii_space"
+        },
+        "collapse_runs": {
+          "const": true
+        },
+        "strip_each_line": {
+          "const": true
+        },
+        "preserve_indentation": {
+          "const": false
+        },
+        "max_blank_lines": {
+          "const": 1
+        },
+        "strip_field": {
+          "const": true
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "punctuation": {
+      "type": "object",
+      "properties": {
+        "global_dash_folding": {
+          "const": false
+        },
+        "global_quote_folding": {
+          "const": false
+        },
+        "fullwidth_solidus_in_ordinary_text": {
+          "const": true
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "structure": {
+      "type": "object",
+      "properties": {
+        "plain_text_lists_in": {
+          "const": [
+            "job_description",
+            "job_criteria_list"
+          ]
+        },
+        "preserve_ordinals": {
+          "const": true
+        },
+        "metadata_before_spacing": {
+          "const": true
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "output": {
+      "type": "object",
+      "properties": {
+        "compact_fields": {
+          "const": [
+            "job_title",
+            "job_type",
+            "seniority",
+            "raw_location"
+          ]
+        },
+        "multiline_fields": {
+          "const": [
+            "job_description",
+            "job_criteria_list"
+          ]
+        },
+        "generated_tokens_require_annotations": {
+          "const": true
+        },
+        "trace_snapshots": {
+          "const": false
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "limits": {
+      "type": "object",
+      "properties": {
+        "job_title": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "job_description": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "job_criteria_list": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "job_type": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "seniority": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "raw_location": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "record": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "html_nodes": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "structural_depth": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "output_floor": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "max_expansion_factor": {
+          "type": "integer",
+          "minimum": 32
+        },
+        "regex_timeout_ms": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  "required": [],
+  "additionalProperties": false
+}

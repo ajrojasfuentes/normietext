@@ -1,0 +1,110 @@
+{
+  "schema_version": "1.0.0",
+  "id": "complex_multilingual_ai_role_001",
+  "origin": "synthetic",
+  "family": "complex_multilingual_ai_role",
+  "split": "validation",
+  "execution_status": "awaiting_normalizer",
+  "policy_id": "linkedin_jobs_aggressive_v1",
+  "fence_final_lf": "excluded_as_markdown_delimiter",
+  "fields": {
+    "job_title": {
+      "state": "present",
+      "source_format": "plain_text",
+      "raw_file": "job_title.raw.txt",
+      "expected_file": "job_title.expected.txt"
+    },
+    "job_description": {
+      "state": "present",
+      "source_format": "plain_text",
+      "raw_file": "job_description.raw.txt",
+      "expected_file": "job_description.expected.txt"
+    },
+    "job_criteria_list": {
+      "state": "missing"
+    },
+    "job_type": {
+      "state": "missing"
+    },
+    "seniority": {
+      "state": "missing"
+    },
+    "raw_location": {
+      "state": "missing"
+    }
+  },
+  "files": {
+    "job_title.raw.txt": {
+      "sha256": "5a2af3c0c5fa97fcf25008ab8c013df3e5eff148d41c304481bd51b50e603b30",
+      "codepoints": 127,
+      "bytes": 136,
+      "spec_section": "31.2"
+    },
+    "job_description.raw.txt": {
+      "sha256": "5be2345afe216ef80e29a2f761fee5cfcceaa4b9967ca0930cf263b02c9a749a",
+      "codepoints": 6976,
+      "bytes": 7299,
+      "spec_section": "31.3"
+    },
+    "job_title.expected.txt": {
+      "sha256": "f09bbbbcec19a6d29eb673bcb27cddb6ea69765451ba760bafc063a162966b25",
+      "codepoints": 120,
+      "bytes": 123,
+      "spec_section": "31.4"
+    },
+    "job_description.expected.txt": {
+      "sha256": "2b6b87d4138bb6441e7e4dc9a42739f9b53b2f303a6bddd001a761134d56b73e",
+      "codepoints": 6947,
+      "bytes": 7105,
+      "spec_section": "31.5"
+    }
+  },
+  "expected_annotations": [
+    {
+      "kind": "emoji_region",
+      "value": "CR",
+      "count": 2
+    },
+    {
+      "kind": "emoji_hint",
+      "value": "warning",
+      "count": 1
+    },
+    {
+      "kind": "emoji_hint",
+      "value": "money_bag",
+      "count": 1
+    },
+    {
+      "kind": "emoji_hint",
+      "value": "round_pushpin",
+      "count": 1
+    }
+  ],
+  "expected_lists": [
+    {
+      "label": "responsibilities",
+      "count": 11
+    },
+    {
+      "label": "requirements",
+      "count": 8
+    },
+    {
+      "label": "benefits",
+      "count": 11
+    },
+    {
+      "label": "locations",
+      "count": 7
+    },
+    {
+      "label": "interviews",
+      "count": 6
+    },
+    {
+      "label": "last_things",
+      "count": 10
+    }
+  ]
+}

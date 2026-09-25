@@ -32,7 +32,16 @@ Repository = "https://github.com/ajrojasfuentes/normietext"
 Issues = "https://github.com/ajrojasfuentes/normietext/issues"
 
 [dependency-groups]
-dev = ["hypothesis", "mypy", "pytest", "ruff==0.16.8", "twine"]
+dev = [
+    "hypothesis",
+    "jsonschema>=4.26.0",
+    "mypy",
+    "pytest",
+    "ruff==0.16.8",
+    "twine",
+    "types-jsonschema>=4.26.0.20260518",
+    "types-regex>=2026.9.10.20260911",
+]
 
 [tool.uv]
 required-version = "==0.12.18"

@@ -1,0 +1,83 @@
+{
+  "authority": "normietext specification",
+  "entries": [
+    {
+      "id": "money_bag",
+      "sequence": "💰",
+      "token": "[emoji:money_bag]"
+    },
+    {
+      "id": "money_bag",
+      "sequence": "💰︎",
+      "token": "[emoji:money_bag]"
+    },
+    {
+      "id": "money_bag",
+      "sequence": "💰️",
+      "token": "[emoji:money_bag]"
+    },
+    {
+      "id": "round_pushpin",
+      "sequence": "📍",
+      "token": "[emoji:round_pushpin]"
+    },
+    {
+      "id": "round_pushpin",
+      "sequence": "📍︎",
+      "token": "[emoji:round_pushpin]"
+    },
+    {
+      "id": "round_pushpin",
+      "sequence": "📍️",
+      "token": "[emoji:round_pushpin]"
+    },
+    {
+      "id": "warning",
+      "sequence": "⚠",
+      "token": "[emoji:warning]"
+    },
+    {
+      "id": "warning",
+      "sequence": "⚠︎",
+      "token": "[emoji:warning]"
+    },
+    {
+      "id": "warning",
+      "sequence": "⚠️",
+      "token": "[emoji:warning]"
+    },
+    {
+      "id": "check_mark_button",
+      "sequence": "✅",
+      "token": "[emoji:check_mark_button]"
+    },
+    {
+      "id": "check_mark_button",
+      "sequence": "✅︎",
+      "token": "[emoji:check_mark_button]"
+    },
+    {
+      "id": "check_mark_button",
+      "sequence": "✅️",
+      "token": "[emoji:check_mark_button]"
+    },
+    {
+      "id": "cross_mark",
+      "sequence": "❌",
+      "token": "[emoji:cross_mark]"
+    },
+    {
+      "id": "cross_mark",
+      "sequence": "❌︎",
+      "token": "[emoji:cross_mark]"
+    },
+    {
+      "id": "cross_mark",
+      "sequence": "❌️",
+      "token": "[emoji:cross_mark]"
+    }
+  ],
+  "license": "MIT",
+  "schema_version": "1.0.0",
+  "table_version": "1.0.0"
+}

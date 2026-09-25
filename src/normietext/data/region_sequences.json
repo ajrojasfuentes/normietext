@@ -1,0 +1,1580 @@
+{
+  "authority": "emoji/2.16.0",
+  "entries": [
+    {
+      "code": "AC",
+      "kind": "region",
+      "sequence": "🇦🇨",
+      "token": "[flag:AC]"
+    },
+    {
+      "code": "AD",
+      "kind": "region",
+      "sequence": "🇦🇩",
+      "token": "[flag:AD]"
+    },
+    {
+      "code": "AE",
+      "kind": "region",
+      "sequence": "🇦🇪",
+      "token": "[flag:AE]"
+    },
+    {
+      "code": "AF",
+      "kind": "region",
+      "sequence": "🇦🇫",
+      "token": "[flag:AF]"
+    },
+    {
+      "code": "AG",
+      "kind": "region",
+      "sequence": "🇦🇬",
+      "token": "[flag:AG]"
+    },
+    {
+      "code": "AI",
+      "kind": "region",
+      "sequence": "🇦🇮",
+      "token": "[flag:AI]"
+    },
+    {
+      "code": "AL",
+      "kind": "region",
+      "sequence": "🇦🇱",
+      "token": "[flag:AL]"
+    },
+    {
+      "code": "AM",
+      "kind": "region",
+      "sequence": "🇦🇲",
+      "token": "[flag:AM]"
+    },
+    {
+      "code": "AO",
+      "kind": "region",
+      "sequence": "🇦🇴",
+      "token": "[flag:AO]"
+    },
+    {
+      "code": "AQ",
+      "kind": "region",
+      "sequence": "🇦🇶",
+      "token": "[flag:AQ]"
+    },
+    {
+      "code": "AR",
+      "kind": "region",
+      "sequence": "🇦🇷",
+      "token": "[flag:AR]"
+    },
+    {
+      "code": "AS",
+      "kind": "region",
+      "sequence": "🇦🇸",
+      "token": "[flag:AS]"
+    },
+    {
+      "code": "AT",
+      "kind": "region",
+      "sequence": "🇦🇹",
+      "token": "[flag:AT]"
+    },
+    {
+      "code": "AU",
+      "kind": "region",
+      "sequence": "🇦🇺",
+      "token": "[flag:AU]"
+    },
+    {
+      "code": "AW",
+      "kind": "region",
+      "sequence": "🇦🇼",
+      "token": "[flag:AW]"
+    },
+    {
+      "code": "AX",
+      "kind": "region",
+      "sequence": "🇦🇽",
+      "token": "[flag:AX]"
+    },
+    {
+      "code": "AZ",
+      "kind": "region",
+      "sequence": "🇦🇿",
+      "token": "[flag:AZ]"
+    },
+    {
+      "code": "BA",
+      "kind": "region",
+      "sequence": "🇧🇦",
+      "token": "[flag:BA]"
+    },
+    {
+      "code": "BB",
+      "kind": "region",
+      "sequence": "🇧🇧",
+      "token": "[flag:BB]"
+    },
+    {
+      "code": "BD",
+      "kind": "region",
+      "sequence": "🇧🇩",
+      "token": "[flag:BD]"
+    },
+    {
+      "code": "BE",
+      "kind": "region",
+      "sequence": "🇧🇪",
+      "token": "[flag:BE]"
+    },
+    {
+      "code": "BF",
+      "kind": "region",
+      "sequence": "🇧🇫",
+      "token": "[flag:BF]"
+    },
+    {
+      "code": "BG",
+      "kind": "region",
+      "sequence": "🇧🇬",
+      "token": "[flag:BG]"
+    },
+    {
+      "code": "BH",
+      "kind": "region",
+      "sequence": "🇧🇭",
+      "token": "[flag:BH]"
+    },
+    {
+      "code": "BI",
+      "kind": "region",
+      "sequence": "🇧🇮",
+      "token": "[flag:BI]"
+    },
+    {
+      "code": "BJ",
+      "kind": "region",
+      "sequence": "🇧🇯",
+      "token": "[flag:BJ]"
+    },
+    {
+      "code": "BL",
+      "kind": "region",
+      "sequence": "🇧🇱",
+      "token": "[flag:BL]"
+    },
+    {
+      "code": "BM",
+      "kind": "region",
+      "sequence": "🇧🇲",
+      "token": "[flag:BM]"
+    },
+    {
+      "code": "BN",
+      "kind": "region",
+      "sequence": "🇧🇳",
+      "token": "[flag:BN]"
+    },
+    {
+      "code": "BO",
+      "kind": "region",
+      "sequence": "🇧🇴",
+      "token": "[flag:BO]"
+    },
+    {
+      "code": "BQ",
+      "kind": "region",
+      "sequence": "🇧🇶",
+      "token": "[flag:BQ]"
+    },
+    {
+      "code": "BR",
+      "kind": "region",
+      "sequence": "🇧🇷",
+      "token": "[flag:BR]"
+    },
+    {
+      "code": "BS",
+      "kind": "region",
+      "sequence": "🇧🇸",
+      "token": "[flag:BS]"
+    },
+    {
+      "code": "BT",
+      "kind": "region",
+      "sequence": "🇧🇹",
+      "token": "[flag:BT]"
+    },
+    {
+      "code": "BV",
+      "kind": "region",
+      "sequence": "🇧🇻",
+      "token": "[flag:BV]"
+    },
+    {
+      "code": "BW",
+      "kind": "region",
+      "sequence": "🇧🇼",
+      "token": "[flag:BW]"
+    },
+    {
+      "code": "BY",
+      "kind": "region",
+      "sequence": "🇧🇾",
+      "token": "[flag:BY]"
+    },
+    {
+      "code": "BZ",
+      "kind": "region",
+      "sequence": "🇧🇿",
+      "token": "[flag:BZ]"
+    },
+    {
+      "code": "CA",
+      "kind": "region",
+      "sequence": "🇨🇦",
+      "token": "[flag:CA]"
+    },
+    {
+      "code": "CC",
+      "kind": "region",
+      "sequence": "🇨🇨",
+      "token": "[flag:CC]"
+    },
+    {
+      "code": "CD",
+      "kind": "region",
+      "sequence": "🇨🇩",
+      "token": "[flag:CD]"
+    },
+    {
+      "code": "CF",
+      "kind": "region",
+      "sequence": "🇨🇫",
+      "token": "[flag:CF]"
+    },
+    {
+      "code": "CG",
+      "kind": "region",
+      "sequence": "🇨🇬",
+      "token": "[flag:CG]"
+    },
+    {
+      "code": "CH",
+      "kind": "region",
+      "sequence": "🇨🇭",
+      "token": "[flag:CH]"
+    },
+    {
+      "code": "CI",
+      "kind": "region",
+      "sequence": "🇨🇮",
+      "token": "[flag:CI]"
+    },
+    {
+      "code": "CK",
+      "kind": "region",
+      "sequence": "🇨🇰",
+      "token": "[flag:CK]"
+    },
+    {
+      "code": "CL",
+      "kind": "region",
+      "sequence": "🇨🇱",
+      "token": "[flag:CL]"
+    },
+    {
+      "code": "CM",
+      "kind": "region",
+      "sequence": "🇨🇲",
+      "token": "[flag:CM]"
+    },
+    {
+      "code": "CN",
+      "kind": "region",
+      "sequence": "🇨🇳",
+      "token": "[flag:CN]"
+    },
+    {
+      "code": "CO",
+      "kind": "region",
+      "sequence": "🇨🇴",
+      "token": "[flag:CO]"
+    },
+    {
+      "code": "CP",
+      "kind": "region",
+      "sequence": "🇨🇵",
+      "token": "[flag:CP]"
+    },
+    {
+      "code": "CQ",
+      "kind": "region",
+      "sequence": "🇨🇶",
+      "token": "[flag:CQ]"
+    },
+    {
+      "code": "CR",
+      "kind": "region",
+      "sequence": "🇨🇷",
+      "token": "[flag:CR]"
+    },
+    {
+      "code": "CU",
+      "kind": "region",
+      "sequence": "🇨🇺",
+      "token": "[flag:CU]"
+    },
+    {
+      "code": "CV",
+      "kind": "region",
+      "sequence": "🇨🇻",
+      "token": "[flag:CV]"
+    },
+    {
+      "code": "CW",
+      "kind": "region",
+      "sequence": "🇨🇼",
+      "token": "[flag:CW]"
+    },
+    {
+      "code": "CX",
+      "kind": "region",
+      "sequence": "🇨🇽",
+      "token": "[flag:CX]"
+    },
+    {
+      "code": "CY",
+      "kind": "region",
+      "sequence": "🇨🇾",
+      "token": "[flag:CY]"
+    },
+    {
+      "code": "CZ",
+      "kind": "region",
+      "sequence": "🇨🇿",
+      "token": "[flag:CZ]"
+    },
+    {
+      "code": "DE",
+      "kind": "region",
+      "sequence": "🇩🇪",
+      "token": "[flag:DE]"
+    },
+    {
+      "code": "DG",
+      "kind": "region",
+      "sequence": "🇩🇬",
+      "token": "[flag:DG]"
+    },
+    {
+      "code": "DJ",
+      "kind": "region",
+      "sequence": "🇩🇯",
+      "token": "[flag:DJ]"
+    },
+    {
+      "code": "DK",
+      "kind": "region",
+      "sequence": "🇩🇰",
+      "token": "[flag:DK]"
+    },
+    {
+      "code": "DM",
+      "kind": "region",
+      "sequence": "🇩🇲",
+      "token": "[flag:DM]"
+    },
+    {
+      "code": "DO",
+      "kind": "region",
+      "sequence": "🇩🇴",
+      "token": "[flag:DO]"
+    },
+    {
+      "code": "DZ",
+      "kind": "region",
+      "sequence": "🇩🇿",
+      "token": "[flag:DZ]"
+    },
+    {
+      "code": "EA",
+      "kind": "region",
+      "sequence": "🇪🇦",
+      "token": "[flag:EA]"
+    },
+    {
+      "code": "EC",
+      "kind": "region",
+      "sequence": "🇪🇨",
+      "token": "[flag:EC]"
+    },
+    {
+      "code": "EE",
+      "kind": "region",
+      "sequence": "🇪🇪",
+      "token": "[flag:EE]"
+    },
+    {
+      "code": "EG",
+      "kind": "region",
+      "sequence": "🇪🇬",
+      "token": "[flag:EG]"
+    },
+    {
+      "code": "EH",
+      "kind": "region",
+      "sequence": "🇪🇭",
+      "token": "[flag:EH]"
+    },
+    {
+      "code": "ER",
+      "kind": "region",
+      "sequence": "🇪🇷",
+      "token": "[flag:ER]"
+    },
+    {
+      "code": "ES",
+      "kind": "region",
+      "sequence": "🇪🇸",
+      "token": "[flag:ES]"
+    },
+    {
+      "code": "ET",
+      "kind": "region",
+      "sequence": "🇪🇹",
+      "token": "[flag:ET]"
+    },
+    {
+      "code": "EU",
+      "kind": "region",
+      "sequence": "🇪🇺",
+      "token": "[flag:EU]"
+    },
+    {
+      "code": "FI",
+      "kind": "region",
+      "sequence": "🇫🇮",
+      "token": "[flag:FI]"
+    },
+    {
+      "code": "FJ",
+      "kind": "region",
+      "sequence": "🇫🇯",
+      "token": "[flag:FJ]"
+    },
+    {
+      "code": "FK",
+      "kind": "region",
+      "sequence": "🇫🇰",
+      "token": "[flag:FK]"
+    },
+    {
+      "code": "FM",
+      "kind": "region",
+      "sequence": "🇫🇲",
+      "token": "[flag:FM]"
+    },
+    {
+      "code": "FO",
+      "kind": "region",
+      "sequence": "🇫🇴",
+      "token": "[flag:FO]"
+    },
+    {
+      "code": "FR",
+      "kind": "region",
+      "sequence": "🇫🇷",
+      "token": "[flag:FR]"
+    },
+    {
+      "code": "GA",
+      "kind": "region",
+      "sequence": "🇬🇦",
+      "token": "[flag:GA]"
+    },
+    {
+      "code": "GB",
+      "kind": "region",
+      "sequence": "🇬🇧",
+      "token": "[flag:GB]"
+    },
+    {
+      "code": "GD",
+      "kind": "region",
+      "sequence": "🇬🇩",
+      "token": "[flag:GD]"
+    },
+    {
+      "code": "GE",
+      "kind": "region",
+      "sequence": "🇬🇪",
+      "token": "[flag:GE]"
+    },
+    {
+      "code": "GF",
+      "kind": "region",
+      "sequence": "🇬🇫",
+      "token": "[flag:GF]"
+    },
+    {
+      "code": "GG",
+      "kind": "region",
+      "sequence": "🇬🇬",
+      "token": "[flag:GG]"
+    },
+    {
+      "code": "GH",
+      "kind": "region",
+      "sequence": "🇬🇭",
+      "token": "[flag:GH]"
+    },
+    {
+      "code": "GI",
+      "kind": "region",
+      "sequence": "🇬🇮",
+      "token": "[flag:GI]"
+    },
+    {
+      "code": "GL",
+      "kind": "region",
+      "sequence": "🇬🇱",
+      "token": "[flag:GL]"
+    },
+    {
+      "code": "GM",
+      "kind": "region",
+      "sequence": "🇬🇲",
+      "token": "[flag:GM]"
+    },
+    {
+      "code": "GN",
+      "kind": "region",
+      "sequence": "🇬🇳",
+      "token": "[flag:GN]"
+    },
+    {
+      "code": "GP",
+      "kind": "region",
+      "sequence": "🇬🇵",
+      "token": "[flag:GP]"
+    },
+    {
+      "code": "GQ",
+      "kind": "region",
+      "sequence": "🇬🇶",
+      "token": "[flag:GQ]"
+    },
+    {
+      "code": "GR",
+      "kind": "region",
+      "sequence": "🇬🇷",
+      "token": "[flag:GR]"
+    },
+    {
+      "code": "GS",
+      "kind": "region",
+      "sequence": "🇬🇸",
+      "token": "[flag:GS]"
+    },
+    {
+      "code": "GT",
+      "kind": "region",
+      "sequence": "🇬🇹",
+      "token": "[flag:GT]"
+    },
+    {
+      "code": "GU",
+      "kind": "region",
+      "sequence": "🇬🇺",
+      "token": "[flag:GU]"
+    },
+    {
+      "code": "GW",
+      "kind": "region",
+      "sequence": "🇬🇼",
+      "token": "[flag:GW]"
+    },
+    {
+      "code": "GY",
+      "kind": "region",
+      "sequence": "🇬🇾",
+      "token": "[flag:GY]"
+    },
+    {
+      "code": "HK",
+      "kind": "region",
+      "sequence": "🇭🇰",
+      "token": "[flag:HK]"
+    },
+    {
+      "code": "HM",
+      "kind": "region",
+      "sequence": "🇭🇲",
+      "token": "[flag:HM]"
+    },
+    {
+      "code": "HN",
+      "kind": "region",
+      "sequence": "🇭🇳",
+      "token": "[flag:HN]"
+    },
+    {
+      "code": "HR",
+      "kind": "region",
+      "sequence": "🇭🇷",
+      "token": "[flag:HR]"
+    },
+    {
+      "code": "HT",
+      "kind": "region",
+      "sequence": "🇭🇹",
+      "token": "[flag:HT]"
+    },
+    {
+      "code": "HU",
+      "kind": "region",
+      "sequence": "🇭🇺",
+      "token": "[flag:HU]"
+    },
+    {
+      "code": "IC",
+      "kind": "region",
+      "sequence": "🇮🇨",
+      "token": "[flag:IC]"
+    },
+    {
+      "code": "ID",
+      "kind": "region",
+      "sequence": "🇮🇩",
+      "token": "[flag:ID]"
+    },
+    {
+      "code": "IE",
+      "kind": "region",
+      "sequence": "🇮🇪",
+      "token": "[flag:IE]"
+    },
+    {
+      "code": "IL",
+      "kind": "region",
+      "sequence": "🇮🇱",
+      "token": "[flag:IL]"
+    },
+    {
+      "code": "IM",
+      "kind": "region",
+      "sequence": "🇮🇲",
+      "token": "[flag:IM]"
+    },
+    {
+      "code": "IN",
+      "kind": "region",
+      "sequence": "🇮🇳",
+      "token": "[flag:IN]"
+    },
+    {
+      "code": "IO",
+      "kind": "region",
+      "sequence": "🇮🇴",
+      "token": "[flag:IO]"
+    },
+    {
+      "code": "IQ",
+      "kind": "region",
+      "sequence": "🇮🇶",
+      "token": "[flag:IQ]"
+    },
+    {
+      "code": "IR",
+      "kind": "region",
+      "sequence": "🇮🇷",
+      "token": "[flag:IR]"
+    },
+    {
+      "code": "IS",
+      "kind": "region",
+      "sequence": "🇮🇸",
+      "token": "[flag:IS]"
+    },
+    {
+      "code": "IT",
+      "kind": "region",
+      "sequence": "🇮🇹",
+      "token": "[flag:IT]"
+    },
+    {
+      "code": "JE",
+      "kind": "region",
+      "sequence": "🇯🇪",
+      "token": "[flag:JE]"
+    },
+    {
+      "code": "JM",
+      "kind": "region",
+      "sequence": "🇯🇲",
+      "token": "[flag:JM]"
+    },
+    {
+      "code": "JO",
+      "kind": "region",
+      "sequence": "🇯🇴",
+      "token": "[flag:JO]"
+    },
+    {
+      "code": "JP",
+      "kind": "region",
+      "sequence": "🇯🇵",
+      "token": "[flag:JP]"
+    },
+    {
+      "code": "KE",
+      "kind": "region",
+      "sequence": "🇰🇪",
+      "token": "[flag:KE]"
+    },
+    {
+      "code": "KG",
+      "kind": "region",
+      "sequence": "🇰🇬",
+      "token": "[flag:KG]"
+    },
+    {
+      "code": "KH",
+      "kind": "region",
+      "sequence": "🇰🇭",
+      "token": "[flag:KH]"
+    },
+    {
+      "code": "KI",
+      "kind": "region",
+      "sequence": "🇰🇮",
+      "token": "[flag:KI]"
+    },
+    {
+      "code": "KM",
+      "kind": "region",
+      "sequence": "🇰🇲",
+      "token": "[flag:KM]"
+    },
+    {
+      "code": "KN",
+      "kind": "region",
+      "sequence": "🇰🇳",
+      "token": "[flag:KN]"
+    },
+    {
+      "code": "KP",
+      "kind": "region",
+      "sequence": "🇰🇵",
+      "token": "[flag:KP]"
+    },
+    {
+      "code": "KR",
+      "kind": "region",
+      "sequence": "🇰🇷",
+      "token": "[flag:KR]"
+    },
+    {
+      "code": "KW",
+      "kind": "region",
+      "sequence": "🇰🇼",
+      "token": "[flag:KW]"
+    },
+    {
+      "code": "KY",
+      "kind": "region",
+      "sequence": "🇰🇾",
+      "token": "[flag:KY]"
+    },
+    {
+      "code": "KZ",
+      "kind": "region",
+      "sequence": "🇰🇿",
+      "token": "[flag:KZ]"
+    },
+    {
+      "code": "LA",
+      "kind": "region",
+      "sequence": "🇱🇦",
+      "token": "[flag:LA]"
+    },
+    {
+      "code": "LB",
+      "kind": "region",
+      "sequence": "🇱🇧",
+      "token": "[flag:LB]"
+    },
+    {
+      "code": "LC",
+      "kind": "region",
+      "sequence": "🇱🇨",
+      "token": "[flag:LC]"
+    },
+    {
+      "code": "LI",
+      "kind": "region",
+      "sequence": "🇱🇮",
+      "token": "[flag:LI]"
+    },
+    {
+      "code": "LK",
+      "kind": "region",
+      "sequence": "🇱🇰",
+      "token": "[flag:LK]"
+    },
+    {
+      "code": "LR",
+      "kind": "region",
+      "sequence": "🇱🇷",
+      "token": "[flag:LR]"
+    },
+    {
+      "code": "LS",
+      "kind": "region",
+      "sequence": "🇱🇸",
+      "token": "[flag:LS]"
+    },
+    {
+      "code": "LT",
+      "kind": "region",
+      "sequence": "🇱🇹",
+      "token": "[flag:LT]"
+    },
+    {
+      "code": "LU",
+      "kind": "region",
+      "sequence": "🇱🇺",
+      "token": "[flag:LU]"
+    },
+    {
+      "code": "LV",
+      "kind": "region",
+      "sequence": "🇱🇻",
+      "token": "[flag:LV]"
+    },
+    {
+      "code": "LY",
+      "kind": "region",
+      "sequence": "🇱🇾",
+      "token": "[flag:LY]"
+    },
+    {
+      "code": "MA",
+      "kind": "region",
+      "sequence": "🇲🇦",
+      "token": "[flag:MA]"
+    },
+    {
+      "code": "MC",
+      "kind": "region",
+      "sequence": "🇲🇨",
+      "token": "[flag:MC]"
+    },
+    {
+      "code": "MD",
+      "kind": "region",
+      "sequence": "🇲🇩",
+      "token": "[flag:MD]"
+    },
+    {
+      "code": "ME",
+      "kind": "region",
+      "sequence": "🇲🇪",
+      "token": "[flag:ME]"
+    },
+    {
+      "code": "MF",
+      "kind": "region",
+      "sequence": "🇲🇫",
+      "token": "[flag:MF]"
+    },
+    {
+      "code": "MG",
+      "kind": "region",
+      "sequence": "🇲🇬",
+      "token": "[flag:MG]"
+    },
+    {
+      "code": "MH",
+      "kind": "region",
+      "sequence": "🇲🇭",
+      "token": "[flag:MH]"
+    },
+    {
+      "code": "MK",
+      "kind": "region",
+      "sequence": "🇲🇰",
+      "token": "[flag:MK]"
+    },
+    {
+      "code": "ML",
+      "kind": "region",
+      "sequence": "🇲🇱",
+      "token": "[flag:ML]"
+    },
+    {
+      "code": "MM",
+      "kind": "region",
+      "sequence": "🇲🇲",
+      "token": "[flag:MM]"
+    },
+    {
+      "code": "MN",
+      "kind": "region",
+      "sequence": "🇲🇳",
+      "token": "[flag:MN]"
+    },
+    {
+      "code": "MO",
+      "kind": "region",
+      "sequence": "🇲🇴",
+      "token": "[flag:MO]"
+    },
+    {
+      "code": "MP",
+      "kind": "region",
+      "sequence": "🇲🇵",
+      "token": "[flag:MP]"
+    },
+    {
+      "code": "MQ",
+      "kind": "region",
+      "sequence": "🇲🇶",
+      "token": "[flag:MQ]"
+    },
+    {
+      "code": "MR",
+      "kind": "region",
+      "sequence": "🇲🇷",
+      "token": "[flag:MR]"
+    },
+    {
+      "code": "MS",
+      "kind": "region",
+      "sequence": "🇲🇸",
+      "token": "[flag:MS]"
+    },
+    {
+      "code": "MT",
+      "kind": "region",
+      "sequence": "🇲🇹",
+      "token": "[flag:MT]"
+    },
+    {
+      "code": "MU",
+      "kind": "region",
+      "sequence": "🇲🇺",
+      "token": "[flag:MU]"
+    },
+    {
+      "code": "MV",
+      "kind": "region",
+      "sequence": "🇲🇻",
+      "token": "[flag:MV]"
+    },
+    {
+      "code": "MW",
+      "kind": "region",
+      "sequence": "🇲🇼",
+      "token": "[flag:MW]"
+    },
+    {
+      "code": "MX",
+      "kind": "region",
+      "sequence": "🇲🇽",
+      "token": "[flag:MX]"
+    },
+    {
+      "code": "MY",
+      "kind": "region",
+      "sequence": "🇲🇾",
+      "token": "[flag:MY]"
+    },
+    {
+      "code": "MZ",
+      "kind": "region",
+      "sequence": "🇲🇿",
+      "token": "[flag:MZ]"
+    },
+    {
+      "code": "NA",
+      "kind": "region",
+      "sequence": "🇳🇦",
+      "token": "[flag:NA]"
+    },
+    {
+      "code": "NC",
+      "kind": "region",
+      "sequence": "🇳🇨",
+      "token": "[flag:NC]"
+    },
+    {
+      "code": "NE",
+      "kind": "region",
+      "sequence": "🇳🇪",
+      "token": "[flag:NE]"
+    },
+    {
+      "code": "NF",
+      "kind": "region",
+      "sequence": "🇳🇫",
+      "token": "[flag:NF]"
+    },
+    {
+      "code": "NG",
+      "kind": "region",
+      "sequence": "🇳🇬",
+      "token": "[flag:NG]"
+    },
+    {
+      "code": "NI",
+      "kind": "region",
+      "sequence": "🇳🇮",
+      "token": "[flag:NI]"
+    },
+    {
+      "code": "NL",
+      "kind": "region",
+      "sequence": "🇳🇱",
+      "token": "[flag:NL]"
+    },
+    {
+      "code": "NO",
+      "kind": "region",
+      "sequence": "🇳🇴",
+      "token": "[flag:NO]"
+    },
+    {
+      "code": "NP",
+      "kind": "region",
+      "sequence": "🇳🇵",
+      "token": "[flag:NP]"
+    },
+    {
+      "code": "NR",
+      "kind": "region",
+      "sequence": "🇳🇷",
+      "token": "[flag:NR]"
+    },
+    {
+      "code": "NU",
+      "kind": "region",
+      "sequence": "🇳🇺",
+      "token": "[flag:NU]"
+    },
+    {
+      "code": "NZ",
+      "kind": "region",
+      "sequence": "🇳🇿",
+      "token": "[flag:NZ]"
+    },
+    {
+      "code": "OM",
+      "kind": "region",
+      "sequence": "🇴🇲",
+      "token": "[flag:OM]"
+    },
+    {
+      "code": "PA",
+      "kind": "region",
+      "sequence": "🇵🇦",
+      "token": "[flag:PA]"
+    },
+    {
+      "code": "PE",
+      "kind": "region",
+      "sequence": "🇵🇪",
+      "token": "[flag:PE]"
+    },
+    {
+      "code": "PF",
+      "kind": "region",
+      "sequence": "🇵🇫",
+      "token": "[flag:PF]"
+    },
+    {
+      "code": "PG",
+      "kind": "region",
+      "sequence": "🇵🇬",
+      "token": "[flag:PG]"
+    },
+    {
+      "code": "PH",
+      "kind": "region",
+      "sequence": "🇵🇭",
+      "token": "[flag:PH]"
+    },
+    {
+      "code": "PK",
+      "kind": "region",
+      "sequence": "🇵🇰",
+      "token": "[flag:PK]"
+    },
+    {
+      "code": "PL",
+      "kind": "region",
+      "sequence": "🇵🇱",
+      "token": "[flag:PL]"
+    },
+    {
+      "code": "PM",
+      "kind": "region",
+      "sequence": "🇵🇲",
+      "token": "[flag:PM]"
+    },
+    {
+      "code": "PN",
+      "kind": "region",
+      "sequence": "🇵🇳",
+      "token": "[flag:PN]"
+    },
+    {
+      "code": "PR",
+      "kind": "region",
+      "sequence": "🇵🇷",
+      "token": "[flag:PR]"
+    },
+    {
+      "code": "PS",
+      "kind": "region",
+      "sequence": "🇵🇸",
+      "token": "[flag:PS]"
+    },
+    {
+      "code": "PT",
+      "kind": "region",
+      "sequence": "🇵🇹",
+      "token": "[flag:PT]"
+    },
+    {
+      "code": "PW",
+      "kind": "region",
+      "sequence": "🇵🇼",
+      "token": "[flag:PW]"
+    },
+    {
+      "code": "PY",
+      "kind": "region",
+      "sequence": "🇵🇾",
+      "token": "[flag:PY]"
+    },
+    {
+      "code": "QA",
+      "kind": "region",
+      "sequence": "🇶🇦",
+      "token": "[flag:QA]"
+    },
+    {
+      "code": "RE",
+      "kind": "region",
+      "sequence": "🇷🇪",
+      "token": "[flag:RE]"
+    },
+    {
+      "code": "RO",
+      "kind": "region",
+      "sequence": "🇷🇴",
+      "token": "[flag:RO]"
+    },
+    {
+      "code": "RS",
+      "kind": "region",
+      "sequence": "🇷🇸",
+      "token": "[flag:RS]"
+    },
+    {
+      "code": "RU",
+      "kind": "region",
+      "sequence": "🇷🇺",
+      "token": "[flag:RU]"
+    },
+    {
+      "code": "RW",
+      "kind": "region",
+      "sequence": "🇷🇼",
+      "token": "[flag:RW]"
+    },
+    {
+      "code": "SA",
+      "kind": "region",
+      "sequence": "🇸🇦",
+      "token": "[flag:SA]"
+    },
+    {
+      "code": "SB",
+      "kind": "region",
+      "sequence": "🇸🇧",
+      "token": "[flag:SB]"
+    },
+    {
+      "code": "SC",
+      "kind": "region",
+      "sequence": "🇸🇨",
+      "token": "[flag:SC]"
+    },
+    {
+      "code": "SD",
+      "kind": "region",
+      "sequence": "🇸🇩",
+      "token": "[flag:SD]"
+    },
+    {
+      "code": "SE",
+      "kind": "region",
+      "sequence": "🇸🇪",
+      "token": "[flag:SE]"
+    },
+    {
+      "code": "SG",
+      "kind": "region",
+      "sequence": "🇸🇬",
+      "token": "[flag:SG]"
+    },
+    {
+      "code": "SH",
+      "kind": "region",
+      "sequence": "🇸🇭",
+      "token": "[flag:SH]"
+    },
+    {
+      "code": "SI",
+      "kind": "region",
+      "sequence": "🇸🇮",
+      "token": "[flag:SI]"
+    },
+    {
+      "code": "SJ",
+      "kind": "region",
+      "sequence": "🇸🇯",
+      "token": "[flag:SJ]"
+    },
+    {
+      "code": "SK",
+      "kind": "region",
+      "sequence": "🇸🇰",
+      "token": "[flag:SK]"
+    },
+    {
+      "code": "SL",
+      "kind": "region",
+      "sequence": "🇸🇱",
+      "token": "[flag:SL]"
+    },
+    {
+      "code": "SM",
+      "kind": "region",
+      "sequence": "🇸🇲",
+      "token": "[flag:SM]"
+    },
+    {
+      "code": "SN",
+      "kind": "region",
+      "sequence": "🇸🇳",
+      "token": "[flag:SN]"
+    },
+    {
+      "code": "SO",
+      "kind": "region",
+      "sequence": "🇸🇴",
+      "token": "[flag:SO]"
+    },
+    {
+      "code": "SR",
+      "kind": "region",
+      "sequence": "🇸🇷",
+      "token": "[flag:SR]"
+    },
+    {
+      "code": "SS",
+      "kind": "region",
+      "sequence": "🇸🇸",
+      "token": "[flag:SS]"
+    },
+    {
+      "code": "ST",
+      "kind": "region",
+      "sequence": "🇸🇹",
+      "token": "[flag:ST]"
+    },
+    {
+      "code": "SV",
+      "kind": "region",
+      "sequence": "🇸🇻",
+      "token": "[flag:SV]"
+    },
+    {
+      "code": "SX",
+      "kind": "region",
+      "sequence": "🇸🇽",
+      "token": "[flag:SX]"
+    },
+    {
+      "code": "SY",
+      "kind": "region",
+      "sequence": "🇸🇾",
+      "token": "[flag:SY]"
+    },
+    {
+      "code": "SZ",
+      "kind": "region",
+      "sequence": "🇸🇿",
+      "token": "[flag:SZ]"
+    },
+    {
+      "code": "TA",
+      "kind": "region",
+      "sequence": "🇹🇦",
+      "token": "[flag:TA]"
+    },
+    {
+      "code": "TC",
+      "kind": "region",
+      "sequence": "🇹🇨",
+      "token": "[flag:TC]"
+    },
+    {
+      "code": "TD",
+      "kind": "region",
+      "sequence": "🇹🇩",
+      "token": "[flag:TD]"
+    },
+    {
+      "code": "TF",
+      "kind": "region",
+      "sequence": "🇹🇫",
+      "token": "[flag:TF]"
+    },
+    {
+      "code": "TG",
+      "kind": "region",
+      "sequence": "🇹🇬",
+      "token": "[flag:TG]"
+    },
+    {
+      "code": "TH",
+      "kind": "region",
+      "sequence": "🇹🇭",
+      "token": "[flag:TH]"
+    },
+    {
+      "code": "TJ",
+      "kind": "region",
+      "sequence": "🇹🇯",
+      "token": "[flag:TJ]"
+    },
+    {
+      "code": "TK",
+      "kind": "region",
+      "sequence": "🇹🇰",
+      "token": "[flag:TK]"
+    },
+    {
+      "code": "TL",
+      "kind": "region",
+      "sequence": "🇹🇱",
+      "token": "[flag:TL]"
+    },
+    {
+      "code": "TM",
+      "kind": "region",
+      "sequence": "🇹🇲",
+      "token": "[flag:TM]"
+    },
+    {
+      "code": "TN",
+      "kind": "region",
+      "sequence": "🇹🇳",
+      "token": "[flag:TN]"
+    },
+    {
+      "code": "TO",
+      "kind": "region",
+      "sequence": "🇹🇴",
+      "token": "[flag:TO]"
+    },
+    {
+      "code": "TR",
+      "kind": "region",
+      "sequence": "🇹🇷",
+      "token": "[flag:TR]"
+    },
+    {
+      "code": "TT",
+      "kind": "region",
+      "sequence": "🇹🇹",
+      "token": "[flag:TT]"
+    },
+    {
+      "code": "TV",
+      "kind": "region",
+      "sequence": "🇹🇻",
+      "token": "[flag:TV]"
+    },
+    {
+      "code": "TW",
+      "kind": "region",
+      "sequence": "🇹🇼",
+      "token": "[flag:TW]"
+    },
+    {
+      "code": "TZ",
+      "kind": "region",
+      "sequence": "🇹🇿",
+      "token": "[flag:TZ]"
+    },
+    {
+      "code": "UA",
+      "kind": "region",
+      "sequence": "🇺🇦",
+      "token": "[flag:UA]"
+    },
+    {
+      "code": "UG",
+      "kind": "region",
+      "sequence": "🇺🇬",
+      "token": "[flag:UG]"
+    },
+    {
+      "code": "UM",
+      "kind": "region",
+      "sequence": "🇺🇲",
+      "token": "[flag:UM]"
+    },
+    {
+      "code": "UN",
+      "kind": "region",
+      "sequence": "🇺🇳",
+      "token": "[flag:UN]"
+    },
+    {
+      "code": "US",
+      "kind": "region",
+      "sequence": "🇺🇸",
+      "token": "[flag:US]"
+    },
+    {
+      "code": "UY",
+      "kind": "region",
+      "sequence": "🇺🇾",
+      "token": "[flag:UY]"
+    },
+    {
+      "code": "UZ",
+      "kind": "region",
+      "sequence": "🇺🇿",
+      "token": "[flag:UZ]"
+    },
+    {
+      "code": "VA",
+      "kind": "region",
+      "sequence": "🇻🇦",
+      "token": "[flag:VA]"
+    },
+    {
+      "code": "VC",
+      "kind": "region",
+      "sequence": "🇻🇨",
+      "token": "[flag:VC]"
+    },
+    {
+      "code": "VE",
+      "kind": "region",
+      "sequence": "🇻🇪",
+      "token": "[flag:VE]"
+    },
+    {
+      "code": "VG",
+      "kind": "region",
+      "sequence": "🇻🇬",
+      "token": "[flag:VG]"
+    },
+    {
+      "code": "VI",
+      "kind": "region",
+      "sequence": "🇻🇮",
+      "token": "[flag:VI]"
+    },
+    {
+      "code": "VN",
+      "kind": "region",
+      "sequence": "🇻🇳",
+      "token": "[flag:VN]"
+    },
+    {
+      "code": "VU",
+      "kind": "region",
+      "sequence": "🇻🇺",
+      "token": "[flag:VU]"
+    },
+    {
+      "code": "WF",
+      "kind": "region",
+      "sequence": "🇼🇫",
+      "token": "[flag:WF]"
+    },
+    {
+      "code": "WS",
+      "kind": "region",
+      "sequence": "🇼🇸",
+      "token": "[flag:WS]"
+    },
+    {
+      "code": "XK",
+      "kind": "region",
+      "sequence": "🇽🇰",
+      "token": "[flag:XK]"
+    },
+    {
+      "code": "YE",
+      "kind": "region",
+      "sequence": "🇾🇪",
+      "token": "[flag:YE]"
+    },
+    {
+      "code": "YT",
+      "kind": "region",
+      "sequence": "🇾🇹",
+      "token": "[flag:YT]"
+    },
+    {
+      "code": "ZA",
+      "kind": "region",
+      "sequence": "🇿🇦",
+      "token": "[flag:ZA]"
+    },
+    {
+      "code": "ZM",
+      "kind": "region",
+      "sequence": "🇿🇲",
+      "token": "[flag:ZM]"
+    },
+    {
+      "code": "ZW",
+      "kind": "region",
+      "sequence": "🇿🇼",
+      "token": "[flag:ZW]"
+    },
+    {
+      "code": "gbeng",
+      "kind": "subdivision",
+      "sequence": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "token": "[flag-subdivision:gbeng]"
+    },
+    {
+      "code": "gbsct",
+      "kind": "subdivision",
+      "sequence": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+      "token": "[flag-subdivision:gbsct]"
+    },
+    {
+      "code": "gbwls",
+      "kind": "subdivision",
+      "sequence": "🏴󠁧󠁢󠁷󠁬󠁳󠁿",
+      "token": "[flag-subdivision:gbwls]"
+    }
+  ],
+  "license": "BSD-3-Clause AND Unicode-3.0",
+  "schema_version": "1.0.0",
+  "table_version": "1.0.0"
+}

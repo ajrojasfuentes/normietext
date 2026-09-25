@@ -1,0 +1,391 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "origin": {
+      "const": "synthetic"
+    },
+    "family": {
+      "type": "string",
+      "minLength": 1
+    },
+    "split": {
+      "const": "validation"
+    },
+    "execution_status": {
+      "const": "awaiting_normalizer"
+    },
+    "policy_id": {
+      "const": "linkedin_jobs_aggressive_v1"
+    },
+    "fence_final_lf": {
+      "const": "excluded_as_markdown_delimiter"
+    },
+    "fields": {
+      "type": "object",
+      "properties": {
+        "job_title": {
+          "oneOf": [
+            {
+              "type": "object",
+              "properties": {
+                "state": {
+                  "const": "missing"
+                }
+              },
+              "required": [
+                "state"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "state": {
+                  "const": "present"
+                },
+                "source_format": {
+                  "const": "plain_text"
+                },
+                "raw_file": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "expected_file": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "state",
+                "source_format",
+                "raw_file",
+                "expected_file"
+              ],
+              "additionalProperties": false
+            }
+          ]
+        },
+        "job_description": {
+          "oneOf": [
+            {
+              "type": "object",
+              "properties": {
+                "state": {
+                  "const": "missing"
+                }
+              },
+              "required": [
+                "state"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "state": {
+                  "const": "present"
+                },
+                "source_format": {
+                  "const": "plain_text"
+                },
+                "raw_file": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "expected_file": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "state",
+                "source_format",
+                "raw_file",
+                "expected_file"
+              ],
+              "additionalProperties": false
+            }
+          ]
+        },
+        "job_criteria_list": {
+          "oneOf": [
+            {
+              "type": "object",
+              "properties": {
+                "state": {
+                  "const": "missing"
+                }
+              },
+              "required": [
+                "state"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "state": {
+                  "const": "present"
+                },
+                "source_format": {
+                  "const": "plain_text"
+                },
+                "raw_file": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "expected_file": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "state",
+                "source_format",
+                "raw_file",
+                "expected_file"
+              ],
+              "additionalProperties": false
+            }
+          ]
+        },
+        "job_type": {
+          "oneOf": [
+            {
+              "type": "object",
+              "properties": {
+                "state": {
+                  "const": "missing"
+                }
+              },
+              "required": [
+                "state"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "state": {
+                  "const": "present"
+                },
+                "source_format": {
+                  "const": "plain_text"
+                },
+                "raw_file": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "expected_file": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "state",
+                "source_format",
+                "raw_file",
+                "expected_file"
+              ],
+              "additionalProperties": false
+            }
+          ]
+        },
+        "seniority": {
+          "oneOf": [
+            {
+              "type": "object",
+              "properties": {
+                "state": {
+                  "const": "missing"
+                }
+              },
+              "required": [
+                "state"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "state": {
+                  "const": "present"
+                },
+                "source_format": {
+                  "const": "plain_text"
+                },
+                "raw_file": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "expected_file": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "state",
+                "source_format",
+                "raw_file",
+                "expected_file"
+              ],
+              "additionalProperties": false
+            }
+          ]
+        },
+        "raw_location": {
+          "oneOf": [
+            {
+              "type": "object",
+              "properties": {
+                "state": {
+                  "const": "missing"
+                }
+              },
+              "required": [
+                "state"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "state": {
+                  "const": "present"
+                },
+                "source_format": {
+                  "const": "plain_text"
+                },
+                "raw_file": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "expected_file": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "state",
+                "source_format",
+                "raw_file",
+                "expected_file"
+              ],
+              "additionalProperties": false
+            }
+          ]
+        }
+      },
+      "required": [
+        "job_title",
+        "job_description",
+        "job_criteria_list",
+        "job_type",
+        "seniority",
+        "raw_location"
+      ],
+      "additionalProperties": false
+    },
+    "files": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "bytes": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "codepoints": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "spec_section": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "sha256",
+          "bytes",
+          "codepoints",
+          "spec_section"
+        ],
+        "additionalProperties": false
+      },
+      "minProperties": 4,
+      "maxProperties": 4
+    },
+    "expected_annotations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "kind": {
+            "type": "string",
+            "minLength": 1
+          },
+          "value": {
+            "type": "string"
+          },
+          "count": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "required": [
+          "kind",
+          "value",
+          "count"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "expected_lists": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "type": "string",
+            "minLength": 1
+          },
+          "count": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "required": [
+          "label",
+          "count"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "id",
+    "origin",
+    "family",
+    "split",
+    "execution_status",
+    "policy_id",
+    "fence_final_lf",
+    "fields",
+    "files",
+    "expected_annotations",
+    "expected_lists"
+  ],
+  "additionalProperties": false
+}

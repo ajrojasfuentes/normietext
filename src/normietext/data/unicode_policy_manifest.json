@@ -1,0 +1,21 @@
+{
+  "classification_unicode_version": "17.0.0",
+  "dependencies": {
+    "emoji": "2.16.0",
+    "regex": "2026.9.10"
+  },
+  "files": {
+    "emoji_hints.json": "feb31450688d67e3caf4fddf9c07679db4c24a8492fa65a08f17f8751e9d3742",
+    "kaomoji.json": "8a273e6a867ef46fb60b64ef004e23980acc6ba5ab1a17f9996bc765f66d9dae",
+    "licenses/Unicode-3.0.txt": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96",
+    "licenses/emoji-LICENSE.txt": "aa20fedcaf6d601de429715d8ecdfb1a0b46ba2a391b33d0e060882335694aab",
+    "licenses/regex-LICENSE.txt": "bff55ef4cdcc8c14ce259f8e8ab60e264418440d6335f4dc138273fbd506144d",
+    "region_sequences.json": "8fcc4d24267ac130c04fa69546e00e98f0a4c9a4deb84a90a3fed4c9201ba7f0",
+    "unicode_properties.json": "1e16fb60dac8c46b8842ae56ec6b35c49621f19bbbb42dd77d0849ccb817001e"
+  },
+  "generator": "scripts/generate_tables.py",
+  "normalization_authority": "CPython unicodedata",
+  "normalization_unicode_version": "16.0.0",
+  "schema_version": "1.0.0",
+  "table_version": "1.0.0"
+}

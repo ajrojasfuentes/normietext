@@ -1,0 +1,135 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "cases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "family": {
+            "type": "string"
+          },
+          "split": {
+            "enum": [
+              "development",
+              "validation"
+            ]
+          },
+          "origin": {
+            "const": "synthetic"
+          },
+          "execution_status": {
+            "const": "awaiting_normalizer"
+          },
+          "field": {
+            "type": "string"
+          },
+          "source_format": {
+            "type": "string"
+          },
+          "raw": {
+            "type": "string"
+          },
+          "decision_status": {
+            "enum": [
+              "specified",
+              "pending_renderer",
+              "pending_boundary_table"
+            ]
+          },
+          "expectation": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "terms": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "definitions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "association_count": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "preserve_dom_list": {
+                "type": "boolean"
+              },
+              "list_item_count": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "edit_rule": {
+                "type": "string"
+              },
+              "dom_ordinal": {
+                "type": "integer"
+              },
+              "preserve_text_ordinal": {
+                "type": "integer"
+              },
+              "issue": {
+                "type": "string"
+              },
+              "output_length_with_separators": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "no_output_limit_error": {
+                "type": "boolean"
+              },
+              "generated_annotations": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "preserve_lexical_content": {
+                "type": "boolean"
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          },
+          "reason": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "family",
+          "split",
+          "origin",
+          "execution_status",
+          "field",
+          "source_format",
+          "raw",
+          "decision_status",
+          "expectation",
+          "reason"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "cases"
+  ],
+  "additionalProperties": false
+}

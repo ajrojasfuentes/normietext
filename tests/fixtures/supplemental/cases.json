@@ -1,0 +1,318 @@
+{
+  "schema_version": "1.0.0",
+  "cases": [
+    {
+      "id": "criteria_dl_simple",
+      "field": "job_criteria_list",
+      "source_format": "html_fragment",
+      "raw": "<dl><dt>Industries</dt><dd>Software, Fintech</dd></dl>",
+      "family": "criteria_dl_simple",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "decision_status": "specified",
+      "expectation": {
+        "terms": [
+          "Industries"
+        ],
+        "definitions": [
+          "Software, Fintech"
+        ],
+        "association_count": 1
+      },
+      "reason": "review"
+    },
+    {
+      "id": "criteria_dl_multiple",
+      "field": "job_criteria_list",
+      "source_format": "html_fragment",
+      "raw": "<dl><dt>Languages</dt><dt>Idiomas</dt><dd>Spanish</dd><dd>English</dd></dl>",
+      "family": "criteria_dl_multiple",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "decision_status": "specified",
+      "expectation": {
+        "terms": [
+          "Languages",
+          "Idiomas"
+        ],
+        "definitions": [
+          "Spanish",
+          "English"
+        ],
+        "association_count": 1
+      },
+      "reason": "review"
+    },
+    {
+      "id": "criteria_not_a_pair",
+      "field": "job_description",
+      "source_format": "html_fragment",
+      "raw": "<li><h3>What you will do</h3><span>Build APIs</span></li>",
+      "family": "criteria_not_a_pair",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "decision_status": "specified",
+      "expectation": {
+        "association_count": 0,
+        "preserve_dom_list": true
+      },
+      "reason": "review"
+    },
+    {
+      "id": "html_text_bullets",
+      "field": "job_description",
+      "source_format": "html_fragment",
+      "raw": "<p>\u2022 Python</p><p>\u2022 AWS</p>",
+      "family": "html_text_bullets",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "decision_status": "specified",
+      "expectation": {
+        "text": "- Python\n- AWS",
+        "list_item_count": 2
+      },
+      "reason": "review"
+    },
+    {
+      "id": "html_redundant_marker",
+      "field": "job_description",
+      "source_format": "html_fragment",
+      "raw": "<ul><li>\u2022 Python</li></ul>",
+      "family": "html_redundant_marker",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "decision_status": "specified",
+      "expectation": {
+        "text": "- Python",
+        "edit_rule": "list.redundant_marker"
+      },
+      "reason": "review"
+    },
+    {
+      "id": "html_ordinal_conflict",
+      "field": "job_description",
+      "source_format": "html_fragment",
+      "raw": "<ol start=\"3\"><li>1. X</li></ol>",
+      "family": "html_ordinal_conflict",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "decision_status": "pending_renderer",
+      "expectation": {
+        "dom_ordinal": 3,
+        "preserve_text_ordinal": 1,
+        "issue": "LIST_ORDINAL_CONFLICT",
+        "text": null
+      },
+      "reason": "review"
+    },
+    {
+      "id": "large_hints",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "raw": "\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705\u2705",
+      "family": "large_hints",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "decision_status": "specified",
+      "expectation": {
+        "output_length_with_separators": 51999,
+        "no_output_limit_error": true
+      },
+      "reason": "review"
+    },
+    {
+      "id": "nel_multiline",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "raw": "a\u0085b",
+      "family": "nel_multiline",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "decision_status": "specified",
+      "expectation": {
+        "text": "a\nb"
+      },
+      "reason": "review"
+    },
+    {
+      "id": "nel_compact",
+      "field": "job_title",
+      "source_format": "plain_text",
+      "raw": "a\u0085b",
+      "family": "nel_compact",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "decision_status": "specified",
+      "expectation": {
+        "text": "a b"
+      },
+      "reason": "review"
+    },
+    {
+      "id": "c1_repair",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "raw": "don\u0092t",
+      "family": "c1_repair",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "decision_status": "specified",
+      "expectation": {
+        "text": "don\u2019t"
+      },
+      "reason": "review"
+    },
+    {
+      "id": "c0_removal",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "raw": "a\u0001b",
+      "family": "c0_removal",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "decision_status": "specified",
+      "expectation": {
+        "text": "ab"
+      },
+      "reason": "review"
+    },
+    {
+      "id": "literal_hint",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "raw": "[flag:CR]",
+      "family": "literal_hint",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "decision_status": "specified",
+      "expectation": {
+        "text": "[flag:CR]",
+        "generated_annotations": 0
+      },
+      "reason": "review"
+    },
+    {
+      "id": "parenthesized_hint",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "raw": "(\ud83c\udde8\ud83c\uddf7)",
+      "family": "parenthesized_hint",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "decision_status": "specified",
+      "expectation": {
+        "text": "([flag:CR])"
+      },
+      "reason": "review"
+    },
+    {
+      "id": "technical_boundary_0",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "raw": "C++\ud83d\ude80Python",
+      "family": "technical_boundary_0",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "decision_status": "pending_boundary_table",
+      "expectation": {
+        "preserve_lexical_content": true,
+        "text": null
+      },
+      "reason": "review"
+    },
+    {
+      "id": "technical_boundary_1",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "raw": "C#\ud83d\udd25Java",
+      "family": "technical_boundary_1",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "decision_status": "pending_boundary_table",
+      "expectation": {
+        "preserve_lexical_content": true,
+        "text": null
+      },
+      "reason": "review"
+    },
+    {
+      "id": "technical_boundary_2",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "raw": "(Remote)\ud83c\udf0eLATAM",
+      "family": "technical_boundary_2",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "decision_status": "pending_boundary_table",
+      "expectation": {
+        "preserve_lexical_content": true,
+        "text": null
+      },
+      "reason": "review"
+    },
+    {
+      "id": "technical_boundary_3",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "raw": "100%\ud83d\udd25bonus",
+      "family": "technical_boundary_3",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "decision_status": "pending_boundary_table",
+      "expectation": {
+        "preserve_lexical_content": true,
+        "text": null
+      },
+      "reason": "review"
+    },
+    {
+      "id": "technical_boundary_4",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "raw": "C\ud83d\ude80++",
+      "family": "technical_boundary_4",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "decision_status": "pending_boundary_table",
+      "expectation": {
+        "preserve_lexical_content": true,
+        "text": null
+      },
+      "reason": "review"
+    },
+    {
+      "id": "technical_boundary_5",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "raw": "$\ud83d\ude80500",
+      "family": "technical_boundary_5",
+      "split": "development",
+      "origin": "synthetic",
+      "execution_status": "awaiting_normalizer",
+      "decision_status": "pending_boundary_table",
+      "expectation": {
+        "preserve_lexical_content": true,
+        "text": null
+      },
+      "reason": "review"
+    }
+  ]
+}

@@ -30,6 +30,7 @@ uv run --locked ruff check .
 uv run --locked ruff format --check .
 uv run --locked mypy
 uv run --locked pytest
+uv run --locked python scripts/generate_tables.py --check
 uv build
 uv run --locked twine check --strict dist/*
 uv run --locked python scripts/check_wheel.py
@@ -155,3 +156,15 @@ El entorno local comprobado reportó GIL activo (`Py_GIL_DISABLED=0`), UCD 16.0.
 libxml2 2.14.6. Las herramientas auxiliares resueltas fueron pytest 9.1.1,
 Hypothesis 6.168.1 y mypy 2.3.1. Estos datos describen la verificación local;
 no sustituyen el manifiesto por resultado que implementará la fase 2.
+
+
+## 8. Estado después de Fase 1
+
+Se añadieron jsonschema y stubs de desarrollo para schemas/tipos; las cinco
+dependencias de runtime siguen fijadas sin cambios. CI verifica también la
+regeneración offline de tablas en el job de distribución. El smoke test del wheel
+comprueba imports de contratos, configuración y hashes de datos/licencias desde
+un entorno externo, usando `uv pip install --only-binary` para lxml y regex.
+
+La evidencia y limitaciones actuales están en [el cierre F0/F1](revisiones/cierre_fases_0_1.md).
+La validación original de inicialización en §7 se mantiene como registro histórico.
