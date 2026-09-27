@@ -3,6 +3,7 @@
 from collections.abc import Iterator, Mapping
 from dataclasses import dataclass
 from enum import StrEnum
+from hashlib import sha256
 from math import isfinite
 
 from normietext._validation import Validated, require, valid_text
@@ -264,13 +265,26 @@ class SourceEvidence(Validated):
     source_ref: str | None = None
     source_adapter_version: str | None = None
 
+    source_sha256: str | None = None
+
     def __post_init__(self) -> None:
         Validated.__post_init__(self)
         require(self.source_length >= 0, "Negative source length")
         require(self.raw is not None or bool(self.source_ref), "Recoverable source required")
         require(self.source_ref is None or bool(self.source_ref), "Empty source reference")
+        if self.source_sha256 is not None:
+            require(
+                len(self.source_sha256) == 64
+                and all(c in "0123456789abcdef" for c in self.source_sha256),
+                "Invalid source digest",
+            )
         if self.raw is not None:
             require(len(self.raw) == self.source_length, "Raw length mismatch")
+            require(
+                self.source_sha256 is None
+                or sha256(self.raw.encode("utf-8")).hexdigest() == self.source_sha256,
+                "Source digest mismatch",
+            )
 
     @classmethod
     def from_input(cls, source: FieldInput) -> SourceEvidence:
@@ -281,6 +295,7 @@ class SourceEvidence(Validated):
             source.value,
             source.source_ref,
             source.source_adapter_version,
+            sha256(source.value.encode("utf-8")).hexdigest(),
         )
 
 
@@ -414,7 +429,7 @@ class VersionedArtifact(Validated):
 
 @dataclass(frozen=True, slots=True)
 class Manifest(Validated):
-    """Manifest shape only; effective manifest generation belongs to phase 2."""
+    """Effective environment identity; generated and verified by manifest.py."""
 
     schema_version: str
     normalization_version: str
@@ -622,6 +637,12 @@ class FieldOutcome(Validated):
                 )
                 require(
                     evidence.source_length == len(self.input.source.value), "Result length mismatch"
+                )
+                require(
+                    evidence.source_sha256 is None
+                    or evidence.source_sha256
+                    == sha256(self.input.source.value.encode("utf-8")).hexdigest(),
+                    "Result source digest mismatch",
                 )
                 if evidence.raw is not None:
                     require(evidence.raw == self.input.source.value, "Result raw mismatch")

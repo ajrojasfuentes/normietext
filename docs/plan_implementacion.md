@@ -3,8 +3,9 @@
 **Base normativa:** [especificación 2.0](normietext_v2.0_especificacion.md).
 **Fecha:** 24 de septiembre de 2026 UTC.
 **Audiencia:** ingeniería del núcleo, responsables de corpus/QA e integradores.
-**Estado:** Fase 0 verificada localmente y Fase 1 completada (2026-09-24); fases
-2–8 pendientes. Véase el [informe de cierre](revisiones/cierre_fases_0_1.md). Las
+**Estado:** Fase 0 verificada localmente y fases 1–2 completadas (2026-09-25); fases
+3–8 pendientes. Véase el [cierre de F2](revisiones/cierre_fase_2.md) y el
+[cierre anterior](revisiones/cierre_fases_0_1.md). Las
 tareas de las fases siguientes siguen siendo trabajo futuro.
 
 **Anotación de revisión (2026-09-24):** se incorporan las decisiones R01–R15 de
@@ -154,6 +155,14 @@ contratos. El usuario autorizó F1 tras esta revisión. Las decisiones de contra
 integradas explícitamente en la especificación y en ADR-0001.
 
 ## 6. Fase 2 — Baseline, fuentes, procedencia y manifiesto
+
+**Estado: completada localmente el 2026-09-25.** Entregables y evidencia en
+[cierre F2](revisiones/cierre_fase_2.md); contratos y límites en
+[ADR-0002](decisions/0002-baseline-fuentes-procedencia.md). 75 pruebas aprobadas;
+replay en cuatro procesos, build stamped y wheel instalado fuera del checkout.
+Los puntos siguientes conservan el alcance aprobado; no implican un normalizador
+completo ni anticipan F3–F5. La puerta canónica es la base de invariantes y se
+ampliará con reglas conductuales al integrar el pipeline.
 
 **Depende de:** fase 1. **Referencias:** §§5, 8, 12, 15, 18–19, 21, 23.
 
@@ -560,14 +569,14 @@ especificación explícitamente antes de declarar aceptación.
 
 ## 17. Primer incremento recomendado
 
-Este incremento (F1) ya se completó. El siguiente trabajo es F2: fuentes,
-procedencia, serialización y manifiesto, fuera del alcance de esta entrega.
+Los incrementos F1 y F2 ya se completaron. El siguiente trabajo es F3: adaptadores
+de formato y estructura de origen, fuera del alcance de la entrega de F2.
 
-Comenzar por fase 1: contrato de estados/campos, errores y política inmutable,
-seguido por esquema de fixtures y materialización del caso integral. Revisar el ADR
-de documento interno y alineación antes de implementar HTML o una regla destructiva.
-Esto permite que la siguiente entrega aporte comportamiento verificable sin perder
-la trazabilidad que condiciona el resto del sistema.
+La secuencia inicial de contratos y fixtures queda registrada en F1. Antes de
+implementar HTML o una regla destructiva, revisar ADR-0001 y ADR-0002 y conservar
+la composición hacia la fuente inicial. F3 debe reutilizar estos contratos, sin
+reclasificar una proyección normalizada como raw ni ejecutar el renderer antes
+de capturar la estructura y las secuencias léxicas.
 
 ## 18. Anotaciones de la revisión externa NT-REV-2.0-001
 

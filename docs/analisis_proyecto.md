@@ -1,3 +1,5 @@
+> Estado actual: [cierre de Fase 2](revisiones/cierre_fase_2.md). Este análisis conserva el contexto de inicialización.
+
 # Análisis del proyecto y decisiones de inicialización
 
 Fecha: 24 de septiembre de 2026 (UTC; 23 de septiembre en Costa Rica).

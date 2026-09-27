@@ -31,7 +31,7 @@ uv run --locked ruff format --check .
 uv run --locked mypy
 uv run --locked pytest
 uv run --locked python scripts/generate_tables.py --check
-uv build
+uv run --locked python scripts/build_distribution.py
 uv run --locked twine check --strict dist/*
 uv run --locked python scripts/check_wheel.py
 ```
@@ -137,7 +137,7 @@ incluye fuente, campo, formato, política, reglas y entorno conductual.
 
 Un lock de desarrollo no viaja como imposición a los instaladores del wheel. Los
 consumidores deben bloquear también transitivas y runtime si necesitan replay
-exacto. El manifiesto futuro registrará esas versiones efectivas y el backend nativo.
+exacto. El manifiesto de F2 registra esas versiones efectivas y el backend nativo.
 
 ## 7. Validación de esta inicialización
 
@@ -168,3 +168,23 @@ un entorno externo, usando `uv pip install --only-binary` para lxml y regex.
 
 La evidencia y limitaciones actuales están en [el cierre F0/F1](revisiones/cierre_fases_0_1.md).
 La validación original de inicialización en §7 se mantiene como registro histórico.
+
+## 9. Baseline y construcción de Fase 2
+
+`uv run --locked python scripts/build_distribution.py` prepara un árbol temporal,
+incorpora revisión y huella de código, fija SOURCE_DATE_EPOCH y llama a uv build.
+El wheel se construye desde el sdist. El checkout no recibe metadata generada.
+CI usa este flujo; check_wheel comprueba el manifiesto fuera del repositorio.
+`uv build` directo sigue siendo posible, pero sin stamping declara source-tree y
+no satisface el smoke test del flujo de distribución recomendado.
+
+Las APIs de fuentes, procedencia, serialización y manifiesto están descritas en
+[ADR-0002](decisions/0002-baseline-fuentes-procedencia.md). Para un manifiesto de
+producción, conservar los ocho wheels de las dependencias efectivamente instaladas
+y proporcionarlos a create_manifest con require_wheels=True. El host garantiza
+que son los archivos utilizados; sus hashes se distinguen de fingerprints de los
+archivos instalados. No descargar ni inspeccionar Git desde la normalización.
+
+El [cierre de F2](revisiones/cierre_fase_2.md) registra la validación local. El corpus
+del producto permanece pendiente del normalizador completo; no se confunde replay
+de baseline con aceptación de todas las reglas. F3 es el siguiente incremento.

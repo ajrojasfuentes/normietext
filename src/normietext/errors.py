@@ -17,6 +17,8 @@ class ErrorCode(StrEnum):
     REGEX_TIMEOUT = "REGEX_TIMEOUT"
     OUTPUT_LIMIT_EXCEEDED = "OUTPUT_LIMIT_EXCEEDED"
     OUTPUT_INVARIANT_FAILED = "OUTPUT_INVARIANT_FAILED"
+    SOURCE_UNAVAILABLE = "SOURCE_UNAVAILABLE"
+    SOURCE_MISMATCH = "SOURCE_MISMATCH"
     POLICY_MISMATCH = "POLICY_MISMATCH"
 
 
@@ -52,3 +54,7 @@ class OutputInvariantError(NormalizationError):
 
 class PolicyMismatchError(NormalizationError):
     """Reprocessing the recoverable source is required."""
+
+
+class SourceRecoveryError(NormalizationError):
+    """Ingestion cannot recover the exact persisted source."""

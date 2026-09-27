@@ -49,6 +49,11 @@ def main() -> None:
                 "assert all(hashlib.sha256(root.joinpath(name).read_bytes()).hexdigest() == digest "
                 "for name, digest in table_manifest['files'].items()); "
                 "assert files(normietext).joinpath('py.typed').is_file(); "
+                "from normietext.manifest import create_manifest; "
+                "from normietext.serialization import canonical_bytes; "
+                "manifest = create_manifest(); "
+                "assert manifest.code_revision.startswith('git:'); "
+                "assert canonical_bytes(manifest) == canonical_bytes(create_manifest()); "
                 "import bs4, emoji, ftfy, lxml.etree, regex; "
                 "print('Installed normietext', version('normietext'))",
             ],

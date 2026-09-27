@@ -55,7 +55,7 @@ jobs:
       - run: uv sync --locked --no-build-package lxml --no-build-package regex
       - run: uv run --locked python scripts/generate_tables.py --check
       # uv builds the wheel from the sdist by default, exercising both artifacts.
-      - run: uv build
+      - run: uv run --locked python scripts/build_distribution.py
       - run: uv run --locked twine check --strict dist/*
       - run: uv run --locked python scripts/check_wheel.py
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1

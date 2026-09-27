@@ -1,6 +1,6 @@
 """Immutable contracts for deterministic job text normalization.
 
-The normalization pipeline is not implemented yet. See the phase 1 ADR.
+The full normalization pipeline is not implemented yet. See the phase 2 ADR.
 """
 
 from normietext.errors import (
@@ -12,6 +12,7 @@ from normietext.errors import (
     PolicyMismatchError,
     PolicyValidationError,
     ResourceLimitError,
+    SourceRecoveryError,
 )
 from normietext.models import (
     Annotation,
@@ -87,6 +88,7 @@ __all__ = [
     "ResourceLimits",
     "SourceEvidence",
     "SourceFormat",
+    "SourceRecoveryError",
     "Span",
     "VersionedArtifact",
     "freeze_json",

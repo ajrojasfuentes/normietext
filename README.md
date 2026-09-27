@@ -4,8 +4,9 @@ Biblioteca Python local y determinista para normalizar seis campos de ofertas
 laborales extraídas de LinkedIn. Conserva evidencia, estructura y procedencia
 para consumidores de parsing, sin LLM ni llamadas de red al normalizar.
 
-**Estado: Fase 0 verificada localmente y Fase 1 completada.** El paquete incluye
-contratos inmutables, configuración validada y tablas reproducibles;
+**Estado: Fase 0 verificada localmente y fases 1–2 completadas.** El paquete incluye
+contratos, política/tablas, fuentes verificadas, alineación compuesta, serialización
+canónica y manifiesto efectivo;
 `JobTextNormalizer` y las reglas de normalización todavía no están implementados.
 La especificación 2.0 no es la versión del paquete: la base usa `0.1.0`.
 
@@ -23,7 +24,7 @@ uv run --locked ruff format --check .
 uv run --locked mypy
 uv run --locked pytest
 uv run --locked python scripts/generate_tables.py --check
-uv build
+uv run --locked python scripts/build_distribution.py
 uv run --locked twine check --strict dist/*
 uv run --locked python scripts/check_wheel.py
 ```
@@ -44,15 +45,34 @@ assert source.value == "Python Engineer"  # Validación, sin transformar conteni
 assert policy.limits.max_expansion_factor == 32
 ```
 
-La API de normalización llegará en las fases siguientes. Las pruebas de Fase 1
-comprueban contratos y fidelidad del corpus; los 40 casos normativos están
+La API de normalización llegará en las fases siguientes. Las pruebas actuales
+comprueban contratos, procedencia, baseline de espacios/NFC y replay; los 40 casos normativos están
 materializados en 49 escenarios y aún no se han ejecutado contra un normalizador.
+
+## Fuentes y manifiesto disponibles
+
+```python
+from normietext import JobField, SourceEvidence
+from normietext.sources import prepare_input, recover_source
+from normietext.manifest import create_manifest
+from normietext.serialization import canonical_bytes
+
+source = prepare_input("Python Engineer", JobField.JOB_TITLE)
+evidence = SourceEvidence.from_input(source)
+assert recover_source(evidence) == source
+manifest_bytes = canonical_bytes(create_manifest())
+```
+
+Estas operaciones no limpian el texto. La recuperación externa se configura en
+ingesta mediante `SourceStore`; no introduce I/O en las transformaciones. El
+[ADR de Fase 2](docs/decisions/0002-baseline-fuentes-procedencia.md) explica alineación,
+validación canónica base, identidad del entorno y requisitos de artefactos de producción.
 
 ## Distribución e integración
 
 La entrega principal es un wheel importable con tipos (`py.typed`). Un consumidor
 puede instalar `dist/normietext-0.1.0-py3-none-any.whl` con su gestor de paquetes.
-Esto instala los contratos y datos del perfil, todavía sin API de limpieza. Las cinco dependencias de
+Esto instala los contratos, datos y utilidades de baseline, todavía sin API de limpieza. Las cinco dependencias de
 runtime son las fijadas por §21 de la especificación. Las herramientas de pruebas,
 tipado y publicación no son dependencias de los consumidores.
 
@@ -67,6 +87,8 @@ FastAPI, Docker ni infraestructura distribuida a esta inicialización.
 - [Plan detallado de implementación](docs/plan_implementacion.md).
 - [Desarrollo, CI y publicación](docs/desarrollo_y_release.md).
 - [ADR de contratos y corpus](docs/decisions/0001-contratos-fase-1.md).
+- [ADR de baseline y procedencia](docs/decisions/0002-baseline-fuentes-procedencia.md).
+- [Informe de cierre F2](docs/revisiones/cierre_fase_2.md).
 - [Informe de revisión F0 y cierre F1](docs/revisiones/cierre_fases_0_1.md).
 
 CI comprueba lint, formato, tipos y pruebas en Linux, Windows y macOS, y construye

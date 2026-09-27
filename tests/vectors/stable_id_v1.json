@@ -1,0 +1,29 @@
+{
+  "source_payload": {
+    "domain": "normietext.source.v1",
+    "field": "job_description",
+    "format": "plain_text",
+    "sha256": "ccf4d509af52c1857ce922424b4ec0c2f7e25c0097a7f0bbac5b005ed6b1a900",
+    "source_ref": null,
+    "adapter": null
+  },
+  "source_identity": "ac49fdf50f343e0a20bbbdc1c5338414c65cb53aee96886cb67ef3e86ff86965",
+  "id_payload": {
+    "domain": "normietext.id.v1",
+    "namespace": "annotation",
+    "source": "ac49fdf50f343e0a20bbbdc1c5338414c65cb53aee96886cb67ef3e86ff86965",
+    "rule": "test.rule",
+    "origin": {
+      "precision": "exact",
+      "span": {
+        "start": 0,
+        "end": 1
+      },
+      "source_block_id": null
+    },
+    "occurrence": 0,
+    "discriminator": null
+  },
+  "id_bytes_utf8": "{\"discriminator\":null,\"domain\":\"normietext.id.v1\",\"namespace\":\"annotation\",\"occurrence\":0,\"origin\":{\"precision\":\"exact\",\"source_block_id\":null,\"span\":{\"end\":1,\"start\":0}},\"rule\":\"test.rule\",\"source\":\"ac49fdf50f343e0a20bbbdc1c5338414c65cb53aee96886cb67ef3e86ff86965\"}",
+  "id_sha256": "c9f2c0bf1a07a886833d3cb8c0a354dee1a517249d63da6346a2f0d60e94e3ce"
+}

@@ -25,6 +25,13 @@ La versión de esta especificación no implica la existencia de una versión pub
 > aún sin normalizador publicado. Véase [ADR-0001](decisions/0001-contratos-fase-1.md).
 > Las demás decisiones de renderer del plan siguen pendientes de sus fases.
 
+> **Aclaración técnica F2 — 2026-09-25:** el hash `source_sha256` verifica la
+> identidad de la fuente, sin sustituir su recuperabilidad. Persistencia/recuperación
+> externa son operaciones de ingesta; sus fallos tipados son `SOURCE_UNAVAILABLE`
+> y `SOURCE_MISMATCH`. Serialización, precisión compuesta y revisión incorporada
+> en build se concretan en [ADR-0002](decisions/0002-baseline-fuentes-procedencia.md).
+> No se modifican las proyecciones esperadas ni se declara implementado el pipeline.
+
 ## Contenido
 
 1. Resumen ejecutivo
@@ -1008,6 +1015,7 @@ El límite de tamaño se valida antes de parsear. Los límites de nodos y profun
 |---|---|
 | `INVALID_TYPE`, `INVALID_FIELD`, `INVALID_FORMAT`, `INVALID_RECORD` | Rechazo de la llamada |
 | `INVALID_UNICODE` | Rechazo, sin sustitución silenciosa |
+| `SOURCE_UNAVAILABLE`, `SOURCE_MISMATCH` | Fallo de ingesta al persistir/recuperar; no publicar fuente no verificable |
 | `INPUT_LIMIT_EXCEEDED` | Rechazo del campo; conservar fuente |
 | `HTML_PARSE_FAILED` | Error del campo; no fallback silencioso |
 | `RESOURCE_LIMIT_EXCEEDED`, `REGEX_TIMEOUT`, `OUTPUT_LIMIT_EXCEEDED` | Fallo operativo; no publicar salida canónica parcial |
