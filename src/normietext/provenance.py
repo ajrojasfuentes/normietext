@@ -7,30 +7,12 @@ from itertools import pairwise
 
 from normietext._validation import Validated, require
 from normietext.errors import ErrorCode, ResourceLimitError
+from normietext.models import AlignmentSegment as AlignmentSegment
 from normietext.models import Edit, Origin, OriginPrecision, SourceEvidence, Span
 from normietext.policy import ResourceLimits
 from normietext.serialization import canonical_hash
 
 _DEFAULT_LIMITS = ResourceLimits()
-
-
-@dataclass(frozen=True, slots=True)
-class AlignmentSegment(Validated):
-    output: Span
-    origin: Origin
-    linear: bool = False
-
-    def __post_init__(self) -> None:
-        Validated.__post_init__(self)
-        require(self.output.start < self.output.end, "Empty alignment segment")
-        if self.linear:
-            require(self.origin.precision is OriginPrecision.EXACT, "Linear mapping must be exact")
-            assert self.origin.span is not None
-            require(
-                self.output.end - self.output.start
-                == self.origin.span.end - self.origin.span.start,
-                "Linear lengths differ",
-            )
 
 
 def _merge(origins: list[Origin]) -> Origin:
@@ -186,7 +168,7 @@ class Alignment(Validated):
 
 def source_identity(source: SourceEvidence) -> str:
     digest = source.source_sha256
-    if source.raw is not None:
+    if digest is None and source.raw is not None:
         digest = sha256(source.raw.encode("utf-8")).hexdigest()
     require(digest is not None, "Stable identity requires the original content digest")
     return canonical_hash(

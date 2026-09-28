@@ -9,6 +9,7 @@ from normietext._validation import require, valid_text
 
 # Adding a model member requires a deliberate wire-contract review here.
 _FIELDS: dict[type[object], str] = {
+    models.AlignmentSegment: "output origin linear",
     models.Span: "start end",
     models.FieldInput: "field value source_format source_ref source_adapter_version",
     models.ExtractionError: "code message source_ref",
@@ -20,7 +21,7 @@ _FIELDS: dict[type[object], str] = {
     models.Origin: "precision span source_block_id",
     models.Block: (
         "id kind span origin parent_id list_id ordinal depth row column rowspan colspan "
-        "heading_level origin_tag header"
+        "heading_level origin_tag header metadata"
     ),
     models.Association: "id term_ids definition_ids origin source_contract parent_id",
     models.Annotation: "id kind rule_id origin payload span rendered_token",
@@ -31,7 +32,9 @@ _FIELDS: dict[type[object], str] = {
         "schema_version normalization_version policy_id policy_hash code_revision python_version "
         "unicode_version backend libxml2_version dependencies tables runtime_artifacts"
     ),
-    models.ParsedDocument: "source text phase blocks associations annotations edits issues",
+    models.ParsedDocument: (
+        "source text phase blocks associations annotations edits issues alignment"
+    ),
     models.NormalizedField: (
         "field source_format source text status phase manifest blocks associations "
         "annotations edits issues"

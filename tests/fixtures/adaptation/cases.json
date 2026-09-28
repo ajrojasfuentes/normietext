@@ -1,0 +1,246 @@
+{
+  "schema_version": "1.0.0",
+  "phase": "converted",
+  "cases": [
+    {
+      "id": "F3-literal-generics",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "raw": "List<T> < $0.03/query <br>",
+      "expected_text": "List<T> < $0.03/query <br>",
+      "requirement": "T03"
+    },
+    {
+      "id": "F3-literal-entities",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "raw": "&lt;b&gt;Python&lt;/b&gt;",
+      "expected_text": "&lt;b&gt;Python&lt;/b&gt;",
+      "requirement": "T04"
+    },
+    {
+      "id": "F3-literal-markdown",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "raw": "**Python**\n# Heading\n  - item",
+      "expected_text": "**Python**\n# Heading\n  - item",
+      "requirement": "literal"
+    },
+    {
+      "id": "F3-unknown",
+      "field": "job_description",
+      "source_format": "unknown",
+      "raw": "<b>Python</b>&amp;",
+      "expected_text": "<b>Python</b>&amp;",
+      "requirement": "unknown"
+    },
+    {
+      "id": "F3-entities-once",
+      "field": "job_description",
+      "source_format": "html_escaped_text",
+      "raw": "&lt;b&gt;Python&lt;/b&gt;",
+      "expected_text": "<b>Python</b>",
+      "requirement": "T05"
+    },
+    {
+      "id": "F3-entities-double",
+      "field": "job_description",
+      "source_format": "html_escaped_text",
+      "raw": "&amp;lt;b&amp;gt;",
+      "expected_text": "&lt;b&gt;",
+      "requirement": "T06"
+    },
+    {
+      "id": "F3-entities-numeric",
+      "field": "job_description",
+      "source_format": "html_escaped_text",
+      "raw": "A&#13;&#10;B&#x85;C &NotEqualTilde;",
+      "expected_text": "A\nB…C ≂̸",
+      "requirement": "entities"
+    },
+    {
+      "id": "F3-entities-literal",
+      "field": "job_description",
+      "source_format": "html_escaped_text",
+      "raw": "C++ &unknown; &amp;lt;",
+      "expected_text": "C++ &unknown; &lt;",
+      "requirement": "entities"
+    },
+    {
+      "id": "F3-inline-technical",
+      "field": "job_description",
+      "source_format": "html_fragment",
+      "raw": "C<b>++</b> / C<span>#</span> / CI<em>/CD</em>",
+      "expected_text": "C++ / C# / CI/CD",
+      "requirement": "T07"
+    },
+    {
+      "id": "F3-break",
+      "field": "job_description",
+      "source_format": "html_fragment",
+      "raw": "Python<br>AWS",
+      "expected_text": "Python\nAWS",
+      "requirement": "T08"
+    },
+    {
+      "id": "F3-paragraphs",
+      "field": "job_description",
+      "source_format": "html_fragment",
+      "raw": "<p>A</p><p>B</p>",
+      "expected_text": "A\nB",
+      "requirement": "T61"
+    },
+    {
+      "id": "F3-no-wrapper-boundaries",
+      "field": "job_description",
+      "source_format": "html_fragment",
+      "raw": "<html><body>C<b>++</b></body></html>",
+      "expected_text": "C++",
+      "requirement": "wrappers"
+    },
+    {
+      "id": "F3-code",
+      "field": "job_description",
+      "source_format": "html_fragment",
+      "raw": "<pre>  for x:\n    f(x)</pre>",
+      "expected_text": "  for x:\n    f(x)",
+      "requirement": "T31"
+    },
+    {
+      "id": "F3-cells",
+      "field": "job_description",
+      "source_format": "html_fragment",
+      "raw": "<table><tr><th>Country</th><th>Salary</th></tr><tr><td>CR</td><td></td></tr></table>",
+      "expected_text": "Country\nSalary\nCR\n",
+      "requirement": "T32"
+    },
+    {
+      "id": "F3-nl-before-repair",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "raw": " A\r\n  B\rCD E F\u000bG\fH",
+      "expected_text": " A\n  B\nC\nD\nE\nF\nG\nH",
+      "requirement": "T63"
+    },
+    {
+      "id": "F3-c0-preserved",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "raw": "A\u0001B‍💰️",
+      "expected_text": "A\u0001B‍💰️",
+      "requirement": "T64"
+    },
+    {
+      "id": "F3-html-nel",
+      "field": "job_description",
+      "source_format": "html_fragment",
+      "raw": "<p>A  B</p>",
+      "expected_text": "A\n  B",
+      "requirement": "T63"
+    },
+    {
+      "id": "F3-excluded",
+      "field": "job_description",
+      "source_format": "html_fragment",
+      "raw": "<p>A<script>bad</script><style>bad</style><template>bad</template><!--bad-->B</p>",
+      "expected_text": "AB",
+      "requirement": "exclusions"
+    },
+    {
+      "id": "F3-fallback",
+      "field": "job_description",
+      "source_format": "html_fragment",
+      "raw": "<button>Apply</button> <select><option>Remote</option></select> <noscript>Fallback</noscript>",
+      "expected_text": "Apply Remote Fallback",
+      "requirement": "R10"
+    },
+    {
+      "id": "F3-html-entities-once",
+      "field": "job_description",
+      "source_format": "html_fragment",
+      "raw": "<p>&amp;lt;b&amp;gt;</p>",
+      "expected_text": "&lt;b&gt;",
+      "requirement": "entities"
+    },
+    {
+      "id": "F3-block-context",
+      "field": "job_description",
+      "source_format": "html_fragment",
+      "raw": "<div>• Python</div><div>• SQL</div>",
+      "expected_text": "• Python\n• SQL",
+      "requirement": "T50"
+    },
+    {
+      "id": "F3-dom-marker-preserved",
+      "field": "job_description",
+      "source_format": "html_fragment",
+      "raw": "<ol><li>2. SQL</li></ol>",
+      "expected_text": "2. SQL",
+      "requirement": "T53"
+    },
+    {
+      "id": "F3-explicit-pair",
+      "field": "job_description",
+      "source_format": "html_fragment",
+      "raw": "<dl><dt>Type</dt><dd>Full-time</dd></dl>",
+      "expected_text": "Type\nFull-time",
+      "requirement": "T48"
+    },
+    {
+      "id": "F3-multiple-pair",
+      "field": "job_description",
+      "source_format": "html_fragment",
+      "raw": "<dl><dt>A</dt><dt>B</dt><dd>C</dd><dd>D</dd></dl>",
+      "expected_text": "A\nB\nC\nD",
+      "requirement": "R06"
+    },
+    {
+      "id": "F3-no-inferred-pair",
+      "field": "job_description",
+      "source_format": "html_fragment",
+      "raw": "<ul><li><h3>Type</h3><b>Full-time</b></li></ul>",
+      "expected_text": "Type\nFull-time",
+      "requirement": "T49"
+    },
+    {
+      "id": "F3-representations",
+      "field": "job_description",
+      "source_format": "html_fragment",
+      "raw": "<p><s>Old</s> H<sub>2</sub>O x<sup>2</sup></p>",
+      "expected_text": "Old H2O x2",
+      "requirement": "R10"
+    },
+    {
+      "id": "F3-alt-link",
+      "field": "job_description",
+      "source_format": "html_fragment",
+      "raw": "<a href=\"https://example.invalid/?a=1&amp;b=2\">Apply</a> <img src=\"https://example.invalid/a\" alt=\"Remote &amp; hybrid\">",
+      "expected_text": "Apply Remote & hybrid",
+      "requirement": "R10"
+    },
+    {
+      "id": "F3-hr-quote",
+      "field": "job_description",
+      "source_format": "html_fragment",
+      "raw": "<p>A</p><hr><blockquote>B</blockquote>",
+      "expected_text": "A\nB",
+      "requirement": "R10"
+    },
+    {
+      "id": "F3-empty",
+      "field": "job_description",
+      "source_format": "html_fragment",
+      "raw": "",
+      "expected_text": "",
+      "requirement": "empty"
+    },
+    {
+      "id": "F3-broken",
+      "field": "job_description",
+      "source_format": "html_fragment",
+      "raw": "<p>x</div>",
+      "expected_text": "x",
+      "requirement": "recovery"
+    }
+  ]
+}

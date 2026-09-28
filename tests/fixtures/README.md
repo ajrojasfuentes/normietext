@@ -30,3 +30,11 @@ reales. Los loaders leen bytes y decodifican UTF-8 sin conversión universal de 
 Los esquemas rechazan claves desconocidas. El split por familia evita mezclar
 copias entre development y validation; el integral público no es una validación
 ciega ni reemplaza la futura muestra real autorizada.
+
+## Adaptación F3
+
+`adaptation/cases.json` y su schema verifican `phase=converted`. Son expectativas
+manuales independientes para formato/estructura, no sustituyen los goldens del
+normalizador ni su estado awaiting_normalizer. El catálogo agrega sus hashes sin
+modificar los del corpus anterior. Un LF final en un bloque/celda vacío es una
+proyección intermedia; delimitadores finales y compactación se validan en F5.

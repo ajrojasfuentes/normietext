@@ -476,6 +476,34 @@ Las listas ordenadas respetan `start`, `value` y `reversed` cuando estén presen
 
 El parser no ejecuta CSS. No promete reproducir exactamente visibilidad o layout de un navegador. Los casos de contenido oculto requieren decisiones en el adaptador y pruebas específicas del origen.
 
+### 10.4.1 Concreción de adaptación F3 (2026-09-27)
+
+El documento convertido conserva sangrías y texto literal; sus offsets todavía no
+son los spans canónicos de F5. Sus bloques pueden incluir `container` y metadatos
+inmutables para listas, tablas, filas, agrupaciones y contextos de HTML. Conserva
+segmentos de alineación hacia raw, sin reinterpretación posterior de HTML.
+
+En F3 se usa LF como separador provisional entre bloques/celdas; los marcadores,
+la compactación de celdas y ` | ` pertenecen al renderer de F5. `hr` aporta un límite
+sin inventar texto; blockquote, caption, thead/tbody/tfoot y th conservan contextos.
+Sup/sub, enlaces, alt y texto tachado conservan contenido y anotaciones de
+representación. Button/select/noscript y fallback no se excluyen por su etiqueta.
+Las envolturas html/body/head no introducen bloques ni límites sintéticos.
+
+Los atributos enteros usan gramática ASCII con signo opcional y hasta 64 dígitos;
+valores inválidos generan incidencia. ol inválido usa inicio 1 o número de hijos li
+si reversed; li.value inválido conserva la secuencia vigente. colspan inválido usa
+1 y rowspan inválido usa 1; rowspan=0 abarca las filas restantes del grupo conocido.
+Los spans de tabla se conservan sin copiar valores. La expansión de coordenadas
+se limita por el presupuesto de nodos; no se materializa una matriz rectangular.
+
+Las asociaciones dl agrupan dt consecutivos con dd consecutivos; se permiten
+miembros faltantes y envolturas div. Cada div hijo directo de dl delimita un grupo:
+no se rellenan miembros faltantes con los de otro grupo. Ninguna negrita o cabecera
+crea una asociación.
+La adaptación no elimina marcadores textuales redundantes con el DOM: F5 resolverá
+su equivalencia/conflicto. Los detalles y casos quedan en ADR-0003.
+
 ### 10.5 Recuperación y pérdida
 
 La recuperación de HTML roto puede omitir contenido. Deben conservarse fuente e incidencias disponibles del parser; una salida corta respecto de la entrada es una señal de observación, no una prueba suficiente de pérdida. No se exige que desaparezca toda cadena con forma de etiqueta: puede ser contenido literal legítimo.

@@ -188,3 +188,14 @@ archivos instalados. No descargar ni inspeccionar Git desde la normalización.
 El [cierre de F2](revisiones/cierre_fase_2.md) registra la validación local. El corpus
 del producto permanece pendiente del normalizador completo; no se confunde replay
 de baseline con aceptación de todas las reglas. F3 es el siguiente incremento.
+
+## 10. Adaptadores de Fase 3
+
+La suite incluye 30 fixtures de fase converted, estructura HTML, seguridad de parser,
+propiedades y replay entre procesos. El smoke test instalado ejecuta convert_source
+sobre HTML y comprueba su alineación. Los pins y el lock de F2 se mantienen.
+
+Véanse [ADR-0003](decisions/0003-adaptadores-formato.md) y [cierre F3](revisiones/cierre_fase_3.md).
+T03–T08 quedan cubiertos en adaptación; T31/T32 solo estructuralmente. El corpus final
+no se marca aprobado hasta ejecutar el pipeline completo. Las rutas del catálogo
+siguen usando as_posix para que las comprobaciones funcionen también en Windows.

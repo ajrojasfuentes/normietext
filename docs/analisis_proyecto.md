@@ -1,4 +1,4 @@
-> Estado actual: [cierre de Fase 2](revisiones/cierre_fase_2.md). Este análisis conserva el contexto de inicialización.
+> Estado actual: [cierre de Fase 3](revisiones/cierre_fase_3.md). Este análisis conserva el contexto de inicialización.
 
 # Análisis del proyecto y decisiones de inicialización
 

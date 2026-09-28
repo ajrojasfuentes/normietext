@@ -56,6 +56,7 @@ class OriginPrecision(StrEnum):
 
 
 class BlockKind(StrEnum):
+    CONTAINER = "container"
     PARAGRAPH = "paragraph"
     LINE = "line"
     HEADING = "heading"
@@ -314,6 +315,25 @@ class Origin(Validated):
 
 
 @dataclass(frozen=True, slots=True)
+class AlignmentSegment(Validated):
+    output: Span
+    origin: Origin
+    linear: bool = False
+
+    def __post_init__(self) -> None:
+        Validated.__post_init__(self)
+        require(self.output.start < self.output.end, "Empty alignment segment")
+        if self.linear:
+            require(self.origin.precision is OriginPrecision.EXACT, "Linear mapping must be exact")
+            assert self.origin.span is not None
+            require(
+                self.output.end - self.output.start
+                == self.origin.span.end - self.origin.span.start,
+                "Linear lengths differ",
+            )
+
+
+@dataclass(frozen=True, slots=True)
 class Block(Validated):
     id: str
     kind: BlockKind
@@ -330,6 +350,7 @@ class Block(Validated):
     heading_level: int | None = None
     origin_tag: str | None = None
     header: bool = False
+    metadata: FrozenMap = FrozenMap()
 
     def __post_init__(self) -> None:
         Validated.__post_init__(self)
@@ -536,12 +557,18 @@ class ParsedDocument(Validated):
     edits: tuple[Edit, ...] = ()
     issues: tuple[Issue, ...] = ()
 
+    alignment: tuple[AlignmentSegment, ...] = ()
+
     @property
     def phase(self) -> DocumentPhase:
         return DocumentPhase.CONVERTED
 
     def __post_init__(self) -> None:
         Validated.__post_init__(self)
+        if self.alignment:
+            from normietext.provenance import Alignment
+
+            Alignment(self.source.source_length, len(self.text), self.alignment)
         _document_links(
             self.text,
             self.source,

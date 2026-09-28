@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "phase",
+    "cases"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "phase": {
+      "const": "converted"
+    },
+    "cases": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "field",
+          "source_format",
+          "raw",
+          "expected_text",
+          "requirement"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "field": {
+            "const": "job_description"
+          },
+          "source_format": {
+            "enum": [
+              "plain_text",
+              "unknown",
+              "html_fragment",
+              "html_escaped_text"
+            ]
+          },
+          "raw": {
+            "type": "string"
+          },
+          "expected_text": {
+            "type": "string"
+          },
+          "requirement": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

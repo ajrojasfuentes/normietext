@@ -11,16 +11,17 @@ No confundir la especificación 2.0 con la versión del paquete 0.1.0.
 - Capturar secuencias emoji y estructura antes de borrar invisibles o sangrías.
 - NFC final antes de calcular spans; no NFKC global ni interpretación semántica.
 - Mantener separados versiones del software, esquema, reglas y perfil.
-- F1–F2 implementan contratos/política/tablas/corpus y baseline de fuentes, alineación y manifiesto; aún no existe `JobTextNormalizer`; no documentar APIs inexistentes
+- F1–F3 implementan contratos, corpus, baseline y adaptadores de formato con estructura; aún no existe `JobTextNormalizer`; no documentar APIs inexistentes
   como utilizables ni considerar los tests de empaquetado aceptación del producto.
 - Usar `uv sync --locked`, Ruff, mypy y pytest; construir y comprobar el wheel.
 - Cambios de comportamiento requieren fixtures y revisión de diffs del corpus.
 - Nunca sustituir los textos esperados del corpus automáticamente por la salida
   de la implementación. No corregir la especificación silenciosamente.
 
-Estado actual y evidencia: `docs/revisiones/cierre_fase_2.md`. Las decisiones de
+Estado actual y evidencia: `docs/revisiones/cierre_fase_3.md`. Las decisiones de
 contratos se fijan en `docs/decisions/0001-contratos-fase-1.md` y
-`docs/decisions/0002-baseline-fuentes-procedencia.md`. Los fixtures con
+`docs/decisions/0002-baseline-fuentes-procedencia.md` y
+`docs/decisions/0003-adaptadores-formato.md`. Los fixtures con
 `awaiting_normalizer` no son pruebas funcionales aprobadas ni deben ocultarse con
 skips. Ejecutar `uv run --locked python scripts/generate_tables.py --check`; no
 regenerar goldens o hashes de corpus a partir de la salida de la implementación.
@@ -31,3 +32,10 @@ regenerar goldens o hashes de corpus a partir de la salida de la implementación
   de limpieza. `validate_canonical` comprueba invariantes base; F4/F5 añaden reglas.
 - Persistencia/recuperación externa pertenecen a ingesta; no llamar SourceStore desde
   las transformaciones. Un fingerprint instalado no equivale al hash de un wheel.
+
+- `convert_source` solo recibe FieldInput nuevo. Su resultado es converted, con
+  alineación; usar `tracked_document` para continuar sin reinterpretar formato.
+- HTML conserva precisión field si el backend no demuestra offsets raw. Nunca
+  usar búsquedas de texto repetido para declarar exactitud.
+- Los fixtures adaptation verifican F3; sus LF son provisionales. La salida final
+  de tablas/listas y NFC/spans sigue en F5. Preservar esas puertas separadas.

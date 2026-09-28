@@ -3,8 +3,8 @@
 **Base normativa:** [especificación 2.0](normietext_v2.0_especificacion.md).
 **Fecha:** 24 de septiembre de 2026 UTC.
 **Audiencia:** ingeniería del núcleo, responsables de corpus/QA e integradores.
-**Estado:** Fase 0 verificada localmente y fases 1–2 completadas (2026-09-25); fases
-3–8 pendientes. Véase el [cierre de F2](revisiones/cierre_fase_2.md) y el
+**Estado:** Fase 0 verificada localmente y fases 1–3 completadas (2026-09-27); fases
+4–8 pendientes. Véase el [cierre de F3](revisiones/cierre_fase_3.md) y el
 [cierre anterior](revisiones/cierre_fases_0_1.md). Las
 tareas de las fases siguientes siguen siendo trabajo futuro.
 
@@ -199,6 +199,11 @@ Mantener `segment` si falta un mapa probado; permitir precisión `exact` solo co
 correspondencia demostrable, sin prohibir mejoras futuras de alineación.
 
 ## 7. Fase 3 — Adaptadores de formato y estructura de origen
+
+**Estado: completada localmente el 2026-09-27.** 130 pruebas aprobadas; adaptación,
+estructura, procedencia, límites y replay descritos en [cierre F3](revisiones/cierre_fase_3.md)
+y [ADR-0003](decisions/0003-adaptadores-formato.md). Las proyecciones finales de
+listas/celdas y sus spans canónicos permanecen expresamente en F5, según la puerta.
 
 **Depende de:** fase 2. **Referencias:** §§7, 9–10, 14, 18, 23.
 
@@ -569,12 +574,12 @@ especificación explícitamente antes de declarar aceptación.
 
 ## 17. Primer incremento recomendado
 
-Los incrementos F1 y F2 ya se completaron. El siguiente trabajo es F3: adaptadores
-de formato y estructura de origen, fuera del alcance de la entrega de F2.
+Los incrementos F1–F3 ya se completaron. El siguiente trabajo es F4: reparación
+de origen, análisis léxico y segmentos protegidos, fuera de la entrega de F3.
 
 La secuencia inicial de contratos y fixtures queda registrada en F1. Antes de
-implementar HTML o una regla destructiva, revisar ADR-0001 y ADR-0002 y conservar
-la composición hacia la fuente inicial. F3 debe reutilizar estos contratos, sin
+implementar HTML o una regla destructiva, revisar ADR-0001, ADR-0002 y ADR-0003 y conservar
+la composición hacia la fuente inicial. F4 debe reutilizar estos contratos, sin
 reclasificar una proyección normalizada como raw ni ejecutar el renderer antes
 de capturar la estructura y las secuencias léxicas.
 

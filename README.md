@@ -4,9 +4,9 @@ Biblioteca Python local y determinista para normalizar seis campos de ofertas
 laborales extraídas de LinkedIn. Conserva evidencia, estructura y procedencia
 para consumidores de parsing, sin LLM ni llamadas de red al normalizar.
 
-**Estado: Fase 0 verificada localmente y fases 1–2 completadas.** El paquete incluye
+**Estado: Fase 0 verificada localmente y fases 1–3 completadas.** El paquete incluye
 contratos, política/tablas, fuentes verificadas, alineación compuesta, serialización
-canónica y manifiesto efectivo;
+canónica, manifiesto efectivo y adaptadores de formato con estructura;
 `JobTextNormalizer` y las reglas de normalización todavía no están implementados.
 La especificación 2.0 no es la versión del paquete: la base usa `0.1.0`.
 
@@ -68,6 +68,24 @@ ingesta mediante `SourceStore`; no introduce I/O en las transformaciones. El
 [ADR de Fase 2](docs/decisions/0002-baseline-fuentes-procedencia.md) explica alineación,
 validación canónica base, identidad del entorno y requisitos de artefactos de producción.
 
+## Conversión de formato disponible
+
+```python
+from normietext import FieldInput, JobField, SourceFormat
+from normietext.adapters import convert_source, tracked_document
+
+source = FieldInput(JobField.JOB_DESCRIPTION, "C<b>++</b><br>Python",
+                    SourceFormat.HTML_FRAGMENT)
+document = convert_source(source)
+assert document.text == "C++\nPython"
+assert document.phase.value == "converted"
+tracked = tracked_document(document)  # Mantiene alineación; no reinterpreta HTML.
+```
+
+La conversión conserva estructura, sangrías y componentes de emoji para las etapas
+siguientes. No es una API de limpieza completa. El [ADR de Fase 3](docs/decisions/0003-adaptadores-formato.md)
+documenta formatos, entidades, límites, listas, tablas, asociaciones y precisión HTML.
+
 ## Distribución e integración
 
 La entrega principal es un wheel importable con tipos (`py.typed`). Un consumidor
@@ -88,6 +106,8 @@ FastAPI, Docker ni infraestructura distribuida a esta inicialización.
 - [Desarrollo, CI y publicación](docs/desarrollo_y_release.md).
 - [ADR de contratos y corpus](docs/decisions/0001-contratos-fase-1.md).
 - [ADR de baseline y procedencia](docs/decisions/0002-baseline-fuentes-procedencia.md).
+- [ADR de adaptación](docs/decisions/0003-adaptadores-formato.md).
+- [Informe de cierre F3](docs/revisiones/cierre_fase_3.md).
 - [Informe de cierre F2](docs/revisiones/cierre_fase_2.md).
 - [Informe de revisión F0 y cierre F1](docs/revisiones/cierre_fases_0_1.md).
 

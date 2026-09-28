@@ -5,6 +5,7 @@ The full normalization pipeline is not implemented yet. See the phase 2 ADR.
 
 from normietext.errors import (
     ErrorCode,
+    FormatConversionError,
     InputValidationError,
     ModelValidationError,
     NormalizationError,
@@ -15,6 +16,7 @@ from normietext.errors import (
     SourceRecoveryError,
 )
 from normietext.models import (
+    AlignmentSegment,
     Annotation,
     AnnotationKind,
     Association,
@@ -50,6 +52,7 @@ from normietext.models import (
 from normietext.policy import NormalizationPolicy, ResourceLimits
 
 __all__ = [
+    "AlignmentSegment",
     "Annotation",
     "AnnotationKind",
     "Association",
@@ -64,6 +67,7 @@ __all__ = [
     "FieldInput",
     "FieldOutcome",
     "FieldStatus",
+    "FormatConversionError",
     "FrozenMap",
     "InputField",
     "InputValidationError",

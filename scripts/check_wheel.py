@@ -53,6 +53,12 @@ def main() -> None:
                 "from normietext.serialization import canonical_bytes; "
                 "manifest = create_manifest(); "
                 "assert manifest.code_revision.startswith('git:'); "
+                "from normietext import SourceFormat; "
+                "from normietext.adapters import convert_source, tracked_document; "
+                "doc = convert_source(FieldInput(JobField.JOB_TITLE, 'C<b>++</b>', "
+                "SourceFormat.HTML_FRAGMENT)); "
+                "assert doc.text == 'C++' and doc.phase.value == 'converted'; "
+                "assert tracked_document(doc).text == 'C++'; "
                 "assert canonical_bytes(manifest) == canonical_bytes(create_manifest()); "
                 "import bs4, emoji, ftfy, lxml.etree, regex; "
                 "print('Installed normietext', version('normietext'))",

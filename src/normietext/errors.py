@@ -58,3 +58,7 @@ class PolicyMismatchError(NormalizationError):
 
 class SourceRecoveryError(NormalizationError):
     """Ingestion cannot recover the exact persisted source."""
+
+
+class FormatConversionError(NormalizationError):
+    """Declared format cannot be converted; no parser fallback or partial result."""
