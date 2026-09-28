@@ -102,7 +102,7 @@ def test_catalog_hashes_and_other_fixture_schemas() -> None:
         == policy["sha256"]
     )
     discovered = {
-        str(path.relative_to(FIXTURES))
+        path.relative_to(FIXTURES).as_posix()
         for path in FIXTURES.rglob("*")
         if path.is_file()
         and path.suffix in (".json", ".txt", ".html")
