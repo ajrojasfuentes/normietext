@@ -42,8 +42,8 @@ El script del wheel resuelve rutas de Python para Windows y POSIX.
 
 Ruff revisa código Python y configuración del proyecto; no reescribe los ejemplos
 normativos Markdown. El test inicial acredita metadatos y `py.typed`, no reglas del
-producto. Hypothesis está listo para la fase de contratos y corpus; no se añaden
-propiedades ficticias para un normalizador inexistente.
+producto. Hypothesis comprueba propiedades Unicode, composición y reentrada de la API
+funcional. Las suites de regresión ejecutan el corpus y el integral de F5.
 
 `uv build` construye sdist y wheel desde ese sdist. El script instala el wheel en
 un entorno temporal independiente, importa el paquete y las cinco dependencias,
@@ -211,3 +211,15 @@ Véanse [ADR-0004](decisions/0004-reparacion-lexico.md) y [cierre F4](revisiones
 La etapa reparada conserva explicaciones de ftfy, incluso cuando cambian longitudes;
 ninguna igualdad de longitud acredita exactitud. Las protecciones son contextos de
 reglas futuras, no excepciones a toda normalización. F5 sigue pendiente.
+
+## Validación funcional F5
+
+`tests/regression/test_normalizer.py` ejecuta T01–T40, el integral, suplementos,
+decisiones de F5 y el registro de seis campos. Los fixtures no se regeneran desde
+la implementación. Revisar los cambios de texto, estructura, anotaciones y origen;
+las fases de adaptación y léxico conservan sus pruebas independientes.
+
+La API y el contrato de errores están en [api.md](api.md); las decisiones de
+renderizado en [ADR-0005](decisions/0005-renderer-api.md). El smoke del wheel
+incluye normalización y reentrada. Los tests locales no acreditan la matriz remota,
+precisión en muestra real, SLO ni autorización de publicación.

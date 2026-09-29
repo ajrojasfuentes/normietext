@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "authority",
+    "cases"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "authority": {
+      "type": "string"
+    },
+    "cases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "raw",
+          "source_format",
+          "field",
+          "expected"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "raw": {
+            "type": "string"
+          },
+          "source_format": {
+            "enum": [
+              "plain_text",
+              "html_fragment",
+              "html_escaped_text",
+              "unknown"
+            ]
+          },
+          "field": {
+            "enum": [
+              "job_description",
+              "job_title",
+              "job_criteria_list",
+              "job_type",
+              "seniority",
+              "raw_location"
+            ]
+          },
+          "expected": {
+            "type": "object",
+            "required": [
+              "text"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "text": {
+                "type": "string"
+              },
+              "items": {
+                "type": "integer"
+              },
+              "annotations": {
+                "type": "integer"
+              },
+              "associations": {
+                "type": "integer"
+              },
+              "rule": {
+                "type": "string"
+              },
+              "issue": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

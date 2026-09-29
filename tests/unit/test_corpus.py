@@ -23,7 +23,7 @@ def test_normative_case_inventory_and_schema() -> None:
     validator.validate(corpus)
     assert {case["requirement"] for case in corpus["cases"]} == {f"T{i:02}" for i in range(1, 41)}
     assert len({case["id"] for case in corpus["cases"]}) == len(corpus["cases"])
-    assert all(case["execution_status"] == "awaiting_normalizer" for case in corpus["cases"])
+    assert all(case["execution_status"] == "verified_f5" for case in corpus["cases"])
     by_id = {case["id"]: case for case in corpus["cases"]}
     assert by_id["T09"]["raw"] == "a\u200b\u0301"
     assert by_id["T36"]["raw"] == "\ud800"
@@ -75,8 +75,8 @@ def test_review_decisions_do_not_become_unsupported_goldens() -> None:
     assert decisions["T54"] == "deferred_marker_extension"
     assert decisions["T56"] == "accepted_hint_without_inferred_list"
     supplemental = load(FIXTURES / "supplemental/cases.json")["cases"]
-    assert any(case["decision_status"] == "pending_renderer" for case in supplemental)
-    assert all(case["execution_status"] == "awaiting_normalizer" for case in supplemental)
+    assert all(case["decision_status"] == "specified" for case in supplemental)
+    assert all(case["execution_status"] == "verified_f5" for case in supplemental)
     record = load(FIXTURES / "records/six_present.json")
     assert len(record["fields"]) == 6
     assert all(value["state"] == "present" for value in record["fields"].values())
@@ -113,6 +113,7 @@ def test_catalog_hashes_and_other_fixture_schemas() -> None:
         assert hashlib.sha256((FIXTURES / name).read_bytes()).hexdigest() == digest
     for data, schema in (
         ("supplemental/cases.json", "supplemental/schema.json"),
+        ("canonical/cases.json", "canonical/schema.json"),
         ("records/six_present.json", "records/schema.json"),
         ("review_inventory.json", "review_inventory.schema.json"),
     ):

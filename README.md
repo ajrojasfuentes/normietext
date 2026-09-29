@@ -4,11 +4,12 @@ Biblioteca Python local y determinista para normalizar seis campos de ofertas
 laborales extraídas de LinkedIn. Conserva evidencia, estructura y procedencia
 para consumidores de parsing, sin LLM ni llamadas de red al normalizar.
 
-**Estado: Fase 0 verificada localmente y fases 1–4 completadas.** El paquete incluye
-contratos, política/tablas, fuentes verificadas, alineación compuesta, serialización
-canónica, manifiesto efectivo adaptadores de formato con estructura, reparación explicada y análisis léxico;
-`JobTextNormalizer` y las reglas de normalización todavía no están implementados.
-La especificación 2.0 no es la versión del paquete: la base usa `0.1.0`.
+**Estado: fases 0–5 completadas localmente.**
+`JobTextNormalizer` ofrece normalización por campo/registro, reentrada canónica
+idempotente y proyección solo texto. Incluye listas, emoji, invisibles, espacios,
+NFC final, estructura y procedencia. Las puertas de calidad sobre muestra real,
+rendimiento y release de F6–F8 siguen pendientes. La especificación 2.0 no es
+la versión del paquete: la base usa `0.1.0`.
 
 ## Desarrollo
 
@@ -31,8 +32,7 @@ uv run --locked python scripts/check_wheel.py
 
 `uv.lock` fija las dependencias efectivas; no se edita manualmente. El rango de
 Python publicado es `>=3.14,<3.15`, con validación inicial sobre 3.14.7. Para
-reproducir el comportamiento normativo se usa el runtime exacto y, cuando exista
-el normalizador, su manifiesto de política y dependencias.
+reproducir el comportamiento normativo se usa el runtime exacto y su manifiesto de política y dependencias.
 
 ## Contratos disponibles
 
@@ -45,9 +45,24 @@ assert source.value == "Python Engineer"  # Validación, sin transformar conteni
 assert policy.limits.max_expansion_factor == 32
 ```
 
-La API de normalización llegará en las fases siguientes. Las pruebas actuales
-comprueban contratos, procedencia, baseline de espacios/NFC y replay; los 40 casos normativos están
-materializados en 49 escenarios y aún no se han ejecutado contra un normalizador.
+## Normalización disponible
+
+```python
+from normietext import FieldInput, JobField, JobTextNormalizer
+
+normalizer = JobTextNormalizer()
+result = normalizer.normalize_field(
+    FieldInput(JobField.JOB_DESCRIPTION, "🚀• Python\n🇨🇷")
+)
+assert result.text == "- Python\n[flag:CR]"
+assert normalizer.canonicalize(result) is result
+assert result.source.raw == "🚀• Python\n🇨🇷"
+assert normalizer.clean_text("C++🚀Python", JobField.JOB_TITLE) == "C++ Python"
+```
+
+La [guía de API](docs/api.md) describe formatos explícitos, estados, errores por campo,
+modo estricto de registros, anotaciones y reentrada. T01–T40 se ejecutan en 49
+escenarios; el integral conserva sus textos esperados originales.
 
 ## Fuentes y manifiesto disponibles
 
@@ -108,17 +123,17 @@ candidatos y protecciones de URL/correo/código; todavía no eliminan emoji, inv
 ni sangrías ni producen texto canónico. El [ADR de F4](docs/decisions/0004-reparacion-lexico.md)
 detalla unidades de reparación, precedencias y limitaciones del reconocimiento.
 La reparación configurada puede tener falsos positivos: conserva raw y explicación,
-pero no demuestra la intención del autor. El renderer y la API funcional siguen en F5.
+pero no demuestra la intención del autor. El renderer de F5 consume esos candidatos una sola vez.
 
 ## Distribución e integración
 
 La entrega principal es un wheel importable con tipos (`py.typed`). Un consumidor
 puede instalar `dist/normietext-0.1.0-py3-none-any.whl` con su gestor de paquetes.
-Esto instala los contratos, datos y utilidades de baseline, todavía sin API de limpieza. Las cinco dependencias de
+Esto instala la API funcional, contratos, datos y etapas tipadas. Las cinco dependencias de
 runtime son las fijadas por §21 de la especificación. Las herramientas de pruebas,
 tipado y publicación no son dependencias de los consumidores.
 
-El núcleo será síncrono e independiente del framework. Un servicio HTTP, workers,
+El núcleo es síncrono e independiente del framework. Un servicio HTTP, workers,
 almacenamiento y orquestación pertenecen a adaptadores externos; no se incorporan
 FastAPI, Docker ni infraestructura distribuida a esta inicialización.
 
@@ -132,6 +147,9 @@ FastAPI, Docker ni infraestructura distribuida a esta inicialización.
 - [ADR de baseline y procedencia](docs/decisions/0002-baseline-fuentes-procedencia.md).
 - [ADR de adaptación](docs/decisions/0003-adaptadores-formato.md).
 - [ADR de reparación y léxico](docs/decisions/0004-reparacion-lexico.md).
+- [Guía de API](docs/api.md).
+- [ADR de renderer y API](docs/decisions/0005-renderer-api.md).
+- [Informe de cierre F5](docs/revisiones/cierre_fase_5.md).
 - [Informe de cierre F4](docs/revisiones/cierre_fase_4.md).
 - [Informe de cierre F3](docs/revisiones/cierre_fase_3.md).
 - [Informe de cierre F2](docs/revisiones/cierre_fase_2.md).

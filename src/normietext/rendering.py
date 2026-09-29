@@ -32,15 +32,16 @@ def _sub(
     limits: ResourceLimits,
 ) -> TrackedText:
     try:
-        changes = tuple(
-            Replacement(Span(match.start(), match.end()), replacement, rule, True)
-            for match in pattern.finditer(tracked.text, timeout=limits.regex_timeout_ms / 1000)
-            if (replacement := transform(match.group())) != match.group()
-        )
+        matches = list(pattern.finditer(tracked.text, timeout=limits.regex_timeout_ms / 1000))
     except TimeoutError as exc:
         raise ResourceLimitError(
             ErrorCode.REGEX_TIMEOUT, "Renderer matching exceeded budget"
         ) from exc
+    changes = tuple(
+        Replacement(Span(match.start(), match.end()), replacement, rule, True)
+        for match in matches
+        if (replacement := transform(match.group())) != match.group()
+    )
     return tracked.replace(changes, limits=limits)
 
 
@@ -72,9 +73,14 @@ def render_baseline(
     tracked = _sub(tracked, _EDGES, lambda _: "", "render.line_edges", limits)
     tracked = _sub(tracked, _BLANKS, lambda _: "\n\n", "render.blank_lines", limits)
     tracked = _sub(tracked, _FIELD_EDGES, lambda _: "", "render.field_edges", limits)
-    tracked = _sub(
-        tracked, _GRAPHEMES, lambda text: unicodedata.normalize("NFC", text), "render.nfc", limits
-    )
+    if not unicodedata.is_normalized("NFC", tracked.text):
+        tracked = _sub(
+            tracked,
+            _GRAPHEMES,
+            lambda text: unicodedata.normalize("NFC", text),
+            "render.nfc",
+            limits,
+        )
     # Guard against differing grapheme/NFC Unicode authorities. Never infer a
     # character map by length; a cross-boundary repair degrades to whole segment.
     normalized = unicodedata.normalize("NFC", tracked.text)

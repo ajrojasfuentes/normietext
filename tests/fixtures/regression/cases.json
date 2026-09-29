@@ -12,7 +12,7 @@
       "family": "T01",
       "split": "development",
       "origin": "synthetic",
-      "execution_status": "awaiting_normalizer",
+      "execution_status": "verified_f5",
       "reason": "Normative regression T01 (\u00a730); representation, not semantic inference.",
       "expected": {
         "properties": [],
@@ -32,7 +32,7 @@
       "family": "T01",
       "split": "development",
       "origin": "synthetic",
-      "execution_status": "awaiting_normalizer",
+      "execution_status": "verified_f5",
       "reason": "Normative regression T01 (\u00a730); representation, not semantic inference.",
       "expected": {
         "properties": [],
@@ -52,7 +52,7 @@
       "family": "T01",
       "split": "development",
       "origin": "synthetic",
-      "execution_status": "awaiting_normalizer",
+      "execution_status": "verified_f5",
       "reason": "Normative regression T01 (\u00a730); representation, not semantic inference.",
       "expected": {
         "properties": [],
@@ -72,7 +72,7 @@
       "family": "T01",
       "split": "development",
       "origin": "synthetic",
-      "execution_status": "awaiting_normalizer",
+      "execution_status": "verified_f5",
       "reason": "Normative regression T01 (\u00a730); representation, not semantic inference.",
       "expected": {
         "properties": [],
@@ -92,7 +92,7 @@
       "family": "T01",
       "split": "development",
       "origin": "synthetic",
-      "execution_status": "awaiting_normalizer",
+      "execution_status": "verified_f5",
       "reason": "Normative regression T01 (\u00a730); representation, not semantic inference.",
       "expected": {
         "properties": [],
@@ -112,7 +112,7 @@
       "family": "T02",
       "split": "development",
       "origin": "synthetic",
-      "execution_status": "awaiting_normalizer",
+      "execution_status": "verified_f5",
       "reason": "Normative regression T02 (\u00a730); representation, not semantic inference.",
       "expected": {
         "properties": [],
@@ -132,7 +132,7 @@
       "family": "T02",
       "split": "development",
       "origin": "synthetic",
-      "execution_status": "awaiting_normalizer",
+      "execution_status": "verified_f5",
       "reason": "Normative regression T02 (\u00a730); representation, not semantic inference.",
       "expected": {
         "properties": [],
@@ -152,7 +152,7 @@
       "family": "T02",
       "split": "development",
       "origin": "synthetic",
-      "execution_status": "awaiting_normalizer",
+      "execution_status": "verified_f5",
       "reason": "Normative regression T02 (\u00a730); representation, not semantic inference.",
       "expected": {
         "properties": [],
@@ -172,7 +172,7 @@
       "family": "T02",
       "split": "development",
       "origin": "synthetic",
-      "execution_status": "awaiting_normalizer",
+      "execution_status": "verified_f5",
       "reason": "Normative regression T02 (\u00a730); representation, not semantic inference.",
       "expected": {
         "properties": [],
@@ -192,7 +192,7 @@
       "family": "T03",
       "split": "development",
       "origin": "synthetic",
-      "execution_status": "awaiting_normalizer",
+      "execution_status": "verified_f5",
       "reason": "Normative regression T03 (\u00a730); representation, not semantic inference.",
       "expected": {
         "properties": [],
@@ -212,7 +212,7 @@
       "family": "T04",
       "split": "development",
       "origin": "synthetic",
-      "execution_status": "awaiting_normalizer",
+      "execution_status": "verified_f5",
       "reason": "Normative regression T04 (\u00a730); representation, not semantic inference.",
       "expected": {
         "properties": [],
@@ -232,7 +232,7 @@
       "family": "T05",
       "split": "development",
       "origin": "synthetic",
-      "execution_status": "awaiting_normalizer",
+      "execution_status": "verified_f5",
       "reason": "Normative regression T05 (\u00a730); representation, not semantic inference.",
       "expected": {
         "properties": [],
@@ -252,7 +252,7 @@
       "family": "T06",
       "split": "development",
       "origin": "synthetic",
-      "execution_status": "awaiting_normalizer",
+      "execution_status": "verified_f5",
       "reason": "Normative regression T06 (\u00a730); representation, not semantic inference.",
       "expected": {
         "properties": [],
@@ -272,7 +272,7 @@
       "family": "T07",
       "split": "development",
       "origin": "synthetic",
-      "execution_status": "awaiting_normalizer",
+      "execution_status": "verified_f5",
       "reason": "Normative regression T07 (\u00a730); representation, not semantic inference.",
       "expected": {
         "properties": [],
@@ -292,7 +292,7 @@
       "family": "T08",
       "split": "development",
       "origin": "synthetic",
-      "execution_status": "awaiting_normalizer",
+      "execution_status": "verified_f5",
       "reason": "Normative regression T08 (\u00a730); representation, not semantic inference.",
       "expected": {
         "properties": [],
@@ -312,7 +312,7 @@
       "family": "T09",
       "split": "development",
       "origin": "synthetic",
-      "execution_status": "awaiting_normalizer",
+      "execution_status": "verified_f5",
       "reason": "Normative regression T09 (\u00a730); representation, not semantic inference.",
       "expected": {
         "properties": [
@@ -334,7 +334,7 @@
       "family": "T10",
       "split": "development",
       "origin": "synthetic",
-      "execution_status": "awaiting_normalizer",
+      "execution_status": "verified_f5",
       "reason": "Normative regression T10 (\u00a730); representation, not semantic inference.",
       "expected": {
         "properties": [],
@@ -354,7 +354,7 @@
       "family": "T11",
       "split": "development",
       "origin": "synthetic",
-      "execution_status": "awaiting_normalizer",
+      "execution_status": "verified_f5",
       "reason": "Normative regression T11 (\u00a730); representation, not semantic inference.",
       "expected": {
         "properties": [
@@ -376,7 +376,7 @@
       "family": "T12",
       "split": "development",
       "origin": "synthetic",
-      "execution_status": "awaiting_normalizer",
+      "execution_status": "verified_f5",
       "reason": "Normative regression T12 (\u00a730); representation, not semantic inference.",
       "expected": {
         "properties": [
@@ -399,7 +399,7 @@
       "family": "T13",
       "split": "development",
       "origin": "synthetic",
-      "execution_status": "awaiting_normalizer",
+      "execution_status": "verified_f5",
       "reason": "Normative regression T13 (\u00a730); representation, not semantic inference.",
       "expected": {
         "properties": [],
@@ -419,7 +419,7 @@
       "family": "T14",
       "split": "development",
       "origin": "synthetic",
-      "execution_status": "awaiting_normalizer",
+      "execution_status": "verified_f5",
       "reason": "Normative regression T14 (\u00a730); representation, not semantic inference.",
       "expected": {
         "properties": [],
@@ -439,7 +439,7 @@
       "family": "T15",
       "split": "development",
       "origin": "synthetic",
-      "execution_status": "awaiting_normalizer",
+      "execution_status": "verified_f5",
       "reason": "Normative regression T15 (\u00a730); representation, not semantic inference.",
       "expected": {
         "properties": [],
@@ -459,7 +459,7 @@
       "family": "T16",
       "split": "development",
       "origin": "synthetic",
-      "execution_status": "awaiting_normalizer",
+      "execution_status": "verified_f5",
       "reason": "Normative regression T16 (\u00a730); representation, not semantic inference.",
       "expected": {
         "properties": [],
@@ -479,7 +479,7 @@
       "family": "T17",
       "split": "development",
       "origin": "synthetic",
-      "execution_status": "awaiting_normalizer",
+      "execution_status": "verified_f5",
       "reason": "Normative regression T17 (\u00a730); representation, not semantic inference.",
       "expected": {
         "properties": [],
@@ -499,7 +499,7 @@
       "family": "T18",
       "split": "development",
       "origin": "synthetic",
-      "execution_status": "awaiting_normalizer",
+      "execution_status": "verified_f5",
       "reason": "Normative regression T18 (\u00a730); representation, not semantic inference.",
       "expected": {
         "properties": [],
@@ -525,7 +525,7 @@
       "family": "T19",
       "split": "development",
       "origin": "synthetic",
-      "execution_status": "awaiting_normalizer",
+      "execution_status": "verified_f5",
       "reason": "Normative regression T19 (\u00a730); representation, not semantic inference.",
       "expected": {
         "properties": [],
@@ -551,7 +551,7 @@
       "family": "T20",
       "split": "development",
       "origin": "synthetic",
-      "execution_status": "awaiting_normalizer",
+      "execution_status": "verified_f5",
       "reason": "Normative regression T20 (\u00a730); representation, not semantic inference.",
       "expected": {
         "properties": [
@@ -573,7 +573,7 @@
       "family": "T21",
       "split": "development",
       "origin": "synthetic",
-      "execution_status": "awaiting_normalizer",
+      "execution_status": "verified_f5",
       "reason": "Normative regression T21 (\u00a730); representation, not semantic inference.",
       "expected": {
         "properties": [],
@@ -599,7 +599,7 @@
       "family": "T22",
       "split": "development",
       "origin": "synthetic",
-      "execution_status": "awaiting_normalizer",
+      "execution_status": "verified_f5",
       "reason": "Normative regression T22 (\u00a730); representation, not semantic inference.",
       "expected": {
         "properties": [],
@@ -627,7 +627,7 @@
       "family": "T23",
       "split": "development",
       "origin": "synthetic",
-      "execution_status": "awaiting_normalizer",
+      "execution_status": "verified_f5",
       "reason": "Normative regression T23 (\u00a730); representation, not semantic inference.",
       "expected": {
         "properties": [],
@@ -652,7 +652,7 @@
       "family": "T24",
       "split": "development",
       "origin": "synthetic",
-      "execution_status": "awaiting_normalizer",
+      "execution_status": "verified_f5",
       "reason": "Normative regression T24 (\u00a730); representation, not semantic inference.",
       "expected": {
         "properties": [],
@@ -681,7 +681,7 @@
       "family": "T25",
       "split": "development",
       "origin": "synthetic",
-      "execution_status": "awaiting_normalizer",
+      "execution_status": "verified_f5",
       "reason": "Normative regression T25 (\u00a730); representation, not semantic inference.",
       "expected": {
         "properties": [],
@@ -701,7 +701,7 @@
       "family": "T26",
       "split": "development",
       "origin": "synthetic",
-      "execution_status": "awaiting_normalizer",
+      "execution_status": "verified_f5",
       "reason": "Normative regression T26 (\u00a730); representation, not semantic inference.",
       "expected": {
         "properties": [],
@@ -721,7 +721,7 @@
       "family": "T27",
       "split": "development",
       "origin": "synthetic",
-      "execution_status": "awaiting_normalizer",
+      "execution_status": "verified_f5",
       "reason": "Normative regression T27 (\u00a730); representation, not semantic inference.",
       "expected": {
         "properties": [],
@@ -741,7 +741,7 @@
       "family": "T28",
       "split": "development",
       "origin": "synthetic",
-      "execution_status": "awaiting_normalizer",
+      "execution_status": "verified_f5",
       "reason": "Normative regression T28 (\u00a730); representation, not semantic inference.",
       "expected": {
         "properties": [],
@@ -761,7 +761,7 @@
       "family": "T29",
       "split": "development",
       "origin": "synthetic",
-      "execution_status": "awaiting_normalizer",
+      "execution_status": "verified_f5",
       "reason": "Normative regression T29 (\u00a730); representation, not semantic inference.",
       "expected": {
         "properties": [],
@@ -781,7 +781,7 @@
       "family": "T30",
       "split": "development",
       "origin": "synthetic",
-      "execution_status": "awaiting_normalizer",
+      "execution_status": "verified_f5",
       "reason": "Normative regression T30 (\u00a730); representation, not semantic inference.",
       "expected": {
         "properties": [],
@@ -801,7 +801,7 @@
       "family": "T31",
       "split": "development",
       "origin": "synthetic",
-      "execution_status": "awaiting_normalizer",
+      "execution_status": "verified_f5",
       "reason": "Normative regression T31 (\u00a730); representation, not semantic inference.",
       "expected": {
         "properties": [
@@ -828,7 +828,7 @@
       "family": "T32",
       "split": "development",
       "origin": "synthetic",
-      "execution_status": "awaiting_normalizer",
+      "execution_status": "verified_f5",
       "reason": "Normative regression T32 (\u00a730); representation, not semantic inference.",
       "expected": {
         "properties": [],
@@ -871,7 +871,7 @@
       "family": "T33",
       "split": "development",
       "origin": "synthetic",
-      "execution_status": "awaiting_normalizer",
+      "execution_status": "verified_f5",
       "reason": "Normative regression T33 (\u00a730); representation, not semantic inference.",
       "expected": {
         "properties": [
@@ -893,7 +893,7 @@
       "family": "T34",
       "split": "development",
       "origin": "synthetic",
-      "execution_status": "awaiting_normalizer",
+      "execution_status": "verified_f5",
       "reason": "Normative regression T34 (\u00a730); representation, not semantic inference.",
       "expected": {
         "properties": [],
@@ -913,7 +913,7 @@
       "family": "T35",
       "split": "development",
       "origin": "synthetic",
-      "execution_status": "awaiting_normalizer",
+      "execution_status": "verified_f5",
       "reason": "Normative regression T35 (\u00a730); representation, not semantic inference.",
       "expected": {
         "properties": [],
@@ -933,7 +933,7 @@
       "family": "T35",
       "split": "development",
       "origin": "synthetic",
-      "execution_status": "awaiting_normalizer",
+      "execution_status": "verified_f5",
       "reason": "Normative regression T35 (\u00a730); representation, not semantic inference.",
       "expected": {
         "properties": [],
@@ -953,7 +953,7 @@
       "family": "T35",
       "split": "development",
       "origin": "synthetic",
-      "execution_status": "awaiting_normalizer",
+      "execution_status": "verified_f5",
       "reason": "Normative regression T35 (\u00a730); representation, not semantic inference.",
       "expected": {
         "properties": [],
@@ -973,7 +973,7 @@
       "family": "T36",
       "split": "development",
       "origin": "synthetic",
-      "execution_status": "awaiting_normalizer",
+      "execution_status": "verified_f5",
       "reason": "Normative regression T36 (\u00a730); representation, not semantic inference.",
       "expected": {
         "properties": [],
@@ -993,7 +993,7 @@
       "family": "T37",
       "split": "development",
       "origin": "synthetic",
-      "execution_status": "awaiting_normalizer",
+      "execution_status": "verified_f5",
       "reason": "Normative regression T37 (\u00a730); representation, not semantic inference.",
       "expected": {
         "properties": [],
@@ -1013,7 +1013,7 @@
       "family": "T38",
       "split": "development",
       "origin": "synthetic",
-      "execution_status": "awaiting_normalizer",
+      "execution_status": "verified_f5",
       "reason": "Normative regression T38 (\u00a730); representation, not semantic inference.",
       "expected": {
         "properties": [
@@ -1034,7 +1034,7 @@
       "family": "T39",
       "split": "development",
       "origin": "synthetic",
-      "execution_status": "awaiting_normalizer",
+      "execution_status": "verified_f5",
       "reason": "Normative regression T39 (\u00a730); representation, not semantic inference.",
       "expected": {
         "properties": [
@@ -1055,7 +1055,7 @@
       "family": "T40",
       "split": "development",
       "origin": "synthetic",
-      "execution_status": "awaiting_normalizer",
+      "execution_status": "verified_f5",
       "reason": "Normative regression T40 (\u00a730); representation, not semantic inference.",
       "expected": {
         "properties": [

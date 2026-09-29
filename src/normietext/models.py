@@ -731,7 +731,7 @@ class LexedDocument(Validated):
 
 @dataclass(frozen=True, slots=True)
 class NormalizedField(Validated):
-    """Canonical result envelope; full policy invariants are checked by the future pipeline."""
+    """Canonical result envelope; representation invariants are checked by the public API."""
 
     source: SourceEvidence
     text: str

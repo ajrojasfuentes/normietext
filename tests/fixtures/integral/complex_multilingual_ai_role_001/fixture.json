@@ -4,7 +4,7 @@
   "origin": "synthetic",
   "family": "complex_multilingual_ai_role",
   "split": "validation",
-  "execution_status": "awaiting_normalizer",
+  "execution_status": "verified_f5",
   "policy_id": "linkedin_jobs_aggressive_v1",
   "fence_final_lf": "excluded_as_markdown_delimiter",
   "fields": {

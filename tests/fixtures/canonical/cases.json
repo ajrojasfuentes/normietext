@@ -1,0 +1,561 @@
+{
+  "schema_version": "1.0.0",
+  "authority": "ADR-0005; independently authored expectations",
+  "cases": [
+    {
+      "id": "T41",
+      "raw": "1 - Recruiter\n2 - Technical\n3 - Offer",
+      "source_format": "plain_text",
+      "field": "job_description",
+      "expected": {
+        "text": "1. Recruiter\n2. Technical\n3. Offer",
+        "items": 3
+      }
+    },
+    {
+      "id": "T42",
+      "raw": "1 - 2 years\n2 - 3 years",
+      "source_format": "plain_text",
+      "field": "job_description",
+      "expected": {
+        "text": "1 - 2 years\n2 - 3 years",
+        "items": 0
+      }
+    },
+    {
+      "id": "T43",
+      "raw": "1 - Intro\n\n2 - Detalle",
+      "source_format": "plain_text",
+      "field": "job_description",
+      "expected": {
+        "text": "1 - Intro\n\n2 - Detalle",
+        "items": 0
+      }
+    },
+    {
+      "id": "T44",
+      "raw": "→ Health insurance\n→ Remote budget",
+      "source_format": "plain_text",
+      "field": "job_description",
+      "expected": {
+        "text": "- Health insurance\n- Remote budget",
+        "items": 2
+      }
+    },
+    {
+      "id": "T45",
+      "raw": "→ Health insurance",
+      "source_format": "plain_text",
+      "field": "job_description",
+      "expected": {
+        "text": "→ Health insurance",
+        "items": 0
+      }
+    },
+    {
+      "id": "T46",
+      "raw": "– 3 años exp.\n– B2 English",
+      "source_format": "plain_text",
+      "field": "job_description",
+      "expected": {
+        "text": "- 3 años exp.\n- B2 English",
+        "items": 2
+      }
+    },
+    {
+      "id": "T47",
+      "raw": "<li><h3>Seniority level</h3><span>Mid-Senior level</span></li>",
+      "source_format": "html_fragment",
+      "field": "job_criteria_list",
+      "expected": {
+        "text": "- Seniority level\nMid-Senior level",
+        "items": 1,
+        "associations": 0
+      }
+    },
+    {
+      "id": "T49",
+      "raw": "<li><h3>Seniority level</h3><span>Mid-Senior level</span></li>",
+      "source_format": "html_fragment",
+      "field": "job_description",
+      "expected": {
+        "text": "- Seniority level\nMid-Senior level",
+        "items": 1,
+        "associations": 0
+      }
+    },
+    {
+      "id": "T48",
+      "raw": "<dl><dt>Industries</dt><dd>Software, Fintech</dd></dl>",
+      "source_format": "html_fragment",
+      "field": "job_criteria_list",
+      "expected": {
+        "text": "Industries: Software, Fintech",
+        "associations": 1
+      }
+    },
+    {
+      "id": "T50",
+      "raw": "<p>• Python</p><p>• AWS</p>",
+      "source_format": "html_fragment",
+      "field": "job_description",
+      "expected": {
+        "text": "- Python\n- AWS",
+        "items": 2
+      }
+    },
+    {
+      "id": "T51",
+      "raw": "<ul><li>• Python</li></ul>",
+      "source_format": "html_fragment",
+      "field": "job_description",
+      "expected": {
+        "text": "- Python",
+        "items": 1,
+        "rule": "list.redundant_marker"
+      }
+    },
+    {
+      "id": "T52",
+      "raw": "<ol><li>1. Recruiter</li><li>2. Technical</li></ol>",
+      "source_format": "html_fragment",
+      "field": "job_description",
+      "expected": {
+        "text": "1. Recruiter\n2. Technical",
+        "items": 2
+      }
+    },
+    {
+      "id": "T53",
+      "raw": "<ol start=\"3\"><li>1. X</li></ol>",
+      "source_format": "html_fragment",
+      "field": "job_description",
+      "expected": {
+        "text": "3. 1. X",
+        "issue": "LIST_ORDINAL_CONFLICT"
+      }
+    },
+    {
+      "id": "T54-negative",
+      "raw": "✔ Python\n✔ AWS",
+      "source_format": "plain_text",
+      "field": "job_description",
+      "expected": {
+        "text": "Python\nAWS",
+        "items": 0
+      }
+    },
+    {
+      "id": "T55-negative",
+      "raw": "✓ Python\n✓ AWS",
+      "source_format": "plain_text",
+      "field": "job_description",
+      "expected": {
+        "text": "✓ Python\n✓ AWS",
+        "items": 0
+      }
+    },
+    {
+      "id": "T56",
+      "raw": "✅ Python\n❌ Visa",
+      "source_format": "plain_text",
+      "field": "job_description",
+      "expected": {
+        "text": "[emoji:check_mark_button] Python\n[emoji:cross_mark] Visa",
+        "items": 0,
+        "annotations": 2
+      }
+    },
+    {
+      "id": "T57",
+      "raw": "* Python",
+      "source_format": "plain_text",
+      "field": "job_description",
+      "expected": {
+        "text": "* Python",
+        "items": 0
+      }
+    },
+    {
+      "id": "T58",
+      "raw": "🇨🇷🇲🇽",
+      "source_format": "plain_text",
+      "field": "job_description",
+      "expected": {
+        "text": "[flag:CR] [flag:MX]",
+        "annotations": 2
+      }
+    },
+    {
+      "id": "T59",
+      "raw": "💰$5.000",
+      "source_format": "plain_text",
+      "field": "job_description",
+      "expected": {
+        "text": "[emoji:money_bag] $5.000",
+        "annotations": 1
+      }
+    },
+    {
+      "id": "T60",
+      "raw": "Costa Rica🇨🇷, pero",
+      "source_format": "plain_text",
+      "field": "job_description",
+      "expected": {
+        "text": "Costa Rica [flag:CR], pero",
+        "annotations": 1
+      }
+    },
+    {
+      "id": "T61-inline",
+      "raw": "<span>Hola</span><span>mundo</span>",
+      "source_format": "html_fragment",
+      "field": "job_description",
+      "expected": {
+        "text": "Holamundo"
+      }
+    },
+    {
+      "id": "T61-paragraphs",
+      "raw": "<p>Hola</p><p>mundo</p>",
+      "source_format": "html_fragment",
+      "field": "job_description",
+      "expected": {
+        "text": "Hola\n\nmundo"
+      }
+    },
+    {
+      "id": "T62",
+      "raw": "dont",
+      "source_format": "plain_text",
+      "field": "job_description",
+      "expected": {
+        "text": "don’t",
+        "rule": "encoding.fix_encoding"
+      }
+    },
+    {
+      "id": "T63",
+      "raw": "ab",
+      "source_format": "plain_text",
+      "field": "job_description",
+      "expected": {
+        "text": "a\nb"
+      }
+    },
+    {
+      "id": "T64",
+      "raw": "a\u0001b",
+      "source_format": "plain_text",
+      "field": "job_description",
+      "expected": {
+        "text": "ab",
+        "rule": "unicode.invisible"
+      }
+    },
+    {
+      "id": "mixed_markers",
+      "raw": "→ A\n— B",
+      "source_format": "plain_text",
+      "field": "job_description",
+      "expected": {
+        "text": "→ A\n— B",
+        "items": 0
+      }
+    },
+    {
+      "id": "blank_arrow",
+      "raw": "→ A\n\n→ B",
+      "source_format": "plain_text",
+      "field": "job_description",
+      "expected": {
+        "text": "→ A\n\n→ B",
+        "items": 0
+      }
+    },
+    {
+      "id": "title_no_list",
+      "raw": "① Engineer\n• Python",
+      "source_format": "plain_text",
+      "field": "job_title",
+      "expected": {
+        "text": "① Engineer • Python",
+        "items": 0
+      }
+    },
+    {
+      "id": "code_no_lists",
+      "raw": "```\n→ A\n→ B\n24／7\n```",
+      "source_format": "plain_text",
+      "field": "job_description",
+      "expected": {
+        "text": "```\n→ A\n→ B\n24／7\n```",
+        "items": 0
+      }
+    },
+    {
+      "id": "url_change",
+      "raw": "https://example.com/a🚀b／c",
+      "source_format": "plain_text",
+      "field": "job_description",
+      "expected": {
+        "text": "https://example.com/a b／c",
+        "issue": "PROTECTED_SPAN_MODIFIED"
+      }
+    },
+    {
+      "id": "multiple_dl",
+      "raw": "<dl><dt>Languages</dt><dt>Idiomas</dt><dd>Spanish</dd><dd>English</dd></dl>",
+      "source_format": "html_fragment",
+      "field": "job_description",
+      "expected": {
+        "text": "Languages\nIdiomas\nSpanish\nEnglish",
+        "associations": 1
+      }
+    },
+    {
+      "id": "orphan_dl",
+      "raw": "<dl><dd>English</dd><dt>Language</dt></dl>",
+      "source_format": "html_fragment",
+      "field": "job_description",
+      "expected": {
+        "text": "English\nLanguage",
+        "associations": 2
+      }
+    },
+    {
+      "id": "cells_empty",
+      "raw": "<table><tr><td>A</td><td></td><td>C</td></tr></table>",
+      "source_format": "html_fragment",
+      "field": "job_description",
+      "expected": {
+        "text": "A | | C"
+      }
+    },
+    {
+      "id": "cell_multiline",
+      "raw": "<table><tr><td>A<br>B</td><td>C</td></tr></table>",
+      "source_format": "html_fragment",
+      "field": "job_description",
+      "expected": {
+        "text": "A B | C"
+      }
+    },
+    {
+      "id": "cell_lists",
+      "raw": "<table><tr><td>→ A</td><td>→ B</td></tr></table>",
+      "source_format": "html_fragment",
+      "field": "job_description",
+      "expected": {
+        "text": "→ A | → B",
+        "items": 0
+      }
+    },
+    {
+      "id": "different_containers",
+      "raw": "<div><p>→ A</p></div><div><p>→ B</p></div>",
+      "source_format": "html_fragment",
+      "field": "job_description",
+      "expected": {
+        "text": "→ A\n\n→ B",
+        "items": 0
+      }
+    },
+    {
+      "id": "dom_code",
+      "raw": "<ul><li><code>1. A</code></li></ul>",
+      "source_format": "html_fragment",
+      "field": "job_description",
+      "expected": {
+        "text": "- 1. A",
+        "items": 1
+      }
+    },
+    {
+      "id": "reversed",
+      "raw": "<ol reversed start=\"7\"><li>A</li><li value=\"3\">B</li><li>C</li></ol>",
+      "source_format": "html_fragment",
+      "field": "job_description",
+      "expected": {
+        "text": "7. A\n3. B\n2. C",
+        "items": 3
+      }
+    },
+    {
+      "id": "nested_dom",
+      "raw": "<ul><li>A<ul><li>B</li></ul></li><li>C</li></ul>",
+      "source_format": "html_fragment",
+      "field": "job_description",
+      "expected": {
+        "text": "- A\n- B\n- C",
+        "items": 3
+      }
+    },
+    {
+      "id": "nested_plain",
+      "raw": "• A\n\t• B\n\t  continued\n• C",
+      "source_format": "plain_text",
+      "field": "job_description",
+      "expected": {
+        "text": "- A\n- B\ncontinued\n- C",
+        "items": 3
+      }
+    },
+    {
+      "id": "noise_markers",
+      "raw": "🚀​• A\n🔥• B",
+      "source_format": "plain_text",
+      "field": "job_description",
+      "expected": {
+        "text": "- A\n- B",
+        "items": 2
+      }
+    },
+    {
+      "id": "hint_before_marker",
+      "raw": "✅• A",
+      "source_format": "plain_text",
+      "field": "job_description",
+      "expected": {
+        "text": "[emoji:check_mark_button]• A",
+        "items": 0,
+        "annotations": 1
+      }
+    },
+    {
+      "id": "presentation_markers",
+      "raw": "▪️ A\n👉️ B",
+      "source_format": "plain_text",
+      "field": "job_description",
+      "expected": {
+        "text": "- A\n- B",
+        "items": 2
+      }
+    },
+    {
+      "id": "keycap_inline",
+      "raw": "A 1️⃣ #️⃣ *️⃣",
+      "source_format": "plain_text",
+      "field": "job_description",
+      "expected": {
+        "text": "A 1 # *",
+        "items": 0
+      }
+    },
+    {
+      "id": "nfc_repeat",
+      "raw": "a​́ 🇨🇷 a​́ 🇨🇷",
+      "source_format": "plain_text",
+      "field": "job_description",
+      "expected": {
+        "text": "á [flag:CR] á [flag:CR]",
+        "annotations": 2
+      }
+    },
+    {
+      "id": "hint_currency_left",
+      "raw": "$💰500",
+      "source_format": "plain_text",
+      "field": "job_description",
+      "expected": {
+        "text": "$ [emoji:money_bag] 500",
+        "annotations": 1
+      }
+    },
+    {
+      "id": "hint_punctuation",
+      "raw": "(🇨🇷), [🇲🇽] \"💰\"",
+      "source_format": "plain_text",
+      "field": "job_description",
+      "expected": {
+        "text": "([flag:CR]), [[flag:MX]] \"[emoji:money_bag]\"",
+        "annotations": 3
+      }
+    },
+    {
+      "id": "literal_generated",
+      "raw": "[flag:CR]🇨🇷",
+      "source_format": "plain_text",
+      "field": "job_description",
+      "expected": {
+        "text": "[flag:CR][flag:CR]",
+        "annotations": 1
+      }
+    },
+    {
+      "id": "invisible_noseparation",
+      "raw": "C++​Python",
+      "source_format": "plain_text",
+      "field": "job_description",
+      "expected": {
+        "text": "C++Python"
+      }
+    },
+    {
+      "id": "gaps_multi",
+      "raw": "foo🚀🔥bar texto 🍕 , siguiente 81,4 %",
+      "source_format": "plain_text",
+      "field": "job_description",
+      "expected": {
+        "text": "foo bar texto, siguiente 81,4 %"
+      }
+    },
+    {
+      "id": "negative_boundaries",
+      "raw": "C🚀++ $🚀500 \"piña🍍\" 3🚀.14",
+      "source_format": "plain_text",
+      "field": "job_description",
+      "expected": {
+        "text": "C++ $500 \"piña\" 3.14"
+      }
+    },
+    {
+      "id": "technical_boundaries",
+      "raw": "C++🚀Python C#🔥Java (Remote)🌎LATAM 100%🔥bonus",
+      "source_format": "plain_text",
+      "field": "job_description",
+      "expected": {
+        "text": "C++ Python C# Java (Remote) LATAM 100% bonus"
+      }
+    },
+    {
+      "id": "invalid_region",
+      "raw": "🇦🇦 🇦",
+      "source_format": "plain_text",
+      "field": "job_description",
+      "expected": {
+        "text": "",
+        "issue": "INVALID_REGION_SEQUENCE"
+      }
+    },
+    {
+      "id": "private",
+      "raw": "a͸b",
+      "source_format": "plain_text",
+      "field": "job_description",
+      "expected": {
+        "text": "a͸b"
+      }
+    },
+    {
+      "id": "uncertain",
+      "raw": "🛸́",
+      "source_format": "plain_text",
+      "field": "job_description",
+      "expected": {
+        "text": "🛸́",
+        "issue": "UNCLASSIFIED_SYMBOL_SEQUENCE"
+      }
+    },
+    {
+      "id": "unknown_format",
+      "raw": "Python",
+      "source_format": "unknown",
+      "field": "job_description",
+      "expected": {
+        "text": "Python",
+        "issue": "SOURCE_FORMAT_UNKNOWN"
+      }
+    }
+  ]
+}

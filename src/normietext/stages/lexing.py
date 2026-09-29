@@ -317,7 +317,9 @@ def lex_document(
             "-",
         ):
             kind, action = TokenKind.LIST_MARKER, CandidateAction.CONTEXTUAL
-            payload["fallback"] = "remove" if value in emoji.EMOJI_DATA else "keep"
+            payload["fallback"] = (
+                "remove" if value.rstrip("\ufe0e\ufe0f") in emoji.EMOJI_DATA else "keep"
+            )
         elif kind in (TokenKind.KEYCAP, TokenKind.TEXT_SYMBOL):
             payload["base"] = value[0]
         elif kind is TokenKind.KAOMOJI and protected:

@@ -17,8 +17,10 @@ from normietext.errors import (
 from normietext.manifest import create_manifest, policy_hash
 from normietext.models import (
     Annotation,
+    AnnotationKind,
     Association,
     Block,
+    BlockKind,
     Edit,
     FieldInput,
     Issue,
@@ -97,7 +99,7 @@ def validate_canonical(
 ) -> NormalizedField:
     """Check compatible phase, environment, structure and base invariants; return the same object.
 
-    Emoji/structural rule acceptance remains a pipeline responsibility in F4/F5.
+    Reentry validates representation; it never repeats source recognition or repair.
     expected_manifest must come from trusted initialization, never the input document.
     """
     if not isinstance(document, NormalizedField):
@@ -140,4 +142,39 @@ def validate_canonical(
             ErrorCode.OUTPUT_INVARIANT_FAILED, "Invalid canonical references"
         ) from exc
     validate_text(document.text, compact=document.field.value in policy.output.compact_fields)
+    _validate_representation(document)
     return document
+
+
+def _validate_representation(document: NormalizedField) -> None:
+    from normietext.stages.lexing import _tables
+
+    hints, regions, _ = _tables()
+    hint_values = set(hints.values())
+    region_values = {code for kind, code, _ in regions.values() if kind == "region"}
+    subdivision_values = {code for kind, code, _ in regions.values() if kind != "region"}
+    for annotation in document.annotations:
+        value = annotation.payload.get("value")
+        expected = None
+        valid = True
+        if annotation.kind is AnnotationKind.EMOJI_HINT:
+            expected, valid = f"[emoji:{value}]", value in hint_values
+        elif annotation.kind is AnnotationKind.EMOJI_REGION:
+            expected, valid = f"[flag:{value}]", value in region_values
+        elif annotation.kind is AnnotationKind.EMOJI_SUBDIVISION:
+            expected, valid = f"[flag-subdivision:{value}]", value in subdivision_values
+        if expected is not None and (not valid or annotation.rendered_token != expected):
+            raise OutputInvariantError(
+                ErrorCode.OUTPUT_INVARIANT_FAILED, "Invalid generated annotation"
+            )
+    for block in document.blocks:
+        if block.kind is not BlockKind.LIST_ITEM:
+            continue
+        text = document.text[block.span.start : block.span.end]
+        prefix = "-" if block.ordinal is None else f"{block.ordinal}."
+        if (
+            text != prefix
+            and not text.startswith(prefix + " ")
+            and not text.startswith(prefix + "\n")
+        ):
+            raise OutputInvariantError(ErrorCode.OUTPUT_INVARIANT_FAILED, "Invalid list projection")

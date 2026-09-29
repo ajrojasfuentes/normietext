@@ -20,7 +20,7 @@
       "const": "validation"
     },
     "execution_status": {
-      "const": "awaiting_normalizer"
+      "enum": ["awaiting_normalizer", "verified_f5"]
     },
     "policy_id": {
       "const": "linkedin_jobs_aggressive_v1"

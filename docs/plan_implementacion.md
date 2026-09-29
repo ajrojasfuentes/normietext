@@ -3,8 +3,8 @@
 **Base normativa:** [especificación 2.0](normietext_v2.0_especificacion.md).
 **Fecha:** 24 de septiembre de 2026 UTC.
 **Audiencia:** ingeniería del núcleo, responsables de corpus/QA e integradores.
-**Estado:** Fase 0 verificada localmente y fases 1–4 completadas (2026-09-28); fases
-5–8 pendientes. Véase el [cierre de F4](revisiones/cierre_fase_4.md) y el
+**Estado:** Fase 0 verificada localmente y fases 1–5 completadas localmente (2026-09-29); fases
+6–8 pendientes. Véase el [cierre de F5](revisiones/cierre_fase_5.md) y el
 [cierre anterior](revisiones/cierre_fases_0_1.md). Las
 tareas de las fases siguientes siguen siendo trabajo futuro.
 
@@ -289,6 +289,12 @@ un rule_id de reinterpretación C1 exige evidencia, no solo una etiqueta deseada
 Degradar a `segment` cuando no exista mapa probado hacia raw.
 
 ## 9. Fase 5 — Símbolos, listas, renderer y API funcional
+
+**Estado: completada y verificada localmente (2026-09-29).**
+T01–T40, integral, suplementos y decisiones adoptadas se ejecutan con la API pública.
+337 tests pasan localmente; el [cierre F5](revisiones/cierre_fase_5.md) registra
+la evidencia y las limitaciones. [ADR-0005](decisions/0005-renderer-api.md) concreta
+las reglas previas. Los puntos siguientes conservan el alcance de esta fase.
 
 **Depende de:** fase 4. **Referencias:** §§12–19, 29–32.
 
@@ -580,11 +586,12 @@ especificación explícitamente antes de declarar aceptación.
 
 ## 17. Primer incremento recomendado
 
-Los incrementos F1–F4 ya se completaron. El siguiente trabajo es F5: símbolos,
-listas, renderer, spans finales y API funcional, con sus decisiones normativas previas.
+Los incrementos F1–F5 ya se completaron localmente. El siguiente trabajo es F6:
+integración con consumidores de evidencia, ampliación del corpus y calidad
+medida de decisiones contextuales sobre muestras etiquetadas.
 
 La secuencia inicial de contratos y fixtures queda registrada en F1. Antes de
-implementar HTML o una regla destructiva, revisar ADR-0001 a ADR-0004 y conservar
+implementar HTML o una regla destructiva, revisar ADR-0001 a ADR-0005 y conservar
 la composición hacia la fuente inicial. F5 debe reutilizar estos contratos, sin
 reclasificar una proyección normalizada como raw ni ejecutar el renderer antes
 de capturar la estructura y las secuencias léxicas.
@@ -649,7 +656,7 @@ Además de los T-cases externos: 2.000 hints, exceso de límite de salida, separ
 junto a C++/C#/porcentaje/paréntesis, `(🇨🇷)`, comillas y tokens literales; dt/dd
 múltiples; prefijos dentro de código; contenido en elementos HTML que la revisión
 proponía excluir; `empty` con incidencias; hashes y carga de CRLF sin conversión.
-Estos casos son trabajo futuro de corpus, no tests del producto ejecutados ahora.
+Estos casos se ejecutan en F5; la evaluación de muestra real y rendimiento sigue en F6/F7.
 
 ### 18.3 Gestión de cambios normativos y versiones
 

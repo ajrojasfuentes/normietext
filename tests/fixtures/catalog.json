@@ -5,23 +5,25 @@
     "sha256": "94913d93fb899bd2773738b87b4ff5e8016fef0da4cf6318831b3ff829281b64"
   },
   "files": {
-    "integral/complex_multilingual_ai_role_001/fixture.json": "2cbdd0c13f16fd54978cf1ebb80b3eeaea3f9205cc4ffedb1fe4e59a82cbf77d",
+    "integral/complex_multilingual_ai_role_001/fixture.json": "2bd38ebb827c9c806637c1e8288a44f31d3db2d94583eb2278595d9950fe54a0",
     "integral/complex_multilingual_ai_role_001/job_description.expected.txt": "2b6b87d4138bb6441e7e4dc9a42739f9b53b2f303a6bddd001a761134d56b73e",
     "integral/complex_multilingual_ai_role_001/job_description.raw.txt": "5be2345afe216ef80e29a2f761fee5cfcceaa4b9967ca0930cf263b02c9a749a",
     "integral/complex_multilingual_ai_role_001/job_title.expected.txt": "f09bbbbcec19a6d29eb673bcb27cddb6ea69765451ba760bafc063a162966b25",
     "integral/complex_multilingual_ai_role_001/job_title.raw.txt": "5a2af3c0c5fa97fcf25008ab8c013df3e5eff148d41c304481bd51b50e603b30",
-    "integral/schema.json": "d9105fb312772237cba666812c95cc40748e5522d78a39929073d3b649a2e4d5",
-    "records/schema.json": "60ded10c5ca5f9ffd750b4865a37088e71298990126ad992368873476fab1177",
-    "records/six_present.json": "dfd10e68b9a96e1060ab32e405e38c33c17c7fdac2e45619b20ee828b7600266",
-    "regression/cases.json": "fecf43b5a5f4e3e15e2349c25cb342771659bbb87c01d45d8b52aa35d51237be",
-    "regression/schema.json": "0581ab83826b0c9da525f8af125c36955c4bd7a350719a9cbcaa9cfc2fa4db59",
-    "review_inventory.json": "8c7b59d5f3539f4467eb98c8c8118eb108aa7245da9f3fa57b25d45b4c8d68b4",
-    "review_inventory.schema.json": "e70a96ad4e3918aca1015cf746d364cd52d4815913a0093d74f3bf7ee119837f",
-    "supplemental/cases.json": "e555631c386f9fcee8617acb337208c67a2004874fb8e135e6acd777ef13af26",
-    "supplemental/schema.json": "345451386b99261fc4fb0bdde1c0b48ecb6c57dd91d9b6dfca038bec0a7bb779",
+    "integral/schema.json": "30f708e8810f85f9a67c8dea766e2c7670129599fcadbd004079f31fd7c0f440",
+    "records/schema.json": "c076e3f6c1847771244148e09e68fa78ff3a2ccbf4216c12f654ac75b754c1c0",
+    "records/six_present.json": "a5155ae14b064e4941c298d8d40b3f1ce12156a5fec8abce5422c685c3edd781",
+    "regression/cases.json": "ddf3eeb472c42b320f26aec3d76d33985a5e11424d9958de44a9799edcefe2e7",
+    "regression/schema.json": "91f863f1ea09576a4e52fca4ddc9f9a8be18a81a3d1b17cc5acd36a3f9a30722",
+    "review_inventory.json": "4f9d6ba9de58dbf4fd3f5f68c31ea3006e2caf16aa9e7344cedd3cb3e1573bfe",
+    "review_inventory.schema.json": "e400645ac8fc5c0b13ca877f864a86c482c776a1f8dcd508eeb72c65e0d97ed3",
+    "supplemental/cases.json": "dc67e8881f2ec477646d7261247a7fde4a59efcf40b958e55a1cbd4018074da6",
+    "supplemental/schema.json": "456aa25260a4dc937fde0e64c742166a04f1d5d0062a7eb872d0b20911bfbef8",
     "adaptation/cases.json": "17e3cbfdff1360444bdf4552559a5cd18343d403af2e987ab9445b39bf75728c",
     "adaptation/schema.json": "54774244f7032c41819c7f132bcb999eb3a9c300a1047abc2771275d2defae11",
     "lexical/cases.json": "f50d7b1f4c18ec0408aa3ea408af34bee0912644fa55e55cd77d0654a49aa4cb",
-    "lexical/schema.json": "967c64fe5fdb257c384854bd9f613c6fd3aede50211c5fbe70d3d799bfbefe72"
+    "lexical/schema.json": "967c64fe5fdb257c384854bd9f613c6fd3aede50211c5fbe70d3d799bfbefe72",
+    "canonical/cases.json": "32d06de5771d5cbf55ce3a6127396f8bd8b470701c420cfbccd4d431e4b13c47",
+    "canonical/schema.json": "6c1dd38d274cab9ffa7b7b0de88a5011049f7b932a73b22d62033014ce989283"
   }
 }

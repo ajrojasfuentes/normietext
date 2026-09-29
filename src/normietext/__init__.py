@@ -1,8 +1,9 @@
 """Immutable contracts for deterministic job text normalization.
 
-The full normalization pipeline is not implemented yet. See the phase 4 ADR.
+Functional field and record normalization. See the phase 5 ADR.
 """
 
+from normietext.api import JobTextNormalizer
 from normietext.errors import (
     ErrorCode,
     FormatConversionError,
@@ -85,6 +86,7 @@ __all__ = [
     "IssueCode",
     "JobField",
     "JobInputRecord",
+    "JobTextNormalizer",
     "LexedDocument",
     "LexicalToken",
     "Manifest",

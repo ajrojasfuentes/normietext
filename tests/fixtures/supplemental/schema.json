@@ -26,7 +26,7 @@
             "const": "synthetic"
           },
           "execution_status": {
-            "const": "awaiting_normalizer"
+            "enum": ["awaiting_normalizer", "verified_f5"]
           },
           "field": {
             "type": "string"

@@ -5,122 +5,122 @@
     {
       "id": "T41",
       "decision": "accepted",
-      "execution_status": "awaiting_normalizer"
+      "execution_status": "verified_f5"
     },
     {
       "id": "T42",
       "decision": "accepted",
-      "execution_status": "awaiting_normalizer"
+      "execution_status": "verified_f5"
     },
     {
       "id": "T43",
       "decision": "accepted",
-      "execution_status": "awaiting_normalizer"
+      "execution_status": "verified_f5"
     },
     {
       "id": "T44",
       "decision": "accepted_scoped",
-      "execution_status": "awaiting_normalizer"
+      "execution_status": "verified_f5"
     },
     {
       "id": "T45",
       "decision": "accepted",
-      "execution_status": "awaiting_normalizer"
+      "execution_status": "verified_f5"
     },
     {
       "id": "T46",
       "decision": "accepted_scoped",
-      "execution_status": "awaiting_normalizer"
+      "execution_status": "verified_f5"
     },
     {
       "id": "T47",
       "decision": "adapted_explicit_association",
-      "execution_status": "awaiting_normalizer"
+      "execution_status": "verified_f5"
     },
     {
       "id": "T48",
       "decision": "accepted_structure_pending_renderer",
-      "execution_status": "awaiting_normalizer"
+      "execution_status": "verified_f5"
     },
     {
       "id": "T49",
       "decision": "rejected_use_negative",
-      "execution_status": "awaiting_normalizer"
+      "execution_status": "verified_f5"
     },
     {
       "id": "T50",
       "decision": "accepted_scoped",
-      "execution_status": "awaiting_normalizer"
+      "execution_status": "verified_f5"
     },
     {
       "id": "T51",
       "decision": "accepted_scoped",
-      "execution_status": "awaiting_normalizer"
+      "execution_status": "verified_f5"
     },
     {
       "id": "T52",
       "decision": "accepted_scoped",
-      "execution_status": "awaiting_normalizer"
+      "execution_status": "verified_f5"
     },
     {
       "id": "T53",
       "decision": "pending_renderer",
-      "execution_status": "awaiting_normalizer"
+      "execution_status": "verified_f5"
     },
     {
       "id": "T54",
       "decision": "deferred_marker_extension",
-      "execution_status": "awaiting_normalizer"
+      "execution_status": "verified_f5"
     },
     {
       "id": "T55",
       "decision": "deferred_marker_extension",
-      "execution_status": "awaiting_normalizer"
+      "execution_status": "verified_f5"
     },
     {
       "id": "T56",
       "decision": "accepted_hint_without_inferred_list",
-      "execution_status": "awaiting_normalizer"
+      "execution_status": "verified_f5"
     },
     {
       "id": "T57",
       "decision": "accepted",
-      "execution_status": "awaiting_normalizer"
+      "execution_status": "verified_f5"
     },
     {
       "id": "T58",
       "decision": "accepted",
-      "execution_status": "awaiting_normalizer"
+      "execution_status": "verified_f5"
     },
     {
       "id": "T59",
       "decision": "accepted",
-      "execution_status": "awaiting_normalizer"
+      "execution_status": "verified_f5"
     },
     {
       "id": "T60",
       "decision": "accepted",
-      "execution_status": "awaiting_normalizer"
+      "execution_status": "verified_f5"
     },
     {
       "id": "T61",
       "decision": "inline_accepted_paragraph_pending",
-      "execution_status": "awaiting_normalizer"
+      "execution_status": "verified_f5"
     },
     {
       "id": "T62",
       "decision": "accepted_real_attribution",
-      "execution_status": "awaiting_normalizer"
+      "execution_status": "verified_f5"
     },
     {
       "id": "T63",
       "decision": "accepted_by_field",
-      "execution_status": "awaiting_normalizer"
+      "execution_status": "verified_f5"
     },
     {
       "id": "T64",
       "decision": "accepted_composition",
-      "execution_status": "awaiting_normalizer"
+      "execution_status": "verified_f5"
     }
   ]
 }

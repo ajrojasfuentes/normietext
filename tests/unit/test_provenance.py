@@ -151,13 +151,13 @@ def test_renderer_timeout_is_operational_and_keeps_original(monkeypatch):
             raise TimeoutError
 
     monkeypatch.setattr(rendering, "_GRAPHEMES", Slow())
-    original = tracked("private")
+    original = tracked("private\u0301")
     with pytest.raises(ResourceLimitError) as caught:
         rendering.render_baseline(original, compact=False)
     from normietext import ErrorCode
 
     assert caught.value.code is ErrorCode.REGEX_TIMEOUT
-    assert original.text == "private" and not original.edits
+    assert original.text == "private\u0301" and not original.edits
 
 
 def test_fixed_identity_vector_matches_documented_wire_formula():

@@ -842,6 +842,14 @@ no clasificadas se conserva con incidencia, sin consumir letras o cifras arbitra
 La vista virtual de listas de F5 dispondrá de tokens, límites y sangrías originales.
 Los delimitadores léxicos y la precedencia determinista se concretan en ADR-0004.
 
+### 18.2 Concreción normativa de F5 (2026-09-29)
+
+Las decisiones pendientes de §§8.2, 10.4, 13.6 y 14 se concretan explícitamente
+en [ADR-0005](decisions/0005-renderer-api.md): fronteras técnicas acotadas, vecinos
+léxicos, conflictos ordinales sin pérdida, separación de tokens generados,
+asociaciones simples/múltiples y límites de párrafos/listas/celdas. Esta revisión
+es parte de la primera baseline funcional; no modifica los goldens existentes.
+
 ## 19. API pública y modelos
 
 ### 19.1 Tipos base
