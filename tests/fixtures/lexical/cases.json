@@ -1,0 +1,355 @@
+{
+  "schema_version": "1.0.0",
+  "phase": "lexed",
+  "cases": [
+    {
+      "id": "T33-mojibake",
+      "format": "plain_text",
+      "raw": "JosÃ©",
+      "repaired_text": "José",
+      "repairs": 1,
+      "special_tokens": [],
+      "protections": [],
+      "issues": [
+        "ORIGIN_PRECISION_REDUCED"
+      ]
+    },
+    {
+      "id": "T34-orthography",
+      "format": "plain_text",
+      "raw": "Enginner Inteligence aveces résumé São Paulo",
+      "repaired_text": "Enginner Inteligence aveces résumé São Paulo",
+      "repairs": 0,
+      "special_tokens": [],
+      "protections": [],
+      "issues": []
+    },
+    {
+      "id": "T62-c1",
+      "format": "plain_text",
+      "raw": "dont",
+      "repaired_text": "don’t",
+      "repairs": 1,
+      "special_tokens": [],
+      "protections": [],
+      "issues": [
+        "ORIGIN_PRECISION_REDUCED"
+      ]
+    },
+    {
+      "id": "T63-nel",
+      "format": "plain_text",
+      "raw": "ab",
+      "repaired_text": "a\nb",
+      "repairs": 0,
+      "special_tokens": [],
+      "protections": [],
+      "issues": []
+    },
+    {
+      "id": "T64-c0",
+      "format": "plain_text",
+      "raw": "a\u0001b",
+      "repaired_text": "a\u0001b",
+      "repairs": 0,
+      "special_tokens": [
+        [
+          "\u0001",
+          "invisible",
+          "remove"
+        ]
+      ],
+      "protections": [],
+      "issues": []
+    },
+    {
+      "id": "c1-unmapped",
+      "format": "plain_text",
+      "raw": "ab",
+      "repaired_text": "ab",
+      "repairs": 0,
+      "special_tokens": [
+        [
+          "",
+          "invisible",
+          "remove"
+        ]
+      ],
+      "protections": [],
+      "issues": []
+    },
+    {
+      "id": "replacement",
+      "format": "plain_text",
+      "raw": "a�b",
+      "repaired_text": "a�b",
+      "repairs": 0,
+      "special_tokens": [],
+      "protections": [],
+      "issues": [
+        "REPLACEMENT_CHARACTER_PRESENT"
+      ]
+    },
+    {
+      "id": "html-inline-repair",
+      "format": "html_fragment",
+      "raw": "<p>Jos<b>Ã</b>©</p>",
+      "repaired_text": "José",
+      "repairs": 1,
+      "special_tokens": [],
+      "protections": [],
+      "issues": [
+        "ORIGIN_PRECISION_REDUCED"
+      ]
+    },
+    {
+      "id": "escaped-literal",
+      "format": "html_escaped_text",
+      "raw": "&lt;b&gt;JosÃ©&lt;/b&gt;",
+      "repaired_text": "<b>José</b>",
+      "repairs": 1,
+      "special_tokens": [],
+      "protections": [],
+      "issues": [
+        "ORIGIN_PRECISION_REDUCED"
+      ]
+    },
+    {
+      "id": "false-positive",
+      "format": "plain_text",
+      "raw": "Ã",
+      "repaired_text": "Ã",
+      "repairs": 0,
+      "special_tokens": [],
+      "protections": [],
+      "issues": []
+    },
+    {
+      "id": "literal-token",
+      "format": "plain_text",
+      "raw": "[flag:CR]",
+      "repaired_text": "[flag:CR]",
+      "repairs": 0,
+      "special_tokens": [],
+      "protections": [],
+      "issues": []
+    },
+    {
+      "id": "hint-variants",
+      "format": "plain_text",
+      "raw": "⚠︎ ✅",
+      "repaired_text": "⚠︎ ✅",
+      "repairs": 0,
+      "special_tokens": [
+        [
+          "⚠︎",
+          "hint",
+          "token"
+        ],
+        [
+          "✅",
+          "hint",
+          "token"
+        ]
+      ],
+      "protections": [],
+      "issues": []
+    },
+    {
+      "id": "region-run",
+      "format": "plain_text",
+      "raw": "🇦🇦🇨🇷",
+      "repaired_text": "🇦🇦🇨🇷",
+      "repairs": 0,
+      "special_tokens": [
+        [
+          "🇦🇦",
+          "invalid_region",
+          "remove"
+        ],
+        [
+          "🇨🇷",
+          "region",
+          "token"
+        ]
+      ],
+      "protections": [],
+      "issues": [
+        "INVALID_REGION_SEQUENCE"
+      ]
+    },
+    {
+      "id": "zwj",
+      "format": "plain_text",
+      "raw": "A👩🏽‍💻B",
+      "repaired_text": "A👩🏽‍💻B",
+      "repairs": 0,
+      "special_tokens": [
+        [
+          "👩🏽‍💻",
+          "emoji",
+          "remove"
+        ]
+      ],
+      "protections": [],
+      "issues": []
+    },
+    {
+      "id": "hint-prefix",
+      "format": "plain_text",
+      "raw": "⚠‍🔥",
+      "repaired_text": "⚠‍🔥",
+      "repairs": 0,
+      "special_tokens": [
+        [
+          "⚠‍🔥",
+          "pictographic",
+          "remove"
+        ]
+      ],
+      "protections": [],
+      "issues": []
+    },
+    {
+      "id": "subdivision",
+      "format": "plain_text",
+      "raw": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "repaired_text": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "repairs": 0,
+      "special_tokens": [
+        [
+          "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+          "subdivision",
+          "token"
+        ]
+      ],
+      "protections": [],
+      "issues": []
+    },
+    {
+      "id": "invisible-before-accent",
+      "format": "plain_text",
+      "raw": "a​́",
+      "repaired_text": "a​́",
+      "repairs": 0,
+      "special_tokens": [
+        [
+          "​",
+          "invisible",
+          "remove"
+        ]
+      ],
+      "protections": [],
+      "issues": []
+    },
+    {
+      "id": "keycaps",
+      "format": "plain_text",
+      "raw": "1️⃣ #️⃣ *️⃣",
+      "repaired_text": "1️⃣ #️⃣ *️⃣",
+      "repairs": 0,
+      "special_tokens": [
+        [
+          "1️⃣",
+          "keycap",
+          "contextual"
+        ],
+        [
+          "#️⃣",
+          "keycap",
+          "contextual"
+        ],
+        [
+          "*️⃣",
+          "keycap",
+          "contextual"
+        ]
+      ],
+      "protections": [],
+      "issues": []
+    },
+    {
+      "id": "text-symbols",
+      "format": "plain_text",
+      "raw": "©️ ® ™ 1 # *",
+      "repaired_text": "©️ ® ™ 1 # *",
+      "repairs": 0,
+      "special_tokens": [
+        [
+          "©️",
+          "text_symbol",
+          "keep"
+        ],
+        [
+          "®",
+          "text_symbol",
+          "keep"
+        ],
+        [
+          "™",
+          "text_symbol",
+          "keep"
+        ]
+      ],
+      "protections": [],
+      "issues": []
+    },
+    {
+      "id": "T30-contacts",
+      "format": "plain_text",
+      "raw": "https://example.com/?q=1&utm_source=linkedin jobs+ai@example.com",
+      "repaired_text": "https://example.com/?q=1&utm_source=linkedin jobs+ai@example.com",
+      "repairs": 0,
+      "special_tokens": [],
+      "protections": [
+        [
+          "https://example.com/?q=1&utm_source=linkedin",
+          "url"
+        ],
+        [
+          "jobs+ai@example.com",
+          "email"
+        ]
+      ],
+      "issues": []
+    },
+    {
+      "id": "kaomoji",
+      "format": "plain_text",
+      "raw": "SEO ¯\\_(ツ)_/¯ : (+506) :)",
+      "repaired_text": "SEO ¯\\_(ツ)_/¯ : (+506) :)",
+      "repairs": 0,
+      "special_tokens": [
+        [
+          "¯\\_(ツ)_/¯",
+          "kaomoji",
+          "remove"
+        ]
+      ],
+      "protections": [],
+      "issues": []
+    },
+    {
+      "id": "unknown",
+      "format": "plain_text",
+      "raw": "",
+      "repaired_text": "",
+      "repairs": 0,
+      "special_tokens": [],
+      "protections": [],
+      "issues": []
+    },
+    {
+      "id": "configured-mixed-repair-limitation",
+      "format": "plain_text",
+      "raw": "Ã and café C++ B2+",
+      "repaired_text": "à and café C++ B2+",
+      "repairs": 1,
+      "special_tokens": [],
+      "protections": [],
+      "issues": [
+        "ORIGIN_PRECISION_REDUCED"
+      ]
+    }
+  ]
+}

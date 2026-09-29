@@ -199,3 +199,15 @@ Véanse [ADR-0003](decisions/0003-adaptadores-formato.md) y [cierre F3](revision
 T03–T08 quedan cubiertos en adaptación; T31/T32 solo estructuralmente. El corpus final
 no se marca aprobado hasta ejecutar el pipeline completo. Las rutas del catálogo
 siguen usando as_posix para que las comprobaciones funcionen también en Windows.
+
+## 11. Reparación y léxico de Fase 4
+
+El smoke test instalado ejecuta también repair_document/lex_document y comprueba
+sus fases y reentrada compatible. La suite verifica reparación, protección,
+partición léxica, entidades numéricas largas y replay entre cuatro procesos.
+Los pins y el lock permanecen sin cambios; el manifiesto refleja el código nuevo.
+
+Véanse [ADR-0004](decisions/0004-reparacion-lexico.md) y [cierre F4](revisiones/cierre_fase_4.md).
+La etapa reparada conserva explicaciones de ftfy, incluso cuando cambian longitudes;
+ninguna igualdad de longitud acredita exactitud. Las protecciones son contextos de
+reglas futuras, no excepciones a toda normalización. F5 sigue pendiente.

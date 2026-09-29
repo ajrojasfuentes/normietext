@@ -38,3 +38,15 @@ manuales independientes para formato/estructura, no sustituyen los goldens del
 normalizador ni su estado awaiting_normalizer. El catálogo agrega sus hashes sin
 modificar los del corpus anterior. Un LF final en un bloque/celda vacío es una
 proyección intermedia; delimitadores finales y compactación se validan en F5.
+
+## Reparación y léxico F4
+
+`lexical/cases.json` contiene 23 expectativas intermedias escritas independientemente:
+texto reparado, número de reparaciones, tokens especiales, protecciones e incidencias.
+El schema exige phase=lexed. No sustituye la salida final del normalizador.
+
+Se incluye una limitación explícita del ftfy configurado: `Ã and café C++ B2+`
+se repara a `à and café C++ B2+`. La expectativa inicial de preservación de ese
+fixture nuevo fue corregida explícitamente durante autoría, tras inspeccionar la
+configuración fijada; el contraejemplo de preservación usa `Ã` aislado. No se
+modificaron los goldens previos ni se generaron expectativas desde el pipeline.

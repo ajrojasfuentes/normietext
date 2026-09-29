@@ -443,6 +443,12 @@ El núcleo no necesita servicios distribuidos. La paralelización, almacenamient
 
 `html_escaped_text` decodifica una sola capa mediante una operación explícita. El resultado queda marcado como texto literal. `&amp;lt;b&amp;gt;` puede terminar como `&lt;b&gt;`; no hay otra decodificación oculta.
 
+La adaptación de texto escapado limita la conversión numérica al rango Unicode
+sin convertir enteros desmesurados ni modificar límites globales de Python. Los
+ceros iniciales no alteran el valor: una referencia con miles de ceros y valor 65
+produce A; un valor por encima de U+10FFFF produce U+FFFD según HTML5. Se mantiene
+la alineación al intervalo original completo y la decodificación de una sola capa.
+
 El parser HTML ya interpreta referencias de caracteres en el contexto del fragmento. No se aplica después un `unescape` global sobre su texto. `ftfy` no recibe responsabilidad sobre entidades.
 
 ### 10.3 Backend
@@ -536,6 +542,23 @@ Prompt Enginering -> Prompt Enginering
 ```
 
 Un carácter de reemplazo `�` se conserva y genera `REPLACEMENT_CHARACTER_PRESENT`. El sistema no afirma haber recuperado lo que no está en la entrada.
+
+### 11.1 Concreción de reparación F4 (2026-09-28)
+
+La unidad lógica queda delimitada por LF y por los bordes de bloques y anotaciones
+convertidos. Así se preservan celdas, código, enlaces y asociaciones; etiquetas
+inline transparentes como b/span no separan una palabra. No se reparan atributos
+HTML ni delimitadores raw después de parsearlos. Las unidades cambiadas registran
+la explicación real de ftfy bajo `encoding.fix_encoding`; una explicación sin
+cambio textual no genera edición. No se atribuye C1 únicamente por la presencia
+del carácter ni por el nombre deseado de una regla.
+
+`RepairedDocument` marca reparación completada y conserva manifiesto, estructura,
+alineación hacia raw y spans intermedios. La reutilización compatible devuelve
+el mismo valor; otra política/entorno exige reprocesamiento de origen. Las opciones
+de §11 no cambian. La configuración de ftfy puede reparar contenido que el autor
+pretendía literal; raw y explicación permiten auditar ese límite. No se promete
+reparación sin falsos positivos. Véase [ADR-0004](decisions/0004-reparacion-lexico.md).
 
 ## 12. Política Unicode, invisibles y controles
 
@@ -803,6 +826,21 @@ El adaptador tokeniza los límites de línea de §15 antes del paso de reparaci�
 Las operaciones sobre texto reparado deben mantener procedencia hacia la fuente inicial, no solo hacia la etapa anterior. Se permite degradar precisión de alineación de forma explícita.
 
 No se usa un bucle de limpieza completa hasta convergencia. Las reglas no pueden crear ciclos ni habilitar una reinterpretación de formato. Los invariantes se verifican también en un documento marcado como canónico; la marca no sustituye su validación.
+
+### 18.1 Documento léxico intermedio de F4
+
+`LexedDocument` contiene el documento reparado, una partición de tokens, protecciones
+superpuestas de código/URL/correo e incidencias acumuladas. Cada token conserva span,
+origen, clase, candidato de acción y referencias a contextos. No es texto canónico:
+no aplica eliminación de emoji/invisibles ni sustitución de marcadores o solidus.
+
+Las secuencias completas se reconocen antes de consultar la allowlist exacta; un
+prefijo de hint no divide una secuencia ZWJ mayor. Los indicadores regionales se
+agrupan de dos en dos desde el principio de cada corrida, sin desplazar la pareja
+para encontrar un código válido. Un candidato pictográfico con marcas combinantes
+no clasificadas se conserva con incidencia, sin consumir letras o cifras arbitrarias.
+La vista virtual de listas de F5 dispondrá de tokens, límites y sangrías originales.
+Los delimitadores léxicos y la precedencia determinista se concretan en ADR-0004.
 
 ## 19. API pública y modelos
 

@@ -35,6 +35,14 @@ _FIELDS: dict[type[object], str] = {
     models.ParsedDocument: (
         "source text phase blocks associations annotations edits issues alignment"
     ),
+    models.EncodingRepair: "converted_span span origin edit_id explanation",
+    models.RepairedDocument: (
+        "source text phase blocks associations annotations edits issues alignment "
+        "manifest repairs converted_length"
+    ),
+    models.Protection: "id kind span origin rule_id",
+    models.LexicalToken: "id kind span origin action rule_id payload protection_ids block_ids",
+    models.LexedDocument: "document tokens protections issues phase",
     models.NormalizedField: (
         "field source_format source text status phase manifest blocks associations "
         "annotations edits issues"

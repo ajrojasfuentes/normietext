@@ -326,3 +326,35 @@ def test_host_recursion_failure_is_typed_and_does_not_publish_partial_document(m
     with pytest.raises(ResourceLimitError) as caught:
         html("<p>data</p>")
     assert caught.value.code is ErrorCode.RESOURCE_LIMIT_EXCEEDED
+
+
+@pytest.mark.parametrize(
+    ("reference", "expected"),
+    [
+        ("&#" + "9" * 5000 + ";", "�"),
+        ("&#x" + "F" * 5000 + ";", "�"),
+        ("&#" + "0" * 5000 + "65;", "A"),
+        ("&#x" + "0" * 5000 + "41;", "A"),
+        ("&#" + "0" * 5000 + ";", "�"),
+        ("&#" + "0" * 5000 + "128;", "€"),
+        ("&#" + "0" * 5000 + "55296;", "�"),
+        ("&#" + "0" * 5000 + "1114111;", ""),
+        ("&#1114112;", "�"),
+        ("&#x110000;", "�"),
+        ("&#" + "0" * 5000 + "65", "A"),
+    ],
+)
+def test_long_numeric_entities_follow_html5_without_global_integer_settings(reference, expected):
+    import sys
+
+    before = sys.get_int_max_str_digits()
+    doc = convert_source(
+        FieldInput(JobField.JOB_DESCRIPTION, reference, SourceFormat.HTML_ESCAPED_TEXT)
+    )
+    assert doc.text == expected
+    assert doc.source.raw == reference
+    assert sys.get_int_max_str_digits() == before
+    assert doc.edits[0].origin.span == Span(0, len(reference))
+    if expected:
+        origin = tracked_document(doc).alignment.origin_for(Span(0, len(expected)))
+        assert origin.span == Span(0, len(reference)) and origin.precision is OriginPrecision.EXACT

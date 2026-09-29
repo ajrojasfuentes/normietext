@@ -3,8 +3,8 @@
 **Base normativa:** [especificación 2.0](normietext_v2.0_especificacion.md).
 **Fecha:** 24 de septiembre de 2026 UTC.
 **Audiencia:** ingeniería del núcleo, responsables de corpus/QA e integradores.
-**Estado:** Fase 0 verificada localmente y fases 1–3 completadas (2026-09-27); fases
-4–8 pendientes. Véase el [cierre de F3](revisiones/cierre_fase_3.md) y el
+**Estado:** Fase 0 verificada localmente y fases 1–4 completadas (2026-09-28); fases
+5–8 pendientes. Véase el [cierre de F4](revisiones/cierre_fase_4.md) y el
 [cierre anterior](revisiones/cierre_fases_0_1.md). Las
 tareas de las fases siguientes siguen siendo trabajo futuro.
 
@@ -250,6 +250,12 @@ entidad externa.
 El texto literal con apariencia HTML sobrevive intacto a conversión/recanonicalización.
 
 ## 8. Fase 4 — Reparación de origen, léxico y protección
+
+**Estado: completada localmente el 2026-09-28.** Reparación explicada una vez,
+documentos intermedios tipados, tokens/protecciones y alineación compuesta;
+190 pruebas aprobadas. Véanse [ADR-0004](decisions/0004-reparacion-lexico.md) y
+[cierre F4](revisiones/cierre_fase_4.md). Los candidatos léxicos no aplican todavía
+las reglas destructivas ni cierran las expectativas finales de F5.
 
 **Depende de:** fase 3. **Referencias:** §§11–14, 16, 18.
 
@@ -574,12 +580,12 @@ especificación explícitamente antes de declarar aceptación.
 
 ## 17. Primer incremento recomendado
 
-Los incrementos F1–F3 ya se completaron. El siguiente trabajo es F4: reparación
-de origen, análisis léxico y segmentos protegidos, fuera de la entrega de F3.
+Los incrementos F1–F4 ya se completaron. El siguiente trabajo es F5: símbolos,
+listas, renderer, spans finales y API funcional, con sus decisiones normativas previas.
 
 La secuencia inicial de contratos y fixtures queda registrada en F1. Antes de
-implementar HTML o una regla destructiva, revisar ADR-0001, ADR-0002 y ADR-0003 y conservar
-la composición hacia la fuente inicial. F4 debe reutilizar estos contratos, sin
+implementar HTML o una regla destructiva, revisar ADR-0001 a ADR-0004 y conservar
+la composición hacia la fuente inicial. F5 debe reutilizar estos contratos, sin
 reclasificar una proyección normalizada como raw ni ejecutar el renderer antes
 de capturar la estructura y las secuencias léxicas.
 

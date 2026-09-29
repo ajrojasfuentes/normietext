@@ -30,3 +30,25 @@ def test_inline_markup_never_inserts_spaces_or_discards_lexical_components(parts
     assert document.text == "".join(parts)
     assert document.source.raw == raw
     assert all(block.span.end <= len(document.text) for block in document.blocks)
+
+
+@given(
+    st.integers(min_value=0, max_value=0x120000),
+    st.integers(min_value=0, max_value=4500),
+    st.booleans(),
+)
+def test_numeric_entity_padding_preserves_html5_value_without_large_integer_conversion(
+    value, zeros, hexadecimal
+):
+    digits = format(value, "x") if hexadecimal else str(value)
+    prefix = "&#x" if hexadecimal else "&#"
+    reference = prefix + "0" * zeros + digits + ";"
+    expected = html.unescape(prefix + digits + ";")
+    document = convert_source(
+        FieldInput(JobField.JOB_DESCRIPTION, reference, SourceFormat.HTML_ESCAPED_TEXT)
+    )
+    # Adaptation tokenizes any decoded separators after one-layer decoding.
+    expected = expected.replace("\r\n", "\n")
+    for separator in "\r\x85\u2028\u2029\v\f":
+        expected = expected.replace(separator, "\n")
+    assert document.text == expected

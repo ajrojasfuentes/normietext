@@ -14,6 +14,20 @@ from normietext.provenance import Replacement
 _CHARREF = re.compile(r"&(#[0-9]+;?|#[xX][0-9a-fA-F]+;?|[^\t\n\f <&#;]{1,32};?)")
 
 
+def _decode(reference: str) -> str:
+    # Bound numeric conversion without changing Python's process-global limit.
+    # Leading zeros do not make a valid scalar invalid; html.unescape retains
+    # authority over HTML5 C1, surrogate and noncharacter handling.
+    if reference.startswith("&#"):
+        hexadecimal = reference[2:3] in ("x", "X")
+        digits = reference[3 if hexadecimal else 2 :].rstrip(";").lstrip("0") or "0"
+        maximum = "10ffff" if hexadecimal else "1114111"
+        if len(digits) > len(maximum) or (len(digits) == len(maximum) and digits.lower() > maximum):
+            return "\ufffd"
+        reference = "&#" + ("x" if hexadecimal else "") + digits + ";"
+    return html.unescape(reference)
+
+
 def convert(source: FieldInput, limits: ResourceLimits = DEFAULT_LIMITS) -> ParsedDocument:
     tracked = initial(source, limits)
     if source.source_format is not SourceFormat.HTML_ESCAPED_TEXT:
@@ -21,9 +35,7 @@ def convert(source: FieldInput, limits: ResourceLimits = DEFAULT_LIMITS) -> Pars
             ErrorCode.INVALID_FORMAT, "Escaped adapter requires declared format"
         )
     changes = tuple(
-        Replacement(
-            Span(m.start(), m.end()), html.unescape(m.group()), "format.unescape_once", True
-        )
+        Replacement(Span(m.start(), m.end()), _decode(m.group()), "format.unescape_once", True)
         for m in _CHARREF.finditer(tracked.text)
     )
     return literal_document(tracked.replace(changes, limits=limits), limits)

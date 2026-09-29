@@ -4,9 +4,9 @@ Biblioteca Python local y determinista para normalizar seis campos de ofertas
 laborales extraídas de LinkedIn. Conserva evidencia, estructura y procedencia
 para consumidores de parsing, sin LLM ni llamadas de red al normalizar.
 
-**Estado: Fase 0 verificada localmente y fases 1–3 completadas.** El paquete incluye
+**Estado: Fase 0 verificada localmente y fases 1–4 completadas.** El paquete incluye
 contratos, política/tablas, fuentes verificadas, alineación compuesta, serialización
-canónica, manifiesto efectivo y adaptadores de formato con estructura;
+canónica, manifiesto efectivo adaptadores de formato con estructura, reparación explicada y análisis léxico;
 `JobTextNormalizer` y las reglas de normalización todavía no están implementados.
 La especificación 2.0 no es la versión del paquete: la base usa `0.1.0`.
 
@@ -86,6 +86,30 @@ La conversión conserva estructura, sangrías y componentes de emoji para las et
 siguientes. No es una API de limpieza completa. El [ADR de Fase 3](docs/decisions/0003-adaptadores-formato.md)
 documenta formatos, entidades, límites, listas, tablas, asociaciones y precisión HTML.
 
+## Reparación y análisis léxico disponibles
+
+```python
+from normietext import FieldInput, JobField
+from normietext.adapters import convert_source
+from normietext.stages.encoding import repair_document
+from normietext.stages.lexing import lex_document
+
+converted = convert_source(FieldInput(JobField.JOB_DESCRIPTION, "JosÃ© 🇨🇷"))
+repaired = repair_document(converted)
+assert repaired.text == "José 🇨🇷"
+assert repair_document(repaired) is repaired
+lexed = lex_document(repaired)
+assert lexed.phase.value == "lexed"
+assert lex_document(lexed) is lexed
+```
+
+Estas etapas conservan estructura y procedencia hacia raw. Los tokens describen
+candidatos y protecciones de URL/correo/código; todavía no eliminan emoji, invisibles
+ni sangrías ni producen texto canónico. El [ADR de F4](docs/decisions/0004-reparacion-lexico.md)
+detalla unidades de reparación, precedencias y limitaciones del reconocimiento.
+La reparación configurada puede tener falsos positivos: conserva raw y explicación,
+pero no demuestra la intención del autor. El renderer y la API funcional siguen en F5.
+
 ## Distribución e integración
 
 La entrega principal es un wheel importable con tipos (`py.typed`). Un consumidor
@@ -107,6 +131,8 @@ FastAPI, Docker ni infraestructura distribuida a esta inicialización.
 - [ADR de contratos y corpus](docs/decisions/0001-contratos-fase-1.md).
 - [ADR de baseline y procedencia](docs/decisions/0002-baseline-fuentes-procedencia.md).
 - [ADR de adaptación](docs/decisions/0003-adaptadores-formato.md).
+- [ADR de reparación y léxico](docs/decisions/0004-reparacion-lexico.md).
+- [Informe de cierre F4](docs/revisiones/cierre_fase_4.md).
 - [Informe de cierre F3](docs/revisiones/cierre_fase_3.md).
 - [Informe de cierre F2](docs/revisiones/cierre_fase_2.md).
 - [Informe de revisión F0 y cierre F1](docs/revisiones/cierre_fases_0_1.md).

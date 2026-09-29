@@ -46,6 +46,8 @@ class RecordStatus(StrEnum):
 
 class DocumentPhase(StrEnum):
     CONVERTED = "converted"
+    REPAIRED = "repaired"
+    LEXED = "lexed"
     CANONICAL = "canonical"
 
 
@@ -578,6 +580,153 @@ class ParsedDocument(Validated):
             self.edits,
             self.issues,
         )
+
+
+@dataclass(frozen=True, slots=True)
+class EncodingRepair(Validated):
+    converted_span: Span
+    span: Span
+    origin: Origin
+    edit_id: str
+    explanation: tuple[tuple[str, str], ...]
+
+
+@dataclass(frozen=True, slots=True)
+class RepairedDocument(ParsedDocument):
+    """Origin repair completed once; offsets refer to repaired, not canonical text."""
+
+    manifest: Manifest | None = None
+    repairs: tuple[EncodingRepair, ...] = ()
+    converted_length: int = 0
+
+    @property
+    def phase(self) -> DocumentPhase:
+        return DocumentPhase.REPAIRED
+
+    def __post_init__(self) -> None:
+        ParsedDocument.__post_init__(self)
+        from normietext.provenance import Alignment
+
+        Alignment(self.source.source_length, len(self.text), self.alignment)
+        require(self.manifest is not None, "Repaired document needs an effective manifest")
+        require(self.converted_length >= 0, "Negative converted length")
+        edits = {edit.id: edit for edit in self.edits}
+        require(len({r.edit_id for r in self.repairs}) == len(self.repairs), "Duplicate repairs")
+        for repair in self.repairs:
+            require(
+                repair.converted_span.end <= self.converted_length, "Repair outside converted text"
+            )
+            require(repair.span.within(self.text), "Repair outside repaired text")
+            require(repair.edit_id in edits, "Repair must reference an edit")
+            require(edits[repair.edit_id].origin == repair.origin, "Repair origin mismatch")
+            require(
+                self.text[repair.span.start : repair.span.end] == edits[repair.edit_id].replacement,
+                "Repair output differs from its edit",
+            )
+            require(bool(repair.explanation), "Changed unit needs an explanation")
+
+
+class ProtectionKind(StrEnum):
+    CODE = "code"
+    URL = "url"
+    EMAIL = "email"
+
+
+@dataclass(frozen=True, slots=True)
+class Protection(Validated):
+    id: str
+    kind: ProtectionKind
+    span: Span
+    origin: Origin
+    rule_id: str
+
+    def __post_init__(self) -> None:
+        Validated.__post_init__(self)
+        require(bool(self.id) and bool(self.rule_id), "Protection needs identity/rule")
+        require(self.span.start < self.span.end, "Empty protection")
+
+
+class TokenKind(StrEnum):
+    TEXT = "text"
+    LINE_BREAK = "line_break"
+    TEXT_SYMBOL = "text_symbol"
+    REGION = "region"
+    SUBDIVISION = "subdivision"
+    HINT = "hint"
+    EMOJI = "emoji"
+    PICTOGRAPHIC = "pictographic"
+    INVALID_REGION = "invalid_region"
+    KEYCAP = "keycap"
+    LIST_MARKER = "list_marker"
+    KAOMOJI = "kaomoji"
+    INVISIBLE = "invisible"
+    UNCLASSIFIED = "unclassified"
+
+
+class CandidateAction(StrEnum):
+    KEEP = "keep"
+    REMOVE = "remove"
+    TOKEN = "token"
+    CONTEXTUAL = "contextual"
+
+
+@dataclass(frozen=True, slots=True)
+class LexicalToken(Validated):
+    id: str
+    kind: TokenKind
+    span: Span
+    origin: Origin
+    action: CandidateAction
+    rule_id: str
+    payload: FrozenMap = FrozenMap()
+    protection_ids: tuple[str, ...] = ()
+    block_ids: tuple[str, ...] = ()
+
+    def __post_init__(self) -> None:
+        Validated.__post_init__(self)
+        require(bool(self.id) and bool(self.rule_id), "Token needs identity/rule")
+        require(self.span.start < self.span.end, "Empty lexical token")
+
+
+@dataclass(frozen=True, slots=True)
+class LexedDocument(Validated):
+    document: RepairedDocument
+    tokens: tuple[LexicalToken, ...]
+    protections: tuple[Protection, ...] = ()
+    issues: tuple[Issue, ...] = ()
+
+    @property
+    def phase(self) -> DocumentPhase:
+        return DocumentPhase.LEXED
+
+    def __post_init__(self) -> None:
+        Validated.__post_init__(self)
+        length = len(self.document.text)
+        protection_ids = {item.id for item in self.protections}
+        block_ids = {item.id for item in self.document.blocks}
+        require(len(protection_ids) == len(self.protections), "Duplicate protections")
+        require(len({item.id for item in self.tokens}) == len(self.tokens), "Duplicate tokens")
+        end = 0
+        for item in self.tokens:
+            require(item.span.start == end and item.span.end <= length, "Token coverage gap")
+            require(set(item.protection_ids) <= protection_ids, "Unknown token protection")
+            require(set(item.block_ids) <= block_ids, "Unknown token block")
+            end = item.span.end
+        require(end == length, "Tokens must cover repaired text")
+        lexical_entries: tuple[LexicalToken | Protection, ...] = (*self.tokens, *self.protections)
+        for entry in lexical_entries:
+            require(entry.span.end <= length, "Lexical span outside text")
+            require(
+                entry.origin.span is None
+                or entry.origin.span.end <= self.document.source.source_length,
+                "Lexical origin outside source",
+            )
+        for issue in self.issues:
+            require(
+                issue.origin.span is None
+                or issue.origin.span.end <= self.document.source.source_length,
+                "Lexical issue outside source",
+            )
 
 
 @dataclass(frozen=True, slots=True)

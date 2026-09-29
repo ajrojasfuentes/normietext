@@ -20,6 +20,8 @@
     "supplemental/cases.json": "e555631c386f9fcee8617acb337208c67a2004874fb8e135e6acd777ef13af26",
     "supplemental/schema.json": "345451386b99261fc4fb0bdde1c0b48ecb6c57dd91d9b6dfca038bec0a7bb779",
     "adaptation/cases.json": "17e3cbfdff1360444bdf4552559a5cd18343d403af2e987ab9445b39bf75728c",
-    "adaptation/schema.json": "54774244f7032c41819c7f132bcb999eb3a9c300a1047abc2771275d2defae11"
+    "adaptation/schema.json": "54774244f7032c41819c7f132bcb999eb3a9c300a1047abc2771275d2defae11",
+    "lexical/cases.json": "f50d7b1f4c18ec0408aa3ea408af34bee0912644fa55e55cd77d0654a49aa4cb",
+    "lexical/schema.json": "967c64fe5fdb257c384854bd9f613c6fd3aede50211c5fbe70d3d799bfbefe72"
   }
 }
