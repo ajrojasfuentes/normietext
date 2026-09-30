@@ -1,0 +1,218 @@
+{
+  "schema_version": "1.0.0",
+  "requirements": [
+    {
+      "id": "title",
+      "field": "job_title",
+      "fragments": [
+        "Senior AI / ML Enginner",
+        "GenAI",
+        "LLMs"
+      ]
+    },
+    {
+      "id": "type_modality",
+      "field": "job_title",
+      "fragments": [
+        "Full-time",
+        "Híbrido ?"
+      ]
+    },
+    {
+      "id": "conditional_remote",
+      "field": "job_description",
+      "fragments": [
+        "remoto desde LATAM dependiendo del timezone"
+      ]
+    },
+    {
+      "id": "location",
+      "field": "job_description",
+      "fragments": [
+        "San José",
+        "Alajuela/Heredia",
+        "Central Valley",
+        "GAM",
+        "SJO"
+      ]
+    },
+    {
+      "id": "eligibility",
+      "field": "job_description",
+      "fragments": [
+        "México",
+        "Colombia",
+        "Argentina",
+        "Perú",
+        "Europe candidates: maybe"
+      ]
+    },
+    {
+      "id": "negation",
+      "field": "job_description",
+      "fragments": [
+        "NOT a pure Data Scientist role",
+        "No sponsorship",
+        "NO esperamos que sepás TODO"
+      ]
+    },
+    {
+      "id": "experience",
+      "field": "job_description",
+      "fragments": [
+        "4+ años"
+      ]
+    },
+    {
+      "id": "languages",
+      "field": "job_description",
+      "fragments": [
+        "B2+ / C1-ish",
+        "Español fluent o conversational"
+      ]
+    },
+    {
+      "id": "monthly_salary",
+      "field": "job_description",
+      "fragments": [
+        "USD $4,500 – $7,250 / month"
+      ]
+    },
+    {
+      "id": "annual_alternative",
+      "field": "job_description",
+      "fragments": [
+        "US$55k—85k yearly equivalent"
+      ]
+    },
+    {
+      "id": "conditional_threshold",
+      "field": "job_description",
+      "fragments": [
+        "> $90.000 USD/año",
+        "no es garantizado"
+      ]
+    },
+    {
+      "id": "currency",
+      "field": "job_description",
+      "fragments": [
+        "CRC ₡",
+        "₡2,400,000+ mensual"
+      ]
+    },
+    {
+      "id": "bonus",
+      "field": "job_description",
+      "fragments": [
+        "5–12% anual",
+        "subject to company + personal performance"
+      ]
+    },
+    {
+      "id": "budget",
+      "field": "job_description",
+      "fragments": [
+        "$750 USD one-time",
+        "≈ $1.200/year"
+      ]
+    },
+    {
+      "id": "cost",
+      "field": "job_description",
+      "fragments": [
+        "$0.004/request",
+        "< $0.03 USD average cost/query"
+      ]
+    },
+    {
+      "id": "metrics",
+      "field": "job_description",
+      "fragments": [
+        "14,500,000 requests",
+        "3.7M",
+        "~81,4 %",
+        "92%+"
+      ]
+    },
+    {
+      "id": "time",
+      "field": "job_description",
+      "fragments": [
+        "UTC−6",
+        "09:07",
+        "11:48pm",
+        "+/- 4 hrs"
+      ]
+    },
+    {
+      "id": "duration",
+      "field": "job_description",
+      "fragments": [
+        "20/30 mins",
+        "~ 60min",
+        "2–3 semanas",
+        "17 días",
+        "21 días"
+      ]
+    },
+    {
+      "id": "reference",
+      "field": "job_description",
+      "fragments": [
+        "№ AI-0042/LATAM",
+        "2026-08-31"
+      ]
+    },
+    {
+      "id": "title_reference",
+      "field": "job_title",
+      "fragments": [
+        "AI-ENG#042"
+      ]
+    },
+    {
+      "id": "capacity",
+      "field": "job_description",
+      "fragments": [
+        "2.0 FTE",
+        "11 → expected 15",
+        "2 (maybe 3 Q4)"
+      ]
+    },
+    {
+      "id": "contacts",
+      "field": "job_description",
+      "fragments": [
+        "https://careers.example.com/jobs/ai-engineer?id=92841&utm_source=linkedin",
+        "jobs+ai@example.com",
+        "+506 8XXX-XX42",
+        "(+506) 2XXX 19 80"
+      ]
+    },
+    {
+      "id": "application",
+      "field": "job_description",
+      "fragments": [
+        "incluí la palabra \"piña\" somewhere en tu application."
+      ]
+    }
+  ],
+  "authorized_losses": [
+    "🚀",
+    "🤖",
+    "😅",
+    "🙃",
+    "💸",
+    "😄",
+    "✨",
+    "🌴",
+    "✈️",
+    "🍕",
+    "😬",
+    "🎉",
+    "🍍",
+    "👉",
+    "¯\\_(ツ)_/¯"
+  ]
+}

@@ -4,11 +4,12 @@ Biblioteca Python local y determinista para normalizar seis campos de ofertas
 laborales extraídas de LinkedIn. Conserva evidencia, estructura y procedencia
 para consumidores de parsing, sin LLM ni llamadas de red al normalizar.
 
-**Estado: fases 0–5 completadas localmente.**
+**Estado: fases 0–6 completadas localmente.**
 `JobTextNormalizer` ofrece normalización por campo/registro, reentrada canónica
 idempotente y proyección solo texto. Incluye listas, emoji, invisibles, espacios,
-NFC final, estructura y procedencia. Las puertas de calidad sobre muestra real,
-rendimiento y release de F6–F8 siguen pendientes. La especificación 2.0 no es
+NFC final, estructura y procedencia. F6 añade evaluación de evidencia y corpus
+sintético; no acredita calidad de tráfico real. Rendimiento y release de F7–F8
+siguen pendientes. La especificación 2.0 no es
 la versión del paquete: la base usa `0.1.0`.
 
 ## Desarrollo
@@ -149,6 +150,9 @@ FastAPI, Docker ni infraestructura distribuida a esta inicialización.
 - [ADR de reparación y léxico](docs/decisions/0004-reparacion-lexico.md).
 - [Guía de API](docs/api.md).
 - [ADR de renderer y API](docs/decisions/0005-renderer-api.md).
+- [Guía de evaluación](docs/evaluacion.md).
+- [ADR de evaluación](docs/decisions/0006-evaluacion-evidencia.md).
+- [Informe de cierre F6](docs/revisiones/cierre_fase_6.md).
 - [Informe de cierre F5](docs/revisiones/cierre_fase_5.md).
 - [Informe de cierre F4](docs/revisiones/cierre_fase_4.md).
 - [Informe de cierre F3](docs/revisiones/cierre_fase_3.md).

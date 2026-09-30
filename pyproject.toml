@@ -58,11 +58,12 @@ select = ["E", "F", "I", "UP", "B", "SIM", "RUF"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+pythonpath = ["."]
 addopts = "-ra --strict-config --strict-markers --import-mode=importlib"
 filterwarnings = ["error"]
 
 [tool.mypy]
 python_version = "3.14"
-files = ["src", "scripts"]
+files = ["src", "scripts", "evaluation"]
 strict = true
 warn_unreachable = true

@@ -39,6 +39,8 @@ def main() -> None:
                 "from importlib.metadata import version; "
                 "from importlib.resources import files; "
                 "import normietext, json, hashlib; "
+                "from importlib.util import find_spec; "
+                "assert find_spec('evaluation') is None; "
                 "from normietext import FieldInput, JobField, NormalizationPolicy; "
                 "assert FieldInput(JobField.JOB_TITLE, 'Python').value == 'Python'; "
                 "root = files(normietext).joinpath('data'); "

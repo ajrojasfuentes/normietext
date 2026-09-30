@@ -1,0 +1,147 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "authority",
+    "cases"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "authority": {
+      "type": "string"
+    },
+    "cases": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "family",
+          "raw",
+          "expected",
+          "split",
+          "language",
+          "origin",
+          "field",
+          "source_format",
+          "labels",
+          "required",
+          "authorized_losses",
+          "technologies",
+          "regions",
+          "roles"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "family": {
+            "type": "string"
+          },
+          "raw": {
+            "type": "string"
+          },
+          "expected": {
+            "type": "string"
+          },
+          "split": {
+            "enum": [
+              "development",
+              "validation"
+            ]
+          },
+          "language": {
+            "enum": [
+              "es",
+              "en",
+              "pt",
+              "mixed"
+            ]
+          },
+          "origin": {
+            "const": "synthetic"
+          },
+          "field": {
+            "enum": [
+              "job_title",
+              "job_description",
+              "job_criteria_list",
+              "job_type",
+              "seniority",
+              "raw_location"
+            ]
+          },
+          "source_format": {
+            "enum": [
+              "plain_text",
+              "html_fragment",
+              "html_escaped_text",
+              "unknown"
+            ]
+          },
+          "labels": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "line",
+                "label"
+              ],
+              "properties": {
+                "line": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "label": {
+                  "enum": [
+                    "item",
+                    "negative",
+                    "abstain",
+                    "explicit"
+                  ]
+                }
+              }
+            }
+          },
+          "required": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "authorized_losses": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "technologies": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "regions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "roles": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

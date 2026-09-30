@@ -13,6 +13,7 @@ from normietext.models import (
     Issue,
     IssueCode,
     LexedDocument,
+    LexicalToken,
     NormalizedField,
     ProtectionKind,
     SourceEvidence,
@@ -33,6 +34,8 @@ class Projection:
         self.local = TrackedText.from_source(
             SourceEvidence.from_input(FieldInput(lexed.document.source.field, lexed.document.text))
         )
+        self.content_map: TrackedText | None = None
+        self.token_spans: dict[str, Span] = {}
         self.marker_map: TrackedText | None = None
         self.marker_spans: dict[str, Span] = {}
         self.limits = policy.limits
@@ -44,6 +47,8 @@ class Projection:
     def apply(self, changes: tuple[Replacement, ...]) -> None:
         self.raw = self.raw.replace(changes, limits=self.limits)
         self.local = self.local.replace(changes, limits=self.local_limits)
+        if self.content_map is not None:
+            self.content_map = self.content_map.replace(changes, limits=self.local_limits)
         if self.marker_map is not None:
             self.marker_map = self.marker_map.replace(changes, limits=self.local_limits)
 
@@ -84,6 +89,18 @@ class Projection:
         self.marker_map = TrackedText.from_source(
             SourceEvidence.from_input(FieldInput(self.raw.source.field, self.raw.text))
         )
+
+    def capture_tokens(self, tokens: tuple[LexicalToken, ...]) -> None:
+        # An identity map after expansion distinguishes token content from later
+        # markers inserted at the same source boundary. Raw origins stay intact.
+        self.token_spans = {token.id: self.span(token.span, trim=True) for token in tokens}
+        self.content_map = TrackedText.from_source(
+            SourceEvidence.from_input(FieldInput(self.raw.source.field, self.raw.text))
+        )
+
+    def token_span(self, token: LexicalToken) -> Span:
+        assert self.content_map is not None
+        return self.content_map.alignment.project(self.token_spans[token.id])
 
     def block_span(self, block: Block) -> Span:
         span = self.span(block.span, trim=True)
@@ -154,6 +171,7 @@ def render_document(lexed: LexedDocument, policy: NormalizationPolicy) -> Normal
     projection = Projection(lexed, policy)
     changes, generated = symbol_changes(lexed, structure.consumed)
     projection.apply(changes)
+    projection.capture_tokens(generated)
     projection.markers(structure)
     projection.original_changes(_html_changes(lexed, structure))
     compact = doc.source.field.value in policy.output.compact_fields
@@ -165,7 +183,26 @@ def render_document(lexed: LexedDocument, policy: NormalizationPolicy) -> Normal
     projection.marker_map = render_baseline(
         projection.marker_map, compact=compact, limits=projection.local_limits
     )
+    assert projection.content_map is not None
+    projection.content_map = render_baseline(
+        projection.content_map, compact=compact, limits=projection.local_limits
+    )
     blocks = [replace(b, span=projection.block_span(b)) for b in structure.blocks]
+    # Inserted markers belong to their item and every enclosing DOM block.
+    # Propagate through the tree without changing source provenance.
+    by_id = {block.id: index for index, block in enumerate(blocks)}
+    for block in tuple(blocks):
+        parent_id = block.parent_id
+        while parent_id is not None:
+            index = by_id[parent_id]
+            parent = blocks[index]
+            blocks[index] = replace(
+                parent,
+                span=Span(
+                    min(parent.span.start, block.span.start), max(parent.span.end, block.span.end)
+                ),
+            )
+            parent_id = parent.parent_id
     for protection in lexed.protections:
         if protection.kind is ProtectionKind.CODE and not any(
             b.kind is BlockKind.CODE and b.span == protection.span for b in doc.blocks
@@ -211,7 +248,7 @@ def render_document(lexed: LexedDocument, policy: NormalizationPolicy) -> Normal
                         "source_text": doc.text[token.span.start : token.span.end],
                     }
                 ),
-                projection.span(token.span, trim=True),
+                projection.token_span(token),
                 str(token.payload["rendered_token"]),
             )
         )

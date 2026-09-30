@@ -12,14 +12,14 @@ No confundir la especificación 2.0 con la versión del paquete 0.1.0.
 - NFC final antes de calcular spans; no NFKC global ni interpretación semántica.
 - Mantener separados versiones del software, esquema, reglas y perfil.
 - F1–F5 implementan contratos, corpus, procedencia, adaptación, reparación, léxico,
-  símbolos, listas y renderer. `JobTextNormalizer` es la API funcional; F6–F8
-  conservan puertas de calidad, operación y release. El smoke de wheel no sustituye corpus.
+  símbolos, listas y renderer. F6 añade consumidores y evaluación sintética.
+  `JobTextNormalizer` es la API funcional; F7–F8 conservan operación y release. El smoke de wheel no sustituye corpus.
 - Usar `uv sync --locked`, Ruff, mypy y pytest; construir y comprobar el wheel.
 - Cambios de comportamiento requieren fixtures y revisión de diffs del corpus.
 - Nunca sustituir los textos esperados del corpus automáticamente por la salida
   de la implementación. No corregir la especificación silenciosamente.
 
-Estado actual y evidencia: `docs/revisiones/cierre_fase_5.md`. Las decisiones de
+Estado actual y evidencia: `docs/revisiones/cierre_fase_6.md`. Las decisiones de
 contratos se fijan en `docs/decisions/0001-contratos-fase-1.md` y
 `docs/decisions/0002-baseline-fuentes-procedencia.md` y
 `docs/decisions/0003-adaptadores-formato.md` y
@@ -57,3 +57,11 @@ regenerar goldens o hashes de corpus a partir de la salida de la implementación
   propaga fallos. No repetir reparaciones ni concatenar colecciones de issues.
 - Las expectativas F1 existentes mantienen raw/text intactos. `verified_f5` es
   estado respaldado por tests ejecutables, no aceptación de tráfico real ni F6.
+
+- F6: `evaluation/` es infraestructura de desarrollo, excluida del wheel. Usar
+  `uv run --locked python -m evaluation.quality --output /tmp/calidad.json`.
+  El informe fija denominadores, abstenciones y pérdidas autorizadas; no acredita
+  tráfico real. No convertir vistas derivadas o ablaciones en fuente raw.
+- Mantener `quality` como corpus de expectativas manuales, separado de regresiones
+  normativas. La nueva alineación local de tokens distingue marcadores insertados;
+  no altera procedencia raw. Los spans padres incluyen sus hijos renderizados.

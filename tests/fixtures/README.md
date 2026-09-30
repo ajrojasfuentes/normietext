@@ -65,3 +65,12 @@ los raw/expected de T01–T40 ni los cuatro archivos de texto del integral. Las 
 expectativas suplementarias antes null se resuelven mediante la tabla manual de
 ADR-0005, no por generación desde el pipeline. El catálogo se actualiza solo para
 estos cambios revisados y los dos archivos nuevos.
+
+## Fase 6
+
+`quality/cases.json` añade 55 casos manuales con familia, split, idioma, campo,
+formato, golden, evidencia obligatoria, pérdidas autorizadas y etiquetas de líneas
+convertidas/reparadas. `quality/integral_evidence.json` inventaría §32 sin cambiar
+los archivos integrales. Ambos tienen schemas estrictos y hashes en el catálogo.
+La [guía de evaluación](../../docs/evaluacion.md) define denominadores, consumidores,
+ablaciones y limitaciones. No regenerar expectativas desde el programa.

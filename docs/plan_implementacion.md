@@ -3,8 +3,8 @@
 **Base normativa:** [especificación 2.0](normietext_v2.0_especificacion.md).
 **Fecha:** 24 de septiembre de 2026 UTC.
 **Audiencia:** ingeniería del núcleo, responsables de corpus/QA e integradores.
-**Estado:** Fase 0 verificada localmente y fases 1–5 completadas localmente (2026-09-29); fases
-6–8 pendientes. Véase el [cierre de F5](revisiones/cierre_fase_5.md) y el
+**Estado:** Fase 0 verificada localmente y fases 1–6 completadas localmente (2026-09-29); fases
+7–8 pendientes. Véase el [cierre de F6](revisiones/cierre_fase_6.md) y el
 [cierre anterior](revisiones/cierre_fases_0_1.md). Las
 tareas de las fases siguientes siguen siendo trabajo futuro.
 
@@ -394,6 +394,13 @@ suplementarias **adoptadas** en §18. Los casos externos diferidos o rechazados 
 se marcan como incumplimientos del perfil vigente ni se ocultan como tests omitidos.
 
 ## 10. Fase 6 — Integración, corpus y calidad de evidencia
+
+**Estado: completada localmente (2026-09-29).** 55 fixtures nuevos, consumidores
+mínimos, 13 ablaciones, replay/metamórficas/propiedades; 369 tests aprobados.
+Precisión contextual observada: 30/30, cero FP sobre 39 negativos normativos.
+Muestra sintética y pública, sin afirmación de calidad de tráfico real.
+Evidencia y limitaciones: [cierre de F6](revisiones/cierre_fase_6.md),
+[informe reproducible](revisiones/fase_6_calidad.json), [guía](evaluacion.md).
 
 **Depende de:** fase 5. **Referencias:** §§20, 24, 26, 30–32.
 

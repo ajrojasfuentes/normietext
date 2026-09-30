@@ -1,0 +1,1604 @@
+{
+  "schema_version": "1.0.0",
+  "authority": "F6 independently authored synthetic evaluation; labels address converted lines",
+  "cases": [
+    {
+      "id": "es_required",
+      "family": "es_required",
+      "split": "development",
+      "language": "es",
+      "origin": "synthetic",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "raw": "Requisitos:\n• Python\n• SQL",
+      "expected": "Requisitos:\n- Python\n- SQL",
+      "labels": [
+        {
+          "line": 0,
+          "label": "negative"
+        },
+        {
+          "line": 1,
+          "label": "item"
+        },
+        {
+          "line": 2,
+          "label": "item"
+        }
+      ],
+      "required": [
+        "Python",
+        "SQL"
+      ],
+      "authorized_losses": [],
+      "technologies": [
+        "python",
+        "sql"
+      ],
+      "regions": [],
+      "roles": [
+        "required"
+      ]
+    },
+    {
+      "id": "en_arrow_pair",
+      "family": "arrow_coverage",
+      "split": "development",
+      "language": "en",
+      "origin": "synthetic",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "raw": "→ Health insurance\n→ Home office allowance",
+      "expected": "- Health insurance\n- Home office allowance",
+      "labels": [
+        {
+          "line": 0,
+          "label": "item"
+        },
+        {
+          "line": 1,
+          "label": "item"
+        }
+      ],
+      "required": [
+        "Health insurance",
+        "Home office allowance"
+      ],
+      "authorized_losses": [],
+      "technologies": [],
+      "regions": [],
+      "roles": []
+    },
+    {
+      "id": "en_arrow_single",
+      "family": "arrow_coverage",
+      "split": "development",
+      "language": "en",
+      "origin": "synthetic",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "raw": "→ Annual retreat",
+      "expected": "→ Annual retreat",
+      "labels": [
+        {
+          "line": 0,
+          "label": "abstain"
+        }
+      ],
+      "required": [],
+      "authorized_losses": [],
+      "technologies": [],
+      "regions": [],
+      "roles": []
+    },
+    {
+      "id": "pt_dash_pair",
+      "family": "pt_dash_pair",
+      "split": "development",
+      "language": "pt",
+      "origin": "synthetic",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "raw": "– Experiência em Java\n– Comunicação clara",
+      "expected": "- Experiência em Java\n- Comunicação clara",
+      "labels": [
+        {
+          "line": 0,
+          "label": "item"
+        },
+        {
+          "line": 1,
+          "label": "item"
+        }
+      ],
+      "required": [
+        "Experiência",
+        "Comunicação"
+      ],
+      "authorized_losses": [],
+      "technologies": [
+        "java"
+      ],
+      "regions": [],
+      "roles": []
+    },
+    {
+      "id": "es_number_neighbors",
+      "family": "number_dash",
+      "split": "development",
+      "language": "es",
+      "origin": "synthetic",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "raw": "4 - Entrevista técnica\n5 - Oferta",
+      "expected": "4. Entrevista técnica\n5. Oferta",
+      "labels": [
+        {
+          "line": 0,
+          "label": "item"
+        },
+        {
+          "line": 1,
+          "label": "item"
+        }
+      ],
+      "required": [],
+      "authorized_losses": [],
+      "technologies": [],
+      "regions": [],
+      "roles": []
+    },
+    {
+      "id": "es_number_range",
+      "family": "number_dash",
+      "split": "development",
+      "language": "es",
+      "origin": "synthetic",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "raw": "1 - 2 años\n2 - 3 años",
+      "expected": "1 - 2 años\n2 - 3 años",
+      "labels": [
+        {
+          "line": 0,
+          "label": "negative"
+        },
+        {
+          "line": 1,
+          "label": "negative"
+        }
+      ],
+      "required": [],
+      "authorized_losses": [],
+      "technologies": [],
+      "regions": [],
+      "roles": []
+    },
+    {
+      "id": "es_number_gap",
+      "family": "number_dash",
+      "split": "development",
+      "language": "es",
+      "origin": "synthetic",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "raw": "1 - Introducción\n\n2 - Detalles",
+      "expected": "1 - Introducción\n\n2 - Detalles",
+      "labels": [
+        {
+          "line": 0,
+          "label": "abstain"
+        },
+        {
+          "line": 2,
+          "label": "abstain"
+        }
+      ],
+      "required": [],
+      "authorized_losses": [],
+      "technologies": [],
+      "regions": [],
+      "roles": []
+    },
+    {
+      "id": "pt_optional",
+      "family": "pt_optional",
+      "split": "development",
+      "language": "pt",
+      "origin": "synthetic",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "raw": "Desejável:\n▪ Docker\n▪ Kubernetes",
+      "expected": "Desejável:\n- Docker\n- Kubernetes",
+      "labels": [
+        {
+          "line": 0,
+          "label": "negative"
+        },
+        {
+          "line": 1,
+          "label": "item"
+        },
+        {
+          "line": 2,
+          "label": "item"
+        }
+      ],
+      "required": [],
+      "authorized_losses": [],
+      "technologies": [
+        "docker",
+        "kubernetes"
+      ],
+      "regions": [],
+      "roles": [
+        "desired"
+      ]
+    },
+    {
+      "id": "es_signs",
+      "family": "es_signs",
+      "split": "development",
+      "language": "es",
+      "origin": "synthetic",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "raw": "C++🚀Python C#🔥Java 100%🔥bonus",
+      "expected": "C++ Python C# Java 100% bonus",
+      "labels": [
+        {
+          "line": 0,
+          "label": "negative"
+        }
+      ],
+      "required": [
+        "C++",
+        "C#",
+        "100%"
+      ],
+      "authorized_losses": [
+        "🚀",
+        "🔥"
+      ],
+      "technologies": [
+        "c++",
+        "python",
+        "c#",
+        "java"
+      ],
+      "regions": [],
+      "roles": []
+    },
+    {
+      "id": "en_punctuation",
+      "family": "en_punctuation",
+      "split": "development",
+      "language": "en",
+      "origin": "synthetic",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "raw": "Remote 🌎, hybrid 🌴; office 🍕.",
+      "expected": "Remote, hybrid; office.",
+      "labels": [
+        {
+          "line": 0,
+          "label": "negative"
+        }
+      ],
+      "required": [
+        "Remote,",
+        "hybrid;",
+        "office."
+      ],
+      "authorized_losses": [
+        "🌎",
+        "🌴",
+        "🍕"
+      ],
+      "technologies": [],
+      "regions": [],
+      "roles": []
+    },
+    {
+      "id": "pt_money",
+      "family": "pt_money",
+      "split": "development",
+      "language": "pt",
+      "origin": "synthetic",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "raw": "Salário: EUR 2500 por mês",
+      "expected": "Salário: EUR 2500 por mês",
+      "labels": [
+        {
+          "line": 0,
+          "label": "negative"
+        }
+      ],
+      "required": [
+        "EUR 2500",
+        "mês"
+      ],
+      "authorized_losses": [],
+      "technologies": [],
+      "regions": [],
+      "roles": [
+        "base_salary"
+      ]
+    },
+    {
+      "id": "en_money",
+      "family": "en_money",
+      "split": "development",
+      "language": "en",
+      "origin": "synthetic",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "raw": "Salary: USD 4500 - 7250 per month",
+      "expected": "Salary: USD 4500 - 7250 per month",
+      "labels": [
+        {
+          "line": 0,
+          "label": "negative"
+        }
+      ],
+      "required": [],
+      "authorized_losses": [],
+      "technologies": [],
+      "regions": [],
+      "roles": [
+        "base_salary"
+      ]
+    },
+    {
+      "id": "en_budgets",
+      "family": "en_budgets",
+      "split": "development",
+      "language": "en",
+      "origin": "synthetic",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "raw": "Home office budget: USD 750 one-time\nBonus: 5–12% annually\nCost: USD 0.03/query",
+      "expected": "Home office budget: USD 750 one-time\nBonus: 5–12% annually\nCost: USD 0.03/query",
+      "labels": [
+        {
+          "line": 0,
+          "label": "negative"
+        },
+        {
+          "line": 1,
+          "label": "negative"
+        },
+        {
+          "line": 2,
+          "label": "negative"
+        }
+      ],
+      "required": [
+        "USD 750",
+        "5–12%",
+        "0.03/query"
+      ],
+      "authorized_losses": [],
+      "technologies": [],
+      "regions": [],
+      "roles": [
+        "budget",
+        "bonus",
+        "technical_cost"
+      ]
+    },
+    {
+      "id": "pt_negated",
+      "family": "pt_negated",
+      "split": "development",
+      "language": "pt",
+      "origin": "synthetic",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "raw": "Não Python\nJava é opcional",
+      "expected": "Não Python\nJava é opcional",
+      "labels": [
+        {
+          "line": 0,
+          "label": "negative"
+        },
+        {
+          "line": 1,
+          "label": "negative"
+        }
+      ],
+      "required": [],
+      "authorized_losses": [],
+      "technologies": [
+        "python",
+        "java"
+      ],
+      "regions": [],
+      "roles": [
+        "negated",
+        "desired"
+      ]
+    },
+    {
+      "id": "mixed_flags",
+      "family": "mixed_flags",
+      "split": "development",
+      "language": "mixed",
+      "origin": "synthetic",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "raw": "LATAM 🇨🇷🇲🇽; Europe 🇪🇺",
+      "expected": "LATAM [flag:CR] [flag:MX]; Europe [flag:EU]",
+      "labels": [
+        {
+          "line": 0,
+          "label": "negative"
+        }
+      ],
+      "required": [
+        "LATAM",
+        "Europe"
+      ],
+      "authorized_losses": [],
+      "technologies": [],
+      "regions": [
+        "CR",
+        "MX",
+        "EU"
+      ],
+      "roles": []
+    },
+    {
+      "id": "literal_flag",
+      "family": "literal_flag",
+      "split": "development",
+      "language": "en",
+      "origin": "synthetic",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "raw": "[flag:CR] is literal; 🇺🇳 is observed",
+      "expected": "[flag:CR] is literal; [flag:UN] is observed",
+      "labels": [
+        {
+          "line": 0,
+          "label": "negative"
+        }
+      ],
+      "required": [],
+      "authorized_losses": [],
+      "technologies": [],
+      "regions": [
+        "UN"
+      ],
+      "roles": []
+    },
+    {
+      "id": "es_compact",
+      "family": "es_compact",
+      "split": "development",
+      "language": "es",
+      "origin": "synthetic",
+      "field": "job_title",
+      "source_format": "plain_text",
+      "raw": "Ingeniería\nC++ y Node.js 🇨🇷",
+      "expected": "Ingeniería C++ y Node.js [flag:CR]",
+      "labels": [
+        {
+          "line": 0,
+          "label": "negative"
+        },
+        {
+          "line": 1,
+          "label": "negative"
+        }
+      ],
+      "required": [],
+      "authorized_losses": [],
+      "technologies": [
+        "c++",
+        "node.js"
+      ],
+      "regions": [
+        "CR"
+      ],
+      "roles": []
+    },
+    {
+      "id": "pt_type",
+      "family": "pt_type",
+      "split": "development",
+      "language": "pt",
+      "origin": "synthetic",
+      "field": "job_type",
+      "source_format": "plain_text",
+      "raw": "Tempo\t integral",
+      "expected": "Tempo integral",
+      "labels": [
+        {
+          "line": 0,
+          "label": "negative"
+        }
+      ],
+      "required": [
+        "Tempo integral"
+      ],
+      "authorized_losses": [],
+      "technologies": [],
+      "regions": [],
+      "roles": []
+    },
+    {
+      "id": "en_seniority",
+      "family": "en_seniority",
+      "split": "development",
+      "language": "en",
+      "origin": "synthetic",
+      "field": "seniority",
+      "source_format": "plain_text",
+      "raw": "Not Specified",
+      "expected": "Not Specified",
+      "labels": [
+        {
+          "line": 0,
+          "label": "negative"
+        }
+      ],
+      "required": [
+        "Not Specified"
+      ],
+      "authorized_losses": [],
+      "technologies": [],
+      "regions": [],
+      "roles": []
+    },
+    {
+      "id": "pt_location",
+      "family": "pt_location",
+      "split": "development",
+      "language": "pt",
+      "origin": "synthetic",
+      "field": "raw_location",
+      "source_format": "plain_text",
+      "raw": "São Paulo / Lisboa\n🇧🇷",
+      "expected": "São Paulo / Lisboa [flag:BR]",
+      "labels": [
+        {
+          "line": 0,
+          "label": "negative"
+        },
+        {
+          "line": 1,
+          "label": "negative"
+        }
+      ],
+      "required": [
+        "São Paulo / Lisboa"
+      ],
+      "authorized_losses": [],
+      "technologies": [],
+      "regions": [
+        "BR"
+      ],
+      "roles": []
+    },
+    {
+      "id": "es_html_bullets",
+      "family": "es_html_bullets",
+      "split": "development",
+      "language": "es",
+      "origin": "synthetic",
+      "field": "job_description",
+      "source_format": "html_fragment",
+      "raw": "<p>• Diseñar APIs</p><p>• Mantener SQL</p>",
+      "expected": "- Diseñar APIs\n- Mantener SQL",
+      "labels": [
+        {
+          "line": 0,
+          "label": "item"
+        },
+        {
+          "line": 1,
+          "label": "item"
+        }
+      ],
+      "required": [],
+      "authorized_losses": [],
+      "technologies": [
+        "sql"
+      ],
+      "regions": [],
+      "roles": []
+    },
+    {
+      "id": "en_dom_ordinals",
+      "family": "en_dom_ordinals",
+      "split": "development",
+      "language": "en",
+      "origin": "synthetic",
+      "field": "job_description",
+      "source_format": "html_fragment",
+      "raw": "<ol start=\"4\"><li>Interview</li><li value=\"9\">Offer</li></ol>",
+      "expected": "4. Interview\n9. Offer",
+      "labels": [
+        {
+          "line": 0,
+          "label": "explicit"
+        },
+        {
+          "line": 1,
+          "label": "explicit"
+        }
+      ],
+      "required": [],
+      "authorized_losses": [],
+      "technologies": [],
+      "regions": [],
+      "roles": []
+    },
+    {
+      "id": "pt_dl",
+      "family": "pt_dl",
+      "split": "development",
+      "language": "pt",
+      "origin": "synthetic",
+      "field": "job_criteria_list",
+      "source_format": "html_fragment",
+      "raw": "<dl><dt>Idiomas</dt><dd>Português e inglês</dd></dl>",
+      "expected": "Idiomas: Português e inglês",
+      "labels": [
+        {
+          "line": 0,
+          "label": "negative"
+        },
+        {
+          "line": 1,
+          "label": "negative"
+        }
+      ],
+      "required": [
+        "Português e inglês"
+      ],
+      "authorized_losses": [],
+      "technologies": [],
+      "regions": [],
+      "roles": []
+    },
+    {
+      "id": "es_table",
+      "family": "es_table",
+      "split": "development",
+      "language": "es",
+      "origin": "synthetic",
+      "field": "job_description",
+      "source_format": "html_fragment",
+      "raw": "<table><tr><th>País</th><th>Monto</th></tr><tr><td>CR</td><td>USD 3000</td></tr></table>",
+      "expected": "País | Monto\nCR | USD 3000",
+      "labels": [
+        {
+          "line": 0,
+          "label": "negative"
+        },
+        {
+          "line": 1,
+          "label": "negative"
+        },
+        {
+          "line": 2,
+          "label": "negative"
+        },
+        {
+          "line": 3,
+          "label": "negative"
+        }
+      ],
+      "required": [
+        "CR",
+        "USD 3000"
+      ],
+      "authorized_losses": [],
+      "technologies": [],
+      "regions": [],
+      "roles": []
+    },
+    {
+      "id": "en_escaped",
+      "family": "en_escaped",
+      "split": "development",
+      "language": "en",
+      "origin": "synthetic",
+      "field": "job_description",
+      "source_format": "html_escaped_text",
+      "raw": "&lt;b&gt;C++&lt;/b&gt; &amp; Python",
+      "expected": "<b>C++</b> & Python",
+      "labels": [
+        {
+          "line": 0,
+          "label": "negative"
+        }
+      ],
+      "required": [
+        "<b>",
+        "</b>"
+      ],
+      "authorized_losses": [],
+      "technologies": [
+        "c++",
+        "python"
+      ],
+      "regions": [],
+      "roles": []
+    },
+    {
+      "id": "en_code",
+      "family": "en_code",
+      "split": "development",
+      "language": "en",
+      "origin": "synthetic",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "raw": "```\n1. Python\n→ AWS\n→ Azure\n24／7\n```",
+      "expected": "```\n1. Python\n→ AWS\n→ Azure\n24／7\n```",
+      "labels": [
+        {
+          "line": 0,
+          "label": "negative"
+        },
+        {
+          "line": 1,
+          "label": "negative"
+        },
+        {
+          "line": 2,
+          "label": "negative"
+        },
+        {
+          "line": 3,
+          "label": "negative"
+        },
+        {
+          "line": 4,
+          "label": "negative"
+        },
+        {
+          "line": 5,
+          "label": "negative"
+        }
+      ],
+      "required": [
+        "24／7"
+      ],
+      "authorized_losses": [],
+      "technologies": [
+        "python",
+        "aws",
+        "azure"
+      ],
+      "regions": [],
+      "roles": []
+    },
+    {
+      "id": "es_continuation",
+      "family": "es_continuation",
+      "split": "development",
+      "language": "es",
+      "origin": "synthetic",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "raw": "• Crear APIs\n    con Python\n• Documentar",
+      "expected": "- Crear APIs\ncon Python\n- Documentar",
+      "labels": [
+        {
+          "line": 0,
+          "label": "item"
+        },
+        {
+          "line": 1,
+          "label": "negative"
+        },
+        {
+          "line": 2,
+          "label": "item"
+        }
+      ],
+      "required": [],
+      "authorized_losses": [],
+      "technologies": [
+        "python"
+      ],
+      "regions": [],
+      "roles": []
+    },
+    {
+      "id": "mixed_unicode",
+      "family": "mixed_unicode",
+      "split": "development",
+      "language": "mixed",
+      "origin": "synthetic",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "raw": "Sa​o Paulo a​́ 𐐀 SQL",
+      "expected": "Sao Paulo á 𐐀 SQL",
+      "labels": [
+        {
+          "line": 0,
+          "label": "negative"
+        }
+      ],
+      "required": [
+        "Sao Paulo",
+        "á",
+        "𐐀"
+      ],
+      "authorized_losses": [
+        "​"
+      ],
+      "technologies": [
+        "sql"
+      ],
+      "regions": [],
+      "roles": []
+    },
+    {
+      "id": "en_urls",
+      "family": "en_urls",
+      "split": "development",
+      "language": "en",
+      "origin": "synthetic",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "raw": "https://jobs.example.test/a?x=1&utm_source=demo jobs+cv@example.test",
+      "expected": "https://jobs.example.test/a?x=1&utm_source=demo jobs+cv@example.test",
+      "labels": [
+        {
+          "line": 0,
+          "label": "negative"
+        }
+      ],
+      "required": [
+        "?x=1&utm_source=demo",
+        "jobs+cv@example.test"
+      ],
+      "authorized_losses": [],
+      "technologies": [],
+      "regions": [],
+      "roles": []
+    },
+    {
+      "id": "pt_nel",
+      "family": "pt_nel",
+      "split": "development",
+      "language": "pt",
+      "origin": "synthetic",
+      "field": "raw_location",
+      "source_format": "plain_text",
+      "raw": "PortoLisboa",
+      "expected": "Porto Lisboa",
+      "labels": [
+        {
+          "line": 0,
+          "label": "negative"
+        },
+        {
+          "line": 1,
+          "label": "negative"
+        }
+      ],
+      "required": [
+        "Porto",
+        "Lisboa"
+      ],
+      "authorized_losses": [],
+      "technologies": [],
+      "regions": [],
+      "roles": []
+    },
+    {
+      "id": "es_validation_bullets",
+      "family": "es_validation_bullets",
+      "split": "validation",
+      "language": "es",
+      "origin": "synthetic",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "raw": "‣ Revisar contratos\n‣ Coordinar entregas",
+      "expected": "- Revisar contratos\n- Coordinar entregas",
+      "labels": [
+        {
+          "line": 0,
+          "label": "item"
+        },
+        {
+          "line": 1,
+          "label": "item"
+        }
+      ],
+      "required": [],
+      "authorized_losses": [],
+      "technologies": [],
+      "regions": [],
+      "roles": []
+    },
+    {
+      "id": "pt_validation_gesture",
+      "family": "pt_validation_gesture",
+      "split": "validation",
+      "language": "pt",
+      "origin": "synthetic",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "raw": "👉 Apoiar clientes\n👉 Melhorar produtos",
+      "expected": "- Apoiar clientes\n- Melhorar produtos",
+      "labels": [
+        {
+          "line": 0,
+          "label": "item"
+        },
+        {
+          "line": 1,
+          "label": "item"
+        }
+      ],
+      "required": [],
+      "authorized_losses": [],
+      "technologies": [],
+      "regions": [],
+      "roles": []
+    },
+    {
+      "id": "en_validation_ordinals",
+      "family": "en_validation_ordinals",
+      "split": "validation",
+      "language": "en",
+      "origin": "synthetic",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "raw": "2.) Discover\n5) Build\n8. Launch",
+      "expected": "2. Discover\n5. Build\n8. Launch",
+      "labels": [
+        {
+          "line": 0,
+          "label": "item"
+        },
+        {
+          "line": 1,
+          "label": "item"
+        },
+        {
+          "line": 2,
+          "label": "item"
+        }
+      ],
+      "required": [],
+      "authorized_losses": [],
+      "technologies": [],
+      "regions": [],
+      "roles": []
+    },
+    {
+      "id": "mixed_validation_keycap",
+      "family": "mixed_validation_keycap",
+      "split": "validation",
+      "language": "mixed",
+      "origin": "synthetic",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "raw": "3️⃣ Revisão\n④ Delivery",
+      "expected": "3. Revisão\n4. Delivery",
+      "labels": [
+        {
+          "line": 0,
+          "label": "item"
+        },
+        {
+          "line": 1,
+          "label": "item"
+        }
+      ],
+      "required": [],
+      "authorized_losses": [],
+      "technologies": [],
+      "regions": [],
+      "roles": []
+    },
+    {
+      "id": "pt_validation_nested",
+      "family": "pt_validation_nested",
+      "split": "validation",
+      "language": "pt",
+      "origin": "synthetic",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "raw": "• Operar\n\t◦ Observar\n\t  detalhes\n• Relatar",
+      "expected": "- Operar\n- Observar\ndetalhes\n- Relatar",
+      "labels": [
+        {
+          "line": 0,
+          "label": "item"
+        },
+        {
+          "line": 1,
+          "label": "item"
+        },
+        {
+          "line": 2,
+          "label": "negative"
+        },
+        {
+          "line": 3,
+          "label": "item"
+        }
+      ],
+      "required": [],
+      "authorized_losses": [],
+      "technologies": [],
+      "regions": [],
+      "roles": []
+    },
+    {
+      "id": "es_validation_negative",
+      "family": "es_validation_negative",
+      "split": "validation",
+      "language": "es",
+      "origin": "synthetic",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "raw": "--version\n-12 grados\n3.14 versión\n2500 - 3200\n11 → expected 15",
+      "expected": "--version\n-12 grados\n3.14 versión\n2500 - 3200\n11 → expected 15",
+      "labels": [
+        {
+          "line": 0,
+          "label": "negative"
+        },
+        {
+          "line": 1,
+          "label": "negative"
+        },
+        {
+          "line": 2,
+          "label": "negative"
+        },
+        {
+          "line": 3,
+          "label": "negative"
+        },
+        {
+          "line": 4,
+          "label": "negative"
+        }
+      ],
+      "required": [],
+      "authorized_losses": [],
+      "technologies": [],
+      "regions": [],
+      "roles": []
+    },
+    {
+      "id": "pt_validation_mixed_dashes",
+      "family": "pt_validation_mixed_dashes",
+      "split": "validation",
+      "language": "pt",
+      "origin": "synthetic",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "raw": "→ Refeições\n— Transporte",
+      "expected": "→ Refeições\n— Transporte",
+      "labels": [
+        {
+          "line": 0,
+          "label": "abstain"
+        },
+        {
+          "line": 1,
+          "label": "abstain"
+        }
+      ],
+      "required": [],
+      "authorized_losses": [],
+      "technologies": [],
+      "regions": [],
+      "roles": []
+    },
+    {
+      "id": "es_validation_title",
+      "family": "es_validation_title",
+      "split": "validation",
+      "language": "es",
+      "origin": "synthetic",
+      "field": "job_title",
+      "source_format": "plain_text",
+      "raw": "① Analista\n• Datos",
+      "expected": "① Analista • Datos",
+      "labels": [
+        {
+          "line": 0,
+          "label": "negative"
+        },
+        {
+          "line": 1,
+          "label": "negative"
+        }
+      ],
+      "required": [],
+      "authorized_losses": [],
+      "technologies": [],
+      "regions": [],
+      "roles": []
+    },
+    {
+      "id": "en_validation_criteria",
+      "family": "en_validation_criteria",
+      "split": "validation",
+      "language": "en",
+      "origin": "synthetic",
+      "field": "job_criteria_list",
+      "source_format": "plain_text",
+      "raw": "Requirements:\n1) Terraform\n3) CI/CD",
+      "expected": "Requirements:\n1. Terraform\n3. CI/CD",
+      "labels": [
+        {
+          "line": 0,
+          "label": "negative"
+        },
+        {
+          "line": 1,
+          "label": "item"
+        },
+        {
+          "line": 2,
+          "label": "item"
+        }
+      ],
+      "required": [],
+      "authorized_losses": [],
+      "technologies": [
+        "terraform",
+        "ci/cd"
+      ],
+      "regions": [],
+      "roles": [
+        "required"
+      ]
+    },
+    {
+      "id": "pt_validation_heading",
+      "family": "pt_validation_heading",
+      "split": "validation",
+      "language": "pt",
+      "origin": "synthetic",
+      "field": "job_description",
+      "source_format": "html_fragment",
+      "raw": "<li><h3>Perfil</h3><span>Autonomia</span></li>",
+      "expected": "- Perfil\nAutonomia",
+      "labels": [
+        {
+          "line": 0,
+          "label": "explicit"
+        },
+        {
+          "line": 1,
+          "label": "negative"
+        }
+      ],
+      "required": [],
+      "authorized_losses": [],
+      "technologies": [],
+      "regions": [],
+      "roles": []
+    },
+    {
+      "id": "es_validation_hr",
+      "family": "es_validation_hr",
+      "split": "validation",
+      "language": "es",
+      "origin": "synthetic",
+      "field": "job_description",
+      "source_format": "html_fragment",
+      "raw": "<p>Introducción</p><hr><blockquote>No reubicación</blockquote>",
+      "expected": "Introducción\n\nNo reubicación",
+      "labels": [
+        {
+          "line": 0,
+          "label": "negative"
+        },
+        {
+          "line": 1,
+          "label": "negative"
+        }
+      ],
+      "required": [
+        "No reubicación"
+      ],
+      "authorized_losses": [],
+      "technologies": [],
+      "regions": [],
+      "roles": []
+    },
+    {
+      "id": "en_validation_dl_multi",
+      "family": "en_validation_dl_multi",
+      "split": "validation",
+      "language": "en",
+      "origin": "synthetic",
+      "field": "job_criteria_list",
+      "source_format": "html_fragment",
+      "raw": "<dl><dt>Language</dt><dt>Idioma</dt><dd>English</dd><dd>Español</dd></dl>",
+      "expected": "Language\nIdioma\nEnglish\nEspañol",
+      "labels": [
+        {
+          "line": 0,
+          "label": "negative"
+        },
+        {
+          "line": 1,
+          "label": "negative"
+        },
+        {
+          "line": 2,
+          "label": "negative"
+        },
+        {
+          "line": 3,
+          "label": "negative"
+        }
+      ],
+      "required": [],
+      "authorized_losses": [],
+      "technologies": [],
+      "regions": [],
+      "roles": []
+    },
+    {
+      "id": "pt_validation_space",
+      "family": "pt_validation_space",
+      "split": "validation",
+      "language": "pt",
+      "origin": "synthetic",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "raw": "Remuneração: CRC ₡2,400,000+ mensal\n2 400 000",
+      "expected": "Remuneração: CRC ₡2,400,000+ mensal\n2 400 000",
+      "labels": [
+        {
+          "line": 0,
+          "label": "negative"
+        },
+        {
+          "line": 1,
+          "label": "negative"
+        }
+      ],
+      "required": [
+        "₡2,400,000+",
+        "2 400 000"
+      ],
+      "authorized_losses": [],
+      "technologies": [],
+      "regions": [],
+      "roles": [
+        "base_salary"
+      ]
+    },
+    {
+      "id": "en_validation_unknown",
+      "family": "en_validation_unknown",
+      "split": "validation",
+      "language": "en",
+      "origin": "synthetic",
+      "field": "job_description",
+      "source_format": "unknown",
+      "raw": "No sponsorship\nPython ",
+      "expected": "No sponsorship\nPython ",
+      "labels": [
+        {
+          "line": 0,
+          "label": "negative"
+        },
+        {
+          "line": 1,
+          "label": "negative"
+        }
+      ],
+      "required": [
+        "No sponsorship",
+        ""
+      ],
+      "authorized_losses": [],
+      "technologies": [
+        "python"
+      ],
+      "regions": [],
+      "roles": []
+    },
+    {
+      "id": "es_validation_noise",
+      "family": "es_validation_noise",
+      "split": "validation",
+      "language": "es",
+      "origin": "synthetic",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "raw": "🚀​◦ Capacitar\n🎉◦ Investigar",
+      "expected": "- Capacitar\n- Investigar",
+      "labels": [
+        {
+          "line": 0,
+          "label": "item"
+        },
+        {
+          "line": 1,
+          "label": "item"
+        }
+      ],
+      "required": [],
+      "authorized_losses": [
+        "🚀",
+        "🎉",
+        "​"
+      ],
+      "technologies": [],
+      "regions": [],
+      "roles": []
+    },
+    {
+      "id": "en_validation_notlist",
+      "family": "en_validation_notlist",
+      "split": "validation",
+      "language": "en",
+      "origin": "synthetic",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "raw": "✅ Required\n❌ Sponsorship\n* Notes\n✓ Approved",
+      "expected": "[emoji:check_mark_button] Required\n[emoji:cross_mark] Sponsorship\n* Notes\n✓ Approved",
+      "labels": [
+        {
+          "line": 0,
+          "label": "negative"
+        },
+        {
+          "line": 1,
+          "label": "negative"
+        },
+        {
+          "line": 2,
+          "label": "negative"
+        },
+        {
+          "line": 3,
+          "label": "negative"
+        }
+      ],
+      "required": [],
+      "authorized_losses": [],
+      "technologies": [],
+      "regions": [],
+      "roles": []
+    },
+    {
+      "id": "pt_validation_typography",
+      "family": "pt_validation_typography",
+      "split": "validation",
+      "language": "pt",
+      "origin": "synthetic",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "raw": "Plantão 24／7; ©️ 2026; prazo…",
+      "expected": "Plantão 24/7; © 2026; prazo…",
+      "labels": [
+        {
+          "line": 0,
+          "label": "negative"
+        }
+      ],
+      "required": [
+        "24/7",
+        "© 2026",
+        "prazo…"
+      ],
+      "authorized_losses": [],
+      "technologies": [],
+      "regions": [],
+      "roles": []
+    },
+    {
+      "id": "es_validation_kaomoji",
+      "family": "es_validation_kaomoji",
+      "split": "validation",
+      "language": "es",
+      "origin": "synthetic",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "raw": "SEO ¯\\_(ツ)_/¯ : (+506) :)",
+      "expected": "SEO: (+506) :)",
+      "labels": [
+        {
+          "line": 0,
+          "label": "negative"
+        }
+      ],
+      "required": [
+        "SEO:",
+        "(+506)",
+        ":)"
+      ],
+      "authorized_losses": [
+        "¯\\_(ツ)_/¯"
+      ],
+      "technologies": [],
+      "regions": [],
+      "roles": []
+    },
+    {
+      "id": "en_validation_regions",
+      "family": "en_validation_regions",
+      "split": "validation",
+      "language": "en",
+      "origin": "synthetic",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "raw": "Allowed 🇬🇧, maybe 🇨🇦; [flag:US]",
+      "expected": "Allowed [flag:GB], maybe [flag:CA]; [flag:US]",
+      "labels": [
+        {
+          "line": 0,
+          "label": "negative"
+        }
+      ],
+      "required": [
+        "maybe",
+        "[flag:US]"
+      ],
+      "authorized_losses": [],
+      "technologies": [],
+      "regions": [
+        "GB",
+        "CA"
+      ],
+      "roles": []
+    },
+    {
+      "id": "mixed_validation_escape",
+      "family": "mixed_validation_escape",
+      "split": "validation",
+      "language": "mixed",
+      "origin": "synthetic",
+      "field": "job_description",
+      "source_format": "html_escaped_text",
+      "raw": "JosÃ© &amp;amp; São Paulo",
+      "expected": "José &amp; São Paulo",
+      "labels": [
+        {
+          "line": 0,
+          "label": "negative"
+        }
+      ],
+      "required": [
+        "José",
+        "&amp;",
+        "São Paulo"
+      ],
+      "authorized_losses": [],
+      "technologies": [],
+      "regions": [],
+      "roles": []
+    },
+    {
+      "split": "development",
+      "language": "en",
+      "origin": "synthetic",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "regions": [],
+      "roles": [],
+      "technologies": [],
+      "required": [
+        "Version 3"
+      ],
+      "authorized_losses": [],
+      "id": "inline_keycap",
+      "family": "inline_keycap",
+      "raw": "Version 3️⃣ is optional",
+      "expected": "Version 3 is optional",
+      "labels": [
+        {
+          "line": 0,
+          "label": "negative"
+        }
+      ]
+    },
+    {
+      "split": "development",
+      "language": "en",
+      "origin": "synthetic",
+      "field": "job_description",
+      "source_format": "plain_text",
+      "regions": [
+        "gbsct"
+      ],
+      "roles": [],
+      "technologies": [],
+      "required": [],
+      "authorized_losses": [],
+      "id": "subdivision",
+      "family": "subdivision",
+      "raw": "Scotland 🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+      "expected": "Scotland [flag-subdivision:gbsct]",
+      "labels": [
+        {
+          "line": 0,
+          "label": "negative"
+        }
+      ]
+    },
+    {
+      "split": "development",
+      "language": "en",
+      "origin": "synthetic",
+      "field": "job_description",
+      "source_format": "html_fragment",
+      "regions": [],
+      "roles": [],
+      "technologies": [
+        "docker",
+        "sql"
+      ],
+      "required": [],
+      "authorized_losses": [],
+      "id": "redundant_dom",
+      "family": "redundant_dom",
+      "raw": "<ul><li>• Docker</li><li>• SQL</li></ul>",
+      "expected": "- Docker\n- SQL",
+      "labels": [
+        {
+          "line": 0,
+          "label": "explicit"
+        },
+        {
+          "line": 1,
+          "label": "explicit"
+        }
+      ]
+    },
+    {
+      "split": "development",
+      "language": "en",
+      "origin": "synthetic",
+      "field": "job_description",
+      "source_format": "html_fragment",
+      "regions": [],
+      "roles": [],
+      "technologies": [],
+      "required": [],
+      "authorized_losses": [],
+      "id": "empty_dom_items",
+      "family": "empty_dom_items",
+      "raw": "<ul><li></li><li></li></ul>",
+      "expected": "-\n-",
+      "labels": []
+    },
+    {
+      "split": "development",
+      "language": "en",
+      "origin": "synthetic",
+      "field": "job_description",
+      "source_format": "html_fragment",
+      "regions": [
+        "CR"
+      ],
+      "roles": [],
+      "technologies": [],
+      "required": [],
+      "authorized_losses": [],
+      "id": "flag_dom_boundary",
+      "family": "flag_dom_boundary",
+      "raw": "<ul><li>🇨🇷</li><li></li></ul>",
+      "expected": "- [flag:CR]\n-",
+      "labels": [
+        {
+          "line": 0,
+          "label": "explicit"
+        }
+      ]
+    }
+  ]
+}

@@ -24,6 +24,10 @@
     "lexical/cases.json": "f50d7b1f4c18ec0408aa3ea408af34bee0912644fa55e55cd77d0654a49aa4cb",
     "lexical/schema.json": "967c64fe5fdb257c384854bd9f613c6fd3aede50211c5fbe70d3d799bfbefe72",
     "canonical/cases.json": "32d06de5771d5cbf55ce3a6127396f8bd8b470701c420cfbccd4d431e4b13c47",
-    "canonical/schema.json": "6c1dd38d274cab9ffa7b7b0de88a5011049f7b932a73b22d62033014ce989283"
+    "canonical/schema.json": "6c1dd38d274cab9ffa7b7b0de88a5011049f7b932a73b22d62033014ce989283",
+    "quality/cases.json": "326802e161397790f7978b5c179f56eb65ce00168ed38f6d8be938711591b89d",
+    "quality/integral_evidence.json": "7a938deff39065258eb5bc9e54b8d7e551781224a96860190b4318b041def214",
+    "quality/integral_evidence.schema.json": "45ea55adc6b43f0b6305f70938c6258c4e9496fc1e5c8132b308184176a6a266",
+    "quality/schema.json": "f2d387c4e3be8f0e1ace85e06719ef1dbb9ce3cd070f2c0fa89939bf8132e7e0"
   }
 }
