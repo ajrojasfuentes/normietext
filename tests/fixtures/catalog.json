@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "configuration": {
     "repository_path": "src/normietext/data/default_policy.json",
-    "sha256": "94913d93fb899bd2773738b87b4ff5e8016fef0da4cf6318831b3ff829281b64"
+    "sha256": "b8c3bea927eed5722253f20e2d303fae795334126daea093dda379dfc3591fa4"
   },
   "files": {
     "integral/complex_multilingual_ai_role_001/fixture.json": "2bd38ebb827c9c806637c1e8288a44f31d3db2d94583eb2278595d9950fe54a0",
@@ -23,7 +23,7 @@
     "adaptation/schema.json": "54774244f7032c41819c7f132bcb999eb3a9c300a1047abc2771275d2defae11",
     "lexical/cases.json": "f50d7b1f4c18ec0408aa3ea408af34bee0912644fa55e55cd77d0654a49aa4cb",
     "lexical/schema.json": "967c64fe5fdb257c384854bd9f613c6fd3aede50211c5fbe70d3d799bfbefe72",
-    "canonical/cases.json": "32d06de5771d5cbf55ce3a6127396f8bd8b470701c420cfbccd4d431e4b13c47",
+    "canonical/cases.json": "c1d68b51138fef978f059d678863601e8503a9b6257280a8b7ee3c6eab7c1554",
     "canonical/schema.json": "6c1dd38d274cab9ffa7b7b0de88a5011049f7b932a73b22d62033014ce989283",
     "quality/cases.json": "326802e161397790f7978b5c179f56eb65ce00168ed38f6d8be938711591b89d",
     "quality/integral_evidence.json": "7a938deff39065258eb5bc9e54b8d7e551781224a96860190b4318b041def214",

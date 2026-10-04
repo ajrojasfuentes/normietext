@@ -1,1 +1,1 @@
-"""Typed intermediate stages; the functional normalizer remains pending F5."""
+"""Typed pipeline stages used by the functional JobTextNormalizer API."""

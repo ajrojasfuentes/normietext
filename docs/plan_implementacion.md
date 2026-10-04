@@ -3,10 +3,11 @@
 **Base normativa:** [especificación 2.0](normietext_v2.0_especificacion.md).
 **Fecha:** 24 de septiembre de 2026 UTC.
 **Audiencia:** ingeniería del núcleo, responsables de corpus/QA e integradores.
-**Estado:** Fase 0 verificada localmente y fases 1–6 completadas localmente (2026-09-29); fases
-7–8 pendientes. Véase el [cierre de F6](revisiones/cierre_fase_6.md) y el
-[cierre anterior](revisiones/cierre_fases_0_1.md). Las
-tareas de las fases siguientes siguen siendo trabajo futuro.
+**Estado:** F0–F6 completadas localmente. F7 validada sobre el equipo de referencia
+como biblioteca por lotes con 20 muestras sintéticas aportadas por el mantenedor.
+F8 preparada localmente para distribución GitHub/MIT; pendientes aprobación final,
+commit/tag, CI remota y publicación. Véase [aceptación vigente](revisiones/aceptacion_biblioteca.md)
+y la [medición inicial F7](revisiones/cierre_fase_7.md).
 
 **Anotación de revisión (2026-09-24):** se incorporan las decisiones R01–R15 de
 [evaluación de NT-REV-2.0-001](revisiones/evaluacion_NT-REV-2.0-001.md), resumidas
@@ -436,6 +437,9 @@ seis campos como contratos distintos. Registrar abstenciones y pérdidas autoriz
 
 ## 11. Fase 7 — Límites, observabilidad y rendimiento
 
+**Estado:** validación local por lotes con objetivos condicionados a hardware/corpus;
+evidencia y límites en la [aceptación vigente](revisiones/aceptacion_biblioteca.md).
+
 **Depende de:** fase 6. **Referencias:** §§21, 23, 25–27.
 
 ### Límites que probar en borde, borde−1 y borde+1
@@ -454,9 +458,9 @@ seis campos como contratos distintos. Registrar abstenciones y pérdidas autoriz
 
 **Anotaciones R01/R05:** la tabla incorpora la revisión contractual F1 de §23.1.
 El factor de salida 32 y `OUTPUT_LIMIT_EXCEEDED` ya están adoptados en norma y
-configuración. En F5/F7 falta verificar expansión del pipeline completo. No basta con la
-longitud del mayor hint para probar la cota. Probar 2.000 ✅ sin fallo de expansión
-y exceso real sin salida parcial. Mantener total 327.680: es redundante frente a
+configuración. F5/F7 verifican 2.000 ✅ sin fallo de expansión y exceso real
+del pipeline tipado sin salida parcial. La longitud del mayor hint no se usa
+como demostración de la cota de todo el pipeline. Mantener total 327.680: es redundante frente a
 la suma predeterminada 319.488. Probar el límite agregado con configuración validada
 que permita alcanzarlo, sin bajar arbitrariamente el presupuesto de producción.
 
@@ -485,14 +489,18 @@ no se sustituyen por benchmarks en runners compartidos sin control de ruido.
 
 ## 12. Fase 8 — Release, adopción gradual y mantenimiento
 
+**Estado:** preparación y adopción sintética local verificadas; publicación y
+verificación remota pendientes. Responsable: Anthony Josue Rojas Fuentes.
+
 **Depende de:** fases 1–7 y aceptación de §26.
 
 1. Congelar contratos y revisar matriz de requisitos, API, licencias de tablas,
    limitaciones, changelog y diferencias de texto/estructura/anotaciones.
 2. Construir desde commit identificado con runtime y dependencias fijados; comprobar
    distribución instalada, datos empaquetados y manifiesto sin depender del checkout.
-3. Configurar Trusted Publisher y entorno de GitHub según
-   [guía operativa](desarrollo_y_release.md); verificar propiedad del nombre PyPI.
+3. Distribuir desde GitHub Releases bajo MIT, según la decisión del mantenedor
+   del 2026-10-03 ([ADR-0008](decisions/0008-biblioteca-lotes-github.md)). PyPI y
+   Trusted Publisher quedan opcionales; no bloquean el destino GitHub elegido.
 4. Publicar tag/release coherente con versión, después de CI; consumir el artefacto
    verificado. No reconstruir otro wheel sin checks dentro del job de publicación.
 5. Integrar en un consumidor representativo y ejecutar muestra en sombra; comparar
@@ -591,17 +599,19 @@ identifica corpus, commit, lock, manifiesto, resultados, incidencias abiertas y
 limitaciones. Las excepciones a una obligación normativa requieren cambiar la
 especificación explícitamente antes de declarar aceptación.
 
-## 17. Primer incremento recomendado
+## 17. Siguiente incremento
 
-Los incrementos F1–F5 ya se completaron localmente. El siguiente trabajo es F6:
-integración con consumidores de evidencia, ampliación del corpus y calidad
-medida de decisiones contextuales sobre muestras etiquetadas.
+El mantenedor definió el alcance de biblioteca por lotes en múltiples dispositivos,
+distribución GitHub/MIT y aportó 20 muestras sintéticas adversariales. F7 publica
+objetivos de referencia y mediciones 1/2/4 procesos, con cero fallos y replay estable.
+F8 incorpora instalación, consumidor sintético, rollback y workflow de assets.
+La siguiente puerta es aprobación final de la candidata por el mantenedor,
+commit/tag, matriz remota y publicación/verificación de GitHub Release.
 
-La secuencia inicial de contratos y fixtures queda registrada en F1. Antes de
-implementar HTML o una regla destructiva, revisar ADR-0001 a ADR-0005 y conservar
-la composición hacia la fuente inicial. F5 debe reutilizar estos contratos, sin
-reclasificar una proyección normalizada como raw ni ejecutar el renderer antes
-de capturar la estructura y las secuencias léxicas.
+Los informes previos conservan sus mediciones históricas. No extrapolar un SLO
+universal ni una ejecución de 100.000 registros desde 300 procesamientos repetidos.
+Véanse ADR-0007/0008 y la aceptación vigente. La especificación, reglas, esquema
+y paquete mantienen identidades separadas.
 
 ## 18. Anotaciones de la revisión externa NT-REV-2.0-001
 

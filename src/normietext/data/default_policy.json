@@ -1,7 +1,7 @@
 {
   "policy_id": "linkedin_jobs_aggressive_v1",
   "schema_version": "1.0.0",
-  "normalization_version": "1.0.0",
+  "normalization_version": "1.0.1",
   "input": {
     "default_format": "plain_text",
     "auto_detect_html": false,

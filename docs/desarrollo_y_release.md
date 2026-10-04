@@ -1,3 +1,7 @@
+> Decisión vigente (2026-10-03): biblioteca MIT distribuida desde GitHub; véase
+> [distribución GitHub](distribucion_github.md). PyPI es opcional. Las secciones
+> de inicialización y fases previas conservan su contexto histórico.
+
 # Desarrollo, CI y publicación
 
 Guía operativa para mantenedores. El [plan](plan_implementacion.md) contiene las
@@ -89,8 +93,8 @@ Preparación externa, una sola vez, cuando el producto esté listo para distribu
 
 Preparación de cada release:
 
-1. Completar §26 de la especificación y adjuntar informe de aceptación. Esta base
-   aún no cumple las puertas funcionales y no constituye una release del cleaner.
+1. Completar §26 de la especificación y adjuntar informe de aceptación. Consultar el informe vigente de aceptación; no confundir los checks locales
+   con una release ya publicada.
 2. Cambiar la versión del paquete y, cuando corresponda, versiones de esquema,
    reglas y perfil; regenerar lock y revisar changelog/diffs de comportamiento.
 3. Ejecutar los checks; integrar el commit revisado en main.

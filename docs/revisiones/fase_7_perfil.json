@@ -1,0 +1,426 @@
+{
+  "schema_version": "1.0.0",
+  "environment": {
+    "os": "Linux-7.0.0-34-generic-x86_64-with-glibc2.43",
+    "machine": "x86_64",
+    "cpu": "AMD Ryzen 5 5600X 6-Core Processor",
+    "logical_cpus": 12,
+    "python": "3.14.7 (main, Sep  1 2026, 14:18:09) [Clang 22.1.3 ]",
+    "manifest": {
+      "backend": "beautifulsoup4:lxml",
+      "code_revision": "source-tree:02bc81b357ed201b0ba9a42b62baa1a4bc8a6021e66a677997c157df0e723dee",
+      "dependencies": [
+        [
+          "beautifulsoup4",
+          "4.15.0"
+        ],
+        [
+          "emoji",
+          "2.16.0"
+        ],
+        [
+          "ftfy",
+          "6.3.1"
+        ],
+        [
+          "lxml",
+          "6.1.3"
+        ],
+        [
+          "regex",
+          "2026.9.10"
+        ],
+        [
+          "soupsieve",
+          "2.10"
+        ],
+        [
+          "typing-extensions",
+          "4.16.0"
+        ],
+        [
+          "wcwidth",
+          "0.9.1"
+        ]
+      ],
+      "libxml2_version": "2.14.6",
+      "normalization_version": "1.0.1",
+      "policy_hash": "75d3d5eebea010d625c9c8e8409e009d7c1ad53ebfc5275e550936a1faa0661f",
+      "policy_id": "linkedin_jobs_aggressive_v1",
+      "python_version": "3.14.7",
+      "runtime_artifacts": [
+        {
+          "name": "installed:beautifulsoup4",
+          "sha256": "caadbd60e8b678ec32a851ec64097130108209de06dcfae8c4d361bcb5a8d3d1",
+          "version": "4.15.0"
+        },
+        {
+          "name": "installed:emoji",
+          "sha256": "9ce594b19bc926a70e8dd795431242fa416643a6a4995792a6cb38e0792a4ae3",
+          "version": "2.16.0"
+        },
+        {
+          "name": "installed:ftfy",
+          "sha256": "3daad76dd51c8e61e5ceaf9af6c16344ca2601ffc4748ee0fd3a808571850cf2",
+          "version": "6.3.1"
+        },
+        {
+          "name": "installed:lxml",
+          "sha256": "1fae0366b53a7da55ac9032e9fec4bfa6af2f0e6f2e9d116602dc9966b259d2e",
+          "version": "6.1.3"
+        },
+        {
+          "name": "installed:regex",
+          "sha256": "77b51ea63af89f6c498a4fa6ba8b07ee2816ef38af3da36d7bd8060444ffc741",
+          "version": "2026.9.10"
+        },
+        {
+          "name": "installed:soupsieve",
+          "sha256": "e393361c946a556909ded9bce4201cd2a73aa9d729841d231dcff8d7b3eba675",
+          "version": "2.10"
+        },
+        {
+          "name": "installed:typing-extensions",
+          "sha256": "b7f1343bb529517aed65e40bc042971228db1789b16b57e0b711930f4f2f9be1",
+          "version": "4.16.0"
+        },
+        {
+          "name": "installed:wcwidth",
+          "sha256": "2e11ea1632147014b3c46fc117ef0388d5fe484084cff0b471f489aa72c85c6b",
+          "version": "0.9.1"
+        },
+        {
+          "name": "lxml-build",
+          "sha256": "a59f7a5f8768b099faf345e25d7ae2837dd9711ccede7f45e994391f0927f16d",
+          "version": "6.1.3"
+        },
+        {
+          "name": "normietext-code",
+          "sha256": "02bc81b357ed201b0ba9a42b62baa1a4bc8a6021e66a677997c157df0e723dee",
+          "version": "0.1.0"
+        },
+        {
+          "name": "python-runtime",
+          "sha256": "154cee19b91075a5a950ba799eba129b5dedab8faac79a572dd141ba29d0c4c8",
+          "version": "3.14.7"
+        }
+      ],
+      "schema_version": "1.0.0",
+      "tables": [
+        {
+          "name": "emoji_hints.json",
+          "sha256": "feb31450688d67e3caf4fddf9c07679db4c24a8492fa65a08f17f8751e9d3742",
+          "version": "1.0.0"
+        },
+        {
+          "name": "kaomoji.json",
+          "sha256": "8a273e6a867ef46fb60b64ef004e23980acc6ba5ab1a17f9996bc765f66d9dae",
+          "version": "1.0.0"
+        },
+        {
+          "name": "licenses/Unicode-3.0.txt",
+          "sha256": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96",
+          "version": "1.0.0"
+        },
+        {
+          "name": "licenses/emoji-LICENSE.txt",
+          "sha256": "aa20fedcaf6d601de429715d8ecdfb1a0b46ba2a391b33d0e060882335694aab",
+          "version": "1.0.0"
+        },
+        {
+          "name": "licenses/regex-LICENSE.txt",
+          "sha256": "bff55ef4cdcc8c14ce259f8e8ab60e264418440d6335f4dc138273fbd506144d",
+          "version": "1.0.0"
+        },
+        {
+          "name": "region_sequences.json",
+          "sha256": "8fcc4d24267ac130c04fa69546e00e98f0a4c9a4deb84a90a3fed4c9201ba7f0",
+          "version": "1.0.0"
+        },
+        {
+          "name": "unicode_policy_manifest.json",
+          "sha256": "7d76280b737d6d55d0a462630217eee4b3a8a76548a5ec13a608fb0aebec8b7c",
+          "version": "1.0.0"
+        },
+        {
+          "name": "unicode_properties.json",
+          "sha256": "1e16fb60dac8c46b8842ae56ec6b35c49621f19bbbb42dd77d0849ccb817001e",
+          "version": "1.0.0"
+        }
+      ],
+      "unicode_version": "16.0.0"
+    },
+    "lock_sha256": "718f79a1b8413f944aac958db548f5b7dd409465156f7249288bc562bfdf543e"
+  },
+  "protocol": {
+    "warmup": 0,
+    "repetitions": 1,
+    "worker_timeout_seconds": 120.0,
+    "worker_memory_mib": 512,
+    "python_memory": true,
+    "profile": true,
+    "percentiles": "nearest rank",
+    "memory_and_profile": "separate runs"
+  },
+  "limitations": [
+    "Synthetic public samples, not production traffic",
+    "Small sample tail percentiles are descriptive, not a production SLO",
+    "RSS is lifetime process high-water including warmup and memory run",
+    "Worker timeout is for the entire benchmark, not a per-record SLO"
+  ],
+  "cases": [
+    {
+      "name": "integral",
+      "cohort": "synthetic_representative",
+      "unit": "field",
+      "input_sha256": "bd7006a561f0ddeaf3504f60fd8635ac035cf761275ec1d06e6bd69c5c60d88d",
+      "input_codepoints": 6976,
+      "fields": 1,
+      "html_fraction": 0.0,
+      "cold_seconds": 0.31613927500438876,
+      "latency_seconds": {
+        "samples": 1,
+        "min": 0.26200379099464044,
+        "max": 0.26200379099464044,
+        "mean": 0.26200379099464044,
+        "stdev": 0,
+        "p50": 0.26200379099464044,
+        "p95": 0.26200379099464044,
+        "p99": 0.26200379099464044
+      },
+      "throughput_units_per_second": 3.816738667038814,
+      "successful_units_per_second": 3.816738667038814,
+      "stage_seconds": {
+        "convert": {
+          "samples": 1,
+          "min": 0.018741025996860117,
+          "max": 0.018741025996860117,
+          "mean": 0.018741025996860117,
+          "stdev": 0,
+          "p50": 0.018741025996860117,
+          "p95": 0.018741025996860117,
+          "p99": 0.018741025996860117
+        },
+        "lex": {
+          "samples": 1,
+          "min": 0.05811108500347473,
+          "max": 0.05811108500347473,
+          "mean": 0.05811108500347473,
+          "stdev": 0,
+          "p50": 0.05811108500347473,
+          "p95": 0.05811108500347473,
+          "p99": 0.05811108500347473
+        },
+        "render": {
+          "samples": 1,
+          "min": 0.15830680198268965,
+          "max": 0.15830680198268965,
+          "mean": 0.15830680198268965,
+          "stdev": 0,
+          "p50": 0.15830680198268965,
+          "p95": 0.15830680198268965,
+          "p99": 0.15830680198268965
+        },
+        "repair": {
+          "samples": 1,
+          "min": 0.012477370008127764,
+          "max": 0.012477370008127764,
+          "mean": 0.012477370008127764,
+          "stdev": 0,
+          "p50": 0.012477370008127764,
+          "p95": 0.012477370008127764,
+          "p99": 0.012477370008127764
+        },
+        "validate": {
+          "samples": 1,
+          "min": 0.01410828300868161,
+          "max": 0.01410828300868161,
+          "mean": 0.01410828300868161,
+          "stdev": 0,
+          "p50": 0.01410828300868161,
+          "p95": 0.01410828300868161,
+          "p99": 0.01410828300868161
+        }
+      },
+      "outcomes": {
+        "success": 1
+      },
+      "python_peak_bytes_separate_run": 1203484,
+      "process_peak_rss_bytes": 52129792,
+      "metrics_example": {
+        "annotations_by_kind": {
+          "emoji_hint": 3,
+          "emoji_region": 2
+        },
+        "edits_by_precision": {
+          "exact": 123,
+          "segment": 1
+        },
+        "edits_by_rule": {
+          "character.fullwidth_solidus": 2,
+          "emoji.hint_token": 3,
+          "emoji.region_token": 2,
+          "emoji.remove": 13,
+          "kaomoji.remove": 1,
+          "list.marker": 45,
+          "render.blank_lines": 14,
+          "render.line_edges": 23,
+          "render.removal_gap": 7,
+          "render.space_run": 14
+        },
+        "elapsed_seconds": 0.31561597500694916,
+        "empty_after": false,
+        "empty_before": false,
+        "error": null,
+        "field": "job_description",
+        "format": "plain_text",
+        "hints": 3,
+        "input_codepoints": 6976,
+        "issues_by_code": {},
+        "length_ratio": 0.9958428899082569,
+        "manifest_id": "79c0d4448f617c2c3731ad463e515dc269ee359fdf19e21cca48fb2312992d80",
+        "origins_by_precision": {
+          "exact": 364,
+          "segment": 1
+        },
+        "output_codepoints": 6947,
+        "profile": "linkedin_jobs_aggressive_v1",
+        "removals": 13,
+        "repairs": 0,
+        "rules_version": "1.0.1",
+        "scraper_version_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stage_seconds": {
+          "convert": 0.019391259003896266,
+          "lex": 0.06648831299389713,
+          "render": 0.16126634099055082,
+          "repair": 0.053837419021874666,
+          "validate": 0.014411479001864791
+        },
+        "status": "ok",
+        "timeout": false
+      },
+      "profile_separate_run": "         4709710 function calls (4644299 primitive calls) in 1.046 seconds\n\n   Ordered by: cumulative time\n   List reduced from 439 to 20 due to restriction <20>\n\n   ncalls  tottime  percall  cumtime  percall filename:lineno(function)\n        1    0.000    0.000    1.070    1.070 load.py:136(run)\n        1    0.000    0.000    1.070    1.070 operations.py:93(measure_field)\n        1    0.000    0.000    1.068    1.068 operations.py:66(_measure)\n        1    0.000    0.000    1.068    1.068 operations.py:102(<lambda>)\n        1    0.000    0.000    1.068    1.068 api.py:36(normalize_field)\n        5    0.000    0.000    1.068    0.214 _telemetry.py:19(measured)\n        1    0.000    0.000    0.983    0.983 api.py:41(canonicalize)\n    33588    0.104    0.000    0.684    0.000 _validation.py:51(__post_init__)\n        1    0.001    0.001    0.659    0.659 rendering.py:175(render_document)\n       36    0.003    0.000    0.483    0.013 provenance.py:253(replace)\n        4    0.001    0.000    0.361    0.090 rendering.py:48(render_baseline)\n       24    0.009    0.000    0.361    0.015 rendering.py:27(_sub)\n141883/100751    0.099    0.000    0.305    0.000 _validation.py:28(_matches)\n    35655    0.086    0.000    0.299    0.000 _validation.py:15(valid_text)\n      479    0.004    0.000    0.252    0.001 provenance.py:286(copy)\n     1589    0.013    0.000    0.244    0.000 provenance.py:69(slice)\n  1060845    0.152    0.000    0.213    0.000 _validation.py:16(<genexpr>)\n        1    0.003    0.003    0.211    0.211 lexing.py:240(lex_document)\n     2261    0.002    0.000    0.185    0.000 serialization.py:145(canonical_hash)\n     2265    0.003    0.000    0.184    0.000 serialization.py:138(canonical_bytes)\n\n\n"
+    },
+    {
+      "name": "hints_2000",
+      "cohort": "adversarial",
+      "unit": "field",
+      "input_sha256": "a890a33a2fb0a9833ba1aef70552865f0269f0400e7ac470755d97e48a130ba2",
+      "input_codepoints": 2000,
+      "fields": 1,
+      "html_fraction": 0.0,
+      "cold_seconds": 1.711095236998517,
+      "latency_seconds": {
+        "samples": 1,
+        "min": 1.6218232380051631,
+        "max": 1.6218232380051631,
+        "mean": 1.6218232380051631,
+        "stdev": 0,
+        "p50": 1.6218232380051631,
+        "p95": 1.6218232380051631,
+        "p99": 1.6218232380051631
+      },
+      "throughput_units_per_second": 0.6165900059676025,
+      "successful_units_per_second": 0.6165900059676025,
+      "stage_seconds": {
+        "convert": {
+          "samples": 1,
+          "min": 0.000903758016647771,
+          "max": 0.000903758016647771,
+          "mean": 0.000903758016647771,
+          "stdev": 0,
+          "p50": 0.000903758016647771,
+          "p95": 0.000903758016647771,
+          "p99": 0.000903758016647771
+        },
+        "lex": {
+          "samples": 1,
+          "min": 0.19865110001410358,
+          "max": 0.19865110001410358,
+          "mean": 0.19865110001410358,
+          "stdev": 0,
+          "p50": 0.19865110001410358,
+          "p95": 0.19865110001410358,
+          "p99": 0.19865110001410358
+        },
+        "render": {
+          "samples": 1,
+          "min": 1.3357471760245971,
+          "max": 1.3357471760245971,
+          "mean": 1.3357471760245971,
+          "stdev": 0,
+          "p50": 1.3357471760245971,
+          "p95": 1.3357471760245971,
+          "p99": 1.3357471760245971
+        },
+        "repair": {
+          "samples": 1,
+          "min": 0.0031847640057094395,
+          "max": 0.0031847640057094395,
+          "mean": 0.0031847640057094395,
+          "stdev": 0,
+          "p50": 0.0031847640057094395,
+          "p95": 0.0031847640057094395,
+          "p99": 0.0031847640057094395
+        },
+        "validate": {
+          "samples": 1,
+          "min": 0.08240107100573368,
+          "max": 0.08240107100573368,
+          "mean": 0.08240107100573368,
+          "stdev": 0,
+          "p50": 0.08240107100573368,
+          "p95": 0.08240107100573368,
+          "p99": 0.08240107100573368
+        }
+      },
+      "outcomes": {
+        "success": 1
+      },
+      "python_peak_bytes_separate_run": 5881934,
+      "process_peak_rss_bytes": 70541312,
+      "metrics_example": {
+        "annotations_by_kind": {
+          "emoji_hint": 2000
+        },
+        "edits_by_precision": {
+          "exact": 2000
+        },
+        "edits_by_rule": {
+          "emoji.hint_token": 2000
+        },
+        "elapsed_seconds": 1.709478484990541,
+        "empty_after": false,
+        "empty_before": false,
+        "error": null,
+        "field": "job_description",
+        "format": "plain_text",
+        "hints": 2000,
+        "input_codepoints": 2000,
+        "issues_by_code": {},
+        "length_ratio": 25.9995,
+        "manifest_id": "79c0d4448f617c2c3731ad463e515dc269ee359fdf19e21cca48fb2312992d80",
+        "origins_by_precision": {
+          "exact": 4001
+        },
+        "output_codepoints": 51999,
+        "profile": "linkedin_jobs_aggressive_v1",
+        "removals": 0,
+        "repairs": 0,
+        "rules_version": "1.0.1",
+        "scraper_version_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stage_seconds": {
+          "convert": 0.001402877998771146,
+          "lex": 0.20180745399557054,
+          "render": 1.3812687679892406,
+          "repair": 0.04310320399235934,
+          "validate": 0.0814679829927627
+        },
+        "status": "ok",
+        "timeout": false
+      },
+      "profile_separate_run": "         32153517 function calls (31799897 primitive calls) in 6.224 seconds\n\n   Ordered by: cumulative time\n   List reduced from 424 to 20 due to restriction <20>\n\n   ncalls  tottime  percall  cumtime  percall filename:lineno(function)\n        1    0.000    0.000    6.353    6.353 load.py:136(run)\n        1    0.000    0.000    6.353    6.353 operations.py:93(measure_field)\n        1    0.000    0.000    6.347    6.347 operations.py:66(_measure)\n        1    0.000    0.000    6.347    6.347 operations.py:102(<lambda>)\n        1    0.001    0.001    6.347    6.347 api.py:36(normalize_field)\n        5    0.001    0.000    6.346    1.269 _telemetry.py:19(measured)\n        1    0.000    0.000    6.342    6.342 api.py:41(canonicalize)\n        1    0.007    0.007    5.173    5.173 rendering.py:175(render_document)\n       36    0.021    0.001    3.556    0.099 provenance.py:253(replace)\n   242308    0.563    0.000    3.492    0.000 _validation.py:51(__post_init__)\n        3    0.001    0.000    1.948    0.649 rendering.py:47(apply)\n   251041    0.490    0.000    1.683    0.000 _validation.py:15(valid_text)\n        4    0.001    0.000    1.641    0.410 rendering.py:48(render_baseline)\n       24    0.019    0.001    1.639    0.068 rendering.py:27(_sub)\n     4036    0.031    0.000    1.564    0.000 provenance.py:286(copy)\n801511/625073    0.470    0.000    1.482    0.000 _validation.py:28(_matches)\n    10037    0.077    0.000    1.286    0.000 provenance.py:69(slice)\n     8001    0.013    0.000    1.205    0.000 provenance.py:186(stable_id)\n  6649058    0.853    0.000    1.192    0.000 _validation.py:16(<genexpr>)\n    16013    0.011    0.000    1.188    0.000 serialization.py:145(canonical_hash)\n\n\n"
+    }
+  ],
+  "comparison_failures": []
+}

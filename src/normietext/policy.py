@@ -119,7 +119,7 @@ class ResourceLimits(Validated):
 class NormalizationPolicy(Validated):
     policy_id: str = "linkedin_jobs_aggressive_v1"
     schema_version: str = "1.0.0"
-    normalization_version: str = "1.0.0"
+    normalization_version: str = "1.0.1"
     input: InputPolicy = InputPolicy()
     encoding: EncodingPolicy = EncodingPolicy()
     unicode: UnicodePolicy = UnicodePolicy()
@@ -135,7 +135,7 @@ class NormalizationPolicy(Validated):
             Validated.__post_init__(self)
             require(self.policy_id == "linkedin_jobs_aggressive_v1", "Unsupported profile")
             require(
-                self.schema_version == self.normalization_version == "1.0.0",
+                self.schema_version == "1.0.0" and self.normalization_version == "1.0.1",
                 "Unsupported initial version",
             )
             for name in (

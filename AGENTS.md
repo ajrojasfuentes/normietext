@@ -13,13 +13,14 @@ No confundir la especificación 2.0 con la versión del paquete 0.1.0.
 - Mantener separados versiones del software, esquema, reglas y perfil.
 - F1–F5 implementan contratos, corpus, procedencia, adaptación, reparación, léxico,
   símbolos, listas y renderer. F6 añade consumidores y evaluación sintética.
-  `JobTextNormalizer` es la API funcional; F7–F8 conservan operación y release. El smoke de wheel no sustituye corpus.
+  `JobTextNormalizer` es la API funcional; F7 implementa operación local y F8 conserva release. El smoke de wheel no sustituye corpus.
 - Usar `uv sync --locked`, Ruff, mypy y pytest; construir y comprobar el wheel.
 - Cambios de comportamiento requieren fixtures y revisión de diffs del corpus.
 - Nunca sustituir los textos esperados del corpus automáticamente por la salida
   de la implementación. No corregir la especificación silenciosamente.
 
-Estado actual y evidencia: `docs/revisiones/cierre_fase_6.md`. Las decisiones de
+Estado actual y evidencia: `docs/revisiones/aceptacion_biblioteca.md`; F7 valida
+capacidad por equipo/corpus. F8 queda preparada, pendiente de aprobación/publicación. Las decisiones de
 contratos se fijan en `docs/decisions/0001-contratos-fase-1.md` y
 `docs/decisions/0002-baseline-fuentes-procedencia.md` y
 `docs/decisions/0003-adaptadores-formato.md` y
@@ -65,3 +66,17 @@ regenerar goldens o hashes de corpus a partir de la salida de la implementación
 - Mantener `quality` como corpus de expectativas manuales, separado de regresiones
   normativas. La nueva alineación local de tokens distingue marcadores insertados;
   no altera procedencia raw. Los spans padres incluyen sus hijos renderizados.
+
+- F7: `normietext.operations` mide llamadas de forma explícita sin registrar texto.
+  Exportar solo `Measurement.metrics`; resultado y trace contienen fuentes privadas.
+  `benchmarks/` es desarrollo, excluido del wheel. Usar `python -m benchmarks.load`.
+  No confundir percentiles sintéticos locales con SLO aprobado de producción.
+- Reglas 1.0.1 corrigen separadores de celdas vacías y validación canónica padre/hijo;
+  esquema 1.0.0, paquete 0.1.0. Mantener versionado y regresiones manuales.
+
+- ADR-0008: biblioteca por lotes, GitHub/MIT; PyPI opcional. Mantenedor: Anthony
+  Josue Rojas Fuentes. Los 20 casos de benchmarks/cases son sintéticos; preservar bytes.
+- Su adaptador conserva modality aparte y seniority missing; no reinterpretar
+  pseudo-HTML ni usar canonical_* como verdad del cleaner. Partial no implica fallo.
+- `benchmarks.batch` mide procesos y replay; los tiempos de 100.000 son extrapolados.
+  Pictogramas se buscan por runs no ASCII; NFC por líneas conserva offsets y límites.

@@ -32,7 +32,25 @@ def _sub(
     limits: ResourceLimits,
 ) -> TrackedText:
     try:
-        matches = list(pattern.finditer(tracked.text, timeout=limits.regex_timeout_ms / 1000))
+        if pattern is _GRAPHEMES:
+            # LF is already canonicalized and is a grapheme boundary. Bound each
+            # regex operation to a logical line, retaining offsets into the same
+            # text; do not spend a whole-document timeout enumerating ASCII too.
+            matches: list[regex.Match[str]] = []
+            start = 0
+            for line in tracked.text.split("\n"):
+                end = min(len(tracked.text), start + len(line) + 1)
+                matches.extend(
+                    pattern.finditer(
+                        tracked.text,
+                        pos=start,
+                        endpos=end,
+                        timeout=limits.regex_timeout_ms / 1000,
+                    )
+                )
+                start = end
+        else:
+            matches = list(pattern.finditer(tracked.text, timeout=limits.regex_timeout_ms / 1000))
     except TimeoutError as exc:
         raise ResourceLimitError(
             ErrorCode.REGEX_TIMEOUT, "Renderer matching exceeded budget"

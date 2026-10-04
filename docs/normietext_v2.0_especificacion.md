@@ -1260,12 +1260,17 @@ Referencias primarias de diseño y baseline, consultadas para la fecha de refere
 
 ## 29. Apéndice A: configuración normativa
 
+**Revisión explícita F7 (2026-10-02):** reglas 1.0.1 para corregir separadores
+de celdas vacías consecutivas y rechazo de spans canónicos fuera de su padre
+(ADR-0007). Conserva los contratos de §§10/18 y el esquema 1.0.0; los documentos
+canónicos de reglas anteriores se reprocesan desde raw.
+
 Representación ilustrativa de la configuración efectiva. El esquema de configuración valida tipos y enumera campos; no acepta opciones desconocidas.
 
 ```yaml
 policy_id: linkedin_jobs_aggressive_v1
 schema_version: "1.0.0"
-normalization_version: "1.0.0"
+normalization_version: "1.0.1"
 input:
   default_format: plain_text
   auto_detect_html: false

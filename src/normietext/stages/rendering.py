@@ -146,6 +146,13 @@ def _html_changes(lexed: LexedDocument, structure: Structure) -> tuple[Replaceme
         previous = previous_by_row.get(key)
         if previous is not None:
             span = Span(previous.span.end, cell.span.start)
+            pending = changes.get(span)
+            if span.start == span.end and pending is not None:
+                # Several empty cells share one source boundary. Each boundary
+                # still contributes a separator; insertion identity is not span identity.
+                changes[span] = replace(pending, text=pending.text + " | ")
+                previous_by_row[key] = cell
+                continue
             for existing in list(changes):
                 if span.start <= existing.start and existing.end <= span.end:
                     del changes[existing]

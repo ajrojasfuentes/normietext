@@ -4,13 +4,16 @@ Biblioteca Python local y determinista para normalizar seis campos de ofertas
 laborales extraídas de LinkedIn. Conserva evidencia, estructura y procedencia
 para consumidores de parsing, sin LLM ni llamadas de red al normalizar.
 
-**Estado: fases 0–6 completadas localmente.**
+**Estado: F7 validada localmente por lotes; F8 preparada para GitHub, sin publicar.**
 `JobTextNormalizer` ofrece normalización por campo/registro, reentrada canónica
 idempotente y proyección solo texto. Incluye listas, emoji, invisibles, espacios,
 NFC final, estructura y procedencia. F6 añade evaluación de evidencia y corpus
-sintético; no acredita calidad de tráfico real. Rendimiento y release de F7–F8
-siguen pendientes. La especificación 2.0 no es
-la versión del paquete: la base usa `0.1.0`.
+sintético; no acredita calidad de tráfico real. F7 añade métricas y pruebas de carga;
+La capacidad se documenta por hardware y corpus, sin un SLO universal de servicio.
+La distribución será desde GitHub bajo MIT; véase [distribución](docs/distribucion_github.md).
+La publicación y verificación remota siguen pendientes.
+La especificación 2.0 no es
+la versión del paquete: la base usa `0.1.0`, esquema `1.0.0` y reglas `1.0.1`.
 
 ## Desarrollo
 
@@ -153,6 +156,8 @@ FastAPI, Docker ni infraestructura distribuida a esta inicialización.
 - [Guía de evaluación](docs/evaluacion.md).
 - [ADR de evaluación](docs/decisions/0006-evaluacion-evidencia.md).
 - [Informe de cierre F6](docs/revisiones/cierre_fase_6.md).
+- [Informe F7 y aceptación pendiente](docs/revisiones/cierre_fase_7.md).
+- [Operación y benchmarks](docs/operacion.md).
 - [Informe de cierre F5](docs/revisiones/cierre_fase_5.md).
 - [Informe de cierre F4](docs/revisiones/cierre_fase_4.md).
 - [Informe de cierre F3](docs/revisiones/cierre_fase_3.md).
@@ -164,3 +169,15 @@ y prueba la distribución en Linux. El workflow de release reutiliza esos checks
 La publicación en PyPI necesita la configuración externa descrita en la guía.
 
 Licencia [MIT](LICENSE).
+
+## Capacidad de referencia y distribución
+
+Las 20 muestras sintéticas del mantenedor se procesaron sin fallos con 1/2/4 procesos,
+con salida idéntica entre configuraciones. En Ryzen 5 5600X, cuatro procesos midieron
+9,79 registros/s. Se adopta 100.000 ofertas en 6 h como objetivo condicionado a esa
+mezcla y recursos; es una proyección con margen, no una prueba de 100.000 ofertas ni
+una garantía para cualquier equipo. Véase la [aceptación](docs/revisiones/aceptacion_biblioteca.md).
+
+Distribución elegida: GitHub Releases, licencia MIT, mantenida por Anthony Josue
+Rojas Fuentes. La candidata aún no está publicada. Instalación, checksums, adopción
+y rollback: [guía de distribución](docs/distribucion_github.md).

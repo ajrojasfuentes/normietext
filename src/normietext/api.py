@@ -2,6 +2,7 @@
 
 from dataclasses import dataclass, field
 
+from normietext._telemetry import measured
 from normietext.adapters import convert_source
 from normietext.errors import ErrorCode, InputValidationError, NormalizationError
 from normietext.models import (
@@ -33,20 +34,24 @@ class JobTextNormalizer:
         self.policy.__post_init__()
 
     def normalize_field(self, source: FieldInput) -> NormalizedField:
-        return self.canonicalize(convert_source(source, limits=self.policy.limits))
+        return self.canonicalize(
+            measured("convert", convert_source, source, limits=self.policy.limits)
+        )
 
     def canonicalize(
         self, document: ParsedDocument | LexedDocument | NormalizedField
     ) -> NormalizedField:
         if isinstance(document, NormalizedField):
-            return validate_canonical(document, self.policy)
+            return measured("validate", validate_canonical, document, self.policy)
         if isinstance(document, LexedDocument):
-            lexical = lex_document(document, self.policy)
+            lexical = measured("lex", lex_document, document, self.policy)
         elif isinstance(document, ParsedDocument):
-            lexical = lex_document(repair_document(document, self.policy), self.policy)
+            repaired = measured("repair", repair_document, document, self.policy)
+            lexical = measured("lex", lex_document, repaired, self.policy)
         else:
             raise InputValidationError(ErrorCode.INVALID_TYPE, "Expected a typed document")
-        return validate_canonical(render_document(lexical, self.policy), self.policy)
+        rendered = measured("render", render_document, lexical, self.policy)
+        return measured("validate", validate_canonical, rendered, self.policy)
 
     def clean_text(
         self, text: str, field: JobField, *, source_format: SourceFormat = SourceFormat.PLAIN_TEXT

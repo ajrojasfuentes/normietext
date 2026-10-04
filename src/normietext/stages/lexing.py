@@ -2,6 +2,7 @@
 
 import heapq
 import json
+import re
 from bisect import bisect_left
 from dataclasses import dataclass
 from functools import lru_cache
@@ -53,6 +54,7 @@ _SYMBOL = regex.compile(r"[©®™][\ufe0e\ufe0f]?", _FLAGS)
 _MARKER = regex.compile(r"[•▪◦‣→\u2013\u2014-]", _FLAGS)
 _LF = regex.compile(r"\n", _FLAGS)
 _DEFAULT_POLICY = NormalizationPolicy()
+_NON_ASCII = re.compile(r"[^\x00-\x7f]+")
 
 
 def _matches(
@@ -257,19 +259,44 @@ def lex_document(
     candidates: list[_Candidate] = []
 
     def add(
-        pattern: regex.Pattern[str], kind: TokenKind, action: CandidateAction, priority: int
+        pattern: regex.Pattern[str],
+        kind: TokenKind,
+        action: CandidateAction,
+        priority: int,
+        *,
+        unicode_only: bool = False,
     ) -> None:
-        for match in _matches(pattern, text, policy):
-            candidates.append(_Candidate(match.start(), match.end(), kind, action, priority))
+        if not unicode_only:
+            for match in _matches(pattern, text, policy):
+                candidates.append(_Candidate(match.start(), match.end(), kind, action, priority))
+            return
+        # These two grammars contain exclusively non-ASCII codepoints and have
+        # no anchors/lookarounds. Splitting at ASCII cannot split a valid match.
+        for run in _NON_ASCII.finditer(text):
+            for match in _matches(pattern, run.group(), policy):
+                candidates.append(
+                    _Candidate(
+                        run.start() + match.start(),
+                        run.start() + match.end(),
+                        kind,
+                        action,
+                        priority,
+                    )
+                )
 
     add(_SYMBOL, TokenKind.TEXT_SYMBOL, CandidateAction.KEEP, 0)
     add(_REGIONAL, TokenKind.INVALID_REGION, CandidateAction.REMOVE, 1)
     add(_KEYCAP, TokenKind.KEYCAP, CandidateAction.CONTEXTUAL, 2)
-    add(uncertain, TokenKind.UNCLASSIFIED, CandidateAction.KEEP, 3)
+    # Every pictograph/modifier/catalog emoji contains a non-ASCII codepoint.
+    # Avoid expensive Unicode-set matching on long literal ASCII documents.
+    # ASCII controls and list markers still pass through their normal rules.
+    non_ascii = not text.isascii()
+    if non_ascii:
+        add(uncertain, TokenKind.UNCLASSIFIED, CandidateAction.KEEP, 3, unicode_only=True)
     # Catalog sequences and the safe pictographic grammar compete by maximal
     # extent before exact allowlist classification; a hint prefix cannot split a
     # longer ZWJ sequence. Regional pairs are anchored to the beginning of a run.
-    for match in emoji.analyze(text, join_emoji=False):
+    for match in emoji.analyze(text, join_emoji=False) if non_ascii else ():
         if isinstance(match.value, str):
             continue
         candidates.append(
@@ -277,7 +304,8 @@ def lex_document(
                 match.value.start, match.value.end, TokenKind.EMOJI, CandidateAction.REMOVE, 4
             )
         )
-    add(pictographic, TokenKind.PICTOGRAPHIC, CandidateAction.REMOVE, 4)
+    if non_ascii:
+        add(pictographic, TokenKind.PICTOGRAPHIC, CandidateAction.REMOVE, 4, unicode_only=True)
     add(_MARKER, TokenKind.LIST_MARKER, CandidateAction.CONTEXTUAL, 5)
     add(kaomoji, TokenKind.KAOMOJI, CandidateAction.REMOVE, 6)
     add(invisible, TokenKind.INVISIBLE, CandidateAction.REMOVE, 7)

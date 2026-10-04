@@ -556,6 +556,42 @@
         "text": "Python",
         "issue": "SOURCE_FORMAT_UNKNOWN"
       }
+    },
+    {
+      "id": "F7-consecutive-empty-cells",
+      "raw": "<table><tr><td>A</td><td></td><td></td><td>B</td></tr></table>",
+      "source_format": "html_fragment",
+      "field": "job_description",
+      "expected": {
+        "text": "A | | | B"
+      }
+    },
+    {
+      "id": "F7-all-empty-cells",
+      "raw": "<table><tr><td></td><td></td><td></td></tr></table>",
+      "source_format": "html_fragment",
+      "field": "job_description",
+      "expected": {
+        "text": "| |"
+      }
+    },
+    {
+      "id": "F7-leading-empty-cells",
+      "raw": "<table><tr><td></td><td></td><td>B</td></tr></table>",
+      "source_format": "html_fragment",
+      "field": "job_description",
+      "expected": {
+        "text": "| | B"
+      }
+    },
+    {
+      "id": "F7-trailing-empty-cells",
+      "raw": "<table><tr><td>A</td><td></td><td></td></tr></table>",
+      "source_format": "html_fragment",
+      "field": "job_description",
+      "expected": {
+        "text": "A | |"
+      }
     }
   ]
 }

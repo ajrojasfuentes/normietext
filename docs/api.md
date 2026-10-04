@@ -109,7 +109,10 @@ Se configura un presupuesto con `NormalizationPolicy(limits=ResourceLimits(...))
 Las opciones conductuales de este perfil están fijadas y no se aceptan opciones
 arbitrarias. `strict` es una opción de agregación de fallos, no una regla de texto.
 
-El corpus disponible es sintético y público. F5 acredita sus regresiones; calidad
-en muestras representativas, precisión de listas ≥99,5 %, SLO y despliegue siguen
-en F6–F8. Véanse [ADR-0005](decisions/0005-renderer-api.md) y el
+El corpus disponible es sintético y público. F6 acredita precisión contextual
+observada de 30/30 y cero falsos positivos en 39 negativos normativos, con las
+limitaciones de [su informe](revisiones/cierre_fase_6.md). F7 incorpora límites,
+observabilidad y mediciones locales; la aprobación del SLO en el entorno objetivo
+se concreta por equipo y corpus; F8 espera publicación. Véanse la
+[aceptación vigente](revisiones/aceptacion_biblioteca.md), la [guía operativa](operacion.md) y el
 [plan](plan_implementacion.md).

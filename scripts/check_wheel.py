@@ -41,6 +41,7 @@ def main() -> None:
                 "import normietext, json, hashlib; "
                 "from importlib.util import find_spec; "
                 "assert find_spec('evaluation') is None; "
+                "assert find_spec('benchmarks') is None; "
                 "from normietext import FieldInput, JobField, NormalizationPolicy; "
                 "assert FieldInput(JobField.JOB_TITLE, 'Python').value == 'Python'; "
                 "root = files(normietext).joinpath('data'); "
@@ -79,6 +80,10 @@ def main() -> None:
                 "assert result.text == '- Python\\n[flag:CR]'; "
                 "assert len(result.annotations) == 1; "
                 "assert normalizer.canonicalize(result) is result; "
+                "from normietext.operations import measure_field; "
+                "measured = measure_field(normalizer, FieldInput(JobField.JOB_TITLE, 'Python')); "
+                "assert measured.result.text == 'Python' and measured.error is None; "
+                "assert measured.metrics['rules_version'] == '1.0.1'; "
                 "assert canonical_bytes(manifest) == canonical_bytes(create_manifest()); "
                 "import bs4, emoji, ftfy, lxml.etree, regex; "
                 "print('Installed normietext', version('normietext'))",

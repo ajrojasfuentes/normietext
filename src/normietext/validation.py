@@ -167,7 +167,14 @@ def _validate_representation(document: NormalizedField) -> None:
             raise OutputInvariantError(
                 ErrorCode.OUTPUT_INVARIANT_FAILED, "Invalid generated annotation"
             )
+    by_id = {block.id: block for block in document.blocks}
     for block in document.blocks:
+        if block.parent_id is not None:
+            parent = by_id[block.parent_id]
+            if not parent.span.start <= block.span.start <= block.span.end <= parent.span.end:
+                raise OutputInvariantError(
+                    ErrorCode.OUTPUT_INVARIANT_FAILED, "Child outside canonical parent"
+                )
         if block.kind is not BlockKind.LIST_ITEM:
             continue
         text = document.text[block.span.start : block.span.end]

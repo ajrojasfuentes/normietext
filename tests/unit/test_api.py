@@ -123,6 +123,20 @@ def test_canonical_revalidation_rejects_invalid_text():
     assert error.value.code is ErrorCode.OUTPUT_INVARIANT_FAILED
 
 
+@pytest.mark.parametrize("parent_span", [(0, 0), (1, 3), (0, 2)])
+def test_canonical_revalidation_rejects_child_outside_parent(parent_span):
+    from normietext import BlockKind, Span
+
+    result = N.normalize_field(FieldInput(D, "<div><p>ABC</p></div>", SourceFormat.HTML_FRAGMENT))
+    blocks = tuple(
+        replace(b, span=Span(*parent_span)) if b.kind is BlockKind.CONTAINER else b
+        for b in result.blocks
+    )
+    with pytest.raises(NormalizationError) as error:
+        N.canonicalize(replace(result, blocks=blocks))
+    assert error.value.code is ErrorCode.OUTPUT_INVARIANT_FAILED
+
+
 @pytest.mark.parametrize("value", [None, {}, "raw"])
 def test_invalid_document(value):
     with pytest.raises(NormalizationError) as error:
@@ -162,15 +176,25 @@ def test_list_depth_budget():
     assert error.value.code is ErrorCode.RESOURCE_LIMIT_EXCEEDED
 
 
-def test_empty_cells_remain_empty_and_nonempty_spans_exclude_separators():
-    result = N.normalize_field(
-        FieldInput(
-            D, "<table><tr><td>A</td><td></td><td>C</td></tr></table>", SourceFormat.HTML_FRAGMENT
-        )
-    )
+@pytest.mark.parametrize(
+    ("contents", "expected_text"),
+    [
+        (["A", "", "C"], "A | | C"),
+        (["A", "", "", "B"], "A | | | B"),
+        (["", "", ""], "| |"),
+        (["", "", "B"], "| | B"),
+        (["A", "", ""], "A | |"),
+    ],
+)
+def test_empty_cells_remain_empty_and_nonempty_spans_exclude_separators(contents, expected_text):
+    raw = "<table><tr>" + "".join(f"<td>{v}</td>" for v in contents) + "</tr></table>"
+    result = N.normalize_field(FieldInput(D, raw, SourceFormat.HTML_FRAGMENT))
+    assert result.text == expected_text
+    assert result.source.raw == raw
     cells = sorted((b for b in result.blocks if b.kind == "table_cell"), key=lambda b: b.column)
-    assert [result.text[b.span.start : b.span.end] for b in cells] == ["A", "", "C"]
-    assert [(b.row, b.column) for b in cells] == [(0, 0), (0, 1), (0, 2)]
+    assert [result.text[b.span.start : b.span.end] for b in cells] == contents
+    assert [(b.row, b.column) for b in cells] == [(0, i) for i in range(len(contents))]
+    assert N.canonicalize(result) is result
 
 
 def test_unclassified_selector_and_isolated_marker_variant():
