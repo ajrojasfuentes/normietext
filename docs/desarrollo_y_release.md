@@ -36,13 +36,20 @@ uv run --locked mypy
 uv run --locked pytest
 uv run --locked python scripts/generate_tables.py --check
 uv run --locked python scripts/build_distribution.py
-uv run --locked twine check --strict dist/*
+uv run --locked twine check --strict dist/*.whl dist/*.tar.gz
 uv run --locked python scripts/check_wheel.py
 ```
 
 En Windows, usar las órdenes de lint, tipos, tests y build normalmente; para Twine
 pueden pasarse los dos nombres de artefacto explícitos si el shell no expande `*`.
 El script del wheel resuelve rutas de Python para Windows y POSIX.
+
+Para anticipar errores de tipos de APIs específicas del sistema, ejecutar también
+`uv run --locked mypy --platform win32`, `uv run --locked mypy --platform darwin`
+y `uv run --locked mypy --platform linux`. Esto comprueba las ramas y stubs de cada
+destino desde el host local; no sustituye las pruebas nativas de la matriz remota.
+Los benchmarks omiten RSS en Windows (`null`) y solo permiten contención de memoria
+con `--worker-memory-mib` en Linux.
 
 Ruff revisa código Python y configuración del proyecto; no reescribe los ejemplos
 normativos Markdown. El test inicial acredita metadatos y `py.typed`, no reglas del

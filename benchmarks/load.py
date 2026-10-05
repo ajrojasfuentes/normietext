@@ -160,13 +160,16 @@ def run_case(
         run()
         _, peak = tracemalloc.get_traced_memory()
         tracemalloc.stop()
-    try:
-        import resource
+    rss_bytes: int | None = None
+    # resource is Unix-only; the explicit guard also narrows its platform stubs.
+    if sys.platform != "win32":
+        try:
+            import resource
 
-        rss = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
-        rss_bytes: int | None = int(rss * (1 if sys.platform == "darwin" else 1024))
-    except ImportError:
-        rss_bytes = None
+            rss = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
+            rss_bytes = int(rss * (1 if sys.platform == "darwin" else 1024))
+        except ImportError:
+            pass
     stream = io.StringIO()
     if profile_enabled:
         profile = cProfile.Profile()
@@ -300,7 +303,7 @@ def main() -> None:
     if set(args.case or ()) - names or (args.worker and args.worker not in names):
         parser.error("unknown workload")
     if args.worker:
-        if args.worker_memory_mib is not None:
+        if sys.platform == "linux" and args.worker_memory_mib is not None:
             import resource
 
             ceiling = args.worker_memory_mib * 1024 * 1024
