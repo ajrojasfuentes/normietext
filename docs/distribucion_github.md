@@ -29,6 +29,12 @@ falla de forma visible; revisar el estado de la release antes de actuar. Mantene
 ENABLE_PYPI_PUBLISH sin activar salvo decisión futura explícita de publicar en PyPI.
 El mantenedor controla permisos, revisión y protección de ramas en GitHub.
 
+Las verificaciones aisladas de wheel y adopción exportan restricciones de runtime
+desde `uv.lock` con `uv export --locked`, sin instalar el checkout ni las dependencias
+de desarrollo. Así la resolución de una dependencia transitiva nueva no cambia el
+entorno de aceptación. El consumidor final sigue siendo responsable de su propio
+lock y de conservar el manifiesto efectivo.
+
 ## Consumo reproducible
 
 Descargar el wheel y SHA256SUMS de la release elegida y comprobar su digest antes

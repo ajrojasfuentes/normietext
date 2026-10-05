@@ -1,0 +1,984 @@
+{
+  "schema_version": "1.0.0",
+  "date": "2026-10-04",
+  "scope": "local library audit; synthetic evidence; no release published by audit",
+  "git_head": "98c47785b6955b8136d2096e71cd711fa46f0508",
+  "working_tree_dirty": true,
+  "build_info": {
+    "code_revision": "git:98c47785b6955b8136d2096e71cd711fa46f0508+tree:9f7a4c5c3a1a802214d869d1a068fe2c45b5efc8bcdbd2d3a3022689b909e371",
+    "code_sha256": "9f7a4c5c3a1a802214d869d1a068fe2c45b5efc8bcdbd2d3a3022689b909e371",
+    "schema_version": "1.0.0"
+  },
+  "checks": {
+    "uv_sync_locked": "passed",
+    "ruff_check": "passed",
+    "ruff_format_check": "passed",
+    "mypy_platforms": {
+      "win32": "passed",
+      "darwin": "passed",
+      "linux": "passed"
+    },
+    "generate_tables_check": "passed",
+    "build_distribution": "passed",
+    "twine_explicit_distributions": "passed",
+    "isolated_wheel": "passed"
+  },
+  "pytest": {
+    "name": "pytest",
+    "errors": "0",
+    "failures": "0",
+    "skipped": "0",
+    "tests": "458",
+    "time": "47.873",
+    "timestamp": "2026-10-04T15:57:21.067665-06:00"
+  },
+  "quality": {
+    "authorized_losses": 10,
+    "case_count": 55,
+    "corpus": "synthetic_public_not_blind",
+    "corpus_sha256": "667de35f9faab9ad1341723707862ac24074b4842b819e644b23b22ceecbfc25",
+    "evaluator_sha256": "5a73eafd02627f1fb70a1f6f8e87eab0250ac7a5d2c35b7e654d25e7d4e89348",
+    "failures": [],
+    "integral": {
+      "authorized_losses": 15,
+      "fragments": 58,
+      "missing": [],
+      "requirement_groups": 23
+    },
+    "list_metrics": {
+      "abstained": 5,
+      "abstention_pct": "4.808",
+      "coverage_pct": "28.846",
+      "fn": 0,
+      "fp": 0,
+      "labeled": 104,
+      "precision_pct": "100.000",
+      "predicted": 30,
+      "recall_pct": "100.000",
+      "tn": 69,
+      "tp": 30
+    },
+    "lock_sha256": "718f79a1b8413f944aac958db548f5b7dd409465156f7249288bc562bfdf543e",
+    "passed": true,
+    "required_fragments": 52,
+    "schema_version": "1.0.0",
+    "split_audit": "family + casefold whitespace exact + SequenceMatcher >= 0.85",
+    "mandatory_negative_cases": 39,
+    "mandatory_negative_false_positives": 0,
+    "ablation_rules": [
+      "character.fullwidth_solidus",
+      "emoji.hint_token",
+      "emoji.keycap_base",
+      "emoji.region_token",
+      "emoji.remove",
+      "emoji.subdivision_token",
+      "emoji.text_symbol",
+      "kaomoji.remove",
+      "list.dom_marker",
+      "list.marker",
+      "list.redundant_marker",
+      "render.removal_gap",
+      "unicode.invisible"
+    ]
+  },
+  "load": {
+    "environment": {
+      "os": "Linux-7.0.0-34-generic-x86_64-with-glibc2.43",
+      "machine": "x86_64",
+      "cpu": "AMD Ryzen 5 5600X 6-Core Processor",
+      "logical_cpus": 12,
+      "affinity_cpus": 12,
+      "memory_snapshot": {
+        "MemTotal_bytes": 32513941504,
+        "MemAvailable_bytes": 6211612672,
+        "SwapTotal_bytes": 8589930496
+      },
+      "visible_cgroup_limits": {},
+      "python": "3.14.7 (main, Sep  1 2026, 14:18:09) [Clang 22.1.3 ]",
+      "manifest": {
+        "backend": "beautifulsoup4:lxml",
+        "code_revision": "source-tree:9f7a4c5c3a1a802214d869d1a068fe2c45b5efc8bcdbd2d3a3022689b909e371",
+        "dependencies": [
+          [
+            "beautifulsoup4",
+            "4.15.0"
+          ],
+          [
+            "emoji",
+            "2.16.0"
+          ],
+          [
+            "ftfy",
+            "6.3.1"
+          ],
+          [
+            "lxml",
+            "6.1.3"
+          ],
+          [
+            "regex",
+            "2026.9.10"
+          ],
+          [
+            "soupsieve",
+            "2.10"
+          ],
+          [
+            "typing-extensions",
+            "4.16.0"
+          ],
+          [
+            "wcwidth",
+            "0.9.1"
+          ]
+        ],
+        "libxml2_version": "2.14.6",
+        "normalization_version": "1.0.1",
+        "policy_hash": "75d3d5eebea010d625c9c8e8409e009d7c1ad53ebfc5275e550936a1faa0661f",
+        "policy_id": "linkedin_jobs_aggressive_v1",
+        "python_version": "3.14.7",
+        "runtime_artifacts": [
+          {
+            "name": "installed:beautifulsoup4",
+            "sha256": "caadbd60e8b678ec32a851ec64097130108209de06dcfae8c4d361bcb5a8d3d1",
+            "version": "4.15.0"
+          },
+          {
+            "name": "installed:emoji",
+            "sha256": "9ce594b19bc926a70e8dd795431242fa416643a6a4995792a6cb38e0792a4ae3",
+            "version": "2.16.0"
+          },
+          {
+            "name": "installed:ftfy",
+            "sha256": "3daad76dd51c8e61e5ceaf9af6c16344ca2601ffc4748ee0fd3a808571850cf2",
+            "version": "6.3.1"
+          },
+          {
+            "name": "installed:lxml",
+            "sha256": "1fae0366b53a7da55ac9032e9fec4bfa6af2f0e6f2e9d116602dc9966b259d2e",
+            "version": "6.1.3"
+          },
+          {
+            "name": "installed:regex",
+            "sha256": "77b51ea63af89f6c498a4fa6ba8b07ee2816ef38af3da36d7bd8060444ffc741",
+            "version": "2026.9.10"
+          },
+          {
+            "name": "installed:soupsieve",
+            "sha256": "e393361c946a556909ded9bce4201cd2a73aa9d729841d231dcff8d7b3eba675",
+            "version": "2.10"
+          },
+          {
+            "name": "installed:typing-extensions",
+            "sha256": "b7f1343bb529517aed65e40bc042971228db1789b16b57e0b711930f4f2f9be1",
+            "version": "4.16.0"
+          },
+          {
+            "name": "installed:wcwidth",
+            "sha256": "2e11ea1632147014b3c46fc117ef0388d5fe484084cff0b471f489aa72c85c6b",
+            "version": "0.9.1"
+          },
+          {
+            "name": "lxml-build",
+            "sha256": "a59f7a5f8768b099faf345e25d7ae2837dd9711ccede7f45e994391f0927f16d",
+            "version": "6.1.3"
+          },
+          {
+            "name": "normietext-code",
+            "sha256": "9f7a4c5c3a1a802214d869d1a068fe2c45b5efc8bcdbd2d3a3022689b909e371",
+            "version": "0.1.0"
+          },
+          {
+            "name": "python-runtime",
+            "sha256": "154cee19b91075a5a950ba799eba129b5dedab8faac79a572dd141ba29d0c4c8",
+            "version": "3.14.7"
+          }
+        ],
+        "schema_version": "1.0.0",
+        "tables": [
+          {
+            "name": "emoji_hints.json",
+            "sha256": "feb31450688d67e3caf4fddf9c07679db4c24a8492fa65a08f17f8751e9d3742",
+            "version": "1.0.0"
+          },
+          {
+            "name": "kaomoji.json",
+            "sha256": "8a273e6a867ef46fb60b64ef004e23980acc6ba5ab1a17f9996bc765f66d9dae",
+            "version": "1.0.0"
+          },
+          {
+            "name": "licenses/Unicode-3.0.txt",
+            "sha256": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96",
+            "version": "1.0.0"
+          },
+          {
+            "name": "licenses/emoji-LICENSE.txt",
+            "sha256": "aa20fedcaf6d601de429715d8ecdfb1a0b46ba2a391b33d0e060882335694aab",
+            "version": "1.0.0"
+          },
+          {
+            "name": "licenses/regex-LICENSE.txt",
+            "sha256": "bff55ef4cdcc8c14ce259f8e8ab60e264418440d6335f4dc138273fbd506144d",
+            "version": "1.0.0"
+          },
+          {
+            "name": "region_sequences.json",
+            "sha256": "8fcc4d24267ac130c04fa69546e00e98f0a4c9a4deb84a90a3fed4c9201ba7f0",
+            "version": "1.0.0"
+          },
+          {
+            "name": "unicode_policy_manifest.json",
+            "sha256": "7d76280b737d6d55d0a462630217eee4b3a8a76548a5ec13a608fb0aebec8b7c",
+            "version": "1.0.0"
+          },
+          {
+            "name": "unicode_properties.json",
+            "sha256": "1e16fb60dac8c46b8842ae56ec6b35c49621f19bbbb42dd77d0849ccb817001e",
+            "version": "1.0.0"
+          }
+        ],
+        "unicode_version": "16.0.0"
+      },
+      "lock_sha256": "718f79a1b8413f944aac958db548f5b7dd409465156f7249288bc562bfdf543e"
+    },
+    "protocol": {
+      "warmup": 1,
+      "repetitions": 3,
+      "worker_timeout_seconds": 120,
+      "worker_memory_mib": null,
+      "python_memory": false,
+      "profile": false,
+      "percentiles": "nearest rank",
+      "memory_and_profile": "separate runs"
+    },
+    "cases": [
+      {
+        "name": "six_fields",
+        "cohort": "synthetic_representative",
+        "unit": "record",
+        "input_sha256": "5eb2b4c7fbbd06366f6a6250230d711c5347e704d25c485e1fe5b264e837ac0d",
+        "input_codepoints": 126,
+        "fields": 6,
+        "html_fraction": 0.16666666666666666,
+        "cold_seconds": 0.10114367603091523,
+        "latency_seconds": {
+          "samples": 3,
+          "min": 0.05302069702884182,
+          "max": 0.05592497700126842,
+          "mean": 0.05440589900050933,
+          "stdev": 0.0014567610074866604,
+          "p50": 0.054272022971417755,
+          "p95": 0.05592497700126842,
+          "p99": 0.05592497700126842
+        },
+        "throughput_units_per_second": 18.38035982073632,
+        "successful_units_per_second": 18.38035982073632,
+        "outcomes": {
+          "success": 3
+        },
+        "python_peak_bytes_separate_run": null,
+        "process_peak_rss_bytes": 51249152
+      },
+      {
+        "name": "integral",
+        "cohort": "synthetic_representative",
+        "unit": "field",
+        "input_sha256": "bd7006a561f0ddeaf3504f60fd8635ac035cf761275ec1d06e6bd69c5c60d88d",
+        "input_codepoints": 6976,
+        "fields": 1,
+        "html_fraction": 0.0,
+        "cold_seconds": 0.2934242620249279,
+        "latency_seconds": {
+          "samples": 3,
+          "min": 0.23202779504936188,
+          "max": 0.2355218050070107,
+          "mean": 0.2333514946900929,
+          "stdev": 0.0018946209710156657,
+          "p50": 0.23250488401390612,
+          "p95": 0.2355218050070107,
+          "p99": 0.2355218050070107
+        },
+        "throughput_units_per_second": 4.285380735735462,
+        "successful_units_per_second": 4.285380735735462,
+        "outcomes": {
+          "success": 3
+        },
+        "python_peak_bytes_separate_run": null,
+        "process_peak_rss_bytes": 52002816
+      },
+      {
+        "name": "compact",
+        "cohort": "synthetic_representative",
+        "unit": "field",
+        "input_sha256": "a7424a11d6c1227351f36498e684e6ac66a5ca3d68396e62ad0c060500743425",
+        "input_codepoints": 33,
+        "fields": 1,
+        "html_fraction": 0.0,
+        "cold_seconds": 0.058378826011903584,
+        "latency_seconds": {
+          "samples": 3,
+          "min": 0.011222588014788926,
+          "max": 0.011499974003527313,
+          "mean": 0.011369190993718803,
+          "stdev": 0.00013936803885519807,
+          "p50": 0.01138501096284017,
+          "p95": 0.011499974003527313,
+          "p99": 0.011499974003527313
+        },
+        "throughput_units_per_second": 87.95700596044831,
+        "successful_units_per_second": 87.95700596044831,
+        "outcomes": {
+          "success": 3
+        },
+        "python_peak_bytes_separate_run": null,
+        "process_peak_rss_bytes": 51326976
+      },
+      {
+        "name": "escaped",
+        "cohort": "synthetic_representative",
+        "unit": "field",
+        "input_sha256": "28f92eb38c3fff61a4f3401720ee66d01e27d1eb90bc6c9188e920cff9746872",
+        "input_codepoints": 54,
+        "fields": 1,
+        "html_fraction": 0.0,
+        "cold_seconds": 0.05405469797551632,
+        "latency_seconds": {
+          "samples": 3,
+          "min": 0.010693727992475033,
+          "max": 0.010952793003525585,
+          "mean": 0.010829066993513456,
+          "stdev": 0.00012992234664632653,
+          "p50": 0.010840679984539747,
+          "p95": 0.010952793003525585,
+          "p99": 0.010952793003525585
+        },
+        "throughput_units_per_second": 92.34405887404648,
+        "successful_units_per_second": 92.34405887404648,
+        "outcomes": {
+          "success": 3
+        },
+        "python_peak_bytes_separate_run": null,
+        "process_peak_rss_bytes": 51519488
+      },
+      {
+        "name": "html",
+        "cohort": "synthetic_representative",
+        "unit": "field",
+        "input_sha256": "186121f22c8f39178f1e3c2af4db88cabacb4075a630dad59e13b425ebce2ce1",
+        "input_codepoints": 113,
+        "fields": 1,
+        "html_fraction": 1.0,
+        "cold_seconds": 0.061752954963594675,
+        "latency_seconds": {
+          "samples": 3,
+          "min": 0.01833914197050035,
+          "max": 0.01890303398249671,
+          "mean": 0.018562186994434644,
+          "stdev": 0.000299835834020211,
+          "p50": 0.018444385030306876,
+          "p95": 0.01890303398249671,
+          "p99": 0.01890303398249671
+        },
+        "throughput_units_per_second": 53.872962291556604,
+        "successful_units_per_second": 53.872962291556604,
+        "outcomes": {
+          "success": 3
+        },
+        "python_peak_bytes_separate_run": null,
+        "process_peak_rss_bytes": 51744768
+      },
+      {
+        "name": "max_plain",
+        "cohort": "adversarial",
+        "unit": "field",
+        "input_sha256": "5cd39501917bfd506d62daaeb7395de656418acdffb313b4fd5561a0d7846152",
+        "input_codepoints": 262144,
+        "fields": 1,
+        "html_fraction": 0.0,
+        "cold_seconds": 0.7961912489845417,
+        "latency_seconds": {
+          "samples": 3,
+          "min": 0.7519088889821433,
+          "max": 0.8463340379530564,
+          "mean": 0.8058853059774265,
+          "stdev": 0.048644381854824705,
+          "p50": 0.8194129909970798,
+          "p95": 0.8463340379530564,
+          "p99": 0.8463340379530564
+        },
+        "throughput_units_per_second": 1.2408713654198464,
+        "successful_units_per_second": 1.2408713654198464,
+        "outcomes": {
+          "success": 3
+        },
+        "python_peak_bytes_separate_run": null,
+        "process_peak_rss_bytes": 59752448
+      },
+      {
+        "name": "combining",
+        "cohort": "adversarial",
+        "unit": "field",
+        "input_sha256": "f0ee8586669570cc0f9d406d16b950af9e2067dc1e4c105c042a664dadfb2a1a",
+        "input_codepoints": 4096,
+        "fields": 1,
+        "html_fraction": 0.0,
+        "cold_seconds": 0.9318212649668567,
+        "latency_seconds": {
+          "samples": 3,
+          "min": 0.8006766390171833,
+          "max": 0.8390676990384236,
+          "mean": 0.8187072586733848,
+          "stdev": 0.01930128028888534,
+          "p50": 0.8163774379645474,
+          "p95": 0.8390676990384236,
+          "p99": 0.8390676990384236
+        },
+        "throughput_units_per_second": 1.221437808699019,
+        "successful_units_per_second": 1.221437808699019,
+        "outcomes": {
+          "success": 3
+        },
+        "python_peak_bytes_separate_run": null,
+        "process_peak_rss_bytes": 56311808
+      },
+      {
+        "name": "hints_2000",
+        "cohort": "adversarial",
+        "unit": "field",
+        "input_sha256": "a890a33a2fb0a9833ba1aef70552865f0269f0400e7ac470755d97e48a130ba2",
+        "input_codepoints": 2000,
+        "fields": 1,
+        "html_fraction": 0.0,
+        "cold_seconds": 1.6968670709757134,
+        "latency_seconds": {
+          "samples": 3,
+          "min": 1.6421273890300654,
+          "max": 1.6748542329878546,
+          "mean": 1.66342378766664,
+          "stdev": 0.018459803763177348,
+          "p50": 1.6732897409819998,
+          "p95": 1.6748542329878546,
+          "p99": 1.6748542329878546
+        },
+        "throughput_units_per_second": 0.6011697123814403,
+        "successful_units_per_second": 0.6011697123814403,
+        "outcomes": {
+          "success": 3
+        },
+        "python_peak_bytes_separate_run": null,
+        "process_peak_rss_bytes": 61378560
+      },
+      {
+        "name": "url_near_miss",
+        "cohort": "adversarial",
+        "unit": "field",
+        "input_sha256": "58f6ec959a4fc71393b3cfdf7f26f4dea39187ac682a6b95e1685282a3ef964c",
+        "input_codepoints": 16385,
+        "fields": 1,
+        "html_fraction": 0.0,
+        "cold_seconds": 0.09875344694592059,
+        "latency_seconds": {
+          "samples": 3,
+          "min": 0.060666033008601516,
+          "max": 0.07092569197993726,
+          "mean": 0.06698279833653942,
+          "stdev": 0.005526445569534118,
+          "p50": 0.06935667002107948,
+          "p95": 0.07092569197993726,
+          "p99": 0.07092569197993726
+        },
+        "throughput_units_per_second": 14.929206077293662,
+        "successful_units_per_second": 14.929206077293662,
+        "outcomes": {
+          "success": 3
+        },
+        "python_peak_bytes_separate_run": null,
+        "process_peak_rss_bytes": 50827264
+      },
+      {
+        "name": "html_depth",
+        "cohort": "adversarial",
+        "unit": "field",
+        "input_sha256": "020d8e308eede2abb1deb5bef1ddd123803f63727c05b4fbd446ceb315a08bed",
+        "input_codepoints": 1409,
+        "fields": 1,
+        "html_fraction": 1.0,
+        "cold_seconds": 0.3151659740251489,
+        "latency_seconds": {
+          "samples": 3,
+          "min": 0.2680179559974931,
+          "max": 0.27198617602698505,
+          "mean": 0.27013959233105805,
+          "stdev": 0.001998357579543489,
+          "p50": 0.27041464496869594,
+          "p95": 0.27198617602698505,
+          "p99": 0.27198617602698505
+        },
+        "throughput_units_per_second": 3.701789846393537,
+        "successful_units_per_second": 3.701789846393537,
+        "outcomes": {
+          "success": 3
+        },
+        "python_peak_bytes_separate_run": null,
+        "process_peak_rss_bytes": 51523584
+      },
+      {
+        "name": "html_nodes",
+        "cohort": "adversarial",
+        "unit": "field",
+        "input_sha256": "afd686ec4bd1a68c7949aadd08a75f1e4668971dba2cef3c3403a757aac4b44d",
+        "input_codepoints": 79992,
+        "fields": 1,
+        "html_fraction": 1.0,
+        "cold_seconds": 18.158672553952783,
+        "latency_seconds": {
+          "samples": 3,
+          "min": 17.431944967014715,
+          "max": 18.32532133103814,
+          "mean": 17.9809887073546,
+          "stdev": 0.48058330486081824,
+          "p50": 18.185699824010953,
+          "p95": 18.32532133103814,
+          "p99": 18.32532133103814
+        },
+        "throughput_units_per_second": 0.055614294423697565,
+        "successful_units_per_second": 0.055614294423697565,
+        "outcomes": {
+          "success": 3
+        },
+        "python_peak_bytes_separate_run": null,
+        "process_peak_rss_bytes": 114802688
+      },
+      {
+        "name": "html_depth_rejected",
+        "cohort": "adversarial",
+        "unit": "field",
+        "input_sha256": "d0f6f75c287f831dfae377f05389f97eba7bfd8f4342a9067cb3f24b3610df7e",
+        "input_codepoints": 1420,
+        "fields": 1,
+        "html_fraction": 1.0,
+        "cold_seconds": 0.0013587879948318005,
+        "latency_seconds": {
+          "samples": 3,
+          "min": 0.0007770659867674112,
+          "max": 0.0007989960140548646,
+          "mean": 0.0007889493329760929,
+          "stdev": 1.1079780156062804e-05,
+          "p50": 0.0007907859981060028,
+          "p95": 0.0007989960140548646,
+          "p99": 0.0007989960140548646
+        },
+        "throughput_units_per_second": 1267.5085182311732,
+        "successful_units_per_second": 0.0,
+        "outcomes": {
+          "RESOURCE_LIMIT_EXCEEDED": 3
+        },
+        "python_peak_bytes_separate_run": null,
+        "process_peak_rss_bytes": 44933120
+      }
+    ],
+    "comparison_failures": [],
+    "limitations": [
+      "Synthetic public samples, not production traffic",
+      "Small sample tail percentiles are descriptive, not a production SLO",
+      "RSS is lifetime process high-water including warmup and memory run",
+      "Worker timeout is for the entire benchmark, not a per-record SLO"
+    ]
+  },
+  "batch": {
+    "cohort": "user_synthetic_adversarial_20",
+    "environment": {
+      "os": "Linux-7.0.0-34-generic-x86_64-with-glibc2.43",
+      "machine": "x86_64",
+      "cpu": "AMD Ryzen 5 5600X 6-Core Processor",
+      "logical_cpus": 12,
+      "affinity_cpus": 12,
+      "memory_snapshot": {
+        "MemTotal_bytes": 32513941504,
+        "MemAvailable_bytes": 5564809216,
+        "SwapTotal_bytes": 8589930496
+      },
+      "visible_cgroup_limits": {},
+      "python": "3.14.7 (main, Sep  1 2026, 14:18:09) [Clang 22.1.3 ]",
+      "manifest": {
+        "backend": "beautifulsoup4:lxml",
+        "code_revision": "source-tree:9f7a4c5c3a1a802214d869d1a068fe2c45b5efc8bcdbd2d3a3022689b909e371",
+        "dependencies": [
+          [
+            "beautifulsoup4",
+            "4.15.0"
+          ],
+          [
+            "emoji",
+            "2.16.0"
+          ],
+          [
+            "ftfy",
+            "6.3.1"
+          ],
+          [
+            "lxml",
+            "6.1.3"
+          ],
+          [
+            "regex",
+            "2026.9.10"
+          ],
+          [
+            "soupsieve",
+            "2.10"
+          ],
+          [
+            "typing-extensions",
+            "4.16.0"
+          ],
+          [
+            "wcwidth",
+            "0.9.1"
+          ]
+        ],
+        "libxml2_version": "2.14.6",
+        "normalization_version": "1.0.1",
+        "policy_hash": "75d3d5eebea010d625c9c8e8409e009d7c1ad53ebfc5275e550936a1faa0661f",
+        "policy_id": "linkedin_jobs_aggressive_v1",
+        "python_version": "3.14.7",
+        "runtime_artifacts": [
+          {
+            "name": "installed:beautifulsoup4",
+            "sha256": "caadbd60e8b678ec32a851ec64097130108209de06dcfae8c4d361bcb5a8d3d1",
+            "version": "4.15.0"
+          },
+          {
+            "name": "installed:emoji",
+            "sha256": "9ce594b19bc926a70e8dd795431242fa416643a6a4995792a6cb38e0792a4ae3",
+            "version": "2.16.0"
+          },
+          {
+            "name": "installed:ftfy",
+            "sha256": "3daad76dd51c8e61e5ceaf9af6c16344ca2601ffc4748ee0fd3a808571850cf2",
+            "version": "6.3.1"
+          },
+          {
+            "name": "installed:lxml",
+            "sha256": "1fae0366b53a7da55ac9032e9fec4bfa6af2f0e6f2e9d116602dc9966b259d2e",
+            "version": "6.1.3"
+          },
+          {
+            "name": "installed:regex",
+            "sha256": "77b51ea63af89f6c498a4fa6ba8b07ee2816ef38af3da36d7bd8060444ffc741",
+            "version": "2026.9.10"
+          },
+          {
+            "name": "installed:soupsieve",
+            "sha256": "e393361c946a556909ded9bce4201cd2a73aa9d729841d231dcff8d7b3eba675",
+            "version": "2.10"
+          },
+          {
+            "name": "installed:typing-extensions",
+            "sha256": "b7f1343bb529517aed65e40bc042971228db1789b16b57e0b711930f4f2f9be1",
+            "version": "4.16.0"
+          },
+          {
+            "name": "installed:wcwidth",
+            "sha256": "2e11ea1632147014b3c46fc117ef0388d5fe484084cff0b471f489aa72c85c6b",
+            "version": "0.9.1"
+          },
+          {
+            "name": "lxml-build",
+            "sha256": "a59f7a5f8768b099faf345e25d7ae2837dd9711ccede7f45e994391f0927f16d",
+            "version": "6.1.3"
+          },
+          {
+            "name": "normietext-code",
+            "sha256": "9f7a4c5c3a1a802214d869d1a068fe2c45b5efc8bcdbd2d3a3022689b909e371",
+            "version": "0.1.0"
+          },
+          {
+            "name": "python-runtime",
+            "sha256": "154cee19b91075a5a950ba799eba129b5dedab8faac79a572dd141ba29d0c4c8",
+            "version": "3.14.7"
+          }
+        ],
+        "schema_version": "1.0.0",
+        "tables": [
+          {
+            "name": "emoji_hints.json",
+            "sha256": "feb31450688d67e3caf4fddf9c07679db4c24a8492fa65a08f17f8751e9d3742",
+            "version": "1.0.0"
+          },
+          {
+            "name": "kaomoji.json",
+            "sha256": "8a273e6a867ef46fb60b64ef004e23980acc6ba5ab1a17f9996bc765f66d9dae",
+            "version": "1.0.0"
+          },
+          {
+            "name": "licenses/Unicode-3.0.txt",
+            "sha256": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96",
+            "version": "1.0.0"
+          },
+          {
+            "name": "licenses/emoji-LICENSE.txt",
+            "sha256": "aa20fedcaf6d601de429715d8ecdfb1a0b46ba2a391b33d0e060882335694aab",
+            "version": "1.0.0"
+          },
+          {
+            "name": "licenses/regex-LICENSE.txt",
+            "sha256": "bff55ef4cdcc8c14ce259f8e8ab60e264418440d6335f4dc138273fbd506144d",
+            "version": "1.0.0"
+          },
+          {
+            "name": "region_sequences.json",
+            "sha256": "8fcc4d24267ac130c04fa69546e00e98f0a4c9a4deb84a90a3fed4c9201ba7f0",
+            "version": "1.0.0"
+          },
+          {
+            "name": "unicode_policy_manifest.json",
+            "sha256": "7d76280b737d6d55d0a462630217eee4b3a8a76548a5ec13a608fb0aebec8b7c",
+            "version": "1.0.0"
+          },
+          {
+            "name": "unicode_properties.json",
+            "sha256": "1e16fb60dac8c46b8842ae56ec6b35c49621f19bbbb42dd77d0849ccb817001e",
+            "version": "1.0.0"
+          }
+        ],
+        "unicode_version": "16.0.0"
+      },
+      "lock_sha256": "718f79a1b8413f944aac958db548f5b7dd409465156f7249288bc562bfdf543e"
+    },
+    "runs": [
+      {
+        "workers": 1,
+        "rounds": 5,
+        "records": 100,
+        "wall_seconds_including_startup_io_and_checks": 35.7451107109664,
+        "records_per_second": 2.7975854042975605,
+        "projected_100000_hours": 9.929197419712889,
+        "latency_seconds": {
+          "samples": 100,
+          "min": 0.19953868398442864,
+          "max": 2.3605117660481483,
+          "mean": 0.33708112013933716,
+          "stdev": 0.44025843992168395,
+          "p50": 0.23064513597637415,
+          "p95": 0.3899057329981588,
+          "p99": 2.263639096985571
+        },
+        "failures": [],
+        "replay_equal": true,
+        "process_peak_rss_bytes": 72400896,
+        "throughput_change_vs_historical_pct": -2.545135986118585
+      },
+      {
+        "workers": 2,
+        "rounds": 5,
+        "records": 100,
+        "wall_seconds_including_startup_io_and_checks": 18.67667837999761,
+        "records_per_second": 5.354271137800296,
+        "projected_100000_hours": 5.187966216666003,
+        "latency_seconds": {
+          "samples": 100,
+          "min": 0.19875373900867999,
+          "max": 2.8035867189755663,
+          "mean": 0.3464125134830829,
+          "stdev": 0.5004843516270822,
+          "p50": 0.2184050380019471,
+          "p95": 0.40530267503345385,
+          "p99": 2.770493655989412
+        },
+        "failures": [],
+        "replay_equal": true,
+        "process_peak_rss_bytes": 72400896,
+        "throughput_change_vs_historical_pct": -3.624856728898107
+      },
+      {
+        "workers": 4,
+        "rounds": 5,
+        "records": 100,
+        "wall_seconds_including_startup_io_and_checks": 10.619581240986008,
+        "records_per_second": 9.416567163124332,
+        "projected_100000_hours": 2.949883678051669,
+        "latency_seconds": {
+          "samples": 100,
+          "min": 0.2067016400396824,
+          "max": 2.7835864319931716,
+          "mean": 0.3727035633678315,
+          "stdev": 0.503747787217753,
+          "p50": 0.25378219602862373,
+          "p95": 0.41464080597506836,
+          "p99": 2.608215829008259
+        },
+        "failures": [],
+        "replay_equal": true,
+        "process_peak_rss_bytes": 72400896,
+        "throughput_change_vs_historical_pct": -3.8413124372202567
+      }
+    ],
+    "cross_worker_replay_equal": true,
+    "limitations": [
+      "Repeated public synthetic inputs, not 100000 distinct jobs",
+      "100000-hour estimate is extrapolated, not an executed full batch",
+      "seniority is missing; partial records without failed fields are expected",
+      "modality retained in ingestion sidecar, outside six-field normalizer"
+    ]
+  },
+  "adoption": {
+    "sequence": [
+      "candidate",
+      "rollback",
+      "candidate"
+    ],
+    "synthetic_consumer": true,
+    "replay_equal": true,
+    "shadow_equal": true,
+    "observations": [
+      {
+        "wheel_sha256": "8dcacd1955367ac7b86dd4b8d3c4f05c6877d00ebaa55319abfa75d131c569e7",
+        "cases": 20,
+        "results_sha256": "0b4d3821ca86b5e9082ea9f053d71a7cd5da67d6fb8eb6150a4b96670e3d64c0"
+      },
+      {
+        "wheel_sha256": "40c22cf30d0f6c611c2ab5c4bdc8375bc6d09099a6ca7fda94eeae09468d35c5",
+        "cases": 20,
+        "results_sha256": "0b4d3821ca86b5e9082ea9f053d71a7cd5da67d6fb8eb6150a4b96670e3d64c0"
+      },
+      {
+        "wheel_sha256": "8dcacd1955367ac7b86dd4b8d3c4f05c6877d00ebaa55319abfa75d131c569e7",
+        "cases": 20,
+        "results_sha256": "0b4d3821ca86b5e9082ea9f053d71a7cd5da67d6fb8eb6150a4b96670e3d64c0"
+      }
+    ]
+  },
+  "additional_probes": {
+    "result": {
+      "cases": 111,
+      "failures": []
+    },
+    "source": "import itertools\nimport json\nfrom pathlib import Path\nfrom normietext import FieldInput, JobField, JobTextNormalizer, SourceFormat\nfrom evaluation.quality import span_errors\n\nn = JobTextNormalizer()\ncontents = ['', 'A', '🇨🇷', 'a\\u0301', '<ul><li>A</li></ul>', '<p>A</p><p>B</p>']\nhtmls = []\nfor a, b in itertools.product(contents, repeat=2):\n    for template in ['<table><tr><td>{a}</td><td>{b}</td></tr></table>', '<dl><dt>{a}</dt><dd>{b}</dd></dl>', '<ul><li>{a}</li><li>{b}</li></ul>']:\n        htmls.append(template.format(a=a,b=b))\nhtmls += ['<table><tr><td>A<table><tr><td>B</td><td>C</td></tr></table>D</td><td>E</td></tr></table>', '<ul><li><ul><li></li><li>🇨🇷</li></ul></li></ul>', '<p><a href=\"x\">🇨🇷</a><sup>2</sup></p>']\nfailures = []\nfor raw in htmls:\n    try:\n        result = n.normalize_field(FieldInput(JobField.JOB_DESCRIPTION,raw,SourceFormat.HTML_FRAGMENT))\n        assert not span_errors(result)\n        assert result.source.raw == raw\n        assert n.canonicalize(result) is result\n    except Exception as exc:\n        failures.append({'raw':raw, 'type':type(exc).__name__, 'error':str(exc)})\nreport = {'cases':len(htmls),'failures':failures}\nPath('/tmp/normietext-auditoria-sondas.json').write_text(json.dumps(report,ensure_ascii=False,indent=2))\nprint(json.dumps(report,ensure_ascii=False,indent=2))\n",
+    "invocation": "Run from repository root with uv run --locked python -c and exec the embedded source; this imports development-only evaluation.quality."
+  },
+  "remote": {
+    "checked_date": "2026-10-04",
+    "repository": "ajrojasfuentes/normietext",
+    "head": "98c47785b6955b8136d2096e71cd711fa46f0508",
+    "run_id": 37236852002,
+    "url": "https://github.com/ajrojasfuentes/normietext/actions/runs/37236852002",
+    "conclusion": "failure",
+    "jobs": [
+      {
+        "name": "Checks (windows-latest)",
+        "conclusion": "failure",
+        "steps": [
+          "Run uv run --locked mypy"
+        ]
+      },
+      {
+        "name": "Checks (ubuntu-latest)",
+        "conclusion": "success",
+        "steps": []
+      },
+      {
+        "name": "Checks (macos-latest)",
+        "conclusion": "success",
+        "steps": []
+      },
+      {
+        "name": "Build and verify distribution",
+        "conclusion": "skipped"
+      }
+    ],
+    "published_releases": 0
+  },
+  "distributions": {
+    "normietext-0.1.0-py3-none-any.whl": "8dcacd1955367ac7b86dd4b8d3c4f05c6877d00ebaa55319abfa75d131c569e7",
+    "normietext-0.1.0.tar.gz": "3c6e7abd7c1d675dbee97e5f78953420a7d497c0104052408bec0a71c0b3323b"
+  },
+  "wheel_inventory": [
+    "normietext/",
+    "normietext/__init__.py",
+    "normietext/_telemetry.py",
+    "normietext/_validation.py",
+    "normietext/adapters/",
+    "normietext/adapters/__init__.py",
+    "normietext/adapters/_common.py",
+    "normietext/adapters/escaped_text.py",
+    "normietext/adapters/html_fragment.py",
+    "normietext/adapters/plain_text.py",
+    "normietext/api.py",
+    "normietext/data/",
+    "normietext/data/build_info.json",
+    "normietext/data/default_policy.json",
+    "normietext/data/emoji_hints.json",
+    "normietext/data/emoji_hints.schema.json",
+    "normietext/data/kaomoji.json",
+    "normietext/data/kaomoji.schema.json",
+    "normietext/data/licenses/",
+    "normietext/data/licenses/Unicode-3.0.txt",
+    "normietext/data/licenses/emoji-LICENSE.txt",
+    "normietext/data/licenses/regex-LICENSE.txt",
+    "normietext/data/policy.schema.json",
+    "normietext/data/region_sequences.json",
+    "normietext/data/region_sequences.schema.json",
+    "normietext/data/unicode_policy_manifest.json",
+    "normietext/data/unicode_properties.json",
+    "normietext/data/unicode_properties.schema.json",
+    "normietext/errors.py",
+    "normietext/manifest.py",
+    "normietext/models.py",
+    "normietext/operations.py",
+    "normietext/policy.py",
+    "normietext/provenance.py",
+    "normietext/py.typed",
+    "normietext/rendering.py",
+    "normietext/serialization.py",
+    "normietext/sources.py",
+    "normietext/stages/",
+    "normietext/stages/__init__.py",
+    "normietext/stages/encoding.py",
+    "normietext/stages/lexing.py",
+    "normietext/stages/rendering.py",
+    "normietext/stages/structure.py",
+    "normietext/stages/symbols.py",
+    "normietext/validation.py",
+    "normietext-0.1.0.dist-info/licenses/",
+    "normietext-0.1.0.dist-info/licenses/LICENSE",
+    "normietext-0.1.0.dist-info/",
+    "normietext-0.1.0.dist-info/WHEEL",
+    "normietext-0.1.0.dist-info/METADATA",
+    "normietext-0.1.0.dist-info/RECORD"
+  ],
+  "original_reports": {
+    "pytest": {
+      "sha256": "4113576bd73962d12ffbd53cbed5e3deeffa3dbcec9e1fc597d647a87c4e6942",
+      "bytes": 118301,
+      "original_local_path": "/tmp/normietext-auditoria-pytest.xml"
+    },
+    "quality": {
+      "sha256": "5c5fd07f9b8ed309c548c29d360b3a144b34a39ad48e913dab92156d2ae944e4",
+      "bytes": 66900,
+      "original_local_path": "/tmp/normietext-auditoria-calidad.json"
+    },
+    "load": {
+      "sha256": "8835198d2313da945a99e2996738fc8d1dccfa0851a626aec6d4ff4ca535681c",
+      "bytes": 55474,
+      "original_local_path": "/tmp/normietext-auditoria-carga.json"
+    },
+    "batch": {
+      "sha256": "1ffbec82a786435c5ab79b94790df7019018a5d3cffe8cf22a595e051a81fe34",
+      "bytes": 2080549,
+      "original_local_path": "/tmp/normietext-auditoria-lotes-comparables.json"
+    },
+    "adoption": {
+      "sha256": "252966ae4c7eca690872dbcd53f451da633e54b9a501859c10af7ff9b8a36bb5",
+      "bytes": 16431,
+      "original_local_path": "/tmp/normietext-auditoria-adopcion.json"
+    }
+  },
+  "notes": [
+    "Original full reports are temporary; this archive retains selected metrics, manifests, protocol and hashes.",
+    "No coverage percentage or formal verification claim.",
+    "Batch uses 100 observations per worker count and only 20 unique synthetic inputs.",
+    "HTML depth rejection is expected, not a successful normalization.",
+    "Standalone probe outputs are observations, not approved goldens."
+  ]
+}

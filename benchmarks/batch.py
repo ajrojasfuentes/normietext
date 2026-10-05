@@ -4,6 +4,7 @@ import argparse
 import hashlib
 import json
 import multiprocessing
+import sys
 import time
 from concurrent.futures import ProcessPoolExecutor
 from pathlib import Path
@@ -53,15 +54,17 @@ def process(index: int) -> dict[str, Any]:
         )
         if description is None or any(anchor not in description.text for anchor in anchors):
             errors.append("missing_manual_evidence")
-    try:
-        import resource
-        import sys
+    rss: int | None = None
+    # resource is Unix-only; keep unavailable RSS distinct from a zero reading.
+    if sys.platform != "win32":
+        try:
+            import resource
 
-        rss: int | None = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss * (
-            1 if sys.platform == "darwin" else 1024
-        )
-    except ImportError:
-        rss = None
+            rss = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss * (
+                1 if sys.platform == "darwin" else 1024
+            )
+        except ImportError:
+            pass
     return {
         "name": sample.name,
         "input_sha256": sample.sha256,

@@ -1,7 +1,11 @@
 """Benchmark summaries and explicit regression gates; no wall-time assertions."""
 
 from copy import deepcopy
+from types import SimpleNamespace
 
+import pytest
+
+from benchmarks import batch, load
 from benchmarks.load import compare, distribution, workloads
 
 
@@ -46,3 +50,36 @@ def test_load_inventory_separates_cohorts_and_contains_both_api_units():
     assert {"six_fields", "integral", "hints_2000", "max_plain", "html_nodes"} <= {
         case.name for case in cases
     }
+
+
+def test_windows_benchmarks_preserve_results_without_importing_resource(monkeypatch):
+    import builtins
+
+    original_import = builtins.__import__
+
+    def checked_import(name, *args, **kwargs):
+        if name == "resource":
+            pytest.fail("Windows benchmarks must not import the Unix resource module")
+        return original_import(name, *args, **kwargs)
+
+    case = next(case for case in workloads() if case.name == "compact")
+    # Replace only the harness references, not Python's global platform state.
+    monkeypatch.setattr(load, "sys", SimpleNamespace(platform="win32"))
+    monkeypatch.setattr(batch, "sys", SimpleNamespace(platform="win32"))
+    monkeypatch.setattr(builtins, "__import__", checked_import)
+    field = load.run_case(case, warmup=0, repetitions=1)
+    record = batch.process(2)
+    assert field["process_peak_rss_bytes"] is None
+    assert field["outcomes"] == {"success": 1}
+    assert record["process_peak_rss_bytes"] is None
+    assert record["errors"] == []
+
+
+@pytest.mark.parametrize("platform", ["win32", "darwin"])
+def test_non_linux_worker_rejects_memory_containment(monkeypatch, capsys, platform):
+    monkeypatch.setattr(load, "sys", SimpleNamespace(platform=platform))
+    monkeypatch.setattr("sys.argv", ["load", "--worker", "compact", "--worker-memory-mib", "256"])
+    with pytest.raises(SystemExit) as error:
+        load.main()
+    assert error.value.code == 2
+    assert "memory containment requires Linux" in capsys.readouterr().err

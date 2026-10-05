@@ -1,0 +1,328 @@
+{
+  "schema_version": "1.0.0",
+  "sequence": [
+    "candidate",
+    "rollback",
+    "candidate"
+  ],
+  "synthetic_consumer": true,
+  "observations": [
+    {
+      "wheel_sha256": "7ea043c481429f5afb0e105a85a176c2b0e1e977f8e9dad808e3564da83e0db4",
+      "results": [
+        {
+          "name": "adversarial_linkedin_job-00.json",
+          "source_sha256": "4245d1bf36d70b7cf5b215ce8ee9661d34a7fe7bd035892a9013a832e4803ca3",
+          "values_sha256": "9fbbefd23b2fdf3721f030b1a6e67693cee87e03e0341fa12f4c02d944d385bb"
+        },
+        {
+          "name": "adversarial_linkedin_job-01.json",
+          "source_sha256": "9d1e821fcc8d351e86a4fae1126bd210b7355dcf0b0bd99bc77002945570b9e3",
+          "values_sha256": "33d0848a5326e3296f56bb3b1b6f83d7ff05728a20bca2e78792932e9b76e25b"
+        },
+        {
+          "name": "adversarial_linkedin_job-02.json",
+          "source_sha256": "7736c203578c1856066e2ba2bb673c85e1c5f64f2bda76897593454d7aaf063a",
+          "values_sha256": "1b91e5744dba8b0a1ac6531410c6a38d81758c49e333cac903e858563b7895de"
+        },
+        {
+          "name": "adversarial_linkedin_job-03.json",
+          "source_sha256": "80acffd400940f0369445ae69b458201cd8c75151ded0bb235c6865b18267c94",
+          "values_sha256": "5a9eac3800a193be5d87dcb3f3870d31d4780e020c7febeb83031764249f64e4"
+        },
+        {
+          "name": "adversarial_linkedin_job-04.json",
+          "source_sha256": "33ed9cbdd09e4374d98132b77d28cd4a18f1079b77974bfcca2c436dc81b5b03",
+          "values_sha256": "a8feaff82025292de75d69743c39d8687d6aadec955591165d7eb170933460b7"
+        },
+        {
+          "name": "adversarial_linkedin_job-05.json",
+          "source_sha256": "b13b2daa92136d3eb17116a29008fa5740140b4a4eaa3f081f75fe53f32fbdbc",
+          "values_sha256": "d3466f85c3a3dd9aad5e6e0e64037c038a44a858428cd0c6f32d2fb651b017d9"
+        },
+        {
+          "name": "adversarial_linkedin_job-06.json",
+          "source_sha256": "24a34f49b09e12c83e1cae6213b7df8224c0716112e465af6e94cccda5d369d4",
+          "values_sha256": "8ed32c7dd9f060e46b69fc0a83d39031bb79f94fd4384925fb5c3169fa08f4a4"
+        },
+        {
+          "name": "adversarial_linkedin_job-07.json",
+          "source_sha256": "84476d66725558df425b3e48810133aa5c1e0464494b906ba03f087a41ac27b6",
+          "values_sha256": "801adcf22e8a536db9002b86c165d9b1c9e600b874ee466a161bb069983e3833"
+        },
+        {
+          "name": "adversarial_linkedin_job-08.json",
+          "source_sha256": "87cb4c689cb4fcd630cb78053664db73edc4597f8cf9cafbc31fb2354ae0fe6b",
+          "values_sha256": "bfc04f899175217a48777744ecad47782119b8ceb3a7a8781d76c75911dd5c22"
+        },
+        {
+          "name": "adversarial_linkedin_job-09.json",
+          "source_sha256": "3b49165d978d6c1beb1078d4f2055cb0d821a8ce5607eccc338e5b6d1a613142",
+          "values_sha256": "73e2a1849c176a162e4963970b352cd6547d5ad3348cc845bc5d825ef9b4e4cc"
+        },
+        {
+          "name": "adversarial_linkedin_job-10.json",
+          "source_sha256": "fec37023c145fbdb4ea2bbf6e5e5c935f97ffa9b719f019d326b427bb6bfcecb",
+          "values_sha256": "2fec19a3a16268f82d2102699e0bd73641db1d16c2588ee458a9d893e6541f36"
+        },
+        {
+          "name": "adversarial_linkedin_job-11.json",
+          "source_sha256": "3779d62b4a02fee2cc77e58f4df49d6ae02609af200c8990505e36c1c8d53c2a",
+          "values_sha256": "7505b115ddf4b9f78edc4c1e24eaeeee8560a22b38cadb41bbdf2c05cd6ec202"
+        },
+        {
+          "name": "adversarial_linkedin_job-12.json",
+          "source_sha256": "a1c0a945f33d4d880c52f51bf643cff8cfea82beffed4c42261bf81f300a00d8",
+          "values_sha256": "8b139615c2ea1fed05e83a982639a3de2c086c47582ade8e7b307ce8cfe93165"
+        },
+        {
+          "name": "adversarial_linkedin_job-13.json",
+          "source_sha256": "e8c70f8e504e347bef11e7e6b36ba09c5c3f5f49c9b9a42d09d821262e2c3e3a",
+          "values_sha256": "df32f90cad050af0fe5308c211603da7018b2c67c6f25060aa20ac7163b6d172"
+        },
+        {
+          "name": "adversarial_linkedin_job-14.json",
+          "source_sha256": "31ade035a36bdbbbd84672946fb7f781f9bca2e8821fca201d7f7723721cdff8",
+          "values_sha256": "b6478e0f3d312c4d760a2a1be651f42e2be3701c930572c12b1d7ceba0745674"
+        },
+        {
+          "name": "adversarial_linkedin_job-15.json",
+          "source_sha256": "66acd72377b52f2415185be4806eac65a333294979475b9856fa4fb897832874",
+          "values_sha256": "6117ba221a4b9e8eabdcc3b20a0e33b50ba1f4f4f1527dfebfcc0911c017ef39"
+        },
+        {
+          "name": "adversarial_linkedin_job-16.json",
+          "source_sha256": "3c09c1638a7850e73c5dd1f6adf27ae4bdd45b4083c33196ebbd30ab0424e38d",
+          "values_sha256": "03d642ac0c932fbffd7fe241c33a2641ceea528a6b37f716955ab3fe764b389b"
+        },
+        {
+          "name": "adversarial_linkedin_job-17.json",
+          "source_sha256": "85baead99f81c2b60e455f578c2b12f5aadd52d6f9db42b51a4abd19ae65eae6",
+          "values_sha256": "6268def2e6315bf3de7ecbf48d8915ed90892b7e40ea9df997e4ce7d33b12714"
+        },
+        {
+          "name": "adversarial_linkedin_job-18.json",
+          "source_sha256": "510c63cd0da7db76f234d8486405140f640f4506920a3a2b6481de35a2b16962",
+          "values_sha256": "3e5a94d270583e38c09d2c5a86fca14d3ec05c2f990e1c3dc24e1c6bb31e0ea5"
+        },
+        {
+          "name": "adversarial_linkedin_job-19.json",
+          "source_sha256": "0e5ca91c7960a1a9c457e1be94b04981821357910ae7e6a7d0fb5fd9b3735e19",
+          "values_sha256": "b63c18c6f3b9f12da9bc12a087c89588ab2b01d183279497c85d676285e05ad0"
+        }
+      ]
+    },
+    {
+      "wheel_sha256": "40c22cf30d0f6c611c2ab5c4bdc8375bc6d09099a6ca7fda94eeae09468d35c5",
+      "results": [
+        {
+          "name": "adversarial_linkedin_job-00.json",
+          "source_sha256": "4245d1bf36d70b7cf5b215ce8ee9661d34a7fe7bd035892a9013a832e4803ca3",
+          "values_sha256": "9fbbefd23b2fdf3721f030b1a6e67693cee87e03e0341fa12f4c02d944d385bb"
+        },
+        {
+          "name": "adversarial_linkedin_job-01.json",
+          "source_sha256": "9d1e821fcc8d351e86a4fae1126bd210b7355dcf0b0bd99bc77002945570b9e3",
+          "values_sha256": "33d0848a5326e3296f56bb3b1b6f83d7ff05728a20bca2e78792932e9b76e25b"
+        },
+        {
+          "name": "adversarial_linkedin_job-02.json",
+          "source_sha256": "7736c203578c1856066e2ba2bb673c85e1c5f64f2bda76897593454d7aaf063a",
+          "values_sha256": "1b91e5744dba8b0a1ac6531410c6a38d81758c49e333cac903e858563b7895de"
+        },
+        {
+          "name": "adversarial_linkedin_job-03.json",
+          "source_sha256": "80acffd400940f0369445ae69b458201cd8c75151ded0bb235c6865b18267c94",
+          "values_sha256": "5a9eac3800a193be5d87dcb3f3870d31d4780e020c7febeb83031764249f64e4"
+        },
+        {
+          "name": "adversarial_linkedin_job-04.json",
+          "source_sha256": "33ed9cbdd09e4374d98132b77d28cd4a18f1079b77974bfcca2c436dc81b5b03",
+          "values_sha256": "a8feaff82025292de75d69743c39d8687d6aadec955591165d7eb170933460b7"
+        },
+        {
+          "name": "adversarial_linkedin_job-05.json",
+          "source_sha256": "b13b2daa92136d3eb17116a29008fa5740140b4a4eaa3f081f75fe53f32fbdbc",
+          "values_sha256": "d3466f85c3a3dd9aad5e6e0e64037c038a44a858428cd0c6f32d2fb651b017d9"
+        },
+        {
+          "name": "adversarial_linkedin_job-06.json",
+          "source_sha256": "24a34f49b09e12c83e1cae6213b7df8224c0716112e465af6e94cccda5d369d4",
+          "values_sha256": "8ed32c7dd9f060e46b69fc0a83d39031bb79f94fd4384925fb5c3169fa08f4a4"
+        },
+        {
+          "name": "adversarial_linkedin_job-07.json",
+          "source_sha256": "84476d66725558df425b3e48810133aa5c1e0464494b906ba03f087a41ac27b6",
+          "values_sha256": "801adcf22e8a536db9002b86c165d9b1c9e600b874ee466a161bb069983e3833"
+        },
+        {
+          "name": "adversarial_linkedin_job-08.json",
+          "source_sha256": "87cb4c689cb4fcd630cb78053664db73edc4597f8cf9cafbc31fb2354ae0fe6b",
+          "values_sha256": "bfc04f899175217a48777744ecad47782119b8ceb3a7a8781d76c75911dd5c22"
+        },
+        {
+          "name": "adversarial_linkedin_job-09.json",
+          "source_sha256": "3b49165d978d6c1beb1078d4f2055cb0d821a8ce5607eccc338e5b6d1a613142",
+          "values_sha256": "73e2a1849c176a162e4963970b352cd6547d5ad3348cc845bc5d825ef9b4e4cc"
+        },
+        {
+          "name": "adversarial_linkedin_job-10.json",
+          "source_sha256": "fec37023c145fbdb4ea2bbf6e5e5c935f97ffa9b719f019d326b427bb6bfcecb",
+          "values_sha256": "2fec19a3a16268f82d2102699e0bd73641db1d16c2588ee458a9d893e6541f36"
+        },
+        {
+          "name": "adversarial_linkedin_job-11.json",
+          "source_sha256": "3779d62b4a02fee2cc77e58f4df49d6ae02609af200c8990505e36c1c8d53c2a",
+          "values_sha256": "7505b115ddf4b9f78edc4c1e24eaeeee8560a22b38cadb41bbdf2c05cd6ec202"
+        },
+        {
+          "name": "adversarial_linkedin_job-12.json",
+          "source_sha256": "a1c0a945f33d4d880c52f51bf643cff8cfea82beffed4c42261bf81f300a00d8",
+          "values_sha256": "8b139615c2ea1fed05e83a982639a3de2c086c47582ade8e7b307ce8cfe93165"
+        },
+        {
+          "name": "adversarial_linkedin_job-13.json",
+          "source_sha256": "e8c70f8e504e347bef11e7e6b36ba09c5c3f5f49c9b9a42d09d821262e2c3e3a",
+          "values_sha256": "df32f90cad050af0fe5308c211603da7018b2c67c6f25060aa20ac7163b6d172"
+        },
+        {
+          "name": "adversarial_linkedin_job-14.json",
+          "source_sha256": "31ade035a36bdbbbd84672946fb7f781f9bca2e8821fca201d7f7723721cdff8",
+          "values_sha256": "b6478e0f3d312c4d760a2a1be651f42e2be3701c930572c12b1d7ceba0745674"
+        },
+        {
+          "name": "adversarial_linkedin_job-15.json",
+          "source_sha256": "66acd72377b52f2415185be4806eac65a333294979475b9856fa4fb897832874",
+          "values_sha256": "6117ba221a4b9e8eabdcc3b20a0e33b50ba1f4f4f1527dfebfcc0911c017ef39"
+        },
+        {
+          "name": "adversarial_linkedin_job-16.json",
+          "source_sha256": "3c09c1638a7850e73c5dd1f6adf27ae4bdd45b4083c33196ebbd30ab0424e38d",
+          "values_sha256": "03d642ac0c932fbffd7fe241c33a2641ceea528a6b37f716955ab3fe764b389b"
+        },
+        {
+          "name": "adversarial_linkedin_job-17.json",
+          "source_sha256": "85baead99f81c2b60e455f578c2b12f5aadd52d6f9db42b51a4abd19ae65eae6",
+          "values_sha256": "6268def2e6315bf3de7ecbf48d8915ed90892b7e40ea9df997e4ce7d33b12714"
+        },
+        {
+          "name": "adversarial_linkedin_job-18.json",
+          "source_sha256": "510c63cd0da7db76f234d8486405140f640f4506920a3a2b6481de35a2b16962",
+          "values_sha256": "3e5a94d270583e38c09d2c5a86fca14d3ec05c2f990e1c3dc24e1c6bb31e0ea5"
+        },
+        {
+          "name": "adversarial_linkedin_job-19.json",
+          "source_sha256": "0e5ca91c7960a1a9c457e1be94b04981821357910ae7e6a7d0fb5fd9b3735e19",
+          "values_sha256": "b63c18c6f3b9f12da9bc12a087c89588ab2b01d183279497c85d676285e05ad0"
+        }
+      ]
+    },
+    {
+      "wheel_sha256": "7ea043c481429f5afb0e105a85a176c2b0e1e977f8e9dad808e3564da83e0db4",
+      "results": [
+        {
+          "name": "adversarial_linkedin_job-00.json",
+          "source_sha256": "4245d1bf36d70b7cf5b215ce8ee9661d34a7fe7bd035892a9013a832e4803ca3",
+          "values_sha256": "9fbbefd23b2fdf3721f030b1a6e67693cee87e03e0341fa12f4c02d944d385bb"
+        },
+        {
+          "name": "adversarial_linkedin_job-01.json",
+          "source_sha256": "9d1e821fcc8d351e86a4fae1126bd210b7355dcf0b0bd99bc77002945570b9e3",
+          "values_sha256": "33d0848a5326e3296f56bb3b1b6f83d7ff05728a20bca2e78792932e9b76e25b"
+        },
+        {
+          "name": "adversarial_linkedin_job-02.json",
+          "source_sha256": "7736c203578c1856066e2ba2bb673c85e1c5f64f2bda76897593454d7aaf063a",
+          "values_sha256": "1b91e5744dba8b0a1ac6531410c6a38d81758c49e333cac903e858563b7895de"
+        },
+        {
+          "name": "adversarial_linkedin_job-03.json",
+          "source_sha256": "80acffd400940f0369445ae69b458201cd8c75151ded0bb235c6865b18267c94",
+          "values_sha256": "5a9eac3800a193be5d87dcb3f3870d31d4780e020c7febeb83031764249f64e4"
+        },
+        {
+          "name": "adversarial_linkedin_job-04.json",
+          "source_sha256": "33ed9cbdd09e4374d98132b77d28cd4a18f1079b77974bfcca2c436dc81b5b03",
+          "values_sha256": "a8feaff82025292de75d69743c39d8687d6aadec955591165d7eb170933460b7"
+        },
+        {
+          "name": "adversarial_linkedin_job-05.json",
+          "source_sha256": "b13b2daa92136d3eb17116a29008fa5740140b4a4eaa3f081f75fe53f32fbdbc",
+          "values_sha256": "d3466f85c3a3dd9aad5e6e0e64037c038a44a858428cd0c6f32d2fb651b017d9"
+        },
+        {
+          "name": "adversarial_linkedin_job-06.json",
+          "source_sha256": "24a34f49b09e12c83e1cae6213b7df8224c0716112e465af6e94cccda5d369d4",
+          "values_sha256": "8ed32c7dd9f060e46b69fc0a83d39031bb79f94fd4384925fb5c3169fa08f4a4"
+        },
+        {
+          "name": "adversarial_linkedin_job-07.json",
+          "source_sha256": "84476d66725558df425b3e48810133aa5c1e0464494b906ba03f087a41ac27b6",
+          "values_sha256": "801adcf22e8a536db9002b86c165d9b1c9e600b874ee466a161bb069983e3833"
+        },
+        {
+          "name": "adversarial_linkedin_job-08.json",
+          "source_sha256": "87cb4c689cb4fcd630cb78053664db73edc4597f8cf9cafbc31fb2354ae0fe6b",
+          "values_sha256": "bfc04f899175217a48777744ecad47782119b8ceb3a7a8781d76c75911dd5c22"
+        },
+        {
+          "name": "adversarial_linkedin_job-09.json",
+          "source_sha256": "3b49165d978d6c1beb1078d4f2055cb0d821a8ce5607eccc338e5b6d1a613142",
+          "values_sha256": "73e2a1849c176a162e4963970b352cd6547d5ad3348cc845bc5d825ef9b4e4cc"
+        },
+        {
+          "name": "adversarial_linkedin_job-10.json",
+          "source_sha256": "fec37023c145fbdb4ea2bbf6e5e5c935f97ffa9b719f019d326b427bb6bfcecb",
+          "values_sha256": "2fec19a3a16268f82d2102699e0bd73641db1d16c2588ee458a9d893e6541f36"
+        },
+        {
+          "name": "adversarial_linkedin_job-11.json",
+          "source_sha256": "3779d62b4a02fee2cc77e58f4df49d6ae02609af200c8990505e36c1c8d53c2a",
+          "values_sha256": "7505b115ddf4b9f78edc4c1e24eaeeee8560a22b38cadb41bbdf2c05cd6ec202"
+        },
+        {
+          "name": "adversarial_linkedin_job-12.json",
+          "source_sha256": "a1c0a945f33d4d880c52f51bf643cff8cfea82beffed4c42261bf81f300a00d8",
+          "values_sha256": "8b139615c2ea1fed05e83a982639a3de2c086c47582ade8e7b307ce8cfe93165"
+        },
+        {
+          "name": "adversarial_linkedin_job-13.json",
+          "source_sha256": "e8c70f8e504e347bef11e7e6b36ba09c5c3f5f49c9b9a42d09d821262e2c3e3a",
+          "values_sha256": "df32f90cad050af0fe5308c211603da7018b2c67c6f25060aa20ac7163b6d172"
+        },
+        {
+          "name": "adversarial_linkedin_job-14.json",
+          "source_sha256": "31ade035a36bdbbbd84672946fb7f781f9bca2e8821fca201d7f7723721cdff8",
+          "values_sha256": "b6478e0f3d312c4d760a2a1be651f42e2be3701c930572c12b1d7ceba0745674"
+        },
+        {
+          "name": "adversarial_linkedin_job-15.json",
+          "source_sha256": "66acd72377b52f2415185be4806eac65a333294979475b9856fa4fb897832874",
+          "values_sha256": "6117ba221a4b9e8eabdcc3b20a0e33b50ba1f4f4f1527dfebfcc0911c017ef39"
+        },
+        {
+          "name": "adversarial_linkedin_job-16.json",
+          "source_sha256": "3c09c1638a7850e73c5dd1f6adf27ae4bdd45b4083c33196ebbd30ab0424e38d",
+          "values_sha256": "03d642ac0c932fbffd7fe241c33a2641ceea528a6b37f716955ab3fe764b389b"
+        },
+        {
+          "name": "adversarial_linkedin_job-17.json",
+          "source_sha256": "85baead99f81c2b60e455f578c2b12f5aadd52d6f9db42b51a4abd19ae65eae6",
+          "values_sha256": "6268def2e6315bf3de7ecbf48d8915ed90892b7e40ea9df997e4ce7d33b12714"
+        },
+        {
+          "name": "adversarial_linkedin_job-18.json",
+          "source_sha256": "510c63cd0da7db76f234d8486405140f640f4506920a3a2b6481de35a2b16962",
+          "values_sha256": "3e5a94d270583e38c09d2c5a86fca14d3ec05c2f990e1c3dc24e1c6bb31e0ea5"
+        },
+        {
+          "name": "adversarial_linkedin_job-19.json",
+          "source_sha256": "0e5ca91c7960a1a9c457e1be94b04981821357910ae7e6a7d0fb5fd9b3735e19",
+          "values_sha256": "b63c18c6f3b9f12da9bc12a087c89588ab2b01d183279497c85d676285e05ad0"
+        }
+      ]
+    }
+  ],
+  "replay_equal": true,
+  "shadow_equal": true
+}
