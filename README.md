@@ -4,14 +4,14 @@ Biblioteca Python local y determinista para normalizar seis campos de ofertas
 laborales extraídas de LinkedIn. Conserva evidencia, estructura y procedencia
 para consumidores de parsing, sin LLM ni llamadas de red al normalizar.
 
-**Estado: F7 validada localmente por lotes; F8 preparada para GitHub, sin publicar.**
+**Estado: v0.1.0 publicada y verificada en GitHub; F8 cerrada para el alcance sintético aprobado.**
 `JobTextNormalizer` ofrece normalización por campo/registro, reentrada canónica
 idempotente y proyección solo texto. Incluye listas, emoji, invisibles, espacios,
 NFC final, estructura y procedencia. F6 añade evaluación de evidencia y corpus
 sintético; no acredita calidad de tráfico real. F7 añade métricas y pruebas de carga;
 La capacidad se documenta por hardware y corpus, sin un SLO universal de servicio.
-La distribución será desde GitHub bajo MIT; véase [distribución](docs/distribucion_github.md).
-La publicación y verificación remota siguen pendientes.
+La distribución está disponible en [GitHub Releases](https://github.com/ajrojasfuentes/normietext/releases/tag/v0.1.0)
+bajo MIT; véanse [distribución](docs/distribucion_github.md) y [cierre F8](docs/revisiones/cierre_fase_8.md).
 La especificación 2.0 no es
 la versión del paquete: la base usa `0.1.0`, esquema `1.0.0` y reglas `1.0.1`.
 
@@ -30,7 +30,7 @@ uv run --locked mypy
 uv run --locked pytest
 uv run --locked python scripts/generate_tables.py --check
 uv run --locked python scripts/build_distribution.py
-uv run --locked twine check --strict dist/*
+uv run --locked twine check --strict dist/*.whl dist/*.tar.gz
 uv run --locked python scripts/check_wheel.py
 ```
 

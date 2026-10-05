@@ -19,8 +19,10 @@ No confundir la especificación 2.0 con la versión del paquete 0.1.0.
 - Nunca sustituir los textos esperados del corpus automáticamente por la salida
   de la implementación. No corregir la especificación silenciosamente.
 
-Estado actual y evidencia: `docs/revisiones/aceptacion_biblioteca.md`; F7 valida
-capacidad por equipo/corpus. F8 queda preparada, pendiente de aprobación/publicación. Las decisiones de
+Estado actual y evidencia: `docs/revisiones/cierre_fase_8.md`; v0.1.0 publicada y
+verificada desde sus assets. F7 valida capacidad por equipo/corpus; la adopción
+continúa limitada a muestras sintéticas y §25.1 conserva seguimiento explícito.
+Las decisiones de
 contratos se fijan en `docs/decisions/0001-contratos-fase-1.md` y
 `docs/decisions/0002-baseline-fuentes-procedencia.md` y
 `docs/decisions/0003-adaptadores-formato.md` y

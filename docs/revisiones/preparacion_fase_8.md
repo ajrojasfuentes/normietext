@@ -1,5 +1,9 @@
 # Fase 8: distribución desde un commit identificado
 
+> Informe histórico de preparación. El [cierre F8](cierre_fase_8.md) acredita la
+> publicación posterior de v0.1.0 y sus assets; los hashes siguientes no son los de
+> la Release publicada.
+
 Verificación local: 2026-10-04. Publicación remota pendiente.
 El mantenedor autorizó continuar F8 después de aprobar el commit
 `98c47785b6955b8136d2096e71cd711fa46f0508`.

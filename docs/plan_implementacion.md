@@ -5,16 +5,16 @@
 **Audiencia:** ingeniería del núcleo, responsables de corpus/QA e integradores.
 **Estado:** F0–F6 completadas localmente. F7 validada sobre el equipo de referencia
 como biblioteca por lotes con 20 muestras sintéticas aportadas por el mantenedor.
-F8 en curso: distribución GitHub/MIT construida desde el commit aprobado, con
-reproducibilidad y adopción local verificadas. Pendientes tag, CI remota y publicación;
-véase [preparación F8](revisiones/preparacion_fase_8.md).
+F8 cerrada para el alcance aprobado: v0.1.0 publicada en GitHub, matrices remotas
+aprobadas y assets descargados, verificados e instalados con replay/rollback sintéticos;
+véase [cierre F8](revisiones/cierre_fase_8.md).
 Véase [aceptación vigente](revisiones/aceptacion_biblioteca.md)
 y la [medición inicial F7](revisiones/cierre_fase_7.md).
 
 **Auditoría integral (2026-10-04):** [contraste de especificación, código y pruebas](revisiones/auditoria_integral_2026_10_04.md).
 458 pruebas locales aprobadas; corrección de tipos Windows validada localmente.
-El CI publicado de `98c4778` pasa en Ubuntu/macOS y falla en Windows; distribución
-omitida y ninguna Release publicada en la consulta. F8 sigue abierta.
+La auditoría registró el fallo Windows de `98c4778` y ausencia de Release en ese
+momento. El cierre F8 posterior acredita la corrección, CI completa y publicación.
 La auditoría también identifica granularidad pendiente de observabilidad en §25.1
 (invisibles por clase y porcentajes/denominadores de emoji); los contadores actuales
 de operaciones no equivalen a esas métricas.
@@ -499,9 +499,9 @@ no se sustituyen por benchmarks en runners compartidos sin control de ruido.
 
 ## 12. Fase 8 — Release, adopción gradual y mantenimiento
 
-**Estado:** construcción reproducible desde commit aprobado y adopción sintética
-local verificadas; publicación y verificación remota pendientes. Evidencia en
-[preparación F8](revisiones/preparacion_fase_8.md).
+**Estado:** completada para el alcance aprobado de biblioteca y consumidor sintético.
+Tag v0.1.0, Release, CI Linux/Windows/macOS, checksums de assets descargados e
+instalación/replay/rollback verificados. Evidencia en [cierre F8](revisiones/cierre_fase_8.md).
 Responsable: Anthony Josue Rojas Fuentes.
 
 **Depende de:** fases 1–7 y aceptación de §26.
