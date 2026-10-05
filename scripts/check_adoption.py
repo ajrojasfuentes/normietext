@@ -21,6 +21,22 @@ def main() -> None:
     observations = []
     with tempfile.TemporaryDirectory(prefix="normietext-adoption-") as temp:
         directory = Path(temp)
+        constraints = directory / "runtime-constraints.txt"
+        subprocess.run(
+            [
+                "uv",
+                "export",
+                "--locked",
+                "--no-dev",
+                "--no-emit-project",
+                "--no-hashes",
+                "--output-file",
+                str(constraints),
+            ],
+            cwd=ROOT,
+            check=True,
+            stdout=subprocess.DEVNULL,
+        )
         subprocess.run(
             [
                 "uv",
@@ -38,6 +54,8 @@ def main() -> None:
                     "uv",
                     "pip",
                     "install",
+                    "--constraint",
+                    str(constraints),
                     "--reinstall-package",
                     "normietext",
                     "--python",

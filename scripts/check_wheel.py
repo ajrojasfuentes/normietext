@@ -14,6 +14,21 @@ def main() -> None:
     with tempfile.TemporaryDirectory(prefix="normietext-wheel-") as directory:
         root = Path(directory)
         environment = root / "venv"
+        constraints = root / "runtime-constraints.txt"
+        subprocess.run(
+            [
+                "uv",
+                "export",
+                "--locked",
+                "--no-dev",
+                "--no-emit-project",
+                "--no-hashes",
+                "--output-file",
+                str(constraints),
+            ],
+            check=True,
+            stdout=subprocess.DEVNULL,
+        )
         python = environment / ("Scripts/python.exe" if os.name == "nt" else "bin/python")
         subprocess.run(["uv", "venv", "--python", version, str(environment)], check=True)
         subprocess.run(
@@ -21,6 +36,8 @@ def main() -> None:
                 "uv",
                 "pip",
                 "install",
+                "--constraint",
+                str(constraints),
                 "--only-binary",
                 "lxml",
                 "--only-binary",
