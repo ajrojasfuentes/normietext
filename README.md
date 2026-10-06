@@ -4,16 +4,16 @@ Biblioteca Python local y determinista para normalizar seis campos de ofertas
 laborales extraídas de LinkedIn. Conserva evidencia, estructura y procedencia
 para consumidores de parsing, sin LLM ni llamadas de red al normalizar.
 
-**Estado: v0.1.0 publicada y verificada en GitHub; F8 cerrada para el alcance sintético aprobado.**
+**Estado: biblioteca Alpha; F8 cerrada para el alcance sintético aprobado.**
 `JobTextNormalizer` ofrece normalización por campo/registro, reentrada canónica
 idempotente y proyección solo texto. Incluye listas, emoji, invisibles, espacios,
 NFC final, estructura y procedencia. F6 añade evaluación de evidencia y corpus
 sintético; no acredita calidad de tráfico real. F7 añade métricas y pruebas de carga;
 La capacidad se documenta por hardware y corpus, sin un SLO universal de servicio.
-La distribución está disponible en [GitHub Releases](https://github.com/ajrojasfuentes/normietext/releases/tag/v0.1.0)
+Las versiones publicadas están disponibles en [GitHub Releases](https://github.com/ajrojasfuentes/normietext/releases)
 bajo MIT; véanse [distribución](docs/distribucion_github.md) y [cierre F8](docs/revisiones/cierre_fase_8.md).
 La especificación 2.0 no es
-la versión del paquete: la base usa `0.1.0`, esquema `1.0.0` y reglas `1.0.1`.
+la versión del paquete: esta versión usa `0.1.1`, esquema `1.0.0` y reglas `1.0.1`.
 
 ## Desarrollo
 
@@ -132,7 +132,7 @@ pero no demuestra la intención del autor. El renderer de F5 consume esos candid
 ## Distribución e integración
 
 La entrega principal es un wheel importable con tipos (`py.typed`). Un consumidor
-puede instalar `dist/normietext-0.1.0-py3-none-any.whl` con su gestor de paquetes.
+puede instalar `dist/normietext-0.1.1-py3-none-any.whl` con su gestor de paquetes.
 Esto instala la API funcional, contratos, datos y etapas tipadas. Las cinco dependencias de
 runtime son las fijadas por §21 de la especificación. Las herramientas de pruebas,
 tipado y publicación no son dependencias de los consumidores.

@@ -1,6 +1,6 @@
 # Changelog
 
-## [Unreleased]
+## [0.1.1] - 2026-10-06
 
 ### Fixed
 
@@ -8,6 +8,9 @@
   instead of masking the rejection with `AttributeError`; omit unavailable source
   dimensions without exposing the rejected input.
 - Correct the audit's text-only API name to `clean_text`.
+
+This patch preserves the public API, normalization rules, schema and policy profile.
+The Alpha compatibility and limitations documented for 0.1.0 still apply.
 
 ## [0.1.0] - 2026-10-04
 
@@ -38,4 +41,5 @@ First public release of the MIT-licensed Python library for deterministic normal
 
 Download the wheel and SHA256SUMS, verify the digest, then install the wheel in a compatible Python environment. Retain raw inputs and the runtime manifest for replay and rollback.
 
+[0.1.1]: https://github.com/ajrojasfuentes/normietext/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/ajrojasfuentes/normietext/releases/tag/v0.1.0
