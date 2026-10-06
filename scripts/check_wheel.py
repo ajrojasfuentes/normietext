@@ -101,6 +101,10 @@ def main() -> None:
                 "measured = measure_field(normalizer, FieldInput(JobField.JOB_TITLE, 'Python')); "
                 "assert measured.result.text == 'Python' and measured.error is None; "
                 "assert measured.metrics['rules_version'] == '1.0.1'; "
+                "rejected = measure_field(normalizer, None, trace=True); "
+                "assert rejected.result is None and rejected.error == 'INVALID_TYPE'; "
+                "assert rejected.metrics['error'] == 'INVALID_TYPE'; "
+                "assert 'field' not in rejected.metrics and rejected.trace == (); "
                 "assert canonical_bytes(manifest) == canonical_bytes(create_manifest()); "
                 "import bs4, emoji, ftfy, lxml.etree, regex; "
                 "print('Installed normietext', version('normietext'))",

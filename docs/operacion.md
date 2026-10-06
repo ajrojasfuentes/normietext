@@ -31,6 +31,11 @@ de campo no publica un resultado canónico parcial. El registro mantiene seis
 sobres y captura fallos por campo como la API no estricta. Los fallos inesperados
 se propagan; las excepciones de la API original permanecen sin cambios.
 
+Si `measure_field` recibe un valor que no es `FieldInput`, conserva el rechazo
+`INVALID_TYPE` con `result=None` y métricas generales de la llamada. Omite campo,
+formato, longitud y versión del scraper porque no dispone de una fuente válida;
+no convierte el valor rechazado a texto ni lo incorpora a métricas o trace.
+
 Exportar **solo metrics**. Resultados, fuentes y traces contienen datos de ofertas.
 No serializar Measurement entero en logging. La biblioteca no envía ni guarda logs.
 `trace=True` habilita snapshots de etapas en memoria: ingesta debe autorizar su

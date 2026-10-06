@@ -1,5 +1,9 @@
 # Auditoría integral de normietext — 2026-10-04
 
+> Fe de erratas (2026-10-06): se corrigió el nombre de la proyección solo texto a
+> `clean_text` en RF-14 y en la explicación de API. Los resultados de la auditoría
+> conservan su fecha y alcance originales.
+
 ## Dictamen y alcance
 
 El núcleo funcional de la biblioteca está implementado y supera la suite disponible.
@@ -97,7 +101,7 @@ posible por el mero hecho de pasar tests.
 | RF-11: espacios/LF | rendering.py y renderer final | corpus, propiedades e invariantes; campos compactos sin LF y multilínea acotado |
 | RF-12: evidencia | protecciones léxicas y renderer | C++, C#, importes, negaciones, URLs y anclas integrales; no transforma señales en hechos |
 | RF-13: ediciones/estados | models.py, provenance.py, operations.py | reglas/orígenes, issues, empty/partial/failure; errores explícitos sin truncamiento silencioso |
-| RF-14: API | api.py | normalize_field, normalize_record y normalize_text; strict propaga fallos |
+| RF-14: API | api.py | normalize_field, normalize_record y clean_text; strict propaga fallos |
 | RF-15: idempotencia/determinismo | api.py, validation.py, serialization.py, manifest.py | propiedades y replay en procesos, registros y wheel aislado; mismo entorno/perfil |
 
 Los nombres de módulos son relativos a `src/normietext/`; las pruebas unitarias
@@ -119,7 +123,7 @@ El recorrido es conversión → reparación → captura léxica/estructural → 
 de reglas/render → validación. Los modelos de cada fase evitan interpretar de nuevo
 HTML o reparar dos veces. `canonicalize` acepta documentos tipados y valida su
 compatibilidad; no es una función para declarar normalizado cualquier string.
-`normalize_text` es una proyección conveniente que descarta los metadatos del resultado.
+`clean_text` es una proyección conveniente que descarta los metadatos del resultado.
 Quien necesite parsing auditable debe consumir `NormalizedField`.
 
 La API de registro captura errores por campo y conserva los seis sobres; `strict`

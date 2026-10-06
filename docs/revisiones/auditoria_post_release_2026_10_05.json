@@ -1,0 +1,534 @@
+{
+  "schema_version": "1.0.0",
+  "date": "2026-10-05",
+  "git_head": "e7be574a0604415e94e9b23696e7dfcc593f8503",
+  "release_commit": "717903d7e5764596a4d7c400dbf032ab7d4b195d",
+  "core_diff_since_release": false,
+  "checks": {
+    "uv_sync": "passed",
+    "ruff_check": "passed",
+    "ruff_format": "passed",
+    "mypy_linux": "passed",
+    "mypy_win32": "passed",
+    "mypy_darwin": "passed",
+    "tables": "passed",
+    "build_distribution": "passed",
+    "twine": "passed",
+    "isolated_wheel": "passed"
+  },
+  "pytest": {
+    "name": "pytest",
+    "errors": "0",
+    "failures": "0",
+    "skipped": "0",
+    "tests": "458",
+    "time": "49.352",
+    "timestamp": "2026-10-05T22:07:31.218340-06:00"
+  },
+  "quality": {
+    "passed": true,
+    "case_count": 55,
+    "list_metrics": {
+      "abstained": 5,
+      "abstention_pct": "4.808",
+      "coverage_pct": "28.846",
+      "fn": 0,
+      "fp": 0,
+      "labeled": 104,
+      "precision_pct": "100.000",
+      "predicted": 30,
+      "recall_pct": "100.000",
+      "tn": 69,
+      "tp": 30
+    },
+    "integral": {
+      "authorized_losses": 15,
+      "fragments": 58,
+      "missing": [],
+      "requirement_groups": 23
+    },
+    "required_fragments": 52,
+    "authorized_losses": 10,
+    "failures": [],
+    "corpus_sha256": "667de35f9faab9ad1341723707862ac24074b4842b819e644b23b22ceecbfc25",
+    "lock_sha256": "718f79a1b8413f944aac958db548f5b7dd409465156f7249288bc562bfdf543e",
+    "evaluator_sha256": "5a73eafd02627f1fb70a1f6f8e87eab0250ac7a5d2c35b7e654d25e7d4e89348",
+    "segments": {
+      "field:job_criteria_list": {
+        "abstained": 0,
+        "abstention_pct": "0.000",
+        "coverage_pct": "22.222",
+        "fn": 0,
+        "fp": 0,
+        "labeled": 9,
+        "precision_pct": "100.000",
+        "predicted": 2,
+        "recall_pct": "100.000",
+        "tn": 7,
+        "tp": 2
+      },
+      "field:job_description": {
+        "abstained": 5,
+        "abstention_pct": "5.882",
+        "coverage_pct": "32.941",
+        "fn": 0,
+        "fp": 0,
+        "labeled": 85,
+        "precision_pct": "100.000",
+        "predicted": 28,
+        "recall_pct": "100.000",
+        "tn": 52,
+        "tp": 28
+      },
+      "field:job_title": {
+        "abstained": 0,
+        "abstention_pct": "0.000",
+        "coverage_pct": "0.000",
+        "fn": 0,
+        "fp": 0,
+        "labeled": 4,
+        "precision_pct": null,
+        "predicted": 0,
+        "recall_pct": null,
+        "tn": 4,
+        "tp": 0
+      },
+      "field:job_type": {
+        "abstained": 0,
+        "abstention_pct": "0.000",
+        "coverage_pct": "0.000",
+        "fn": 0,
+        "fp": 0,
+        "labeled": 1,
+        "precision_pct": null,
+        "predicted": 0,
+        "recall_pct": null,
+        "tn": 1,
+        "tp": 0
+      },
+      "field:raw_location": {
+        "abstained": 0,
+        "abstention_pct": "0.000",
+        "coverage_pct": "0.000",
+        "fn": 0,
+        "fp": 0,
+        "labeled": 4,
+        "precision_pct": null,
+        "predicted": 0,
+        "recall_pct": null,
+        "tn": 4,
+        "tp": 0
+      },
+      "field:seniority": {
+        "abstained": 0,
+        "abstention_pct": "0.000",
+        "coverage_pct": "0.000",
+        "fn": 0,
+        "fp": 0,
+        "labeled": 1,
+        "precision_pct": null,
+        "predicted": 0,
+        "recall_pct": null,
+        "tn": 1,
+        "tp": 0
+      },
+      "language:en": {
+        "abstained": 1,
+        "abstention_pct": "2.703",
+        "coverage_pct": "18.919",
+        "fn": 0,
+        "fp": 0,
+        "labeled": 37,
+        "precision_pct": "100.000",
+        "predicted": 7,
+        "recall_pct": "100.000",
+        "tn": 29,
+        "tp": 7
+      },
+      "language:es": {
+        "abstained": 2,
+        "abstention_pct": "5.714",
+        "coverage_pct": "34.286",
+        "fn": 0,
+        "fp": 0,
+        "labeled": 35,
+        "precision_pct": "100.000",
+        "predicted": 12,
+        "recall_pct": "100.000",
+        "tn": 21,
+        "tp": 12
+      },
+      "language:mixed": {
+        "abstained": 0,
+        "abstention_pct": "0.000",
+        "coverage_pct": "40.000",
+        "fn": 0,
+        "fp": 0,
+        "labeled": 5,
+        "precision_pct": "100.000",
+        "predicted": 2,
+        "recall_pct": "100.000",
+        "tn": 3,
+        "tp": 2
+      },
+      "language:pt": {
+        "abstained": 2,
+        "abstention_pct": "7.407",
+        "coverage_pct": "33.333",
+        "fn": 0,
+        "fp": 0,
+        "labeled": 27,
+        "precision_pct": "100.000",
+        "predicted": 9,
+        "recall_pct": "100.000",
+        "tn": 16,
+        "tp": 9
+      },
+      "source_format:html_escaped_text": {
+        "abstained": 0,
+        "abstention_pct": "0.000",
+        "coverage_pct": "0.000",
+        "fn": 0,
+        "fp": 0,
+        "labeled": 2,
+        "precision_pct": null,
+        "predicted": 0,
+        "recall_pct": null,
+        "tn": 2,
+        "tp": 0
+      },
+      "source_format:html_fragment": {
+        "abstained": 0,
+        "abstention_pct": "0.000",
+        "coverage_pct": "13.333",
+        "fn": 0,
+        "fp": 0,
+        "labeled": 15,
+        "precision_pct": "100.000",
+        "predicted": 2,
+        "recall_pct": "100.000",
+        "tn": 13,
+        "tp": 2
+      },
+      "source_format:plain_text": {
+        "abstained": 5,
+        "abstention_pct": "5.882",
+        "coverage_pct": "32.941",
+        "fn": 0,
+        "fp": 0,
+        "labeled": 85,
+        "precision_pct": "100.000",
+        "predicted": 28,
+        "recall_pct": "100.000",
+        "tn": 52,
+        "tp": 28
+      },
+      "source_format:unknown": {
+        "abstained": 0,
+        "abstention_pct": "0.000",
+        "coverage_pct": "0.000",
+        "fn": 0,
+        "fp": 0,
+        "labeled": 2,
+        "precision_pct": null,
+        "predicted": 0,
+        "recall_pct": null,
+        "tn": 2,
+        "tp": 0
+      },
+      "split:development": {
+        "abstained": 3,
+        "abstention_pct": "5.172",
+        "coverage_pct": "24.138",
+        "fn": 0,
+        "fp": 0,
+        "labeled": 58,
+        "precision_pct": "100.000",
+        "predicted": 14,
+        "recall_pct": "100.000",
+        "tn": 41,
+        "tp": 14
+      },
+      "split:validation": {
+        "abstained": 2,
+        "abstention_pct": "4.348",
+        "coverage_pct": "34.783",
+        "fn": 0,
+        "fp": 0,
+        "labeled": 46,
+        "precision_pct": "100.000",
+        "predicted": 16,
+        "recall_pct": "100.000",
+        "tn": 28,
+        "tp": 16
+      }
+    },
+    "manifest": {
+      "backend": "beautifulsoup4:lxml",
+      "code_revision": "source-tree:9f7a4c5c3a1a802214d869d1a068fe2c45b5efc8bcdbd2d3a3022689b909e371",
+      "dependencies": [
+        [
+          "beautifulsoup4",
+          "4.15.0"
+        ],
+        [
+          "emoji",
+          "2.16.0"
+        ],
+        [
+          "ftfy",
+          "6.3.1"
+        ],
+        [
+          "lxml",
+          "6.1.3"
+        ],
+        [
+          "regex",
+          "2026.9.10"
+        ],
+        [
+          "soupsieve",
+          "2.10"
+        ],
+        [
+          "typing-extensions",
+          "4.16.0"
+        ],
+        [
+          "wcwidth",
+          "0.9.1"
+        ]
+      ],
+      "libxml2_version": "2.14.6",
+      "normalization_version": "1.0.1",
+      "policy_hash": "75d3d5eebea010d625c9c8e8409e009d7c1ad53ebfc5275e550936a1faa0661f",
+      "policy_id": "linkedin_jobs_aggressive_v1",
+      "python_version": "3.14.7",
+      "runtime_artifacts": [
+        {
+          "name": "installed:beautifulsoup4",
+          "sha256": "caadbd60e8b678ec32a851ec64097130108209de06dcfae8c4d361bcb5a8d3d1",
+          "version": "4.15.0"
+        },
+        {
+          "name": "installed:emoji",
+          "sha256": "9ce594b19bc926a70e8dd795431242fa416643a6a4995792a6cb38e0792a4ae3",
+          "version": "2.16.0"
+        },
+        {
+          "name": "installed:ftfy",
+          "sha256": "3daad76dd51c8e61e5ceaf9af6c16344ca2601ffc4748ee0fd3a808571850cf2",
+          "version": "6.3.1"
+        },
+        {
+          "name": "installed:lxml",
+          "sha256": "1fae0366b53a7da55ac9032e9fec4bfa6af2f0e6f2e9d116602dc9966b259d2e",
+          "version": "6.1.3"
+        },
+        {
+          "name": "installed:regex",
+          "sha256": "77b51ea63af89f6c498a4fa6ba8b07ee2816ef38af3da36d7bd8060444ffc741",
+          "version": "2026.9.10"
+        },
+        {
+          "name": "installed:soupsieve",
+          "sha256": "e393361c946a556909ded9bce4201cd2a73aa9d729841d231dcff8d7b3eba675",
+          "version": "2.10"
+        },
+        {
+          "name": "installed:typing-extensions",
+          "sha256": "b7f1343bb529517aed65e40bc042971228db1789b16b57e0b711930f4f2f9be1",
+          "version": "4.16.0"
+        },
+        {
+          "name": "installed:wcwidth",
+          "sha256": "2e11ea1632147014b3c46fc117ef0388d5fe484084cff0b471f489aa72c85c6b",
+          "version": "0.9.1"
+        },
+        {
+          "name": "lxml-build",
+          "sha256": "a59f7a5f8768b099faf345e25d7ae2837dd9711ccede7f45e994391f0927f16d",
+          "version": "6.1.3"
+        },
+        {
+          "name": "normietext-code",
+          "sha256": "9f7a4c5c3a1a802214d869d1a068fe2c45b5efc8bcdbd2d3a3022689b909e371",
+          "version": "0.1.0"
+        },
+        {
+          "name": "python-runtime",
+          "sha256": "154cee19b91075a5a950ba799eba129b5dedab8faac79a572dd141ba29d0c4c8",
+          "version": "3.14.7"
+        }
+      ],
+      "schema_version": "1.0.0",
+      "tables": [
+        {
+          "name": "emoji_hints.json",
+          "sha256": "feb31450688d67e3caf4fddf9c07679db4c24a8492fa65a08f17f8751e9d3742",
+          "version": "1.0.0"
+        },
+        {
+          "name": "kaomoji.json",
+          "sha256": "8a273e6a867ef46fb60b64ef004e23980acc6ba5ab1a17f9996bc765f66d9dae",
+          "version": "1.0.0"
+        },
+        {
+          "name": "licenses/Unicode-3.0.txt",
+          "sha256": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96",
+          "version": "1.0.0"
+        },
+        {
+          "name": "licenses/emoji-LICENSE.txt",
+          "sha256": "aa20fedcaf6d601de429715d8ecdfb1a0b46ba2a391b33d0e060882335694aab",
+          "version": "1.0.0"
+        },
+        {
+          "name": "licenses/regex-LICENSE.txt",
+          "sha256": "bff55ef4cdcc8c14ce259f8e8ab60e264418440d6335f4dc138273fbd506144d",
+          "version": "1.0.0"
+        },
+        {
+          "name": "region_sequences.json",
+          "sha256": "8fcc4d24267ac130c04fa69546e00e98f0a4c9a4deb84a90a3fed4c9201ba7f0",
+          "version": "1.0.0"
+        },
+        {
+          "name": "unicode_policy_manifest.json",
+          "sha256": "7d76280b737d6d55d0a462630217eee4b3a8a76548a5ec13a608fb0aebec8b7c",
+          "version": "1.0.0"
+        },
+        {
+          "name": "unicode_properties.json",
+          "sha256": "1e16fb60dac8c46b8842ae56ec6b35c49621f19bbbb42dd77d0849ccb817001e",
+          "version": "1.0.0"
+        }
+      ],
+      "unicode_version": "16.0.0"
+    }
+  },
+  "probes": {
+    "transparent_inline_cases": 288,
+    "failures": [],
+    "invalid_input_observations": [
+      {
+        "input_type": "NoneType",
+        "api": {
+          "exception": "InputValidationError",
+          "code": "INVALID_TYPE",
+          "message": "Expected fresh FieldInput, not converted text"
+        },
+        "measurement": {
+          "exception": "AttributeError",
+          "code": "None",
+          "message": "'NoneType' object has no attribute 'field'"
+        }
+      },
+      {
+        "input_type": "str",
+        "api": {
+          "exception": "InputValidationError",
+          "code": "INVALID_TYPE",
+          "message": "Expected fresh FieldInput, not converted text"
+        },
+        "measurement": {
+          "exception": "AttributeError",
+          "code": "None",
+          "message": "'str' object has no attribute 'field'"
+        }
+      },
+      {
+        "input_type": "bytes",
+        "api": {
+          "exception": "InputValidationError",
+          "code": "INVALID_TYPE",
+          "message": "Expected fresh FieldInput, not converted text"
+        },
+        "measurement": {
+          "exception": "AttributeError",
+          "code": "None",
+          "message": "'bytes' object has no attribute 'field'"
+        }
+      }
+    ]
+  },
+  "probe_source": "import itertools,json,html\nfrom pathlib import Path\nfrom normietext import FieldInput,JobField,JobTextNormalizer,SourceFormat\nfrom normietext.operations import measure_field\nfrom normietext.errors import NormalizationError\nn=JobTextNormalizer();values=['A','🚀','🇨🇷','Jo','sÃ©','\\u200b','\\u0301','©️','1️⃣','👉',' ','\\n'];failures=[];cases=0\nfor field in (JobField.JOB_TITLE,JobField.JOB_DESCRIPTION):\n for a,b in itertools.product(values,repeat=2):\n  raw='<b>'+html.escape(a)+'</b><span>'+html.escape(b)+'</span>'\n  cases+=1\n  try:\n   plain=n.normalize_field(FieldInput(field,a+b));styled=n.normalize_field(FieldInput(field,raw,SourceFormat.HTML_FRAGMENT))\n   assert styled.text==plain.text,(plain.text,styled.text)\n   assert n.canonicalize(styled) is styled\n  except Exception as exc:failures.append({'field':field.value,'a':a,'b':b,'type':type(exc).__name__,'error':str(exc)})\ninvalid=[]\nfor value in (None,'Python',b'Python'):\n row={'input_type':type(value).__name__}\n for name,fn in [('api',n.normalize_field),('measurement',lambda x:measure_field(n,x))]:\n  try:\n   r=fn(value);row[name]={'returned':str(getattr(r,'error',None))}\n  except Exception as e:row[name]={'exception':type(e).__name__,'code':str(getattr(e,'code',None)),'message':str(e)}\n invalid.append(row)\nreport={'transparent_inline_cases':cases,'failures':failures,'invalid_input_observations':invalid}\nPath('/tmp/normietext-audit-20261005-probes.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\\n')\nprint(json.dumps(report,ensure_ascii=False,indent=2))\n",
+  "ci": {
+    "id": 37262558837,
+    "head": "e7be574a0604415e94e9b23696e7dfcc593f8503",
+    "conclusion": "success",
+    "url": "https://github.com/ajrojasfuentes/normietext/actions/runs/37262558837"
+  },
+  "release_assets": [
+    "normietext-0.1.0-py3-none-any.whl",
+    "normietext-0.1.0.tar.gz",
+    "SHA256SUMS"
+  ],
+  "findings": [
+    {
+      "id": "A01",
+      "priority": 2,
+      "kind": "error contract",
+      "location": "src/normietext/operations.py:104",
+      "status": "reproduced, not fixed"
+    },
+    {
+      "id": "A02",
+      "priority": 2,
+      "kind": "specification 25.1 metrics",
+      "status": "partial implementation"
+    },
+    {
+      "id": "A03",
+      "kind": "acceptance evidence",
+      "status": "synthetic only, accepted limited scope"
+    },
+    {
+      "id": "A04",
+      "priority": 3,
+      "kind": "previous audit API-name erratum",
+      "status": "actual API is clean_text, not normalize_text"
+    }
+  ],
+  "artifacts": {
+    "normietext-audit-20261005-tests.xml": {
+      "sha256": "9985d29d81885210c993ba8ba406b132aa481f9e64839a90c0ec4736d1a11fab",
+      "bytes": 118297
+    },
+    "normietext-audit-20261005-quality.json": {
+      "sha256": "5c5fd07f9b8ed309c548c29d360b3a144b34a39ad48e913dab92156d2ae944e4",
+      "bytes": 66900
+    },
+    "normietext-audit-20261005-probes.json": {
+      "sha256": "05a46cab6f9ff2825ea45c61b53a53a028994b545f33160faeef2ae1c9ef5e74",
+      "bytes": 1191
+    }
+  },
+  "documentation_sha256": {
+    "docs/normietext_v2.0_especificacion.md": "479d6b1e29dd75b3019c0141d34d1453ad993d51a87339341c4d9eff68bd4c79",
+    "docs/plan_implementacion.md": "3670d897c3dfed2cfe80639e7a9570050e01310a4a5cd42d59a3caa52066c4e4",
+    "docs/decisions/0001-contratos-fase-1.md": "58cd587a0cb272c1bbd241c3645834d3ba456cd582ae956b51b2f6b934260fad",
+    "docs/decisions/0002-baseline-fuentes-procedencia.md": "dfb543fa92d2b275f8a69213ff13db05b0ee936dfa5b18d70dfb64b008ee0f7e",
+    "docs/decisions/0003-adaptadores-formato.md": "95ad1971a95266f86fd87054f09fbf56ce23bbaa67687d544c531a013d9fdf59",
+    "docs/decisions/0004-reparacion-lexico.md": "c10d78ad7d5968fd9e02e12ed0cb3142dadc6614a852689d62b533168a9c790d",
+    "docs/decisions/0005-renderer-api.md": "7b79e174d315946797168d371e0b35ab8583d9bd45bf6c334fdc0d96b3ed3f13",
+    "docs/decisions/0006-evaluacion-evidencia.md": "c30442f9ada73b73dd22972a0c1c8a472e384bca330bf01dbde629ee52ebc413",
+    "docs/decisions/0007-operacion-limites.md": "53c724e99a5528ba6cda75cb2d118c2770e915fc16c7608d80abbbab335ce462",
+    "docs/decisions/0008-biblioteca-lotes-github.md": "eb0940b57456a86f410569e790eee26320dbf3378e0e571852884ab2ffd14b56"
+  },
+  "limitations": [
+    "No fresh benchmark; unchanged core and lock, historical measurements retained.",
+    "No source-code coverage percentage claimed.",
+    "No behavior or corpus expectations modified."
+  ],
+  "audit_build_info": {
+    "code_revision": "git:e7be574a0604415e94e9b23696e7dfcc593f8503",
+    "code_sha256": "9f7a4c5c3a1a802214d869d1a068fe2c45b5efc8bcdbd2d3a3022689b909e371",
+    "schema_version": "1.0.0"
+  },
+  "audit_build_hashes": {
+    "normietext-0.1.0.tar.gz": "4d7488b9665cbe5a7293ad95fb51c53e46f0ef41529c24a61885cd2a6803f86f",
+    "normietext-0.1.0-py3-none-any.whl": "112523982730445d9f63b24b51622400fa95a4c52f5cc27e3d07735d87e6275f"
+  }
+}

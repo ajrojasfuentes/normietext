@@ -3,6 +3,8 @@
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import replace
 
+import pytest
+
 from normietext import (
     ExtractionError,
     ExtractionStatus,
@@ -15,9 +17,40 @@ from normietext import (
     ResourceLimits,
     SourceFormat,
 )
-from normietext._telemetry import capture
+from normietext._telemetry import StageCapture, capture
+from normietext.errors import ErrorCode, InputValidationError
 from normietext.operations import measure_field, measure_record
 from normietext.serialization import canonical_bytes
+
+
+@pytest.mark.parametrize("source", [None, "PRIVATE-INVALID-INPUT", b"PRIVATE-INVALID-INPUT"])
+@pytest.mark.parametrize("trace", [False, True])
+@pytest.mark.parametrize("nested", [False, True])
+def test_invalid_field_input_preserves_typed_failure_and_capture(source, trace, nested):
+    normalizer = JobTextNormalizer()
+    with pytest.raises(InputValidationError) as rejected:
+        normalizer.normalize_field(source)
+    assert rejected.value.code is ErrorCode.INVALID_TYPE
+
+    outer = StageCapture(timings={"outer": 1.0}, capture_trace=True) if nested else None
+    token = capture.set(outer)
+    try:
+        measurement = measure_field(normalizer, source, trace=trace)
+        assert capture.get() is outer
+        assert measurement.result is None
+        assert measurement.error is ErrorCode.INVALID_TYPE
+        assert measurement.metrics["error"] == "INVALID_TYPE"
+        assert measurement.metrics["timeout"] is False
+        assert set(measurement.metrics["stage_seconds"]) == {"convert"}
+        assert measurement.trace == ()
+        for key in ("field", "format", "input_codepoints", "scraper_version_sha256"):
+            assert key not in measurement.metrics
+        assert b"PRIVATE-INVALID-INPUT" not in canonical_bytes(measurement.metrics)
+        if outer is not None:
+            assert outer.timings == {"outer": 1.0}
+            assert outer.snapshots == []
+    finally:
+        capture.reset(token)
 
 
 def test_metrics_do_not_change_canonical_bytes_or_expose_content(capsys, caplog):

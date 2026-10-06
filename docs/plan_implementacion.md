@@ -19,6 +19,16 @@ La auditoría también identifica granularidad pendiente de observabilidad en §
 (invisibles por clase y porcentajes/denominadores de emoji); los contadores actuales
 de operaciones no equivalen a esas métricas.
 
+**Auditoría posterior a release (2026-10-05):** [estado de preparación y pendientes](revisiones/auditoria_post_release_2026_10_05.md).
+F8 conserva su cierre de distribución. A01, reproducido en esa auditoría, queda
+corregido localmente el 2026-10-06: measure_field conserva INVALID_TYPE para una
+entrada no FieldInput, sin intentar extraer dimensiones de fuente. La errata A04
+se corrigió en el informe original: la API se llama clean_text. A02
+precisa los agregados pendientes de §25.1: invisibles por clase y porcentaje de
+emoji con denominador explícito; candidatos no clasificados ya son observables
+por sus incidencias. A02 continúa abierto; A01/A04 no están aún en una nueva release.
+Validación del arreglo: [470 tests, calidad y distribución aislada aprobados](revisiones/correccion_wrapper_2026_10_06.md).
+
 **Anotación de revisión (2026-09-24):** se incorporan las decisiones R01–R15 de
 [evaluación de NT-REV-2.0-001](revisiones/evaluacion_NT-REV-2.0-001.md), resumidas
 con sus puertas en §18. Son tareas y aclaraciones del plan, no cambios ya aplicados

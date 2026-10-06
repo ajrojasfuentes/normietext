@@ -1,5 +1,14 @@
 # Changelog
 
+## [Unreleased]
+
+### Fixed
+
+- Preserve `INVALID_TYPE` in `measure_field` for rejected non-`FieldInput` values
+  instead of masking the rejection with `AttributeError`; omit unavailable source
+  dimensions without exposing the rejected input.
+- Correct the audit's text-only API name to `clean_text`.
+
 ## [0.1.0] - 2026-10-04
 
 First public release of the MIT-licensed Python library for deterministic normalization of scraped job text.

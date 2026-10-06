@@ -97,11 +97,13 @@ def measure_field(
 
     No logs, callbacks, network, or persistent global collectors. Ordinary API calls
     continue to raise normally. Unexpected implementation exceptions propagate.
+    Rejected non-FieldInput values retain INVALID_TYPE without source dimensions.
     """
     result, error, metrics, active = _measure(
         lambda: normalizer.normalize_field(source), normalizer, trace=trace
     )
-    metrics.update(_field_metrics(source, result))
+    if isinstance(source, FieldInput):
+        metrics.update(_field_metrics(source, result))
     return Measurement(result, error, FrozenMap.from_mapping(metrics), tuple(active.snapshots))
 
 
